@@ -8,7 +8,7 @@ void setup() {
   display.init();
 
   display.setFont(ArialMT_Plain_16);
-  display.drawString(10, 10, "Hello World");
+  display.drawString(0, 16, "Hello World");
   display.display();
 }
 
