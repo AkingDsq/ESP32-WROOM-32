@@ -1,6 +1,9 @@
 # ESP32-WROOM-32
  学习ESP32-WROOM-32 
-### 注意：使用的是Arduino IDE测试并拷贝程序所以需要其开发环境 
+### 注意：
+使用的是Arduino IDE测试并拷贝程序所以需要其开发环境, 相关教程可在此网站上找到
+
+`https://doc.itprojects.cn/A0022.esp32.arduino/01.doc.bc474157992b15c366439040fd61543c/index.html#/01.esp32.arduino.build.dev`
 ## （一）IIC-OLED-1306显示屏
 ### 和ESP32-WROOM-32连线 
 连线按照此图连接即可：
