@@ -5,8 +5,8 @@
 #include <time.h>
 
 // 定义 Wi-Fi 名与密码
-const char * ssid = "ChinaNet-sapC7Y";   //需要输入自己的WIFI名字
-const char * password = "skfh4366";   //需要输入自己的WIFI密码
+const char * ssid = "laodong";   //需要输入自己的WIFI名字
+const char * password = "dsq245349";   //需要输入自己的WIFI密码
 // 
 const char* ntpServer = "pool.ntp.org";  // NTP服务器地址
 const long utcOffsetInSeconds = 28800;  // 北京时间：UTC+8，单位为秒
@@ -15,6 +15,7 @@ SSD1306 display(0x3c, 21, 22);
 
 void setup() {
 //-----------------连接WIFI--------------//
+  // wifi模式
   Serial.begin(9600);
 
   // 断开之前的连接
@@ -22,8 +23,12 @@ void setup() {
   // 连接 Wi-Fi
   WiFi.begin(ssid, password);
 
-  Serial.print("正在连接 Wi-Fi");
+  // 热点模式
+  // Serial.begin(115200);
+  // WiFi.softAP(ssid, password);  // 将 ESP32 设置为热点
 
+  Serial.print("正在连接 Wi-Fi");
+  
   // 检测是否链接成功
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
@@ -32,6 +37,7 @@ void setup() {
   Serial.println("连接成功");
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
+  //Serial.println(WiFi.softAPIP());  // 打印热点的IP地址
 //-----------------连接WIFI--------------//
 
 //-----------------显示时间--------------//
@@ -42,11 +48,6 @@ void setup() {
     Serial.println(".");
   }
   Serial.println("Time synced successfully");
-
-  // 显示屏显示
-  display.init();
-
-  display.setFont(ArialMT_Plain_16);  // 设置字号
   
 //-----------------显示时间--------------//
 }
@@ -62,6 +63,10 @@ void loop() {
   strftime(timeStr, sizeof(timeStr), "%Y-%m-%d %H:%M:%S", timeinfo);
   Serial.printf("Current Time: %s\n", timeStr);
   
+  // 显示屏显示
+  display.init();
+
+  display.setFont(ArialMT_Plain_10);  // 设置字号
   display.drawString(0, 16, timeStr); // 设置显示位置和内容
   display.display(); // 显示
 
