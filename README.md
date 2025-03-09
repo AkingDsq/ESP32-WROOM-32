@@ -59,15 +59,17 @@
 
 复制进文件夹解压后，进入解压目录，看到compile为止，鼠标右击空白地方，进入终端 
 
-`./configure \
-  -xplatform linux-arm-gnueabihf-g++ \
-  -prefix /home/akingdsq/work/arm-release \
-  -I /home/akingdsq/work/tslib_release/include \
-  -L /home/akingdsq/work/tslib_release/lib \
-  -verbose \
-  -- \
-  -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc \
-  -DCMAKE_CXX_COMPILER=arm-linux-gnueabihf-g++` 
+`./configure \ -xplatform linux-arm-gnueabihf-g++ \                  # 指定目标平台 
+-prefix /home/akingdsq/work/qt-everywhere-src-6.8.2/arm-release \    # 安装路径 
+-I /home/akingdsq/work/tslib_release/include \                       # tslib 头文件路径 
+-L /home/akingdsq/work/tslib_release/lib \                           # tslib 库路径 
+-opensource -confirm-license \                                       # 接受开源协议 
+-release \                                                           # 编译为发布版本 
+-nomake examples -nomake tests \                                     # 跳过示例和测试 
+-opengl es2 \                                                        # 启用 OpenGL ES 支持 
+-qt-libjpeg -qt-libpng \                                             # 启用图像格式支持 
+-- \ -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc \                    # 显式指定编译器 
+-DCMAKE_CXX_COMPILER=arm-linux-gnueabihf-g++` 
 
 （可能报错cmake没有找到，执行`sudo apt install cmake`安装cmake，`cmake --version`验证）
 
@@ -80,7 +82,7 @@ tslib需先编译并安装，Qt通过 -I 和 -L 参数引用其路径。
 -I: 之前所编译好的QT触摸库tslab的include路径
 -L: 之前所编译好的QT触摸库tslab的lib路径
 
-`make -j$(nproc) && make install` （这里可能会报错没有make命令, 执行`sudo apt-get install make`即可下载make命令包）
+`make -j$(nproc) && sudo make install` （这里可能会报错没有make命令, 执行`sudo apt-get install make`即可下载make命令包）
 
 执行完make命令后就会生成文件到输出目录 
 
