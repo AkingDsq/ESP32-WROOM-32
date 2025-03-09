@@ -66,7 +66,7 @@ arm-linux-gnueabihf-g++ --version  # 验证编译器, 输出应包含 "Target: a
 ### 交叉编译qt-everywhere-src-6.8.2.tar.xz 
 #### 安装基础依赖 
 
-`sudo apt install build-essential libgl1-mesa-dev libfontconfig1-dev \ libxkbcommon-dev libx11-dev libxcb-xinput-dev python3` 
+`sudo apt install build-essential libgl1-mesa-dev libfontconfig1-dev libxkbcommon-dev` 
 
 #### 交叉编译
 
