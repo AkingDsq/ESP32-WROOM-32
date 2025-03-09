@@ -97,19 +97,7 @@ QMAKE_STRIP             = arm-linux-gnueabihf-strip
 
 然后进入./<解压目录>，也就是qtbase所在目录，看到compile为止，鼠标右击空白地方，进入终端 
 
-`./configure \
-  -xplatform linux-arm-gnueabihf-g++ \          # 指定目标平台
-  -prefix /home/akingdsq/work/qt-everywhere-src-6.8.2/arm-release \                   # 安装路径
-  -I /home/akingdsq/work/tslib_release/include \                       # tslib 头文件路径
-  -L /home/akingdsq/work/tslib_release/lib \                           # tslib 库路径
-  -opensource -confirm-license \                # 接受开源协议
-  -release \                                    # 编译为发布版本
-  -nomake examples -nomake tests \              # 跳过示例和测试
-  -opengl es2 \                                 # 启用 OpenGL ES 支持
-  -qt-libjpeg -qt-libpng \                      # 启用图像格式支持
-  -- \
-  -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc \  # 显式指定编译器
-  -DCMAKE_CXX_COMPILER=arm-linux-gnueabihf-g++` 
+`./configure \ -xplatform linux-arm-gnueabihf-g++ \          # 指定目标平台 -prefix /home/akingdsq/work/qt-everywhere-src-6.8.2/arm-release \                   # 安装路径 -I /home/akingdsq/work/tslib_release/include \                       # tslib 头文件路径 -L /home/akingdsq/work/tslib_release/lib \                           # tslib 库路径 -opensource -confirm-license \                # 接受开源协议 -release \                                    # 编译为发布版本 -nomake examples -nomake tests \              # 跳过示例和测试 -opengl es2 \                                 # 启用 OpenGL ES 支持 -qt-libjpeg -qt-libpng \                      # 启用图像格式支持 -- \ -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc \  # 显式指定编译器 -DCMAKE_CXX_COMPILER=arm-linux-gnueabihf-g++` 
 
 #### 注意：具体的路径需要根据自身修改即可，每种参数的意义都在每个参数的后面用#注释了 
 
