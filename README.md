@@ -147,4 +147,18 @@ tslib需先编译并安装，Qt通过 -I 和 -L 参数引用其路径。
 
 执行完make命令后就会生成文件到输出目录 
 
+## QEMU模拟
+
+## qemu安装 
+
+`sudo apt install qemu-system-x86 qemu-utils` 
+
+## arm开发板镜像下载安装 
+
+`https://mirrors.tuna.tsinghua.edu.cn/raspberry-pi-os-images/` 
+
+## 模拟 
+
+`qemu-system-x86_64 \-nodefaults \-enable-kvm \-m 4096 \-smp 4 \-drive file=2024-11-19-raspios-bookworm-armhf-lite.img,format=raw,index=0,media=disk \                # 直接加载已有磁盘镜像 -vga virtio \                  # 使用高性能 VirtIO 显卡驱动 -net user,hostfwd=tcp::2222-:22 \  # 启用网络并转发 SSH 端口（宿主机 2222 → 虚拟机 22） -net nic` 
+
 
