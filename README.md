@@ -237,7 +237,7 @@ offset = 8192 × 512 = 4,194,304
 
 `sudo mount -o loop,offset=<上面算出的offset值> <你的镜像文件名.img> <镜像文件挂载处（一般是/mnt/img）>` 
 
-`sudo mount -o loop,offset=4194304 raspios-bookworm-armhf-full.img /mnt/img` 
+`sudo mount -o loop,offset=4194304 2024-11-19-raspios-bookworm-armhf-full.img /mnt/img` 
 
 #### 如果需要卸载`sudo umount /mnt/img`
 
