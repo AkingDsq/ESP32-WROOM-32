@@ -25,35 +25,56 @@
 
 #### 共享文件夹
 
-`sudo apt update && sudo apt install open-vm-tools open-vm-tools-desktop`
+##### 安装open-vm-tools(与主机共享文件夹并且提供复制与粘贴的功能)
 
-### 下载ubuntu-24.04.2-desktop-amd64.iso 
+`sudo apt update && sudo apt install open-vm-tools open-vm-tools-desktop` 
+
+##### 验证vmhgfs-fuse工具是否存在, 运行命令：
+
+`command -v vmhgfs-fuse` 
+
+若未找到，需重新安装open-vm-tools 
+
+##### 创建挂载点（若不存在）​
+
+`sudo mkdir -p /mnt/hgfs` 
+
+​执行手动挂载命令
+
+`sudo vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other` 
+
+通过`ls /mnt/hgfs`验证是否显示共享内容 
+
+### 下载ubuntu-24.04.2-desktop-amd64.iso（ubuntu镜像） 
 
 `https://mirrors.aliyun.com/ubuntu-releases/?spm=a2c6h.25603864.0.0.6781d6deYyXSkU` 
 
-### 下载qt-everywhere-src-6.8.2.tar.xz 
+### 下载qt-everywhere-src-6.8.2.tar.xz（交叉编译Qt库） 
 
 `https://download.qt.io/archive/qt/6.8/6.8.2/single/` 
 
-### 下载qt-unified-linux-x64-online.run  
+### 下载qt-unified-linux-x64-online.run（Qt-linux联网下载程序） 
 
 `https://download.qt.io/official_releases/online_installers/` 
 
-### 下载tslib-1.23.tar.xz 
+### 下载tslib-1.23.tar.xz（触摸屏模拟） 
 
 `https://github.com/libts/tslib/releases` 
 
 ### 下载交叉编译工具gcc-arm-linux-gnueabihf
+#### Ubuntu/Debian 安装 ARM 交叉编译器（ARMv7/AArch64） 
 
-`# Ubuntu/Debian 安装 ARM 交叉编译器（ARMv7/AArch64）
+`sudo apt update` 
 
-sudo apt update 
+`sudo apt install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf` 
 
-sudo apt install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf
+#### 验证编译器, 输出应包含 "Target: arm-linux-gnueabihf" 
+ 
+`arm-linux-gnueabihf-g++ --version` 
 
-arm-linux-gnueabihf-g++ --version  # 验证编译器, 输出应包含 "Target: arm-linux-gnueabihf"` 
+#### 安装基础依赖 
 
-### 共享给虚拟机 
+`sudo apt install build-essential libgl1-mesa-dev libfontconfig1-dev libxkbcommon-dev`
 
 ### 交叉编译tslib 
 
@@ -68,10 +89,7 @@ arm-linux-gnueabihf-g++ --version  # 验证编译器, 输出应包含 "Target: a
 执行完make命令后就会生成文件到输出目录 
 
 ### 交叉编译qt-everywhere-src-6.8.2.tar.xz 
-#### 安装基础依赖 
-
-`sudo apt install build-essential libgl1-mesa-dev libfontconfig1-dev libxkbcommon-dev` 
-
+ 
 #### 交叉编译
 
 复制进文件夹解压后，进入解压目录 
@@ -155,13 +173,31 @@ tslib需先编译并安装，Qt通过 -I 和 -L 参数引用其路径。
 
 ## qemu安装 
 
-`sudo apt install qemu-system-x86 qemu-utils` 
+`sudo apt install qemu-system-arm qemu-utils` 
+
+安装完成后，检查 QEMU 支持的 ARM 机器类型：
+
+`qemu-system-arm -machine help` 
+
+输出应包含树莓派相关设备（如 raspi2b 或 versatilepb）：
+
+versatilepb       ARM Versatile/PB (ARM926EJ-S) 
+
+raspi2b          Raspberry Pi 2B
 
 ## arm开发板镜像下载安装 
 
 `https://mirrors.tuna.tsinghua.edu.cn/raspberry-pi-os-images/` 
 
 ## 模拟 
+
+使用 QEMU 启动树莓派镜像时，需指定：
+
+机器类型（-M）：如 versatilepb（通用）或 raspi2b（专用）。 
+
+内核文件（-kernel）：从镜像中提取的 kernel7.img 或 kernel8.img。 
+
+设备树（-dtb）：如 bcm2708-rpi-b.dtb。 
 
 `qemu-system-x86_64 \-nodefaults \-enable-kvm \-m 4096 \-smp 4 \-drive file=2024-11-19-raspios-bookworm-armhf-lite.img,format=raw,index=0,media=disk \                # 直接加载已有磁盘镜像 -vga virtio \                  # 使用高性能 VirtIO 显卡驱动 -net user,hostfwd=tcp::2222-:22 \  # 启用网络并转发 SSH 端口（宿主机 2222 → 虚拟机 22） -net nic` 
 
