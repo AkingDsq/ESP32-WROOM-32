@@ -23,6 +23,10 @@
 
 ### 下载VMware 
 
+#### 共享文件夹
+
+`sudo apt update && sudo apt install open-vm-tools open-vm-tools-desktop`
+
 ### 下载ubuntu-24.04.2-desktop-amd64.iso 
 
 `https://mirrors.aliyun.com/ubuntu-releases/?spm=a2c6h.25603864.0.0.6781d6deYyXSkU` 
