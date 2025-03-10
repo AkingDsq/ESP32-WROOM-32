@@ -221,11 +221,11 @@ Device                                Boot  Start   End  Sectors  Size Id Type
 
 确定目标分区的 Start 扇区 
 
-​启动分区（FAT32）​：通常是第一个分区（.img1），包含内核和设备树文件。 
+#### ​启动分区（FAT32）​：通常是第一个分区（.img1），包含内核和设备树文件。 
 
 示例中的 Start 值为 8192。 
 
-​根文件系统（ext4）​：通常是第二个分区（.img2）。 
+#### ​根文件系统（ext4）​：通常是第二个分区（.img2）。 
 
 示例中的 Start 值为 98304 
 
@@ -242,6 +242,11 @@ offset = 8192 × 512 = 4,194,304
 #### 如果需要卸载`sudo umount /mnt/img`
 
 ### 启动
+确保主机系统已安装必要的图形驱动（如 SDL、GTK 或 VNC 支持库）。在 Ubuntu 中可安装依赖：
+
+`sudo apt-get install libsdl2-2.0 libgtk-3-0` 
+
+`sudo apt install libgtk-3-dev`​ 安装 GTK 依赖(-display gtk 可能因环境依赖缺失导致黑屏)
 
 可以使用官方镜像的默认内核，从镜像的 /boot 分区提取内核和设备树文件（需挂载镜像）在上面的步骤已完成 
 
@@ -263,6 +268,50 @@ qemu-system-arm \
   
 -append "root=/dev/sda2 console=ttyAMA0" \  # 内核参数 
   
--net nic -net user,hostfwd=tcp::5022-:22  # 网络端口转发 
+-netdev user,id=net0：定义用户模式网络后端，标识为 net0。 
 
-`qemu-system-arm \-M versatilepb \-cpu arm1176 \-m 256M \-kernel /mnt/img/kernel7.img \-dtb /mnt/img/bcm2708-rpi-b.dtb \-drive file=2024-11-19-raspios-bookworm-armhf-full.img,format=raw \-append "root=/dev/sda2 console=ttyAMA0" \-net nic -net user,hostfwd=tcp::5022-:22` 
+-device virtio-net-device,netdev=net0：将设备绑定到网络后端。 
+
+-display sdl # 使用 SDL 图形库 或 -display gtk # 使用 GTK 图形界面 或 -vnc :0 # 启用 VNC 服务（需 VNC 客户端连接） 或-nographic # 禁用图形，仅用串口输出
+
+-enable-kvm \    # 启用 KVM 加速（需主机支持） 
+
+`qemu-system-arm \-M raspi2b \-cpu arm1176 \-m 1G \-kernel /mnt/img/kernel7.img \-dtb /mnt/img/bcm2708-rpi-b.dtb \-drive file=2024-11-19-raspios-bookworm-armhf-full.img,format=raw \-append "root=/dev/sda2 console=ttyAMA0,115200" \-net user,hostfwd=tcp::5022-:22 \-display gtk \-serial stdio` 
+
+#### 16
+
+##### (1) 使用 qemu-img resize 调整镜像大小 
+
+运行以下命令将镜像调整为 16 GiB（最小合规值）：
+
+qemu-img resize 2024-11-19-raspios-bookworm-armhf-full.img 16G 
+
+##### (2) 扩展镜像内的文件系统 
+
+调整镜像大小后，需在虚拟机内扩展分区和文件系统, 挂载镜像并检查分区：
+
+如果之前挂载了​启动分区（FAT32）需要先卸载之前挂载的​启动分区（FAT32），然后再挂载根文件系统（ext4）
+
+`sudo umount /mnt/img`
+
+##### 计算根分区偏移量（假设分区起始扇区为 98304）
+
+`offset=$((1056768 * 512))` 
+
+`sudo mount -o loop,offset=$offset 2024-11-19-raspios-bookworm-armhf-full.img /mnt/img` 
+
+##### ​使用 parted 或 fdisk 扩展分区：
+
+`sudo parted 2024-11-19-raspios-bookworm-armhf-full.img` 
+
+(parted) `resizepart 2 100%`  # 将第二个分区扩展至全盘 
+
+(parted) `quit` 
+
+​调整文件系统大小：
+
+sudo e2fsck -f /dev/loop0p2  # 检查分区
+
+sudo resize2fs /dev/loop0p2   # 扩展 ext4 文件系统
+
+#### 
