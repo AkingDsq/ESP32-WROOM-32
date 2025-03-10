@@ -189,16 +189,80 @@ raspi2b          Raspberry Pi 2B
 
 `https://mirrors.tuna.tsinghua.edu.cn/raspberry-pi-os-images/` 
 
+共享到ubuntu后解压出镜像文件 
+
+`xz -d 2024-11-19-raspios-bookworm-armhf-full.img.xz`
+
 ## 模拟 
+
+### 查看镜像的信息 
+
+`sudo fdisk -l 2024-11-19-raspios-bookworm-armhf-full.img` 
+
+输出示例如下：
+
+Disk raspios-bookworm-armhf-full.img: 4 GiB, 4294967296 bytes, 8388608 sectors 
+
+Units: sectors of 1 * 512 = 512 bytes 
+
+Sector size (logical/physical): 512 bytes / 512 bytes 
+
+I/O size (minimum/optimal): 512 bytes / 512 bytes 
+
+Disklabel type: dos 
+
+Disk identifier: 0x12345678 
+
+Device                                Boot  Start   End  Sectors  Size Id Type 
+
+2024-11-19-raspios-bookworm-armhf-full.img1        8192  98045    89854   44M  c W95 FAT32 (LBA) 
+
+2024-11-19-raspios-bookworm-armhf-full.img2       98304 8388607 8290304  3.9G 83 Linux 
+
+确定目标分区的 Start 扇区 
+
+​启动分区（FAT32）​：通常是第一个分区（.img1），包含内核和设备树文件。 
+
+示例中的 Start 值为 8192。 
+
+​根文件系统（ext4）​：通常是第二个分区（.img2）。 
+
+示例中的 Start 值为 98304 
+
+offset = 8192 × 512 = 4,194,304 
+
+### 镜像文件挂载命令
+
+参数自行修改
+
+`sudo mount -o loop,offset=<上面算出的offset值> <你的镜像文件名.img> <镜像文件挂载处（一般是/mnt/img）>` 
+
+`sudo mount -o loop,offset=4194304 raspios-bookworm-armhf-full.img /mnt/img` 
+
+#### 如果需要卸载`sudo umount /mnt/img`
+
+### 启动
+
+可以使用官方镜像的默认内核，从镜像的 /boot 分区提取内核和设备树文件（需挂载镜像）在上面的步骤已完成 
 
 使用 QEMU 启动树莓派镜像时，需指定：
 
-机器类型（-M）：如 versatilepb（通用）或 raspi2b（专用）。 
+qemu-system-arm \ 
 
-内核文件（-kernel）：从镜像中提取的 kernel7.img 或 kernel8.img。 
+-M versatilepb \                     # 机器类型（树莓派B型） 
+  
+-cpu arm1176 \                       # CPU架构 
+  
+-m 256M \                            # 内存 
+  
+-kernel /mnt/img/boot/kernel7.img \  # 内核路径 
+  
+-dtb /mnt/img/boot/bcm2708-rpi-b.dtb \  # 设备树路径 
+  
+-drive file=your_image.img,format=raw \  # 镜像文件 
+  
+-append "root=/dev/sda2 console=ttyAMA0" \  # 内核参数 
+  
+-net nic -net user,hostfwd=tcp::5022-:22  # 网络端口转发 
 
-设备树（-dtb）：如 bcm2708-rpi-b.dtb。 
-
-`qemu-system-x86_64 \-nodefaults \-enable-kvm \-m 4096 \-smp 4 \-drive file=2024-11-19-raspios-bookworm-armhf-lite.img,format=raw,index=0,media=disk \                # 直接加载已有磁盘镜像 -vga virtio \                  # 使用高性能 VirtIO 显卡驱动 -net user,hostfwd=tcp::2222-:22 \  # 启用网络并转发 SSH 端口（宿主机 2222 → 虚拟机 22） -net nic` 
-
-
+`qemu-system-arm \-M versatilepb \-cpu arm1176 \-m 256M \-kernel /mnt/img/kernel7.img \-dtb /mnt/img/bcm2708-rpi-b.dtb \-drive file=2024-11-19-raspios-bookworm-armhf-full.img,format=raw \-append "root=/dev/sda2 console=ttyAMA0" \-net nic -net user,hostfwd=tcp::5022-:22` 
