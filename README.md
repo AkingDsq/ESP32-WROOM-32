@@ -278,13 +278,13 @@ qemu-system-arm \
 
 `qemu-system-arm \-M raspi2b \-cpu arm1176 \-m 1G \-kernel /mnt/img/kernel7.img \-dtb /mnt/img/bcm2708-rpi-b.dtb \-drive file=2024-11-19-raspios-bookworm-armhf-full.img,format=raw \-append "root=/dev/sda2 console=ttyAMA0,115200" \-net user,hostfwd=tcp::5022-:22 \-display gtk \-serial stdio` 
 
-#### 16
+#### 报错：qemu-system-arm: Invalid SD card size: 11.5 GiB,SD card size has to be a power of 2, e.g. 16 GiB.You can resize disk images with 'qemu-img resize <imagefile> <new-size>'(note that this will lose data if you make the image smaller than it currently is).
 
 ##### (1) 使用 qemu-img resize 调整镜像大小 
 
 运行以下命令将镜像调整为 16 GiB（最小合规值）：
 
-qemu-img resize 2024-11-19-raspios-bookworm-armhf-full.img 16G 
+`qemu-img resize -f raw 2024-11-19-raspios-bookworm-armhf-full.img 16G` 
 
 ##### (2) 扩展镜像内的文件系统 
 
@@ -294,24 +294,37 @@ qemu-img resize 2024-11-19-raspios-bookworm-armhf-full.img 16G
 
 `sudo umount /mnt/img`
 
-##### 计算根分区偏移量（假设分区起始扇区为 98304）
+###### 计算根分区偏移量（假设分区起始扇区为 98304）
 
 `offset=$((1056768 * 512))` 
 
 `sudo mount -o loop,offset=$offset 2024-11-19-raspios-bookworm-armhf-full.img /mnt/img` 
 
-##### ​使用 parted 或 fdisk 扩展分区：
+###### ​扩展分区：
 
-`sudo parted 2024-11-19-raspios-bookworm-armhf-full.img` 
+`sudo apt update && sudo apt install multipath-tools -y`
 
-(parted) `resizepart 2 100%`  # 将第二个分区扩展至全盘 
+`sudo losetup -fP 2024-11-19-raspios-bookworm-armhf-full.img` 
 
-(parted) `quit` 
+查看生成的分区设备 
 
-​调整文件系统大小：
+`ls /dev/loop*`
 
-sudo e2fsck -f /dev/loop0p2  # 检查分区
+sudo losetup -a
 
-sudo resize2fs /dev/loop0p2   # 扩展 ext4 文件系统
+`sudo fdisk -l 2024-11-19-raspios-bookworm-armhf-full.img` 
 
+qemu-img info 2024-11-19-raspios-bookworm-armhf-full.img
+
+sudo losetup -fP 2024-11-19-raspios-bookworm-armhf-full.img 
+
+sudo partprobe /dev/loop10
+
+sudo growpart /dev/loop10 2
+
+sudo e2fsck -f /dev/mapper/loop10p2
+
+sudo resize2fs /dev/mapper/loop10p2
+
+sudo losetup -d /dev/loop10
 #### 
