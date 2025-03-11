@@ -2,6 +2,9 @@
 #define MUSICPLAYER_H
 
 #include "mainwindow.h"
+#include "bluetoothmanager.h"
+
+class BluetoothManager;
 
 class MusicPlayer : public QMainWindow
 {
@@ -11,8 +14,11 @@ public:
     explicit MusicPlayer(Ui::MainWindow* ui);
     ~MusicPlayer();
 
+    void init_BlueTooth_Connect();
+
 private:
     Ui::MainWindow *ui;
+    BluetoothManager* bluetoothManager;
 
     //切换页面
     QStackedWidget* pages;
@@ -20,6 +26,7 @@ private:
 
 public slots:
     void on_Back_musicPlayer_clicked();
+
 };
 
 #endif // MUSICPLAYER_H

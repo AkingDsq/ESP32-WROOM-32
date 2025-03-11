@@ -19,9 +19,9 @@
 #include "ESP_I2S.h"
 #include "BluetoothA2DPSink.h"
 
-const uint8_t I2S_SCK = 5;       /* Audio data bit clock */
-const uint8_t I2S_WS = 25;       /* Audio data left and right clock */
-const uint8_t I2S_SDOUT = 26;    /* ESP32 audio data output (to speakers) */
+const uint8_t I2S_SCK = 27;       /* Audio data bit clock */
+const uint8_t I2S_WS = 26;       /* Audio data left and right clock */
+const uint8_t I2S_SDOUT = 14;    /* ESP32 audio data output (to speakers) */
 I2SClass i2s;
 
 BluetoothA2DPSink a2dp_sink(i2s);
@@ -33,7 +33,7 @@ void setup() {
       while (1); // do nothing
     }
 
-    a2dp_sink.start("MyMusic");
+    a2dp_sink.start("ESP32");
 }
 
 void loop() {

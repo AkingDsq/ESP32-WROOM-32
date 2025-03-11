@@ -37,15 +37,15 @@ public:
     QWidget *page1;
     QGridLayout *gridLayout_3;
     QGridLayout *gridLayout_2;
-    QPushButton *musicPlayer_page_2;
-    QPushButton *musicPlayer_page_1;
-    QPushButton *pushButton_4;
-    QPushButton *pushButton_3;
     QPushButton *pushButton_6;
-    QPushButton *pushButton_8;
-    QPushButton *pushButton_9;
-    QPushButton *pushButton_5;
+    QPushButton *musicPlayer_page_2;
     QPushButton *pushButton_7;
+    QPushButton *pushButton_9;
+    QPushButton *pushButton_8;
+    QPushButton *pushButton_3;
+    QPushButton *pushButton_4;
+    QPushButton *pushButton_5;
+    QPushButton *musicPlayer_page_1;
     QWidget *page2;
     QGridLayout *gridLayout_4;
     QVBoxLayout *verticalLayout_2;
@@ -112,34 +112,6 @@ public:
         gridLayout_2 = new QGridLayout();
         gridLayout_2->setSpacing(0);
         gridLayout_2->setObjectName("gridLayout_2");
-        musicPlayer_page_2 = new QPushButton(page1);
-        musicPlayer_page_2->setObjectName("musicPlayer_page_2");
-        sizePolicy.setHeightForWidth(musicPlayer_page_2->sizePolicy().hasHeightForWidth());
-        musicPlayer_page_2->setSizePolicy(sizePolicy);
-
-        gridLayout_2->addWidget(musicPlayer_page_2, 0, 3, 1, 1);
-
-        musicPlayer_page_1 = new QPushButton(page1);
-        musicPlayer_page_1->setObjectName("musicPlayer_page_1");
-        sizePolicy.setHeightForWidth(musicPlayer_page_1->sizePolicy().hasHeightForWidth());
-        musicPlayer_page_1->setSizePolicy(sizePolicy);
-
-        gridLayout_2->addWidget(musicPlayer_page_1, 0, 1, 1, 1);
-
-        pushButton_4 = new QPushButton(page1);
-        pushButton_4->setObjectName("pushButton_4");
-        sizePolicy.setHeightForWidth(pushButton_4->sizePolicy().hasHeightForWidth());
-        pushButton_4->setSizePolicy(sizePolicy);
-
-        gridLayout_2->addWidget(pushButton_4, 1, 1, 1, 1);
-
-        pushButton_3 = new QPushButton(page1);
-        pushButton_3->setObjectName("pushButton_3");
-        sizePolicy.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
-        pushButton_3->setSizePolicy(sizePolicy);
-
-        gridLayout_2->addWidget(pushButton_3, 0, 5, 1, 1);
-
         pushButton_6 = new QPushButton(page1);
         pushButton_6->setObjectName("pushButton_6");
         sizePolicy.setHeightForWidth(pushButton_6->sizePolicy().hasHeightForWidth());
@@ -147,12 +119,19 @@ public:
 
         gridLayout_2->addWidget(pushButton_6, 1, 5, 1, 1);
 
-        pushButton_8 = new QPushButton(page1);
-        pushButton_8->setObjectName("pushButton_8");
-        sizePolicy.setHeightForWidth(pushButton_8->sizePolicy().hasHeightForWidth());
-        pushButton_8->setSizePolicy(sizePolicy);
+        musicPlayer_page_2 = new QPushButton(page1);
+        musicPlayer_page_2->setObjectName("musicPlayer_page_2");
+        sizePolicy.setHeightForWidth(musicPlayer_page_2->sizePolicy().hasHeightForWidth());
+        musicPlayer_page_2->setSizePolicy(sizePolicy);
 
-        gridLayout_2->addWidget(pushButton_8, 2, 3, 1, 1);
+        gridLayout_2->addWidget(musicPlayer_page_2, 0, 3, 1, 1);
+
+        pushButton_7 = new QPushButton(page1);
+        pushButton_7->setObjectName("pushButton_7");
+        sizePolicy.setHeightForWidth(pushButton_7->sizePolicy().hasHeightForWidth());
+        pushButton_7->setSizePolicy(sizePolicy);
+
+        gridLayout_2->addWidget(pushButton_7, 2, 1, 1, 1);
 
         pushButton_9 = new QPushButton(page1);
         pushButton_9->setObjectName("pushButton_9");
@@ -161,6 +140,27 @@ public:
 
         gridLayout_2->addWidget(pushButton_9, 2, 5, 1, 1);
 
+        pushButton_8 = new QPushButton(page1);
+        pushButton_8->setObjectName("pushButton_8");
+        sizePolicy.setHeightForWidth(pushButton_8->sizePolicy().hasHeightForWidth());
+        pushButton_8->setSizePolicy(sizePolicy);
+
+        gridLayout_2->addWidget(pushButton_8, 2, 3, 1, 1);
+
+        pushButton_3 = new QPushButton(page1);
+        pushButton_3->setObjectName("pushButton_3");
+        sizePolicy.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
+        pushButton_3->setSizePolicy(sizePolicy);
+
+        gridLayout_2->addWidget(pushButton_3, 0, 5, 1, 1);
+
+        pushButton_4 = new QPushButton(page1);
+        pushButton_4->setObjectName("pushButton_4");
+        sizePolicy.setHeightForWidth(pushButton_4->sizePolicy().hasHeightForWidth());
+        pushButton_4->setSizePolicy(sizePolicy);
+
+        gridLayout_2->addWidget(pushButton_4, 1, 1, 1, 1);
+
         pushButton_5 = new QPushButton(page1);
         pushButton_5->setObjectName("pushButton_5");
         sizePolicy.setHeightForWidth(pushButton_5->sizePolicy().hasHeightForWidth());
@@ -168,12 +168,12 @@ public:
 
         gridLayout_2->addWidget(pushButton_5, 1, 3, 1, 1);
 
-        pushButton_7 = new QPushButton(page1);
-        pushButton_7->setObjectName("pushButton_7");
-        sizePolicy.setHeightForWidth(pushButton_7->sizePolicy().hasHeightForWidth());
-        pushButton_7->setSizePolicy(sizePolicy);
+        musicPlayer_page_1 = new QPushButton(page1);
+        musicPlayer_page_1->setObjectName("musicPlayer_page_1");
+        sizePolicy.setHeightForWidth(musicPlayer_page_1->sizePolicy().hasHeightForWidth());
+        musicPlayer_page_1->setSizePolicy(sizePolicy);
 
-        gridLayout_2->addWidget(pushButton_7, 2, 1, 1, 1);
+        gridLayout_2->addWidget(musicPlayer_page_1, 0, 1, 1, 1);
 
 
         gridLayout_3->addLayout(gridLayout_2, 0, 0, 1, 1);
@@ -374,15 +374,15 @@ public:
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Microsoft YaHei UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:28pt;\">MyApp</span></p></body></html>", nullptr));
-        musicPlayer_page_2->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        musicPlayer_page_1->setText(QCoreApplication::translate("MainWindow", "MusicPlayer", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
         pushButton_6->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        pushButton_8->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        pushButton_9->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        pushButton_5->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        musicPlayer_page_2->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
         pushButton_7->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_9->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_8->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_5->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        musicPlayer_page_1->setText(QCoreApplication::translate("MainWindow", "MusicPlayer", nullptr));
         back_musicPlayer->setText(QCoreApplication::translate("MainWindow", "back", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "0.00", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "0.00", nullptr));

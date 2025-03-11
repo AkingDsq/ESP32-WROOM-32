@@ -10,12 +10,14 @@ CONFIG += c++17
 
 SOURCES += \
     MusicPlayer.cpp \
+    bluetoothmanager.cpp \
     error.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     MusicPlayer.h \
+    bluetoothmanager.h \
     error.h \
     mainwindow.h
 

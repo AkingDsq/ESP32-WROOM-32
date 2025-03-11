@@ -53,16 +53,20 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ..\..\MusicPlayer.cpp \
+		..\..\bluetoothmanager.cpp \
 		..\..\error.cpp \
 		..\..\main.cpp \
 		..\..\mainwindow.cpp moc_MusicPlayer.cpp \
+		moc_bluetoothmanager.cpp \
 		moc_error.cpp \
 		moc_mainwindow.cpp
 OBJECTS       = MusicPlayer.obj \
+		bluetoothmanager.obj \
 		error.obj \
 		main.obj \
 		mainwindow.obj \
 		moc_MusicPlayer.obj \
+		moc_bluetoothmanager.obj \
 		moc_error.obj \
 		moc_mainwindow.obj
 DIST          = ..\..\android\AndroidManifest.xml \
@@ -74,8 +78,10 @@ DIST          = ..\..\android\AndroidManifest.xml \
 		..\..\android\gradlew.bat \
 		..\..\android\res\values\libs.xml \
 		..\..\android\res\xml\qtprovider_paths.xml ..\..\MusicPlayer.h \
+		..\..\bluetoothmanager.h \
 		..\..\error.h \
 		..\..\mainwindow.h ..\..\MusicPlayer.cpp \
+		..\..\bluetoothmanager.cpp \
 		..\..\error.cpp \
 		..\..\main.cpp \
 		..\..\mainwindow.cpp
@@ -500,8 +506,8 @@ distdir: FORCE
 	@if not exist $(DISTDIR) mkdir $(DISTDIR) & if not exist $(DISTDIR) exit 1
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)\
 	$(COPY_FILE) --parents E:\Qt\6.8.0\android_arm64_v8a\mkspecs\features\data\dummy.cpp $(DISTDIR)\
-	$(COPY_FILE) --parents ..\..\MusicPlayer.h ..\..\error.h ..\..\mainwindow.h $(DISTDIR)\
-	$(COPY_FILE) --parents ..\..\MusicPlayer.cpp ..\..\error.cpp ..\..\main.cpp ..\..\mainwindow.cpp $(DISTDIR)\
+	$(COPY_FILE) --parents ..\..\MusicPlayer.h ..\..\bluetoothmanager.h ..\..\error.h ..\..\mainwindow.h $(DISTDIR)\
+	$(COPY_FILE) --parents ..\..\MusicPlayer.cpp ..\..\bluetoothmanager.cpp ..\..\error.cpp ..\..\main.cpp ..\..\mainwindow.cpp $(DISTDIR)\
 	$(COPY_FILE) --parents ..\..\error.ui ..\..\mainwindow.ui $(DISTDIR)\
 
 
@@ -543,9 +549,9 @@ compiler_moc_predefs_clean:
 moc_predefs.h: E:\Qt\6.8.0\android_arm64_v8a\mkspecs\features\data\dummy.cpp
 	E:\Qt\Android\Sdk\ndk\26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++ -target aarch64-linux-android28 -fno-limit-debug-info -fPIC -fstack-protector-strong -DANDROID -g -std=gnu++1z -Wall -W -dM -E -o moc_predefs.h E:\Qt\6.8.0\android_arm64_v8a\mkspecs\features\data\dummy.cpp
 
-compiler_moc_header_make_all: moc_MusicPlayer.cpp moc_error.cpp moc_mainwindow.cpp
+compiler_moc_header_make_all: moc_MusicPlayer.cpp moc_bluetoothmanager.cpp moc_error.cpp moc_mainwindow.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_MusicPlayer.cpp moc_error.cpp moc_mainwindow.cpp
+	-$(DEL_FILE) moc_MusicPlayer.cpp moc_bluetoothmanager.cpp moc_error.cpp moc_mainwindow.cpp
 moc_MusicPlayer.cpp: ..\..\MusicPlayer.h \
 		..\..\mainwindow.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtWidgets\QMainWindow \
@@ -779,9 +785,181 @@ moc_MusicPlayer.cpp: ..\..\MusicPlayer.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtWidgets\QTextEdit \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtWidgets\QVBoxLayout \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtWidgets\QWidget \
+		..\..\bluetoothmanager.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothDeviceDiscoveryAgent \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothdevicediscoveryagent.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qtbluetoothglobal.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qtbluetooth-config.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qtbluetoothexports.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothDeviceInfo \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothdeviceinfo.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothUuid \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothuuid.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QtGlobal \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QMetaType \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QUuid \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\quuid.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QDebug \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothAddress \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothaddress.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QByteArray \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QString \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothSocket \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothsocket.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetooth.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothserviceinfo.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QSharedPointer \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothServiceInfo \
 		moc_predefs.h \
 		E:\Qt\6.8.0\mingw_64\bin\moc.exe
 	E:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include D:/git/work/ESP32-WROOM-32/APP/mimo1.0/Mimo/build/Qt_6_8_0_Clang_arm64_v8a-Debug/moc_predefs.h -IE:/Qt/6.8.0/android_arm64_v8a/mkspecs/android-clang -ID:/git/work/ESP32-WROOM-32/APP/mimo1.0/Mimo -IE:/Qt/6.8.0/android_arm64_v8a/include -IE:/Qt/6.8.0/android_arm64_v8a/include/QtWidgets -IE:/Qt/6.8.0/android_arm64_v8a/include/QtGui -IE:/Qt/6.8.0/android_arm64_v8a/include/QtBluetooth -IE:/Qt/6.8.0/android_arm64_v8a/include/QtNetwork -IE:/Qt/6.8.0/android_arm64_v8a/include/QtCore -I. -IE:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/include/c++ -IE:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include -IE:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/include ..\..\MusicPlayer.h -o moc_MusicPlayer.cpp
+
+moc_bluetoothmanager.cpp: ..\..\bluetoothmanager.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothDeviceDiscoveryAgent \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothdevicediscoveryagent.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qtbluetoothglobal.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qglobal.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtversionchecks.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtconfiginclude.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qconfig.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtcore-config.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtconfigmacros.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtdeprecationdefinitions.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtcoreexports.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcompilerdetection.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qprocessordetection.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qsystemdetection.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtdeprecationmarkers.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtclasshelpermacros.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtpreprocessorsupport.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qassert.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtnoop.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtypes.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtversion.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtypeinfo.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcontainerfwd.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qsysinfo.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qlogging.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qflags.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcompare_impl.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qatomic.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qbasicatomic.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qatomic_cxx11.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qgenericatomic.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qyieldcpu.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qconstructormacros.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qdarwinhelpers.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qexceptionhandling.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qforeach.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qttypetraits.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qfunctionpointer.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qglobalstatic.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qmalloc.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qminmax.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qnumeric.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qoverload.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qswap.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtenvironmentvariables.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtresource.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qttranslation.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qversiontagging.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qtbluetooth-config.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qtbluetoothexports.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QObject \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qobject.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qobjectdefs.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qnamespace.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcompare.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcomparehelpers.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\q20type_traits.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtmetamacros.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qobjectdefs_impl.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qfunctionaltools_impl.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstring.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qchar.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringview.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qbytearray.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qrefcount.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qarraydata.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qpair.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qarraydatapointer.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qarraydataops.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcontainertools_impl.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qxptype_traits.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\q20functional.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\q20memory.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qbytearrayalgorithms.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qbytearrayview.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringfwd.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringliteral.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringalgorithms.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qlatin1stringview.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qanystringview.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qutf8stringview.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringtokenizer.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringbuilder.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringconverter.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringconverter_base.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qlist.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qhashfunctions.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qiterator.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qbytearraylist.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringlist.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qalgorithms.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringmatcher.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcoreevent.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qscopedpointer.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qmetatype.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qdatastream.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qiodevicebase.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qfloat16.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qmath.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qiterable.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qmetacontainer.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcontainerinfo.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtaggedpointer.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qscopeguard.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qobject_impl.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qbindingstorage.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothDeviceInfo \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothdeviceinfo.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothUuid \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothuuid.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QtGlobal \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QMetaType \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QUuid \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\quuid.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qendian.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QDebug \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qdebug.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtextstream.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcontiguouscache.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qsharedpointer.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qshareddata.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qsharedpointer_impl.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qmap.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qshareddata_impl.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qset.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qhash.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qvarlengtharray.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothAddress \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothaddress.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QByteArray \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QString \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothSocket \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothsocket.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetooth.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothserviceinfo.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QList \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QSharedPointer \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QVariant \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qvariant.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\q23utility.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qiodevice.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothServiceInfo \
+		moc_predefs.h \
+		E:\Qt\6.8.0\mingw_64\bin\moc.exe
+	E:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include D:/git/work/ESP32-WROOM-32/APP/mimo1.0/Mimo/build/Qt_6_8_0_Clang_arm64_v8a-Debug/moc_predefs.h -IE:/Qt/6.8.0/android_arm64_v8a/mkspecs/android-clang -ID:/git/work/ESP32-WROOM-32/APP/mimo1.0/Mimo -IE:/Qt/6.8.0/android_arm64_v8a/include -IE:/Qt/6.8.0/android_arm64_v8a/include/QtWidgets -IE:/Qt/6.8.0/android_arm64_v8a/include/QtGui -IE:/Qt/6.8.0/android_arm64_v8a/include/QtBluetooth -IE:/Qt/6.8.0/android_arm64_v8a/include/QtNetwork -IE:/Qt/6.8.0/android_arm64_v8a/include/QtCore -I. -IE:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/include/c++ -IE:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include -IE:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/include ..\..\bluetoothmanager.h -o moc_bluetoothmanager.cpp
 
 moc_error.cpp: ..\..\error.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtWidgets\QWidget \
@@ -1481,8 +1659,180 @@ MusicPlayer.obj: ..\..\MusicPlayer.cpp ..\..\MusicPlayer.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtGui\qpen.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtWidgets\QTextEdit \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtWidgets\QVBoxLayout \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtWidgets\QWidget
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtWidgets\QWidget \
+		..\..\bluetoothmanager.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothDeviceDiscoveryAgent \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothdevicediscoveryagent.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qtbluetoothglobal.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qtbluetooth-config.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qtbluetoothexports.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothDeviceInfo \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothdeviceinfo.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothUuid \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothuuid.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QtGlobal \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QMetaType \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QUuid \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\quuid.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QDebug \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothAddress \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothaddress.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QByteArray \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QString \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothSocket \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothsocket.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetooth.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothserviceinfo.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QSharedPointer \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothServiceInfo \
+		..\..\error.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtWidgets\QPushButton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o MusicPlayer.obj ..\..\MusicPlayer.cpp
+
+bluetoothmanager.obj: ..\..\bluetoothmanager.cpp ..\..\BluetoothManager.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothDeviceDiscoveryAgent \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothdevicediscoveryagent.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qtbluetoothglobal.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qglobal.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtversionchecks.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtconfiginclude.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qconfig.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtcore-config.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtconfigmacros.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtdeprecationdefinitions.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtcoreexports.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcompilerdetection.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qprocessordetection.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qsystemdetection.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtdeprecationmarkers.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtclasshelpermacros.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtpreprocessorsupport.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qassert.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtnoop.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtypes.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtversion.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtypeinfo.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcontainerfwd.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qsysinfo.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qlogging.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qflags.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcompare_impl.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qatomic.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qbasicatomic.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qatomic_cxx11.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qgenericatomic.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qyieldcpu.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qconstructormacros.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qdarwinhelpers.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qexceptionhandling.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qforeach.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qttypetraits.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qfunctionpointer.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qglobalstatic.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qmalloc.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qminmax.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qnumeric.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qoverload.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qswap.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtenvironmentvariables.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtresource.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qttranslation.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qversiontagging.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qtbluetooth-config.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qtbluetoothexports.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QObject \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qobject.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qobjectdefs.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qnamespace.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcompare.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcomparehelpers.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\q20type_traits.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtmetamacros.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qobjectdefs_impl.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qfunctionaltools_impl.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstring.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qchar.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringview.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qbytearray.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qrefcount.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qarraydata.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qpair.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qarraydatapointer.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qarraydataops.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcontainertools_impl.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qxptype_traits.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\q20functional.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\q20memory.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qbytearrayalgorithms.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qbytearrayview.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringfwd.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringliteral.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringalgorithms.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qlatin1stringview.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qanystringview.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qutf8stringview.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringtokenizer.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringbuilder.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringconverter.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringconverter_base.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qlist.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qhashfunctions.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qiterator.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qbytearraylist.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringlist.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qalgorithms.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qstringmatcher.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcoreevent.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qscopedpointer.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qmetatype.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qdatastream.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qiodevicebase.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qfloat16.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qmath.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qiterable.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qmetacontainer.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcontainerinfo.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtaggedpointer.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qscopeguard.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qobject_impl.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qbindingstorage.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothDeviceInfo \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothdeviceinfo.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothUuid \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothuuid.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QtGlobal \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QMetaType \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QUuid \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\quuid.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qendian.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QDebug \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qdebug.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qtextstream.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcontiguouscache.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qsharedpointer.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qshareddata.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qsharedpointer_impl.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qmap.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qshareddata_impl.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qset.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qhash.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qvarlengtharray.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothAddress \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothaddress.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QByteArray \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QString \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothSocket \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothsocket.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetooth.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothserviceinfo.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QList \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QSharedPointer \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QVariant \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qvariant.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\q23utility.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qiodevice.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothServiceInfo
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o bluetoothmanager.obj ..\..\bluetoothmanager.cpp
 
 error.obj: ..\..\error.cpp ..\..\error.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtWidgets\QWidget \
@@ -2168,6 +2518,31 @@ mainwindow.obj: ..\..\mainwindow.cpp ..\..\mainwindow.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtWidgets\QVBoxLayout \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtWidgets\QWidget \
 		..\..\MusicPlayer.h \
+		..\..\bluetoothmanager.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothDeviceDiscoveryAgent \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothdevicediscoveryagent.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qtbluetoothglobal.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qtbluetooth-config.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qtbluetoothexports.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothDeviceInfo \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothdeviceinfo.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothUuid \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothuuid.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QtGlobal \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QMetaType \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QUuid \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\quuid.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QDebug \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothAddress \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothaddress.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QByteArray \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QString \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothSocket \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothsocket.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetooth.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothserviceinfo.h \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QSharedPointer \
+		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothServiceInfo \
 		..\..\error.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtWidgets\QPushButton.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QPermissions \
@@ -2203,7 +2578,6 @@ mainwindow.obj: ..\..\mainwindow.cpp ..\..\mainwindow.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcborcommon.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qdatetime.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qregularexpression.h \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\quuid.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcbormap.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcborstream.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qcborstreamreader.h \
@@ -2293,7 +2667,6 @@ mainwindow.obj: ..\..\mainwindow.cpp ..\..\mainwindow.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qurlquery.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qvarianthash.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QHash \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QString \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qvariantlist.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\qvariantmap.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QMap \
@@ -2326,7 +2699,6 @@ mainwindow.obj: ..\..\mainwindow.cpp ..\..\mainwindow.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QFlags \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtNetwork\qformdatabuilder.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtNetwork\qhttpmultipart.h \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QByteArray \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QIODevice \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtNetwork\QNetworkRequest \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtNetwork\qhostinfo.h \
@@ -2340,7 +2712,6 @@ mainwindow.obj: ..\..\mainwindow.cpp ..\..\mainwindow.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtNetwork\qsslconfiguration.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtNetwork\QSslPreSharedKeyAuthenticator \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtNetwork\qsslpresharedkeyauthenticator.h \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QMetaType \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtNetwork\qnetworkcookie.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtNetwork\qnetworkcookiejar.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtNetwork\qnetworkdatagram.h \
@@ -2368,31 +2739,11 @@ mainwindow.obj: ..\..\mainwindow.cpp ..\..\mainwindow.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtNetwork\QSslSocket \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtNetwork\qtnetworkversion.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtNetwork\qudpsocket.h \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qtbluetoothglobal.h \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qtbluetooth-config.h \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qtbluetoothexports.h \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetooth.h \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothaddress.h \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QDebug \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothdevicediscoveryagent.h \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothDeviceInfo \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothdeviceinfo.h \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothUuid \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothuuid.h \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QtGlobal \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QUuid \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothAddress \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothhostinfo.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothlocaldevice.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothHostInfo \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothserver.h \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothSocket \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothsocket.h \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothserviceinfo.h \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtCore\QSharedPointer \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothServiceInfo \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qbluetoothservicediscoveryagent.h \
-		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\QBluetoothDeviceDiscoveryAgent \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qlowenergyadvertisingdata.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qlowenergyadvertisingparameters.h \
 		E:\Qt\6.8.0\android_arm64_v8a\include\QtBluetooth\qlowenergycontroller.h \
@@ -2415,6 +2766,9 @@ mainwindow.obj: ..\..\mainwindow.cpp ..\..\mainwindow.h \
 
 moc_MusicPlayer.obj: moc_MusicPlayer.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_MusicPlayer.obj moc_MusicPlayer.cpp
+
+moc_bluetoothmanager.obj: moc_bluetoothmanager.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_bluetoothmanager.obj moc_bluetoothmanager.cpp
 
 moc_error.obj: moc_error.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_error.obj moc_error.cpp

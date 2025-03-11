@@ -24,7 +24,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(musicPlayer_page_2, &QPushButton::clicked, this, [this]() { on_stackedWidget_currentChanged(2); });
 
 
-    init();
+    //init();
 }
 
 MainWindow::~MainWindow()
@@ -53,25 +53,11 @@ void MainWindow::init()
     // 发现esp32设备
     QBluetoothDeviceDiscoveryAgent *discoveryAgent = new QBluetoothDeviceDiscoveryAgent(this);
     connect(discoveryAgent, &QBluetoothDeviceDiscoveryAgent::deviceDiscovered, [](const QBluetoothDeviceInfo &device) {
-        if (device.name().contains("ESP32test")) {
+        if (device.name().contains("ESP32_SPP")) {
             qDebug() << "发现 ESP32 设备";
         }
     });
     discoveryAgent->start();
-
-    error *e = new error;
-    QLabel* message = e->getMessageLabel();
-    QString m = "正在连接蓝牙";
-    // 检查连接状态（需先建立连接）
-    QBluetoothSocket *socket = new QBluetoothSocket(QBluetoothServiceInfo::RfcommProtocol);
-    connect(socket, &QBluetoothSocket::connected, [&m]() {
-        m = "已连接到 ESP32";
-    });
-    connect(socket, &QBluetoothSocket::disconnected, [&m]() {
-        m = "连接已断开";
-    });
-    message->setText(m);
-    e->show();
 
     // 请求摄像头权限
     QCameraPermission cameraPermission;
