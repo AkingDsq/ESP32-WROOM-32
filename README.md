@@ -45,6 +45,37 @@
 
 通过`ls /mnt/hgfs`验证是否显示共享内容 
 
+#### 使用filezilla传输文件
+
+`https://filezilla-project.org/download.php?type=client` 
+
+1.在使用之前要打开Ubuntu的FTP服务
+打开 Ubuntu 的终端窗口，然后执行如下命令来安装 FTP 服务：
+
+`sudo apt-get install vsftpd`
+
+等待软件自动安装，安装完成以后使用如下 VI 命令打开/etc/vsftpd.conf，命令如下：
+
+`sudo vi /etc/vsftpd.conf` （也可以使用图形化操作修改/etc/vsftpd.conf） 
+
+打开以后 vsftpd.conf 文件以后找到如下两行，确保两行前面没有“#”，有的话就删除掉
+
+local_enable=YES 
+
+write_enable=YES
+
+保存退出，并且使用如下命令重启 FTP 服务：
+
+`sudo /etc/init.d/vsftpd restart` 
+
+在虚拟机中输入`ifconfig`得到虚拟机ip地址,断端口一般默认是22或者21 
+
+
+
+#### 使用MobaXterm远程连接Ubuntu 
+
+``
+
 ### 下载ubuntu-24.04.2-desktop-amd64.iso（ubuntu镜像） 
 
 `https://mirrors.aliyun.com/ubuntu-releases/?spm=a2c6h.25603864.0.0.6781d6deYyXSkU` 
