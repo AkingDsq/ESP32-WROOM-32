@@ -230,6 +230,8 @@ raspi2b          Raspberry Pi 2B
 
 `sudo fdisk -l 2024-11-19-raspios-bookworm-armhf-full.img` 
 
+`sudo fdisk -l 2024-11-19-raspios-bookworm-armhf-lite.img`
+
 输出示例如下：
 
 Disk raspios-bookworm-armhf-full.img: 4 GiB, 4294967296 bytes, 8388608 sectors 
@@ -270,6 +272,8 @@ offset = 8192 × 512 = 4,194,304
 
 `sudo mount -o loop,offset=4194304 2024-11-19-raspios-bookworm-armhf-full.img /mnt/img` 
 
+`sudo mount -o loop,offset=4194304 2024-11-19-raspios-bookworm-armhf-lite.img /mnt/img` 
+
 #### 如果需要卸载`sudo umount /mnt/img`
 
 ### 启动
@@ -303,11 +307,16 @@ qemu-system-arm \
 
 -device virtio-net-device,netdev=net0：将设备绑定到网络后端。 
 
+-nographic：不使用图形化界面，仅仅使用串口
+
 -display sdl # 使用 SDL 图形库 或 -display gtk # 使用 GTK 图形界面 或 -vnc :0 # 启用 VNC 服务（需 VNC 客户端连接） 或-nographic # 禁用图形，仅用串口输出
 
 -enable-kvm \    # 启用 KVM 加速（需主机支持） 
 
-`qemu-system-arm \-M raspi2b \-cpu arm1176 \-m 1G \-kernel /mnt/img/kernel7.img \-dtb /mnt/img/bcm2708-rpi-b.dtb \-drive file=2024-11-19-raspios-bookworm-armhf-full.img,format=raw \-append "root=/dev/sda2 console=ttyAMA0,115200" \-net user,hostfwd=tcp::5022-:22 \-display gtk \-serial stdio` 
+`qemu-system-arm \-M raspi2b \-cpu arm1176 \-m 1G \-kernel /mnt/img/kernel7.img \-dtb /mnt/img/bcm2708-rpi-b.dtb \-drive file=2024-11-19-raspios-bookworm-armhf-full.img,format=raw \-append "root=/dev/sda2 console=ttyAMA0,115200" \-net user,hostfwd=tcp::5022-:22 \-display gtk \-serial stdio` 图形化镜像2024-11-19-raspios-bookworm-armhf-full.img 
+
+
+`qemu-system-arm \-M versatilepb \-cpu arm1176 \-m 256M \-kernel /mnt/img/kernel7.img \-dtb /mnt/img/bcm2708-rpi-b.dtb \-drive file=2024-11-19-raspios-bookworm-armhf-lite.img,format=raw \-append "root=/dev/sda2 console=ttyAMA0,115200" \-net user,hostfwd=tcp::5022-:22 \-display curses \-serial stdio` 无图形2024-11-19-raspios-bookworm-armhf-lite.img 
 
 #### 报错：qemu-system-arm: Invalid SD card size: 11.5 GiB,SD card size has to be a power of 2, e.g. 16 GiB.You can resize disk images with 'qemu-img resize <imagefile> <new-size>'(note that this will lose data if you make the image smaller than it currently is).
 
