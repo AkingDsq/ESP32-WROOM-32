@@ -259,9 +259,11 @@ cmake --build . --parallel 4
 # 安装
 cmake --install .
 
-`cmake -GNinja -DCMAKE_BUILD_TYPE=RelWithDebInfo -DINPUT_opengl=es2 -DQT_BUILD_EXAMPLES=OFF -DQT_BUILD_TESTS=OFF -DCMAKE_INSTALL_PREFIX=/home/dsq2/work/qt-everywhere-src-6.8.2/qt6Host` 
+`./configure \-prefix /opt/qt6-armhf \-extprefix /home/dsq2/work/qt-cross/arm \-xplatform linux-arm-gnueabihf-g++ \-device-option CROSS_COMPILE=arm-linux-gnueabihf- \-sysroot /home/dsq2/work/sysroot \-opensource -confirm-license \-static \-no-pkg-config \-nomake examples \-skip qtdoc \-qt-zlib \-qt-libpng  \-opengl es2 -- -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE` 
 
-./configure -release -opengl es2 -device linux-rasp-pi4-v3d -device-option CROSS_COMPILE=arm-linux-gnueabihf- -sysroot /path/to/raspberrypi/rootfs -prefix /usr/local/qt5pi -opensource -confirm-license -skip webengine -nomake examples -nomake tests
+`make -j$(nproc)` 
+
+`sudo make install`
 
 ## QEMU模拟
 
