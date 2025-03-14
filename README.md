@@ -167,7 +167,7 @@ QMAKE_STRIP             = arm-linux-gnueabihf-strip
 
 -xplatform linux-arm-gnueabihf-g++ \ # 指定目标平台 
 
--prefix /home/akingdsq/work/qt-everywhere-src-6.8.2/arm-release \  # 安装路径 
+-prefix /home/akingdsq/work/qt-everywhere-src-6.8.2/arm-release \  # 目标机安装路径 
 
 -I /home/akingdsq/work/tslib_release/include \  # tslib 头文件include路径 
 
@@ -259,8 +259,29 @@ cmake --build . --parallel 4
 # 安装
 cmake --install .
 
-`./configure \-prefix /opt/qt6-armhf \-extprefix /home/dsq2/work/qt-cross/arm \-xplatform linux-arm-gnueabihf-g++ \-device-option CROSS_COMPILE=arm-linux-gnueabihf- \-sysroot /home/dsq2/work/sysroot \-opensource -confirm-license \-static \-no-pkg-config \-nomake examples \-skip qtdoc \-qt-zlib \-qt-libpng  \-opengl es2 -- -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE` 
+# 进入sysroot目录
+cd /home/dsq2/work/sysroot
 
+# 使用apt-get下载armhf版本的库（需配置多架构）
+sudo apt update  # 更新软件源
+# 将主机中的依赖库复制到目标文件系统的对应目录（如 /lib）
+sudo cp -L /lib/x86_64-linux-gnu/libc.so.6 /home/dsq2/work/sysroot/lib/ 
+
+# 下载ARMHF版本的库
+wget http://ports.ubuntu.com/ubuntu-ports/pool/main/z/zstd/libzstd-dev_1.5.5+dfsg2-3ubuntu1_armhf.deb
+wget http://ports.ubuntu.com/ubuntu-ports/pool/main/d/dbus/libdbus-1-dev_1.12.20-2ubuntu4_armhf.deb
+wget http://ports.ubuntu.com/ubuntu-ports/pool/main/g/glib2.0/libglib2.0-dev_2.76.3-0ubuntu1_armhf.deb
+
+# 解压到sysroot
+sudo dpkg -x libzstd-dev_*.deb /home/dsq2/work/sysroot/
+sudo dpkg -x libdbus-1-dev_*.deb /home/dsq2/work/sysroot/
+sudo dpkg -x libglib2.0-dev_*.deb /home/dsq2/work/sysroot/
+# OpenGL/EGL
+wget http://ports.ubuntu.com/ubuntu-ports/pool/main/m/mesa/libgles2-mesa-dev_23.2.1-1ubuntu3.1_armhf.deb
+sudo dpkg -x libgles2-mesa-dev_*.deb /home/dsq2/work/sysroot/
+
+`./configure \-prefix /opt/qt6-armhf \-extprefix /home/dsq2/work/qt-cross/arm \-xplatform linux-arm-gnueabihf-g++ \-device-option CROSS_COMPILE=arm-linux-gnueabihf- \-opensource -confirm-license \-no-pkg-config \-nomake examples \-no-feature-dbus \-no-feature-zstd \-skip qtdoc \-qt-libpng  \-no-opengl \-skip qtwebengine \-skip qtwayland \-no-xcb -- -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE \-DCMAKE_TOOLCHAIN_FILE=/home/dsq2/work/toolchain.cmake \-DCMAKE_SYSROOT=/home/dsq2/work/sysroot` 
+ 
 `make -j$(nproc)` 
 
 `sudo make install`
