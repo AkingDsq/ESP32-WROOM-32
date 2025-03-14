@@ -228,6 +228,37 @@ tslib需先编译并安装，Qt通过 -I 和 -L 参数引用其路径。
 
 Sysroot：目标系统的根文件系统（如 /opt/sysroot-arm） 
 
+#### qtHost 
+
+##### 1. 创建源码目录并解压
+mkdir qt6Host
+tar -xvf qt-everywhere-src-6.2.4.tar.xz -C qt6Host --strip-components 1
+
+##### 2. 创建独立的构建目录
+mkdir qt6HostBuild && cd qt6HostBuild
+
+#### 3. 配置构建选项（示例）
+../qt-cross/configure -prefix /home/dsq2/work/qt6Host
+
+##### 4. 编译并安装
+cmake --build . --parallel 4
+cmake --install . 
+
+##### 创建cmake toolcain文件
+
+使用cmake交叉编译Qt，需要一个toolcain.cmake文件，在文件中指定编译器路径，sysroot路径，编译链接参数等。 示例创建一个配置文件lubancat_toolchain.cmake：
+
+##### 创建lubancat设备文件 
+
+##### 编译配置 
+
+#
+
+# 编译
+cmake --build . --parallel 4
+# 安装
+cmake --install .
+
 `cmake -GNinja -DCMAKE_BUILD_TYPE=RelWithDebInfo -DINPUT_opengl=es2 -DQT_BUILD_EXAMPLES=OFF -DQT_BUILD_TESTS=OFF -DCMAKE_INSTALL_PREFIX=/home/dsq2/work/qt-everywhere-src-6.8.2/qt6Host` 
 
 ./configure -release -opengl es2 -device linux-rasp-pi4-v3d -device-option CROSS_COMPILE=arm-linux-gnueabihf- -sysroot /path/to/raspberrypi/rootfs -prefix /usr/local/qt5pi -opensource -confirm-license -skip webengine -nomake examples -nomake tests
