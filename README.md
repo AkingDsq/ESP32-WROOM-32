@@ -97,11 +97,15 @@ write_enable=YES
 
 `sudo apt update` 
 
-`sudo apt install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf` 
+`sudo apt install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf` 32位 
+
+`sudo apt-get install gcc-aarch64-linux-gnu` 64位 
 
 #### 验证编译器, 输出应包含 "Target: arm-linux-gnueabihf" 
  
 `arm-linux-gnueabihf-g++ --version` 
+
+`aarch64-linux-gnu-gcc --version` 
 
 #### 安装基础依赖 
 
@@ -120,7 +124,14 @@ write_enable=YES
 执行完make命令后就会生成文件到输出目录 
 
 ### 交叉编译qt-everywhere-src-6.8.2.tar.xz 
- 
+参考文档： 
+
+`https://doc.qt.io/qt-6/zh/configure-linux-device.html` 
+
+`https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html#cross-compiling-for-linux` 
+
+`https://www.qt.io/blog/standalone-boot2qt-/-yocto-sdk-cmake-toolchain`
+
 #### 交叉编译
 
 复制进文件夹解压后，进入解压目录 
@@ -199,6 +210,27 @@ tslib需先编译并安装，Qt通过 -I 和 -L 参数引用其路径。
 `sudo chown -R $USER:$USER /home/akingdsq/work/qt-everywhere-src-6.8.2/arm-release && make -j$(nproc) && sudo make install`
 
 执行完make命令后就会生成文件到输出目录 
+
+### 交叉编译Qt库
+安装必要依赖 
+
+`sudo apt update` 
+
+`sudo apt install build-essential ninja-build python3 perl git flex bison gperf \libxcb* libgl1-mesa-dev libglu1-mesa-dev libssl-dev libicu-dev libsqlite3-dev \libclang-dev zlib1g-dev` 
+
+获取交叉编译工具链 
+
+假设目标平台为ARM架构（如Raspberry Pi），从供应商获取工具链（示例路径：/opt/toolchain-arm），需包含：
+
+编译器：arm-linux-gnueabihf-gcc 和 arm-linux-gnueabihf-g++ 
+
+`sudo apt install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf`
+
+Sysroot：目标系统的根文件系统（如 /opt/sysroot-arm） 
+
+`cmake -GNinja -DCMAKE_BUILD_TYPE=RelWithDebInfo -DINPUT_opengl=es2 -DQT_BUILD_EXAMPLES=OFF -DQT_BUILD_TESTS=OFF -DCMAKE_INSTALL_PREFIX=/home/dsq2/work/qt-everywhere-src-6.8.2/qt6Host` 
+
+./configure -release -opengl es2 -device linux-rasp-pi4-v3d -device-option CROSS_COMPILE=arm-linux-gnueabihf- -sysroot /path/to/raspberrypi/rootfs -prefix /usr/local/qt5pi -opensource -confirm-license -skip webengine -nomake examples -nomake tests
 
 ## QEMU模拟
 
