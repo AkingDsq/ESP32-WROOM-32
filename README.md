@@ -454,3 +454,35 @@ sudo resize2fs /dev/mapper/loop10p2
 
 sudo losetup -d /dev/loop10
 #### 
+
+$ sudo dpkg --add-architecture armfh
+$ sudo vim /etc/apt/sources.list.d/ubuntu-armfh.sources
+Types: deb
+URIs: http://ports.ubuntu.com/ubuntu-ports/
+Suites: noble noble-updates noble-security
+Components: main restricted universe multiverse
+Architectures: armfh
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+$ sudo apt update
+$ sudo apt install -y libudev-dev:arm64 libmtdev-dev:arm64
+
+toolchain.cmake 
+
+set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_SYSTEM_PROCESSOR arm)
+
+# Path to your cross-compiler
+set(CMAKE_C_COMPILER /usr/bin/arm-linux-gnueabihf-gcc)
+set(CMAKE_CXX_COMPILER /usr/bin/arm-linux-gnueabihf-g++)
+
+set(CMAKE_LINKER "/usr/bin/arm-linux-gnueabihf-ld")
+set(CMAKE_AR "/usr/bin/arm-linux-gnueabihf-ar")
+set(CMAKE_FIND_ROOT_PATH /usr/arm-linux-gnueabihf)
+
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY) 
+
+./configure \-prefix /home/dsq2/work/armfh \-qt-host-path /home/dsq2/Qt/6.8.2/gcc_64 \-platform arm-linux-gnueabihf-g++ \-device linux-arm-gnueabihf-g++ \-device-option CROSS_COMPILE=arm-linux-gnueabihf- \-no-opengl \-skip qtopcua -skip qtwebengine -skip qtwebview -skip qtserialport -skip qtlocation \-no-feature-brotli -no-feature-hunspell \-- -DCMAKE_TOOLCHAIN_FILE=/home/dsq2/work/toolchain.cmake 
