@@ -15,7 +15,12 @@
 ![导入库](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/导入库.png)
 
 导入后测试程序在`esp32_oled`文件夹中,将程序拷贝至`ESP32-WROOM-32`后就会显示hellow world
-## （二）
+## （二）蓝牙双向通信协议
+
+指令类型	     发送方	      指令内容	  预期响应	      数据格式
+模式切换	  Qt Android	     "AI"	     无	        UTF-8字符串
+模式确认	  ESP32(Source)	  "music"	 发送音频数据流	PCM 16bit/44kHz
+状态反馈	    ESP32	        "OK"	 通知模式状态	   BLE NOTIFY
 
 ## （三）
 
