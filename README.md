@@ -15,7 +15,12 @@
 ![导入库](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/导入库.png)
 
 导入后测试程序在`esp32_oled`文件夹中,将程序拷贝至`ESP32-WROOM-32`后就会显示hellow world
-## （二）
+## （二）蓝牙双向通信协议
+
+指令类型	     发送方	      指令内容	  预期响应	      数据格式
+模式切换	  Qt Android	     "AI"	     无	        UTF-8字符串
+模式确认	  ESP32(Source)	  "music"	 发送音频数据流	PCM 16bit/44kHz
+状态反馈	    ESP32	        "OK"	 通知模式状态	   BLE NOTIFY
 
 ## （三）
 
@@ -45,6 +50,37 @@
 
 通过`ls /mnt/hgfs`验证是否显示共享内容 
 
+#### 使用filezilla传输文件
+
+`https://filezilla-project.org/download.php?type=client` 
+
+1.在使用之前要打开Ubuntu的FTP服务
+打开 Ubuntu 的终端窗口，然后执行如下命令来安装 FTP 服务：
+
+`sudo apt-get install vsftpd`
+
+等待软件自动安装，安装完成以后使用如下 VI 命令打开/etc/vsftpd.conf，命令如下：
+
+`sudo vi /etc/vsftpd.conf` （也可以使用图形化操作修改/etc/vsftpd.conf） 
+
+打开以后 vsftpd.conf 文件以后找到如下两行，确保两行前面没有“#”，有的话就删除掉
+
+local_enable=YES 
+
+write_enable=YES
+
+保存退出，并且使用如下命令重启 FTP 服务：
+
+`sudo /etc/init.d/vsftpd restart` 
+
+在虚拟机中输入`ifconfig`得到虚拟机ip地址,断端口一般默认是22或者21 
+
+
+
+#### 使用MobaXterm远程连接Ubuntu 
+
+``
+
 ### 下载ubuntu-24.04.2-desktop-amd64.iso（ubuntu镜像） 
 
 `https://mirrors.aliyun.com/ubuntu-releases/?spm=a2c6h.25603864.0.0.6781d6deYyXSkU` 
@@ -66,11 +102,15 @@
 
 `sudo apt update` 
 
-`sudo apt install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf` 
+`sudo apt install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf` 32位 
+
+`sudo apt-get install gcc-aarch64-linux-gnu` 64位 
 
 #### 验证编译器, 输出应包含 "Target: arm-linux-gnueabihf" 
  
 `arm-linux-gnueabihf-g++ --version` 
+
+`aarch64-linux-gnu-gcc --version` 
 
 #### 安装基础依赖 
 
@@ -89,7 +129,14 @@
 执行完make命令后就会生成文件到输出目录 
 
 ### 交叉编译qt-everywhere-src-6.8.2.tar.xz 
- 
+参考文档： 
+
+`https://doc.qt.io/qt-6/zh/configure-linux-device.html` 
+
+`https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html#cross-compiling-for-linux` 
+
+`https://www.qt.io/blog/standalone-boot2qt-/-yocto-sdk-cmake-toolchain`
+
 #### 交叉编译
 
 复制进文件夹解压后，进入解压目录 
@@ -125,7 +172,7 @@ QMAKE_STRIP             = arm-linux-gnueabihf-strip
 
 -xplatform linux-arm-gnueabihf-g++ \ # 指定目标平台 
 
--prefix /home/akingdsq/work/qt-everywhere-src-6.8.2/arm-release \  # 安装路径 
+-prefix /home/akingdsq/work/qt-everywhere-src-6.8.2/arm-release \  # 目标机安装路径 
 
 -I /home/akingdsq/work/tslib_release/include \  # tslib 头文件include路径 
 
@@ -169,6 +216,81 @@ tslib需先编译并安装，Qt通过 -I 和 -L 参数引用其路径。
 
 执行完make命令后就会生成文件到输出目录 
 
+### 交叉编译Qt库
+安装必要依赖 
+
+`sudo apt update` 
+
+`sudo apt install build-essential ninja-build python3 perl git flex bison gperf \libxcb* libgl1-mesa-dev libglu1-mesa-dev libssl-dev libicu-dev libsqlite3-dev \libclang-dev zlib1g-dev` 
+
+获取交叉编译工具链 
+
+假设目标平台为ARM架构（如Raspberry Pi），从供应商获取工具链（示例路径：/opt/toolchain-arm），需包含：
+
+编译器：arm-linux-gnueabihf-gcc 和 arm-linux-gnueabihf-g++ 
+
+`sudo apt install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf`
+
+Sysroot：目标系统的根文件系统（如 /opt/sysroot-arm） 
+
+#### qtHost 
+
+##### 1. 创建源码目录并解压
+mkdir qt6Host
+tar -xvf qt-everywhere-src-6.2.4.tar.xz -C qt6Host --strip-components 1
+
+##### 2. 创建独立的构建目录
+mkdir qt6HostBuild && cd qt6HostBuild
+
+#### 3. 配置构建选项（示例）
+../qt-cross/configure -prefix /home/dsq2/work/qt6Host
+
+##### 4. 编译并安装
+cmake --build . --parallel 4
+cmake --install . 
+
+##### 创建cmake toolcain文件
+
+使用cmake交叉编译Qt，需要一个toolcain.cmake文件，在文件中指定编译器路径，sysroot路径，编译链接参数等。 示例创建一个配置文件lubancat_toolchain.cmake：
+
+##### 创建lubancat设备文件 
+
+##### 编译配置 
+
+#
+
+# 编译
+cmake --build . --parallel 4
+# 安装
+cmake --install .
+
+# 进入sysroot目录
+cd /home/dsq2/work/sysroot
+
+# 使用apt-get下载armhf版本的库（需配置多架构）
+sudo apt update  # 更新软件源
+# 将主机中的依赖库复制到目标文件系统的对应目录（如 /lib）
+sudo cp -L /lib/x86_64-linux-gnu/libc.so.6 /home/dsq2/work/sysroot/lib/ 
+
+# 下载ARMHF版本的库
+wget http://ports.ubuntu.com/ubuntu-ports/pool/main/z/zstd/libzstd-dev_1.5.5+dfsg2-3ubuntu1_armhf.deb
+wget http://ports.ubuntu.com/ubuntu-ports/pool/main/d/dbus/libdbus-1-dev_1.12.20-2ubuntu4_armhf.deb
+wget http://ports.ubuntu.com/ubuntu-ports/pool/main/g/glib2.0/libglib2.0-dev_2.76.3-0ubuntu1_armhf.deb
+
+# 解压到sysroot
+sudo dpkg -x libzstd-dev_*.deb /home/dsq2/work/sysroot/
+sudo dpkg -x libdbus-1-dev_*.deb /home/dsq2/work/sysroot/
+sudo dpkg -x libglib2.0-dev_*.deb /home/dsq2/work/sysroot/
+# OpenGL/EGL
+wget http://ports.ubuntu.com/ubuntu-ports/pool/main/m/mesa/libgles2-mesa-dev_23.2.1-1ubuntu3.1_armhf.deb
+sudo dpkg -x libgles2-mesa-dev_*.deb /home/dsq2/work/sysroot/
+
+`./configure \-prefix /opt/qt6-armhf \-extprefix /home/dsq2/work/qt-cross/arm \-xplatform linux-arm-gnueabihf-g++ \-device-option CROSS_COMPILE=arm-linux-gnueabihf- \-opensource -confirm-license \-no-pkg-config \-nomake examples \-no-feature-dbus \-no-feature-zstd \-skip qtdoc \-qt-libpng  \-no-opengl \-skip qtwebengine \-skip qtwayland \-no-xcb -- -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE \-DCMAKE_TOOLCHAIN_FILE=/home/dsq2/work/toolchain.cmake \-DCMAKE_SYSROOT=/home/dsq2/work/sysroot` 
+ 
+`make -j$(nproc)` 
+
+`sudo make install`
+
 ## QEMU模拟
 
 ## qemu安装 
@@ -198,6 +320,8 @@ raspi2b          Raspberry Pi 2B
 ### 查看镜像的信息 
 
 `sudo fdisk -l 2024-11-19-raspios-bookworm-armhf-full.img` 
+
+`sudo fdisk -l 2024-11-19-raspios-bookworm-armhf-lite.img`
 
 输出示例如下：
 
@@ -239,6 +363,8 @@ offset = 8192 × 512 = 4,194,304
 
 `sudo mount -o loop,offset=4194304 2024-11-19-raspios-bookworm-armhf-full.img /mnt/img` 
 
+`sudo mount -o loop,offset=4194304 2024-11-19-raspios-bookworm-armhf-lite.img /mnt/img` 
+
 #### 如果需要卸载`sudo umount /mnt/img`
 
 ### 启动
@@ -272,11 +398,16 @@ qemu-system-arm \
 
 -device virtio-net-device,netdev=net0：将设备绑定到网络后端。 
 
+-nographic：不使用图形化界面，仅仅使用串口
+
 -display sdl # 使用 SDL 图形库 或 -display gtk # 使用 GTK 图形界面 或 -vnc :0 # 启用 VNC 服务（需 VNC 客户端连接） 或-nographic # 禁用图形，仅用串口输出
 
 -enable-kvm \    # 启用 KVM 加速（需主机支持） 
 
-`qemu-system-arm \-M raspi2b \-cpu arm1176 \-m 1G \-kernel /mnt/img/kernel7.img \-dtb /mnt/img/bcm2708-rpi-b.dtb \-drive file=2024-11-19-raspios-bookworm-armhf-full.img,format=raw \-append "root=/dev/sda2 console=ttyAMA0,115200" \-net user,hostfwd=tcp::5022-:22 \-display gtk \-serial stdio` 
+`qemu-system-arm \-M raspi2b \-cpu arm1176 \-m 1G \-kernel /mnt/img/kernel7.img \-dtb /mnt/img/bcm2708-rpi-b.dtb \-drive file=2024-11-19-raspios-bookworm-armhf-full.img,format=raw \-append "root=/dev/sda2 console=ttyAMA0,115200" \-net user,hostfwd=tcp::5022-:22 \-display gtk \-serial stdio` 图形化镜像2024-11-19-raspios-bookworm-armhf-full.img 
+
+
+`qemu-system-arm \-M versatilepb \-cpu arm1176 \-m 256M \-kernel /mnt/img/kernel7.img \-dtb /mnt/img/bcm2708-rpi-b.dtb \-drive file=2024-11-19-raspios-bookworm-armhf-lite.img,format=raw \-append "root=/dev/sda2 console=ttyAMA0,115200" \-net user,hostfwd=tcp::5022-:22 \-display curses \-serial stdio` 无图形2024-11-19-raspios-bookworm-armhf-lite.img 
 
 #### 报错：qemu-system-arm: Invalid SD card size: 11.5 GiB,SD card size has to be a power of 2, e.g. 16 GiB.You can resize disk images with 'qemu-img resize <imagefile> <new-size>'(note that this will lose data if you make the image smaller than it currently is).
 
@@ -328,3 +459,35 @@ sudo resize2fs /dev/mapper/loop10p2
 
 sudo losetup -d /dev/loop10
 #### 
+
+$ sudo dpkg --add-architecture armfh
+$ sudo vim /etc/apt/sources.list.d/ubuntu-armfh.sources
+Types: deb
+URIs: http://ports.ubuntu.com/ubuntu-ports/
+Suites: noble noble-updates noble-security
+Components: main restricted universe multiverse
+Architectures: armfh
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+$ sudo apt update
+$ sudo apt install -y libudev-dev:arm64 libmtdev-dev:arm64
+
+toolchain.cmake 
+
+set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_SYSTEM_PROCESSOR arm)
+
+# Path to your cross-compiler
+set(CMAKE_C_COMPILER /usr/bin/arm-linux-gnueabihf-gcc)
+set(CMAKE_CXX_COMPILER /usr/bin/arm-linux-gnueabihf-g++)
+
+set(CMAKE_LINKER "/usr/bin/arm-linux-gnueabihf-ld")
+set(CMAKE_AR "/usr/bin/arm-linux-gnueabihf-ar")
+set(CMAKE_FIND_ROOT_PATH /usr/arm-linux-gnueabihf)
+
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY) 
+
+./configure \-prefix /home/dsq2/work/armfh \-qt-host-path /home/dsq2/Qt/6.8.2/gcc_64 \-platform arm-linux-gnueabihf-g++ \-device linux-arm-gnueabihf-g++ \-device-option CROSS_COMPILE=arm-linux-gnueabihf- \-no-opengl \-skip qtopcua -skip qtwebengine -skip qtwebview -skip qtserialport -skip qtlocation \-no-feature-brotli -no-feature-hunspell \-- -DCMAKE_TOOLCHAIN_FILE=/home/dsq2/work/toolchain.cmake 
