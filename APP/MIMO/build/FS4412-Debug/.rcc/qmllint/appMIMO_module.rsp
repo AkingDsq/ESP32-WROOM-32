@@ -1,0 +1,10 @@
+-I
+D:/git/work/ESP32-WROOM-32/APP/MIMO/build/FS4412-Debug
+-I
+E:/Qt/6.8.0/android_armv7/qml
+--resource
+D:/git/work/ESP32-WROOM-32/APP/MIMO/build/FS4412-Debug/.qt/rcc/qmake_MIMO.qrc
+--resource
+D:/git/work/ESP32-WROOM-32/APP/MIMO/build/FS4412-Debug/.qt/rcc/appMIMO_raw_qml_0.qrc
+--module
+MIMO

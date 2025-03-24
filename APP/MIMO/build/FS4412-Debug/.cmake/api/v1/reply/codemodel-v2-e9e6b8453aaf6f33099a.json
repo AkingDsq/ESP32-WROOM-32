@@ -1,0 +1,277 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-33934882cb6beca2a875.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "MIMO",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "_qt_internal_apk_dependencies::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-_qt_internal_apk_dependencies-Debug-647c4f9b8846a9088973.json",
+					"name" : "_qt_internal_apk_dependencies",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "aab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-aab-Debug-97d07211fb71bc231064.json",
+					"name" : "aab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "aar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-aar-Debug-86f1f84a2e27084a2c36.json",
+					"name" : "aar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_aotstats-Debug-06d550773c58bc58f115.json",
+					"name" : "all_aotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-c965118038a98e2ec682.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-8fe3c6362b2fcd2de1fe.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-f8208eeccdc6dbf3c1c5.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-13bcbf0cd4c623b94c37.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apk-Debug-1c94178336fc39fb6e25.json",
+					"name" : "apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apk_all::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apk_all-Debug-b3aae80aa4a985c37ca8.json",
+					"name" : "apk_all",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMIMO::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMIMO-Debug-10e40d9e7153057fb2b2.json",
+					"name" : "appMIMO",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMIMO_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMIMO_autogen-Debug-f0436622d73e1ddd30ea.json",
+					"name" : "appMIMO_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMIMO_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMIMO_autogen_timestamp_deps-Debug-12420bb419a4cf359519.json",
+					"name" : "appMIMO_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMIMO_make_aab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMIMO_make_aab-Debug-a221cf02738c95018e6b.json",
+					"name" : "appMIMO_make_aab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMIMO_make_aar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMIMO_make_aar-Debug-258153f6ea0acc2dbb7d.json",
+					"name" : "appMIMO_make_aar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMIMO_make_apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMIMO_make_apk-Debug-83a09e9df74a5f653bc1.json",
+					"name" : "appMIMO_make_apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMIMO_other_files::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMIMO_other_files-Debug-376672187de43e693150.json",
+					"name" : "appMIMO_other_files",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMIMO_prepare_apk_dir::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMIMO_prepare_apk_dir-Debug-d4730a14853c00c7956c.json",
+					"name" : "appMIMO_prepare_apk_dir",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMIMO_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMIMO_qmllint-Debug-b59dfc8f630a3529770d.json",
+					"name" : "appMIMO_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMIMO_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMIMO_qmllint_json-Debug-e2fa4068af1182775b6e.json",
+					"name" : "appMIMO_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMIMO_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMIMO_qmllint_module-Debug-fd248829abd7ee303079.json",
+					"name" : "appMIMO_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMIMO_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMIMO_qmltyperegistration-Debug-19bbbc679df3b21b4920.json",
+					"name" : "appMIMO_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMIMO_tooling::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMIMO_tooling-Debug-9ccef19e5e03609aecef.json",
+					"name" : "appMIMO_tooling",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_appMIMO_aotstats_targets::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_appMIMO_aotstats_targets-Debug-028dd77823df9c71ce44.json",
+					"name" : "module_appMIMO_aotstats_targets",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qt_internal_plugins::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qt_internal_plugins-Debug-80b3d2120361a1dbd426.json",
+					"name" : "qt_internal_plugins",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/FS4412-Debug",
+		"source" : "D:/git/work/ESP32-WROOM-32/APP/MIMO"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

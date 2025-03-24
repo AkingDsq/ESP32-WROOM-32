@@ -1,0 +1,3 @@
+set(__QT_DEPLOY_TARGET_appMIMO_FILE D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Desktop_Qt_6_8_0_MSVC2022_64bit-Debug/appMIMO.exe)
+set(__QT_DEPLOY_TARGET_appMIMO_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_appMIMO_RUNTIME_DLLS E:/Qt/6.8.0/msvc2022_64/bin/Qt6Quickd.dll;E:/Qt/6.8.0/msvc2022_64/bin/Qt6QmlMetad.dll;E:/Qt/6.8.0/msvc2022_64/bin/Qt6QmlWorkerScriptd.dll;E:/Qt/6.8.0/msvc2022_64/bin/Qt6QmlModelsd.dll;E:/Qt/6.8.0/msvc2022_64/bin/Qt6Qmld.dll;E:/Qt/6.8.0/msvc2022_64/bin/Qt6Networkd.dll;E:/Qt/6.8.0/msvc2022_64/bin/Qt6OpenGLd.dll;E:/Qt/6.8.0/msvc2022_64/bin/Qt6Guid.dll;E:/Qt/6.8.0/msvc2022_64/bin/Qt6Cored.dll)

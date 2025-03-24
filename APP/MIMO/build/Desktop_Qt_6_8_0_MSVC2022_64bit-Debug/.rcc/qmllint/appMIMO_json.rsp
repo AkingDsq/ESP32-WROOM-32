@@ -1,0 +1,16 @@
+--bare
+-I
+D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Desktop_Qt_6_8_0_MSVC2022_64bit-Debug
+-I
+E:/Qt/6.8.0/msvc2022_64/qml
+--resource
+D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Desktop_Qt_6_8_0_MSVC2022_64bit-Debug/.qt/rcc/qmake_MIMO.qrc
+--resource
+D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Desktop_Qt_6_8_0_MSVC2022_64bit-Debug/.qt/rcc/appMIMO_raw_qml_0.qrc
+D:/git/work/ESP32-WROOM-32/APP/MIMO/Main.qml
+D:/git/work/ESP32-WROOM-32/APP/MIMO/components/BottonButtonChoose.qml
+D:/git/work/ESP32-WROOM-32/APP/MIMO/components/Volume.qml
+D:/git/work/ESP32-WROOM-32/APP/MIMO/components/LocalData.qml
+D:/git/work/ESP32-WROOM-32/APP/MIMO/components/camera.qml
+--json
+D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Desktop_Qt_6_8_0_MSVC2022_64bit-Debug/appMIMO_qmllint.json

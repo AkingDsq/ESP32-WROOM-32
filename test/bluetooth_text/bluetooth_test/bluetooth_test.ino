@@ -1,19 +1,19 @@
-#include "BluetoothSerial.h"
+#include "AudioTools.h"
+#include "BluetoothA2DPSink.h"
 
-BluetoothSerial SerialBT;
+I2SStream i2s;
+BluetoothA2DPSink a2dp_sink(i2s);
 
 void setup() {
-  Serial.begin(115200);
-  SerialBT.begin("ESP32test"); // 蓝牙设备名称
-  Serial.println("The device started, now you can pair it with bluetooth!");
+    auto cfg = i2s.defaultConfig();
+    cfg.pin_bck = 27;
+    cfg.pin_ws = 26;
+    cfg.pin_data = 14;
+    i2s.begin(cfg);
+
+    a2dp_sink.start("MyMusic");
 }
 
 void loop() {
-  if (Serial.available()) {
-    SerialBT.write(Serial.read());
-  }
-  if (SerialBT.available()) {
-    Serial.write(SerialBT.read());
-  }
-  delay(20);
+  
 }

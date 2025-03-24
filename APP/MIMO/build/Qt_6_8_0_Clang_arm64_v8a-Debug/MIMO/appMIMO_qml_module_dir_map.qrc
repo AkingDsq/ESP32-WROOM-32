@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="/qt/qml/MIMO">D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_0_Clang_arm64_v8a-Debug/MIMO</file>
+
+  </qresource>
+</RCC>

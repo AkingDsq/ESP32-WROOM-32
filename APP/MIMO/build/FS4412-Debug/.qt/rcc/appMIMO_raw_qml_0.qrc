@@ -1,0 +1,19 @@
+<RCC>
+  <qresource prefix="/qt/qml/MIMO/">
+    <file alias="Main.qml">D:/git/work/ESP32-WROOM-32/APP/MIMO/Main.qml</file>
+    <file alias="components/BottonButtonChoose.qml">D:/git/work/ESP32-WROOM-32/APP/MIMO/components/BottonButtonChoose.qml</file>
+    <file alias="components/Volume.qml">D:/git/work/ESP32-WROOM-32/APP/MIMO/components/Volume.qml</file>
+    <file alias="components/LocalData.qml">D:/git/work/ESP32-WROOM-32/APP/MIMO/components/LocalData.qml</file>
+    <file alias="components/camera.qml">D:/git/work/ESP32-WROOM-32/APP/MIMO/components/camera.qml</file>
+    <file alias="android/AndroidManifest.xml">D:/git/work/ESP32-WROOM-32/APP/MIMO/android/AndroidManifest.xml</file>
+    <file alias="android/build.gradle">D:/git/work/ESP32-WROOM-32/APP/MIMO/android/build.gradle</file>
+    <file alias="android/res/values/libs.xml">D:/git/work/ESP32-WROOM-32/APP/MIMO/android/res/values/libs.xml</file>
+    <file alias="android/res/xml/qtprovider_paths.xml">D:/git/work/ESP32-WROOM-32/APP/MIMO/android/res/xml/qtprovider_paths.xml</file>
+    <file alias="android/gradle/wrapper/gradle-wrapper.jar">D:/git/work/ESP32-WROOM-32/APP/MIMO/android/gradle/wrapper/gradle-wrapper.jar</file>
+    <file alias="android/gradle/wrapper/gradle-wrapper.properties">D:/git/work/ESP32-WROOM-32/APP/MIMO/android/gradle/wrapper/gradle-wrapper.properties</file>
+    <file alias="android/gradle.properties">D:/git/work/ESP32-WROOM-32/APP/MIMO/android/gradle.properties</file>
+    <file alias="android/gradlew">D:/git/work/ESP32-WROOM-32/APP/MIMO/android/gradlew</file>
+    <file alias="android/gradlew.bat">D:/git/work/ESP32-WROOM-32/APP/MIMO/android/gradlew.bat</file>
+  </qresource>
+</RCC>
+

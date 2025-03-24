@@ -1,0 +1,14 @@
+-rootPath
+D:/git/work/ESP32-WROOM-32/APP/MIMO
+-cmake-output
+-output-file
+D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Desktop_Qt_6_8_0_MSVC2022_64bit-Debug/.qt/qml_imports/appMIMO_build.cmake
+-importPath
+D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Desktop_Qt_6_8_0_MSVC2022_64bit-Debug/MIMO
+-importPath
+D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Desktop_Qt_6_8_0_MSVC2022_64bit-Debug
+-importPath
+E:/Qt/6.8.0/msvc2022_64/qml
+-qrcFiles
+D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Desktop_Qt_6_8_0_MSVC2022_64bit-Debug/.qt/rcc/qmake_MIMO.qrc
+D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Desktop_Qt_6_8_0_MSVC2022_64bit-Debug/.qt/rcc/appMIMO_raw_qml_0.qrc

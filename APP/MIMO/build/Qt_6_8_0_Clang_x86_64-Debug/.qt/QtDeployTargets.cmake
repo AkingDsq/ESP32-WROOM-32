@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_appMIMO_FILE D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_0_Clang_x86_64-Debug/libappMIMO_x86_64.so)
+set(__QT_DEPLOY_TARGET_appMIMO_TYPE MODULE_LIBRARY)

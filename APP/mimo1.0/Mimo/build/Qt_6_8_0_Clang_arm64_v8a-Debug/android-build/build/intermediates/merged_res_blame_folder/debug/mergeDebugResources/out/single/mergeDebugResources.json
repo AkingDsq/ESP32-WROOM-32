@@ -1,6 +1,0 @@
-[
-    {
-        "merged": "org.qtproject.example.Mimo-debug-10:/xml_qtprovider_paths.xml.flat",
-        "source": "org.qtproject.example.Mimo-android-build-11:/xml/qtprovider_paths.xml"
-    }
-]

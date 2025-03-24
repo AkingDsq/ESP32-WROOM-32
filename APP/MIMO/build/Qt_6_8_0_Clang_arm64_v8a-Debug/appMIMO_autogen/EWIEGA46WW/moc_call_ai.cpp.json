@@ -1,0 +1,46 @@
+{
+    "classes": [
+        {
+            "className": "Call_AI",
+            "lineNumber": 7,
+            "object": true,
+            "qualifiedClassName": "Call_AI",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "response",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "aiResponseReceived",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "param",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 1,
+                    "name": "call",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "call_ai.h",
+    "outputRevision": 68
+}

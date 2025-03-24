@@ -1,32 +1,156 @@
-#include "BluetoothSerial.h"
+// // 蓝牙串口
+// #include "BluetoothSerial.h"
+// BluetoothSerial SerialBT;
 
-BluetoothSerial SerialBT;
+// // A2DP
+// #include "AudioTools.h"
+// #include "BluetoothA2DPSink.h"
+// I2SStream i2s_VoiceSink;
+// BluetoothA2DPSink a2dp_sink(i2s_VoiceSink);
 
-// 连接经典蓝牙
-void BlueTooth_Connect() {
-  // 若未连接，启动蓝牙并等待连接
-    SerialBT.begin("ESP32_SPP"); // 蓝牙名称
-    Serial.println("等待蓝牙连接...");
+// BLE
+#include <BLEDevice.h>
+#include <BLEUtils.h>
+#include <BLEServer.h>
+#include <BLE2902.h>
+#define SERVICE_UUID        "0000181A-0000-1000-8000-00805F9B34FB"
+#define Temperature_UUID "2A6E" // 温度uuid
+#define Humidity_UUID "2A6F"    // 湿度的uuid
+#define Command_UUID "FFE1"     // 用于接收命令的特性UUID
+
+// 温湿度传感器
+#include <DHT.h>
+#define DHTPIN 25 // 温湿度传感器引脚
+#define DHTTYPE DHT11 // 温湿度传感器类型
+DHT dht(DHTPIN, DHTTYPE); // 创建DHT对象
+
+// BLE服务初始化
+BLEServer *pServer;
+BLEService *pService;
+BLECharacteristic *pTemperatureChar, *pHumidityChar, *pCommandChar;
+
+// void init_A2DPSink();
+// // 连接经典蓝牙
+// void BlueTooth_Connect() {
+//   Serial.begin(115200);
+//   // 若未连接，启动蓝牙并等待连接
+//   SerialBT.begin("ESP32"); // 蓝牙名称
+//   Serial.println("等待蓝牙连接...");
+// }
+// // 接收数据
+// void GetData_BlueToothConnect() {
+//   // 处理数据接收
+//   if (SerialBT.available()) {
+//     char cmd = SerialBT.read();
+//     if (cmd == 'Music') { // 假设 'R' 为开始录音指令
+
+//     }
+//     Serial.println(cmd);
+//   }
+//   delay(100);
+// }
+// // A2DP
+// void init_A2DPSink() {
+//   auto cfg = i2s_VoiceSink.defaultConfig();
+//   cfg.pin_bck = 27;
+//   cfg.pin_ws = 26;
+//   cfg.pin_data = 14;
+//   i2s_VoiceSink.begin(cfg);
+
+//   a2dp_sink.start("ESP32");
+// }
+// 传感器
+void init_TH(){
+  dht.begin(); // 初始化温湿度传感器
 }
-// 接收数据
-void GetData_BlueToothConnect() {
-  if (SerialBT.connected()) {
-    // 处理数据接收
-    if (SerialBT.available()) {
-      char cmd = SerialBT.read();
-      if (cmd == 'R') { // 假设 'R' 为开始录音指令
-        //startRecording();
+// 处理接收到的命令的回调
+class CommandCallbacks: public BLECharacteristicCallbacks {
+    void onWrite(BLECharacteristic *pCharacteristic) {
+      String value = pCharacteristic->getValue();
+      if (value.length() > 0) {
+        Serial.print("接收到命令: ");
+        Serial.println(value.c_str());
+        
+        // 处理接收到的命令
+        if (value == "LED_ON") {
+          // 打开LED
+
+        } 
+        else if (value == "LED_OFF") {
+          // 关闭LED
+
+        }
+        if (value == "callAI") {
+          // 打开LED
+          Serial.println("正在执行命令");
+          pTemperatureChar->setValue("30");
+          pTemperatureChar->notify();
+          pHumidityChar->setValue("50");
+          pHumidityChar->notify();
+
+        } 
+        // 添加更多命令处理...
       }
     }
-  }
-  delay(100);
-}
+};
+// 初始化BLE连接
+void init_BLE() {
+  Serial.begin(115200);
+  Serial.println("Starting BLE work!");
+  // BLE服务初始化
 
-// 检测蓝牙的连接情况
-bool isConnect_BlueTooth(){
-  if (SerialBT.connected()) { // 检查连接状态
-    return true;
-  } else {
-    return false;
+  BLEDevice::init("ESP32-BLE");
+  BLEServer *pServer = BLEDevice::createServer();
+  BLEService *pService = pServer->createService(SERVICE_UUID);
+
+  // 温度特征（支持通知）
+  pTemperatureChar = pService->createCharacteristic(
+    BLEUUID(Temperature_UUID),
+    BLECharacteristic::PROPERTY_READ | BLECharacteristic::PROPERTY_NOTIFY
+  );
+  pTemperatureChar->addDescriptor(new BLE2902());  // 关键！添加标准CCCD描述符
+  // 湿度特征（支持通知）
+  pHumidityChar = pService->createCharacteristic(
+    BLEUUID(Humidity_UUID),
+    BLECharacteristic::PROPERTY_READ | BLECharacteristic::PROPERTY_NOTIFY
+  );
+  pHumidityChar->addDescriptor(new BLE2902());  // 关键！添加标准CCCD描述符
+  // 添加命令特性（可写）
+  pCommandChar = pService->createCharacteristic(
+    BLEUUID(Command_UUID),
+    BLECharacteristic::PROPERTY_WRITE
+  );
+  pCommandChar->setCallbacks(new CommandCallbacks());
+
+  pService->start();
+  // BLEAdvertising *pAdvertising = pServer->getAdvertising();  // this still is working for backward compatibility
+  BLEAdvertising *pAdvertising = BLEDevice::getAdvertising();
+  pAdvertising->addServiceUUID(SERVICE_UUID);
+  pAdvertising->setScanResponse(true);  // 允许扫描响应
+  pAdvertising->setMinPreferred(0x06); // 提高广播优先级
+  BLEDevice::startAdvertising();
+  Serial.println("Characteristic defined! Now you can read it in your phone!");
+}
+// 数据读取并更新
+String readSensors() {
+  float humidity = dht.readHumidity();
+  float temperature = dht.readTemperature();
+  float f = dht.readTemperature(true);
+  if (isnan(humidity) || isnan(temperature) || isnan(f)) {  // 检查是否为NaN
+    Serial.println("读取失败!");
+    return "";
   }
+  float hif = dht.computeHeatIndex(f, humidity);
+  // Compute heat index in Celsius (isFahreheit = false)
+  float hic = dht.computeHeatIndex(temperature, humidity, false);
+
+  // 更新特征值并通知
+  pTemperatureChar->setValue(String(temperature));
+  pTemperatureChar->notify();
+  pHumidityChar->setValue(String(humidity));
+  pHumidityChar->notify();
+  Serial.println("T:" + String(temperature) +  "°C H:" + String(humidity) + "%");
+
+  delay(2000); // 每2秒上报一次
+  return "T:" + String(temperature) +  "°C\nH:" + String(humidity) + "%";
 }
