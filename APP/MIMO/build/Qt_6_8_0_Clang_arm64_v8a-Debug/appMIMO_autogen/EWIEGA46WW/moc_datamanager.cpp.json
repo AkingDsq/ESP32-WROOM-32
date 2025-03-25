@@ -1,0 +1,18 @@
+{
+    "classes": [
+        {
+            "className": "DataManager",
+            "lineNumber": 11,
+            "object": true,
+            "qualifiedClassName": "DataManager",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "datamanager.h",
+    "outputRevision": 68
+}

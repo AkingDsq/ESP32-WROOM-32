@@ -4,35 +4,8 @@ BlueToothController::BlueToothController(QObject *parent)
     : QObject{parent}
 {
     localDevice = new QBluetoothLocalDevice();  //本地操作
-
-    // 查看蓝牙是否打开
-    if( localDevice->hostMode() == QBluetoothLocalDevice::HostPoweredOff)//判断开机有没有打开蓝牙
-    {
-        qDebug() << "正在调用打开本地的蓝牙设备";
-        localDevice->powerOn();//调用打开本地的蓝牙设备
-    }
-
-    // 检测蓝牙权限
-    QBluetoothPermission permission{};
-    permission.setCommunicationModes(QBluetoothPermission::Access);
-    switch (qApp->checkPermission(permission)) {
-    case Qt::PermissionStatus::Undetermined:     //权限状态未知。应通过QCoreApplication::requestPermission() 申请权限，以确定实际状态。
-        qDebug() << "权限状态未知";
-        qApp->requestPermission(permission, [this](const QPermission &perm){
-            if (perm.status() == Qt::PermissionStatus::Granted) {
-                qDebug() << "蓝牙权限已授予";
-                startScan();
-            } else {
-                qDebug() << "用户拒绝蓝牙权限";
-                return;
-            }
-        });
-    case Qt::PermissionStatus::Denied:  // 用户已明确拒绝应用程序请求的权限，或已知该权限不可访问或不适用于给定平台上的应用程序。
-        qDebug() << "用户已明确拒绝应用程序请求的权限";
-        return;
-    case Qt::PermissionStatus::Granted:  // 用户已明确授予应用程序权限，或已知该权限在给定平台上不需要用户授权。
-        qDebug() << "用户已明确授予应用程序权限";
-    }
+    checkLocationPermission();
+    checkBluetoothPermission();
 
     // 开始扫描
     startScan();
@@ -52,8 +25,71 @@ BlueToothController::~BlueToothController(){
         delete localDevice;
     }
 }
+// 检测蓝牙权限
+bool BlueToothController::checkBluetoothPermission(){
+    // 查看蓝牙是否打开
+    if( localDevice->hostMode() == QBluetoothLocalDevice::HostPoweredOff)//判断开机有没有打开蓝牙
+    {
+        qDebug() << "正在调用打开本地的蓝牙设备";
+        localDevice->powerOn();//调用打开本地的蓝牙设备
+    }
+
+    // 检测蓝牙权限
+    QBluetoothPermission permission{};
+    permission.setCommunicationModes(QBluetoothPermission::Access);
+    switch (qApp->checkPermission(permission)) {
+    case Qt::PermissionStatus::Undetermined:     //权限状态未知。应通过QCoreApplication::requestPermission() 申请权限，以确定实际状态。
+        qDebug() << "权限状态未知";
+        qApp->requestPermission(permission, [this](const QPermission &perm){
+            if (perm.status() == Qt::PermissionStatus::Granted) {
+                qDebug() << "蓝牙权限已授予";
+                startScan();
+            } else {
+                qDebug() << "用户拒绝蓝牙权限";
+                return false;
+            }
+        });
+        break;
+    case Qt::PermissionStatus::Denied:  // 用户已明确拒绝应用程序请求的权限，或已知该权限不可访问或不适用于给定平台上的应用程序。
+        qDebug() << "用户已明确拒绝应用程序请求的权限";
+        return false;
+    case Qt::PermissionStatus::Granted:  // 用户已明确授予应用程序权限，或已知该权限在给定平台上不需要用户授权。
+        qDebug() << "用户已明确授予应用程序蓝牙权限";
+    }
+
+    return true;
+}
+bool BlueToothController::checkLocationPermission(){
+    // 检测本地位置权限
+    QLocationPermission locationPermission{};
+    locationPermission.setAccuracy(QLocationPermission::Precise);
+    switch (qApp->checkPermission(locationPermission)) {
+    case Qt::PermissionStatus::Undetermined:     //权限状态未知。应通过QCoreApplication::requestPermission() 申请权限，以确定实际状态。
+        qDebug() << "权限状态未知";
+        qApp->requestPermission(locationPermission, [this](const QPermission &perm){
+            if (perm.status() == Qt::PermissionStatus::Granted) {
+                qDebug() << "位置权限已授予";
+                startScan();
+            } else {
+                qDebug() << "用户拒绝位置权限";
+                return false;
+            }
+        });
+        break;
+    case Qt::PermissionStatus::Denied:  // 用户已明确拒绝应用程序请求的权限，或已知该权限不可访问或不适用于给定平台上的应用程序。
+        qDebug() << "用户已明确拒绝应用程序请求的权限";
+        return false;
+    case Qt::PermissionStatus::Granted:  // 用户已明确授予应用程序权限，或已知该权限在给定平台上不需要用户授权。
+        qDebug() << "用户已明确授予应用程序位置权限";
+    }
+
+    return true;
+}
 // 开始扫描
 void BlueToothController::startScan(){
+    //  检测权限
+    //checkBluetoothPermission();
+
     if (!agent) {
         agent = new QBluetoothDeviceDiscoveryAgent(this);
         connect(agent, &QBluetoothDeviceDiscoveryAgent::deviceDiscovered, this, &BlueToothController::onDeviceDiscovered);

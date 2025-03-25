@@ -32,6 +32,7 @@ public:
 
 
 private:
+
     QLowEnergyService *service = nullptr;          // BLE——Service
     QBluetoothLocalDevice *localDevice = nullptr;  // 访问本地蓝牙
     QBluetoothDeviceDiscoveryAgent *agent = nullptr; // 扫描
@@ -49,6 +50,8 @@ signals:
     void commandSent(bool success);
 
 public slots:
+    bool checkBluetoothPermission();
+    bool checkLocationPermission();
     void startScan(); // 扫描蓝牙设备
     void connectDevice(QString address, QBluetoothDeviceInfo info);// 连接服务
     void sendCommand(QString command); // 发送特征

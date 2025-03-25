@@ -3,8 +3,10 @@
     <file alias="Main.qml">D:/git/work/ESP32-WROOM-32/APP/MIMO/Main.qml</file>
     <file alias="components/BottonButtonChoose.qml">D:/git/work/ESP32-WROOM-32/APP/MIMO/components/BottonButtonChoose.qml</file>
     <file alias="components/Volume.qml">D:/git/work/ESP32-WROOM-32/APP/MIMO/components/Volume.qml</file>
-    <file alias="components/LocalData.qml">D:/git/work/ESP32-WROOM-32/APP/MIMO/components/LocalData.qml</file>
     <file alias="components/camera.qml">D:/git/work/ESP32-WROOM-32/APP/MIMO/components/camera.qml</file>
+    <file alias="components/Cancel_CallAI.qml">D:/git/work/ESP32-WROOM-32/APP/MIMO/components/Cancel_CallAI.qml</file>
+    <file alias="components/speechWithAi.qml">D:/git/work/ESP32-WROOM-32/APP/MIMO/components/speechWithAi.qml</file>
+    <file alias="components/LoginOn.qml">D:/git/work/ESP32-WROOM-32/APP/MIMO/components/LoginOn.qml</file>
     <file alias="android/AndroidManifest.xml">D:/git/work/ESP32-WROOM-32/APP/MIMO/android/AndroidManifest.xml</file>
     <file alias="android/build.gradle">D:/git/work/ESP32-WROOM-32/APP/MIMO/android/build.gradle</file>
     <file alias="android/res/values/libs.xml">D:/git/work/ESP32-WROOM-32/APP/MIMO/android/res/values/libs.xml</file>

@@ -11,6 +11,8 @@ appMIMO_autogen/timestamp: \
 	D:/git/work/ESP32-WROOM-32/APP/MIMO/call_ai.h \
 	D:/git/work/ESP32-WROOM-32/APP/MIMO/cv_controller.cpp \
 	D:/git/work/ESP32-WROOM-32/APP/MIMO/cv_controller.h \
+	D:/git/work/ESP32-WROOM-32/APP/MIMO/datamanager.cpp \
+	D:/git/work/ESP32-WROOM-32/APP/MIMO/datamanager.h \
 	D:/git/work/ESP32-WROOM-32/APP/MIMO/imageprovider.cpp \
 	D:/git/work/ESP32-WROOM-32/APP/MIMO/imageprovider.h \
 	D:/git/work/ESP32-WROOM-32/APP/MIMO/main.cpp \
@@ -133,6 +135,7 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.0/android_arm64_v8a/include/QtCore/qmap.h \
 	E:/Qt/6.8.0/android_arm64_v8a/include/QtCore/qmath.h \
 	E:/Qt/6.8.0/android_arm64_v8a/include/QtCore/qmetacontainer.h \
+	E:/Qt/6.8.0/android_arm64_v8a/include/QtCore/qmetaobject.h \
 	E:/Qt/6.8.0/android_arm64_v8a/include/QtCore/qmetatype.h \
 	E:/Qt/6.8.0/android_arm64_v8a/include/QtCore/qminmax.h \
 	E:/Qt/6.8.0/android_arm64_v8a/include/QtCore/qmutex.h \
@@ -203,6 +206,15 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.0/android_arm64_v8a/include/QtCore/qversiontagging.h \
 	E:/Qt/6.8.0/android_arm64_v8a/include/QtCore/qxptype_traits.h \
 	E:/Qt/6.8.0/android_arm64_v8a/include/QtCore/qyieldcpu.h \
+	E:/Qt/6.8.0/android_arm64_v8a/include/QtSql/QSqlDatabase \
+	E:/Qt/6.8.0/android_arm64_v8a/include/QtSql/QSqlError \
+	E:/Qt/6.8.0/android_arm64_v8a/include/QtSql/QSqlQuery \
+	E:/Qt/6.8.0/android_arm64_v8a/include/QtSql/qsqldatabase.h \
+	E:/Qt/6.8.0/android_arm64_v8a/include/QtSql/qsqlerror.h \
+	E:/Qt/6.8.0/android_arm64_v8a/include/QtSql/qsqlquery.h \
+	E:/Qt/6.8.0/android_arm64_v8a/include/QtSql/qtsql-config.h \
+	E:/Qt/6.8.0/android_arm64_v8a/include/QtSql/qtsqlexports.h \
+	E:/Qt/6.8.0/android_arm64_v8a/include/QtSql/qtsqlglobal.h \
 	E:/Qt/6.8.0/android_arm64_v8a/include/QtTextToSpeech/QTextToSpeech \
 	E:/Qt/6.8.0/android_arm64_v8a/include/QtTextToSpeech/qtexttospeech.h \
 	E:/Qt/6.8.0/android_arm64_v8a/include/QtTextToSpeech/qtexttospeech_global.h \
@@ -673,6 +685,19 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Quick/Qt6QuickTargets-relwithdebinfo.cmake \
 	E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Quick/Qt6QuickTargets.cmake \
 	E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Quick/Qt6QuickVersionlessAliasTargets.cmake \
+	E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginAdditionalTargetInfo.cmake \
+	E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginConfig.cmake \
+	E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets-relwithdebinfo.cmake \
+	E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets.cmake \
+	E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Sql/Qt6SqlAdditionalTargetInfo.cmake \
+	E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Sql/Qt6SqlConfig.cmake \
+	E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Sql/Qt6SqlConfigVersion.cmake \
+	E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Sql/Qt6SqlConfigVersionImpl.cmake \
+	E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Sql/Qt6SqlDependencies.cmake \
+	E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Sql/Qt6SqlPlugins.cmake \
+	E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Sql/Qt6SqlTargets-relwithdebinfo.cmake \
+	E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Sql/Qt6SqlTargets.cmake \
+	E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Sql/Qt6SqlVersionlessAliasTargets.cmake \
 	E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechEngineAndroidPluginAdditionalTargetInfo.cmake \
 	E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechEngineAndroidPluginConfig.cmake \
 	E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechEngineAndroidPluginTargets-relwithdebinfo.cmake \

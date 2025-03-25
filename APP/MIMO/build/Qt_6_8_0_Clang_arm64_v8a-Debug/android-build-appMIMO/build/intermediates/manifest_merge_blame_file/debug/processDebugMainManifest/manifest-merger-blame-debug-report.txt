@@ -84,144 +84,147 @@
 39    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
 39-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:10:5-78
 39-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:10:22-75
-40
-41    <permission
-41-->[androidx.core:core:1.13.1] C:\Users\dsq2\.gradle\caches\8.10\transforms\614f50bb2b90647a5f75820a3da4b2e4\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
-42        android:name="org.qtproject.example.appMIMO.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-42-->[androidx.core:core:1.13.1] C:\Users\dsq2\.gradle\caches\8.10\transforms\614f50bb2b90647a5f75820a3da4b2e4\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
-43        android:protectionLevel="signature" />
-43-->[androidx.core:core:1.13.1] C:\Users\dsq2\.gradle\caches\8.10\transforms\614f50bb2b90647a5f75820a3da4b2e4\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
-44
-45    <uses-permission android:name="org.qtproject.example.appMIMO.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-45-->[androidx.core:core:1.13.1] C:\Users\dsq2\.gradle\caches\8.10\transforms\614f50bb2b90647a5f75820a3da4b2e4\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
-45-->[androidx.core:core:1.13.1] C:\Users\dsq2\.gradle\caches\8.10\transforms\614f50bb2b90647a5f75820a3da4b2e4\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
-46
-47    <application
-47-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:17:5-30:19
-48        android:name="org.qtproject.qt.android.bindings.QtApplication"
-48-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:17:18-80
-49        android:allowBackup="true"
-49-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:17:184-210
-50        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-50-->[androidx.core:core:1.13.1] C:\Users\dsq2\.gradle\caches\8.10\transforms\614f50bb2b90647a5f75820a3da4b2e4\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
-51        android:debuggable="true"
-52        android:extractNativeLibs="true"
-53        android:fullBackupOnly="false"
-53-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:17:211-241
-54        android:hardwareAccelerated="true"
-54-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:17:81-115
-55        android:label="appMIMO"
-55-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:17:116-139
-56        android:requestLegacyExternalStorage="true" >
-56-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:17:140-183
-57        <activity
-57-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:18:9-25:20
-58            android:name="org.qtproject.qt.android.bindings.QtActivity"
-58-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:18:19-78
-59            android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density"
-59-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:18:79-248
-60            android:exported="true"
-60-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:18:320-343
-61            android:label=""
-61-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:18:344-360
-62            android:launchMode="singleTop"
-62-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:18:249-279
-63            android:screenOrientation="unspecified" >
-63-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:18:280-319
-64            <intent-filter>
-64-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:19:13-22:29
-65                <action android:name="android.intent.action.MAIN" />
-65-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:20:17-68
-65-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:20:25-66
-66
-67                <category android:name="android.intent.category.LAUNCHER" />
-67-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:21:17-76
-67-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:21:27-74
-68            </intent-filter>
-69
-70            <meta-data
-70-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:23:13-85
-71                android:name="android.app.lib_name"
-71-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:23:24-59
-72                android:value="appMIMO" />
-72-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:23:60-83
-73            <meta-data
-73-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:24:13-79
-74                android:name="android.app.arguments"
-74-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:24:24-60
-75                android:value="" />
-75-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:24:61-77
-76        </activity>
-77
-78        <provider
-79            android:name="androidx.core.content.FileProvider"
-79-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:27:19-68
-80            android:authorities="org.qtproject.example.appMIMO.qtprovider"
-80-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:27:69-118
-81            android:exported="false"
-81-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:27:119-143
-82            android:grantUriPermissions="true" >
-82-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:27:144-178
-83            <meta-data
-83-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:28:13-117
-84                android:name="android.support.FILE_PROVIDER_PATHS"
-84-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:28:24-74
-85                android:resource="@xml/qtprovider_paths" />
-85-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:28:75-115
-86        </provider>
-87        <provider
-87-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
-88            android:name="androidx.startup.InitializationProvider"
-88-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:25:13-67
-89            android:authorities="org.qtproject.example.appMIMO.androidx-startup"
-89-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:26:13-68
-90            android:exported="false" >
-90-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:27:13-37
-91            <meta-data
-91-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-92                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-92-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
-93                android:value="androidx.startup" />
-93-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-94        </provider>
-95
-96        <receiver
-96-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-97            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-97-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-98            android:directBootAware="false"
-98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-99            android:enabled="true"
-99-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-100            android:exported="true"
-100-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-101            android:permission="android.permission.DUMP" >
-101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-102            <intent-filter>
-102-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-103                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-104            </intent-filter>
-105            <intent-filter>
-105-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-106                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-106-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-106-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
-107            </intent-filter>
-108            <intent-filter>
-108-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-109                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-109-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-109-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-110            </intent-filter>
-111            <intent-filter>
-111-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-112                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-112-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-112-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
-113            </intent-filter>
-114        </receiver>
-115    </application>
-116
-117</manifest>
+40    <uses-permission android:name="android.permission.INTERNET" />
+40-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:3:5-67
+40-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:3:22-64
+41
+42    <permission
+42-->[androidx.core:core:1.13.1] C:\Users\dsq2\.gradle\caches\8.10\transforms\614f50bb2b90647a5f75820a3da4b2e4\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+43        android:name="org.qtproject.example.appMIMO.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+43-->[androidx.core:core:1.13.1] C:\Users\dsq2\.gradle\caches\8.10\transforms\614f50bb2b90647a5f75820a3da4b2e4\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+44        android:protectionLevel="signature" />
+44-->[androidx.core:core:1.13.1] C:\Users\dsq2\.gradle\caches\8.10\transforms\614f50bb2b90647a5f75820a3da4b2e4\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+45
+46    <uses-permission android:name="org.qtproject.example.appMIMO.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+46-->[androidx.core:core:1.13.1] C:\Users\dsq2\.gradle\caches\8.10\transforms\614f50bb2b90647a5f75820a3da4b2e4\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+46-->[androidx.core:core:1.13.1] C:\Users\dsq2\.gradle\caches\8.10\transforms\614f50bb2b90647a5f75820a3da4b2e4\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+47
+48    <application
+48-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:17:5-30:19
+49        android:name="org.qtproject.qt.android.bindings.QtApplication"
+49-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:17:18-80
+50        android:allowBackup="true"
+50-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:17:184-210
+51        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+51-->[androidx.core:core:1.13.1] C:\Users\dsq2\.gradle\caches\8.10\transforms\614f50bb2b90647a5f75820a3da4b2e4\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+52        android:debuggable="true"
+53        android:extractNativeLibs="true"
+54        android:fullBackupOnly="false"
+54-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:17:211-241
+55        android:hardwareAccelerated="true"
+55-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:17:81-115
+56        android:label="appMIMO"
+56-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:17:116-139
+57        android:requestLegacyExternalStorage="true" >
+57-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:17:140-183
+58        <activity
+58-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:18:9-25:20
+59            android:name="org.qtproject.qt.android.bindings.QtActivity"
+59-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:18:19-78
+60            android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density"
+60-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:18:79-248
+61            android:exported="true"
+61-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:18:320-343
+62            android:label=""
+62-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:18:344-360
+63            android:launchMode="singleTop"
+63-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:18:249-279
+64            android:screenOrientation="unspecified" >
+64-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:18:280-319
+65            <intent-filter>
+65-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:19:13-22:29
+66                <action android:name="android.intent.action.MAIN" />
+66-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:20:17-68
+66-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:20:25-66
+67
+68                <category android:name="android.intent.category.LAUNCHER" />
+68-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:21:17-76
+68-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:21:27-74
+69            </intent-filter>
+70
+71            <meta-data
+71-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:23:13-85
+72                android:name="android.app.lib_name"
+72-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:23:24-59
+73                android:value="appMIMO" />
+73-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:23:60-83
+74            <meta-data
+74-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:24:13-79
+75                android:name="android.app.arguments"
+75-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:24:24-60
+76                android:value="" />
+76-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:24:61-77
+77        </activity>
+78
+79        <provider
+80            android:name="androidx.core.content.FileProvider"
+80-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:27:19-68
+81            android:authorities="org.qtproject.example.appMIMO.qtprovider"
+81-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:27:69-118
+82            android:exported="false"
+82-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:27:119-143
+83            android:grantUriPermissions="true" >
+83-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:27:144-178
+84            <meta-data
+84-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:28:13-117
+85                android:name="android.support.FILE_PROVIDER_PATHS"
+85-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:28:24-74
+86                android:resource="@xml/qtprovider_paths" />
+86-->D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:28:75-115
+87        </provider>
+88        <provider
+88-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+89            android:name="androidx.startup.InitializationProvider"
+89-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:25:13-67
+90            android:authorities="org.qtproject.example.appMIMO.androidx-startup"
+90-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:26:13-68
+91            android:exported="false" >
+91-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:27:13-37
+92            <meta-data
+92-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+93                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+93-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+94                android:value="androidx.startup" />
+94-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+95        </provider>
+96
+97        <receiver
+97-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+98            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+99            android:directBootAware="false"
+99-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+100            android:enabled="true"
+100-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+101            android:exported="true"
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+102            android:permission="android.permission.DUMP" >
+102-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+103            <intent-filter>
+103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+104                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+105            </intent-filter>
+106            <intent-filter>
+106-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+107                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+108            </intent-filter>
+109            <intent-filter>
+109-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+110                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+110-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+110-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+111            </intent-filter>
+112            <intent-filter>
+112-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+113                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\acbc698e3f0c16775281193bdfceb4d0\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+114            </intent-filter>
+115        </receiver>
+116    </application>
+117
+118</manifest>

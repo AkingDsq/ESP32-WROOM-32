@@ -21,120 +21,31 @@ ApplicationWindow {
         }
     }
 
-
-        // Rectangle{
-        //     id: openCamera
-        //     color: "green"
-        //     width: parent.width * 0.1
-        //     height: parent.height
-        //     anchors{
-        //         top: parent.top * 0.8
-        //         bottom: parent.bottom
-        //         left: parent.left
-        //     }
-
-        //     Text{
-        //         text: "open"
-        //         anchors.centerIn: parent
-        //         font.pixelSize: (parent.width + parent.height) * 0.1
-        //         horizontalAlignment: Text.AlignHCenter
-        //         verticalAlignment: Text.AlignVCenter
-        //     }
-
-        //     MouseArea{
-        //         anchors.fill: parent
-        //         onClicked: {
-        //             cam.OpenCamera();
-        //             console.log("打开摄像头")
-        //         }
-        //     }
-        // }
-        // Rectangle{
-        //     id: closeCamera
-        //     color: "green"
-        //     width: parent.width * 0.2
-        //     height: parent.height
-        //     anchors{
-        //         top: parent.top * 0.8
-        //         bottom: parent.bottom
-        //         left: openCamera.right
-        //     }
-
-        //     Text{
-        //         text: "close"
-        //         anchors.centerIn: parent
-        //         font.pixelSize: (parent.width + parent.height) * 0.1
-        //         horizontalAlignment: Text.AlignHCenter
-        //         verticalAlignment: Text.AlignVCenter
-        //     }
-
-        //     MouseArea{
-        //         anchors.fill: parent
-        //         onClicked: {
-        //             cam.CloseCamera();
-        //             console.log("关闭摄像头")
-        //         }
-        //     }
-        // }
-
-    // // 接收 C++ 发送的信号
-    // Connections {
-    //     target: cam // 这是在 main.cpp 中注册的 C++ 对象
-    //     function onOpenOk(response) {
-    //         console.log(response);
-    //     }
-    // }
-    // // 接收 C++ 发送的信号
-    // Connections {
-    //     target: cam // 这是在 main.cpp 中注册的 C++ 对象
-    //     function onCloseOk(response) {
-    //         console.log(response);
-    //     }
-    // }
-    // Image {
-    //     id: c
-    //     width: parent.width/2
-    //     height: parent.height/2
-    //     x: parent.width/2 - width/2
-    //     y: parent.height/2 - height/2
-    //     source: "image://camera/frame" // 对应注册的ImageProvider
-    //     cache: false // 禁用缓存确保实时更新
-    // }
-
-    // Connections {
-    //     target: camera // 这是在 main.cpp 中注册的 C++ 对象
-    //     function onCurrentImage(response) {
-    //         // 更新ImageProvider的currentImage
-    //         camera.currentImage = response;
-    //         // 强制刷新Image组件（通过修改URL参数）
-    //         c.source = "image://camera/frame?" + Date.now();
-    //     }
-    // }
-
     // 主窗口结构
     SwipeView {
         id: swipeView
         width: parent.width
-        anchors{
-            top: parent.top
-            bottom: bottomArea.top
-        }
+        height: parent.height - bottomArea.height
+        anchors.top: parent.top
+        z : 2
 
         currentIndex: 0
 
 
         // 页面1
         Page {
+            z : 3
             // 顶部区域
             Rectangle {
                 id: topArea
                 width: parent.width
-                height: parent.height * 0.07
+                height: parent.height * 0.1
                 anchors {
                     top: parent.top
                     left: parent.left
                 }
-                color: Qt.rgba(29/255,77/255,211/255, 1)
+                radius: 10
+                color: Qt.rgba(31/255, 24/255, 24/255, 1)
 
                 // 可以在这里添加与当前按钮索引关联的内容
                 Text {
@@ -149,6 +60,7 @@ ApplicationWindow {
                 }
 
                 Rectangle{
+                    z: 4
                     color: "red"
                     width: parent.width * 0.15
                     height: parent.height
@@ -167,8 +79,33 @@ ApplicationWindow {
 
                     MouseArea{
                         anchors.fill: parent
-                        onClicked: listModel.append({})  // 动态增加一项
+                        onClicked: {
+                            console.log("添加")
+                            listModel.append({})  // 动态增加一项
+                        }
                     }
+                }
+            }
+            // 房间选择的拖动显示动画
+            MouseArea {
+                width: parent.width
+                height: parent.height - topArea.height
+                anchors{
+                    top: topArea.bottom
+                    right: parent.right
+                }
+                drag.target: wheelArea
+                drag.axis: Drag.XAxis
+                // 限制拖动范围
+                drag.minimumX: -wheelArea.width
+                drag.maximumX: 0
+                // 拖动超过一半全部显示，反之隐藏
+                onReleased: {
+                    if (wheelArea.x > -wheelArea.width/2) wheelArea.x = 0
+                    else wheelArea.x = -wheelArea.width
+                }
+                onClicked: {
+                    if (wheelArea.x == 0) wheelArea.x = -wheelArea.width
                 }
             }
             // 侧边房间选择
@@ -176,11 +113,11 @@ ApplicationWindow {
                 id: listModel
                 // Add some example rooms
                 Component.onCompleted: {
-                    append({ name: "Living Room" })
-                    append({ name: "Bedroom" })
-                    append({ name: "Kitchen" })
-                    append({ name: "Bathroom" })
-                    append({ name: "Office" })
+                    append({ name: "客厅" })
+                    append({ name: "卧室" })
+                    append({ name: "厨房" })
+                    append({ name: "卫生间" })
+                    append({ name: "办公室" })
                 }
             }
             // 轮盘选择区域
@@ -188,12 +125,17 @@ ApplicationWindow {
                 id: wheelArea
                 width: parent.width * 0.25
                 height: parent.parent.height - topArea.height
-                anchors {
-                    top: topArea.bottom
-                    left: parent.left
-                }
+                anchors.top: topArea.bottom
                 color: "#e0e0e0"
 
+                // 滑动动画
+                x: -width // 初始隐藏到左侧屏幕外
+                Behavior on x {
+                    NumberAnimation {
+                        duration: 300
+                        easing.type: Easing.OutQuad
+                    }
+                }
                 // Center indicator
                 Rectangle {
                     z: 1
@@ -224,8 +166,8 @@ ApplicationWindow {
                     flickDeceleration: 1500
 
                     // 中间高光
-                    preferredHighlightBegin: height/2 - 30
-                    preferredHighlightEnd: height/2 + 30
+                    preferredHighlightBegin: height/2 - wheelArea.height * 0.05
+                    preferredHighlightEnd: height/2 + wheelArea.height * 0.05
                     highlightRangeMode: ListView.StrictlyEnforceRange     // 选中项居中
                     highlightMoveDuration: 200
 
@@ -247,12 +189,12 @@ ApplicationWindow {
                         required property int index
                         required property var model
 
-                        width: parent.width - 30
-                        height: 60
+                        width: wheelArea.width
+                        height: wheelArea.height * 0.1
                         anchors.horizontalCenter: parent.horizontalCenter
 
                         // 选中时放大
-                        scale: ListView.isCurrentItem ? 1.1 : 0.9
+                        scale: ListView.isCurrentItem ? 1 : 0.9
                         opacity: ListView.isCurrentItem ? 1.0 : 0.7
 
                         // 动画
@@ -285,34 +227,31 @@ ApplicationWindow {
                         }
                     }
                 }
-
-                // // 当前选中
-                // Text {
-                //     anchors {
-                //         top: parent.bottom
-                //         horizontalCenter: parent.horizontalCenter
-                //         topMargin: 10
-                //     }
-                //     text: "Selected: " + (listModel.get(roomsChoose.currentIndex)?.name || "")
-                //     font.pixelSize: 18
-                //     visible: false // Hidden by default, enable if needed
-                // }
             }
-            // 当前选中
-            Rectangle {
-                anchors {
-                    left: wheelArea.right
-                    right: parent.right
-                    top: topArea.bottom
-                    bottom: bottomArea.top
-                }
-                color: Qt.rgba(0,0,0,0)
+            // 数据模型
+            ListModel { id: pageModel }
 
-                Text {
-                    anchors.centerIn: parent
-                    text: "Currently controlling: " + (listModel.get(roomsChoose.currentIndex)?.name || "")
-                    font.pixelSize: 24
-                    color: "#333333"
+            // 房间选择区域
+            SwipeView {
+                Repeater {
+                    model: ListModel { id: pageModel }
+                    delegate: Rectangle {
+                        color: model.bgColor
+                        Text { text: model.text; anchors.centerIn: parent }
+                    }
+                }
+
+                Component.onCompleted: {
+                    // 读取 JSON 文件并填充模型
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("GET", "pages.json");
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            var pages = JSON.parse(xhr.responseText);
+                            pages.forEach(page => pageModel.append(page));
+                        }
+                    };
+                    xhr.send();
                 }
             }
         }
@@ -320,6 +259,7 @@ ApplicationWindow {
 
         // 页面2(音视频)
         Page {
+            z : 2
             // 互动物品选择
             ListModel {
                 id: interactionListModel
@@ -436,11 +376,10 @@ ApplicationWindow {
             SwipeView {
                 id: interactionSwipeView
                 width: parent.width
+                height: parent.height - interactionWheelArea.height - bottomArea.height
+                anchors.top: interactionWheelArea.bottom
 
-                anchors{
-                    top: interactionWheelArea.bottom
-                    bottom: bottomArea.top
-                }
+                z : 1
 
                 Component.onCompleted: {
                     Qt.callLater(() => {
@@ -457,11 +396,14 @@ ApplicationWindow {
                 onCurrentIndexChanged: {
                     // 到达边界时允许外层滑动
                     if (atLeftEdge || atRightEdge) innerSwipeActive = false;
+                    // 保持选择框同步
+                    interactionChoose.currentIndex = interactionSwipeView.currentIndex
                 }
-
 
                 // 页面1
                 Page {
+                    z:1
+                    clip: true  // 关键！防止子组件溢出到其他页面
                     Rectangle{
                         x: parent.width/2 - width/2
                         y: parent.height/2 - height/2
@@ -472,6 +414,8 @@ ApplicationWindow {
                 }
                 // 页面2
                 Page {
+                    z:1
+                    clip: true  // 关键！防止子组件溢出到其他页面
                     Rectangle{
                         width: 60
                         height:60
@@ -482,6 +426,8 @@ ApplicationWindow {
                 }
                 // 页面3
                 Page {
+                    z:1
+                    clip: true  // 关键！防止子组件溢出到其他页面
                     Rectangle{
                         width: 60
                         height:60
@@ -501,6 +447,7 @@ ApplicationWindow {
 
         // 页面3
         Page {
+            z:2
             Rectangle {
                 width: parent.width
                 height: parent.height/2
@@ -538,13 +485,12 @@ ApplicationWindow {
 
         // 页面4
         Page {
-
+            z:2
         }
     }
 
     // 语音识别完成信号
     signal recognitionCompleted(string text)
-
     // AI助手按钮
     Rectangle {
         id: aiCall
@@ -557,6 +503,7 @@ ApplicationWindow {
             bottomMargin: (parent.height - bottomArea.height) * 0.05  // 距离底部20%高度
         }
         color: Qt.rgba(65/255,167/255,166/255,1)
+        z: 100
 
         Text {
             id: label
@@ -591,58 +538,64 @@ ApplicationWindow {
             loops: 1
             NumberAnimation { to: 1.5; duration: 100 }
         }
+        // 取消长按
+        function create_cancel_callai() {
+            var component = Qt.createComponent("./components/Cancel_CallAI.qml");
+            if (component.status === Component.Ready) {
+                var instance = component.createObject(mainWindow, {
+                    "width": mainWindow.width,
+                    "height": mainWindow.height,
+                    "anchors.fill": mainWindow
+                });
+                // 绑定信号到销毁逻辑
+                instance.buttonClicked.connect(() => {
+                    aiCall.isLongPressed = false
+                    aiCall.color = Qt.rgba(65/255, 167/255, 166/255, 1)
+                    back.start();
+                    instance.destroy(200);
+                    console.log("组件已销毁");
+                });
+            }
+        }
 
         MouseArea {
             anchors.fill: parent
-            onClicked: {
-                console.log("正在发送")
-                blueToothController.sendCommand("callAI")
-                console.log("发送成功")
-                if(aiCall.isLongPressed){
-                    // 触摸取消，停止长按定时器
-                    longPressTimer.stop();
-                    aiCall.isLongPressed = false
-                    aiCall.scale = 1.0;
-                }
-
-                if (aiCall.isListening) {
-                    // 触摸取消，停止音频监听定时器
-                    aiCall.isListening = false
-                }
-            }
+            // 按压事件
             onPressed: {
                 pressAiCall.start();
                 parent.color = Qt.darker("#2196F3", 1.2);
                 longPressTimer.start();
-
             }
+            // 松开事件
             onReleased:{
-                console.log(aiCall.isLongPressed)
+                // 如果不在长按状态，恢复，否则保持
                 if(!aiCall.isLongPressed){
+                    longPressTimer.stop()
                     parent.color = Qt.rgba(65/255, 167/255, 166/255, 1)
                     back.start();
                 }
-                else{
-                    aiCall.scale = 1.5
-                }
             }
-
+            // 长按判定
             Timer {
                 id: longPressTimer
-                interval: aiCall.longPressThreshold  // 长按1秒触发
+                interval: aiCall.longPressThreshold  // 长按（longPressThreshold）秒触发
                 onTriggered: {
+                    longPressTimer.stop()
+                    // 进入长按状态
                     aiCall.isLongPressed = true
-                    // 视觉效果
-                    console.log("send1");
-                    aiController.call("start"); // 直接调用C++方法
-                    console.log("send2");
+                    // 创建取消长按组件
+                    aiCall.create_cancel_callai()
                     // 跳转音视频界面的AI界面
                     swipeView.currentIndex = 1
                     interactionChoose.currentIndex = Math.floor(interactionListModel.count / 2)
                     interactionSwipeView.currentIndex = Math.floor(interactionListModel.count / 2)
+                    // 调用语音录制和识别模块
+                    console.log("send1");
+                    aiController.call("start"); // 直接调用C++方法
+                    console.log("send2");
                     // 开始监听音频输入
                     aiCall.isListening = true
-                    //startAudioDetection()
+                    //aiController.startAudioDetection()
                 }
             }
         }
@@ -664,6 +617,7 @@ ApplicationWindow {
             bottom: parent.bottom
             left: parent.left
         }
+        z: 99
 
         BottonButtonChoose{
             id: rooms

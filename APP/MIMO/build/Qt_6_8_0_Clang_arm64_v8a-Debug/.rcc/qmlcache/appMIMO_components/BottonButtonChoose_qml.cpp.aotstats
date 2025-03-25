@@ -4,9 +4,17 @@
             {
                 "entries": [
                     {
+                        "codegenSuccessfull": false,
+                        "column": 30,
+                        "durationMicroseconds": 697,
+                        "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: QVariant -> QColor stored as QVariant",
+                        "functionName": "btnColor",
+                        "line": 7
+                    },
+                    {
                         "codegenSuccessfull": true,
                         "column": 12,
-                        "durationMicroseconds": 381,
+                        "durationMicroseconds": 298,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 10
@@ -14,23 +22,23 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 13,
-                        "durationMicroseconds": 94,
+                        "durationMicroseconds": 150,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 11
                     },
                     {
-                        "codegenSuccessfull": false,
+                        "codegenSuccessfull": true,
                         "column": 12,
-                        "durationMicroseconds": 333,
-                        "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: QVariant -> QColor stored as QVariant",
+                        "durationMicroseconds": 145,
+                        "errorMessage": "",
                         "functionName": "color",
                         "line": 12
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 14,
-                        "durationMicroseconds": 140,
+                        "durationMicroseconds": 211,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 14
@@ -38,7 +46,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 17,
-                        "durationMicroseconds": 126,
+                        "durationMicroseconds": 218,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 15
@@ -46,7 +54,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 16,
-                        "durationMicroseconds": 85,
+                        "durationMicroseconds": 159,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 18
@@ -54,7 +62,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 17,
-                        "durationMicroseconds": 83,
+                        "durationMicroseconds": 147,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 19
@@ -62,7 +70,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 30,
-                        "durationMicroseconds": 82,
+                        "durationMicroseconds": 146,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
                         "line": 23
@@ -70,7 +78,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 72,
+                        "durationMicroseconds": 128,
                         "errorMessage": "",
                         "functionName": "verticalAlignment",
                         "line": 24
@@ -78,7 +86,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 15,
-                        "durationMicroseconds": 82,
+                        "durationMicroseconds": 135,
                         "errorMessage": "",
                         "functionName": "text",
                         "line": 25
@@ -86,7 +94,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 93,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 20
@@ -94,7 +102,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 123,
+                        "durationMicroseconds": 240,
                         "errorMessage": "",
                         "functionName": "pixelSize",
                         "line": 22
@@ -102,7 +110,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 159,
+                        "durationMicroseconds": 246,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 30
@@ -110,7 +118,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 66,
+                        "durationMicroseconds": 72,
                         "errorMessage": "Type (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_0_Clang_arm64_v8a-Debug/BottonButtonChoose.qml)::parent with type QQuickItem does not have a property color for writing",
                         "functionName": "onPressed",
                         "line": 33
@@ -118,7 +126,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 57,
                         "errorMessage": "Type (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_0_Clang_arm64_v8a-Debug/BottonButtonChoose.qml)::parent with type QQuickItem does not have a property color for writing",
                         "functionName": "onReleased",
                         "line": 36
@@ -126,7 +134,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 59,
+                        "durationMicroseconds": 64,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 29

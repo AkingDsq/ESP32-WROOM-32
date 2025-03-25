@@ -26,14 +26,28 @@ namespace _qt_qml_MIMO_components_Volume_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _qt_qml_MIMO_components_LocalData_qml { 
+namespace _qt_qml_MIMO_components_camera_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _qt_qml_MIMO_components_camera_qml { 
+namespace _qt_qml_MIMO_components_Cancel_CallAI_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_MIMO_components_speechWithAi_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_MIMO_components_LoginOn_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
@@ -57,8 +71,10 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/Main.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_Main_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/BottonButtonChoose.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_BottonButtonChoose_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/Volume.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_Volume_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/LocalData.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_LocalData_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/camera.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_camera_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/Cancel_CallAI.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_Cancel_CallAI_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/speechWithAi.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_speechWithAi_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/LoginOn.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_LoginOn_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

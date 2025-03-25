@@ -11,10 +11,10 @@ INJECTED from D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a
 	android:name
 		ADDED from D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:27:19-68
 manifest
-ADDED from D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:2:1-40:12
-INJECTED from D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:2:1-40:12
-INJECTED from D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:2:1-40:12
-INJECTED from D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:2:1-40:12
+ADDED from D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:2:1-41:12
+INJECTED from D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:2:1-41:12
+INJECTED from D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:2:1-41:12
+INJECTED from D:\git\work\ESP32-WROOM-32\APP\MIMO\build\Qt_6_8_0_Clang_arm64_v8a-Debug\android-build-appMIMO\AndroidManifest.xml:2:1-41:12
 MERGED from [androidx.core:core:1.13.1] C:\Users\dsq2\.gradle\caches\8.10\transforms\614f50bb2b90647a5f75820a3da4b2e4\transformed\core-1.13.1\AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\dsq2\.gradle\caches\8.10\transforms\cf6c48ff86591f2b5ce0c5348228b09a\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\dsq2\.gradle\caches\8.10\transforms\055deb4e15898d502e0d6b8ea8364002\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12

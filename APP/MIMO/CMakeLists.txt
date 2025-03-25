@@ -20,15 +20,19 @@ qt_add_qml_module(appMIMO
     QML_FILES
         Main.qml
         SOURCES call_ai.cpp call_ai.h
-        QML_FILES components/BottonButtonChoose.qml
+        QML_FILES
         QML_FILES components/Volume.qml
-        QML_FILES components/LocalData.qml
-        SOURCES cv_controller.h cv_controller.cpp
+        QML_FILES
+        SOURCES
         RESOURCES android/AndroidManifest.xml android/build.gradle android/res/values/libs.xml android/res/xml/qtprovider_paths.xml android/gradle/wrapper/gradle-wrapper.jar android/gradle/wrapper/gradle-wrapper.properties android/gradle.properties android/gradlew android/gradlew.bat
-        SOURCES imageprovider.h imageprovider.cpp
+        SOURCES
         QML_FILES components/camera.qml
         SOURCES speechrecognizer.h speechrecognizer.cpp
         SOURCES bluetoothcontroller.h bluetoothcontroller.cpp
+        QML_FILES
+        QML_FILES components/LoginOn.qml
+        SOURCES datamanager.h datamanager.cpp
+        QML_FILES components/Home.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -58,6 +62,12 @@ find_package(Qt6 REQUIRED COMPONENTS TextToSpeech)
 find_package(Qt6 REQUIRED COMPONENTS Multimedia)
 # 蓝牙
 find_package(Qt6 REQUIRED COMPONENTS Bluetooth)
+# 数据库
+find_package(Qt6 REQUIRED COMPONENTS Sql)
+add_library(qsqlmysql SHARED IMPORTED)
+set_target_properties(qsqlmysql PROPERTIES
+    IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/android_arm64-v8a/libqsqlmysql.so
+)
 
 target_link_libraries(appMIMO
     PRIVATE Qt6::Quick
@@ -66,6 +76,7 @@ target_link_libraries(appMIMO
     PRIVATE Qt6::Core #添加蓝牙相机麦克风
     PRIVATE Qt6::Multimedia  # 音视频
     PRIVATE Qt6::Bluetooth #蓝牙
+    PRIVATE Qt6::Sql #数据库
 )
 
 include(GNUInstallDirs)

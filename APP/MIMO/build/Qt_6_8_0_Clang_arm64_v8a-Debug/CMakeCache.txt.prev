@@ -355,6 +355,9 @@ QT_QMAKE_EXECUTABLE:FILEPATH=E:/Qt/6.8.0/android_arm64_v8a/bin/qmake.bat
 //No help, variable specified on the command line.
 QT_USE_TARGET_ANDROID_BUILD_DIR:BOOL=ON
 
+//The directory containing a CMake configuration file for Qt6Bluetooth.
+Qt6Bluetooth_DIR:PATH=E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Bluetooth
+
 //The directory containing a CMake configuration file for Qt6CoreTools.
 Qt6CoreTools_DIR:PATH=E:/Qt/6.8.0/mingw_64/lib/cmake/Qt6CoreTools
 
@@ -399,6 +402,9 @@ Qt6Qml_DIR:PATH=E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Qml
 
 //The directory containing a CMake configuration file for Qt6Quick.
 Qt6Quick_DIR:PATH=E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Quick
+
+//The directory containing a CMake configuration file for Qt6Sql.
+Qt6Sql_DIR:PATH=E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Sql
 
 //The directory containing a CMake configuration file for Qt6TextToSpeech.
 Qt6TextToSpeech_DIR:PATH=E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6TextToSpeech
@@ -691,6 +697,10 @@ QT_FEATURE_avx512vbmi2:INTERNAL=OFF
 QT_FEATURE_avx512vl:INTERNAL=OFF
 //Qt feature: backtrace (from target Qt6::Core)
 QT_FEATURE_backtrace:INTERNAL=OFF
+//Qt feature: bluez (from target Qt6::Bluetooth)
+QT_FEATURE_bluez:INTERNAL=OFF
+//Qt feature: bluez_le (from target Qt6::Bluetooth)
+QT_FEATURE_bluez_le:INTERNAL=OFF
 //Qt feature: brotli (from target Qt6::Network)
 QT_FEATURE_brotli:INTERNAL=OFF
 //Qt feature: cborstreamreader (from target Qt6::Core)
@@ -959,6 +969,8 @@ QT_FEATURE_libstdcpp_assertions:INTERNAL=OFF
 QT_FEATURE_libudev:INTERNAL=OFF
 //Qt feature: linkat (from target Qt6::Core)
 QT_FEATURE_linkat:INTERNAL=OFF
+//Qt feature: linux_crypto_api (from target Qt6::Bluetooth)
+QT_FEATURE_linux_crypto_api:INTERNAL=OFF
 //Qt feature: linux_dmabuf (from target Qt6::Multimedia)
 QT_FEATURE_linux_dmabuf:INTERNAL=OFF
 //Qt feature: linux_netlink (from target Qt6::Network)
@@ -1230,6 +1242,8 @@ QT_FEATURE_spatialaudio_quick3d:INTERNAL=ON
 QT_FEATURE_speechd:INTERNAL=OFF
 //Qt feature: sql (from target Qt6::Core)
 QT_FEATURE_sql:INTERNAL=ON
+//Qt feature: sqlmodel (from target Qt6::Sql)
+QT_FEATURE_sqlmodel:INTERNAL=ON
 //Qt feature: sse2 (from target Qt6::Core)
 QT_FEATURE_sse2:INTERNAL=OFF
 //Qt feature: sse3 (from target Qt6::Core)
@@ -1376,6 +1390,8 @@ QT_FEATURE_whatsthis:INTERNAL=ON
 QT_FEATURE_wheelevent:INTERNAL=ON
 //Qt feature: widgets (from target Qt6::Core)
 QT_FEATURE_widgets:INTERNAL=ON
+//Qt feature: winrt_bt (from target Qt6::Bluetooth)
+QT_FEATURE_winrt_bt:INTERNAL=OFF
 //Qt feature: wmf (from target Qt6::Multimedia)
 QT_FEATURE_wmf:INTERNAL=OFF
 //Qt feature: wmsdk (from target Qt6::Multimedia)

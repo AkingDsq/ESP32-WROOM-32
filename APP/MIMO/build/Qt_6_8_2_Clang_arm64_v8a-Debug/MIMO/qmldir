@@ -1,0 +1,8 @@
+module MIMO
+typeinfo appMIMO.qmltypes
+prefer :/qt/qml/MIMO/
+Main 1.0 Main.qml
+Volume 1.0 components/Volume.qml
+LoginOn 1.0 components/LoginOn.qml
+Home 1.0 components/Home.qml
+

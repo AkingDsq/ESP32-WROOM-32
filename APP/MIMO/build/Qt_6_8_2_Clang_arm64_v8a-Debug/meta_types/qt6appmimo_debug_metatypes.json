@@ -1,0 +1,294 @@
+[
+    {
+        "classes": [
+            {
+                "className": "BlueToothController",
+                "lineNumber": 20,
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "temperature",
+                        "notify": "temperatureChanged",
+                        "read": "temperature",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "humidity",
+                        "notify": "humidityChanged",
+                        "read": "humidity",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "BlueToothController",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "temperature",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 0,
+                        "name": "temperatureChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "humidity",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 1,
+                        "name": "humidityChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "connected",
+                                "type": "bool"
+                            }
+                        ],
+                        "index": 2,
+                        "name": "connectionStatusChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "success",
+                                "type": "bool"
+                            }
+                        ],
+                        "index": 3,
+                        "name": "commandSent",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "public",
+                        "index": 4,
+                        "name": "checkBluetoothPermission",
+                        "returnType": "bool"
+                    },
+                    {
+                        "access": "public",
+                        "index": 5,
+                        "name": "checkLocationPermission",
+                        "returnType": "bool"
+                    },
+                    {
+                        "access": "public",
+                        "index": 6,
+                        "name": "startScan",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "address",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "info",
+                                "type": "QBluetoothDeviceInfo"
+                            }
+                        ],
+                        "index": 7,
+                        "name": "connectDevice",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "command",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 8,
+                        "name": "sendCommand",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "name": "info",
+                                "type": "QBluetoothDeviceInfo"
+                            }
+                        ],
+                        "index": 9,
+                        "name": "onDeviceDiscovered",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "index": 10,
+                        "name": "onScanFinished",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "name": "uuid",
+                                "type": "QBluetoothUuid"
+                            }
+                        ],
+                        "index": 11,
+                        "name": "serviceDiscovered",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "name": "state",
+                                "type": "QLowEnergyService::ServiceState"
+                            }
+                        ],
+                        "index": 12,
+                        "name": "serviceStateChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "name": "characteristic",
+                                "type": "QLowEnergyCharacteristic"
+                            },
+                            {
+                                "name": "newValue",
+                                "type": "QByteArray"
+                            }
+                        ],
+                        "index": 13,
+                        "name": "characteristicChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "name": "state",
+                                "type": "QLowEnergyController::ControllerState"
+                            }
+                        ],
+                        "index": 14,
+                        "name": "controllerStateChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "name": "error",
+                                "type": "QLowEnergyController::Error"
+                            }
+                        ],
+                        "index": 15,
+                        "name": "errorOccurred",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "bluetoothcontroller.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "Call_AI",
+                "lineNumber": 7,
+                "object": true,
+                "qualifiedClassName": "Call_AI",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "response",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 0,
+                        "name": "aiResponseReceived",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "param",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 1,
+                        "name": "call",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "call_ai.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "DataManager",
+                "lineNumber": 13,
+                "object": true,
+                "qualifiedClassName": "DataManager",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "datamanager.h",
+        "outputRevision": 68
+    }
+]

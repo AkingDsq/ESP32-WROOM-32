@@ -1,2 +1,3 @@
 D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_0_Clang_arm64_v8a-Debug/appMIMO_autogen/include/../EWIEGA46WW/moc_bluetoothcontroller.cpp.json
 D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_0_Clang_arm64_v8a-Debug/appMIMO_autogen/include/../EWIEGA46WW/moc_call_ai.cpp.json
+D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_0_Clang_arm64_v8a-Debug/appMIMO_autogen/include/../EWIEGA46WW/moc_datamanager.cpp.json

@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 134,
+                        "durationMicroseconds": 320,
                         "errorMessage": "function without return type annotation returns QJSValue. This may prevent proper compilation to Cpp.",
                         "functionName": "getDatabase",
                         "line": 13
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 339,
+                        "durationMicroseconds": 630,
                         "errorMessage": "Cannot generate efficient code for LoadClosure",
                         "functionName": "initDatabase",
                         "line": 18
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 288,
+                        "durationMicroseconds": 668,
                         "errorMessage": "Cannot generate efficient code for LoadClosure",
                         "functionName": "loadRooms",
                         "line": 27
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 88,
+                        "durationMicroseconds": 236,
                         "errorMessage": "",
                         "functionName": "onCompleted",
                         "line": 71
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 16,
-                        "durationMicroseconds": 200,
+                        "durationMicroseconds": 423,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 84
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 17,
-                        "durationMicroseconds": 145,
+                        "durationMicroseconds": 344,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 85
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 16,
-                        "durationMicroseconds": 131,
+                        "durationMicroseconds": 172,
                         "errorMessage": "",
                         "functionName": "model",
                         "line": 93
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 88,
+                        "durationMicroseconds": 204,
                         "errorMessage": "",
                         "functionName": "orientation",
                         "line": 94
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 19,
-                        "durationMicroseconds": 79,
+                        "durationMicroseconds": 202,
                         "errorMessage": "",
                         "functionName": "snapMode",
                         "line": 96
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 34,
-                        "durationMicroseconds": 174,
+                        "durationMicroseconds": 408,
                         "errorMessage": "",
                         "functionName": "preferredHighlightBegin",
                         "line": 99
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 32,
-                        "durationMicroseconds": 161,
+                        "durationMicroseconds": 521,
                         "errorMessage": "",
                         "functionName": "preferredHighlightEnd",
                         "line": 100
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 75,
+                        "durationMicroseconds": 204,
                         "errorMessage": "",
                         "functionName": "highlightRangeMode",
                         "line": 101
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 18,
-                        "durationMicroseconds": 118,
+                        "durationMicroseconds": 302,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 87
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 19,
-                        "durationMicroseconds": 110,
+                        "durationMicroseconds": 268,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 89
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 72,
+                        "durationMicroseconds": 190,
                         "errorMessage": "Cannot load property text from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_0_Clang_arm64_v8a-Debug/LocalData.qml)::parent with type QQuickItem.",
                         "functionName": "text",
                         "line": 114
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 76,
+                        "durationMicroseconds": 208,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
                         "line": 116
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 64,
+                        "durationMicroseconds": 157,
                         "errorMessage": "",
                         "functionName": "verticalAlignment",
                         "line": 117

@@ -403,6 +403,9 @@ Qt6Qml_DIR:PATH=E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Qml
 //The directory containing a CMake configuration file for Qt6Quick.
 Qt6Quick_DIR:PATH=E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Quick
 
+//The directory containing a CMake configuration file for Qt6Sql.
+Qt6Sql_DIR:PATH=E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6Sql
+
 //The directory containing a CMake configuration file for Qt6TextToSpeech.
 Qt6TextToSpeech_DIR:PATH=E:/Qt/6.8.0/android_arm64_v8a/lib/cmake/Qt6TextToSpeech
 
@@ -1239,6 +1242,8 @@ QT_FEATURE_spatialaudio_quick3d:INTERNAL=ON
 QT_FEATURE_speechd:INTERNAL=OFF
 //Qt feature: sql (from target Qt6::Core)
 QT_FEATURE_sql:INTERNAL=ON
+//Qt feature: sqlmodel (from target Qt6::Sql)
+QT_FEATURE_sqlmodel:INTERNAL=ON
 //Qt feature: sse2 (from target Qt6::Core)
 QT_FEATURE_sse2:INTERNAL=OFF
 //Qt feature: sse3 (from target Qt6::Core)

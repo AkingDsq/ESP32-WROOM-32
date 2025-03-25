@@ -1,11 +1,10 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QSurfaceFormat>
 // 长按唤起AI助手
 #include "call_ai.h"
-#include "imageprovider.h"
-#include "cv_controller.h"
-
+//#include "datamanager.h"
 #include "bluetoothcontroller.h"
 
 int main(int argc, char *argv[])
@@ -20,6 +19,13 @@ int main(int argc, char *argv[])
         &app,
         []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
+    // // 创建数据库管理器实例
+    // DataManager dbManager;
+    // if (!dbManager.initDatabase()) {
+    //     qDebug() << "Failed to initialize database!";
+    //     return -1;
+    // }
+    // engine.rootContext()->setContextProperty("dbManager", &dbManager);
 
     // c++ -》 qml
     Call_AI aiController;
@@ -30,13 +36,6 @@ int main(int argc, char *argv[])
     BlueToothController blueToothController;
     engine.rootContext()->setContextProperty("blueToothController", &blueToothController);
     qDebug() << "C++对象blueToothController注册状态:" << engine.rootContext()->contextProperty("blueToothController").isValid();
-    // camera
-    // ImageProvider imageProvider;
-    // engine.addImageProvider("camera", &imageProvider); // URL前缀为"image://camera"
-    // qDebug() << "C++对象注册状态:" << engine.rootContext()->contextProperty("camera").isValid();
-    // cv_controller cam;
-    // engine.rootContext()->setContextProperty("cam", &cam);
-    // qDebug() << "C++对象注册状态:" << engine.rootContext()->contextProperty("cam").isValid();
 
     engine.loadFromModule("MIMO", "Main");
     return app.exec();

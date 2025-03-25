@@ -260,5 +260,23 @@
         ],
         "inputFile": "call_ai.h",
         "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "DataManager",
+                "lineNumber": 11,
+                "object": true,
+                "qualifiedClassName": "DataManager",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "datamanager.h",
+        "outputRevision": 68
     }
 ]
