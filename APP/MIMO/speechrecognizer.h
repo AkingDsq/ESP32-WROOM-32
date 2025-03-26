@@ -1,42 +1,38 @@
-// #ifndef SPEECHRECOGNIZER_H
-// #define SPEECHRECOGNIZER_H
+#ifndef SPEECHRECOGNIZER_H
+#define SPEECHRECOGNIZER_H
 
-// #include <QObject>
-// #include <QAudioInput>
-// #include <QBuffer>
+// 使用andriod原生的语音识别模块
+#include <QObject>
+#include <QString>
+#ifdef Q_OS_ANDROID
+#include <QJniObject>
+#include <QJniEnvironment>
+#endif
 
-// class SpeechRecognizer : public QObject
-// {
-//     Q_OBJECT
-//     Q_PROPERTY(bool listening READ isListening NOTIFY listeningChanged)
-//     Q_PROPERTY(double audioLevel READ audioLevel NOTIFY audioLevelChanged)
+class SpeechRecognizer : public QObject
+{
+    Q_OBJECT
+public:
+    explicit SpeechRecognizer(QObject *parent = nullptr);
+    ~SpeechRecognizer();
 
-// public:
-//     explicit SpeechRecognizer(QObject *parent = nullptr);
-//     ~SpeechRecognizer();
+    void startListening();
+    void recognizeFromFile(const QString &filePath);
 
-//     bool isListening() const;
-//     double audioLevel() const;
+public slots:
 
-// public slots:
-//     void startListening();
-//     void stopListening();
 
-// signals:
-//     void listeningChanged(bool listening);
-//     void audioLevelChanged(double level);
-//     void recognitionResult(const QString &text);
-//     void error(const QString &errorMessage);
+signals:
+    void recognitionResult(const QString &text);
+    void recognitionError(const QString &errorMessage);
 
-// private:
-//     void processAudio();
-//     void checkForSilence();
+private:
+#ifdef Q_OS_ANDROID
+    QJniObject speechRecognizerHelper;
+    static void onResultCallback(JNIEnv *env, jobject obj, jstring result);
+    static SpeechRecognizer* instance;
+#endif
 
-//     QAudioInput *m_audioInput;
-//     QBuffer m_audioBuffer;
-//     bool m_listening;
-//     double m_audioLevel;
+};
 
-// };
-
-// #endif // SPEECHRECOGNIZER_H
+#endif // SPEECHRECOGNIZER_H

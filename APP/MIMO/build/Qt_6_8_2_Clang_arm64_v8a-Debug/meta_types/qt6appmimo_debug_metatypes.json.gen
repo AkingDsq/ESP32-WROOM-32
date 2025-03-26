@@ -3,7 +3,7 @@
         "classes": [
             {
                 "className": "BlueToothController",
-                "lineNumber": 20,
+                "lineNumber": 21,
                 "object": true,
                 "properties": [
                     {
@@ -289,6 +289,50 @@
             }
         ],
         "inputFile": "datamanager.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "SpeechRecognizer",
+                "lineNumber": 12,
+                "object": true,
+                "qualifiedClassName": "SpeechRecognizer",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "text",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 0,
+                        "name": "recognitionResult",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "errorMessage",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 1,
+                        "name": "recognitionError",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "speechrecognizer.h",
         "outputRevision": 68
     }
 ]

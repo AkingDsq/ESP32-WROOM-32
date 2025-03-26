@@ -2,3 +2,4 @@
 #include "EWIEGA46WW/moc_bluetoothcontroller.cpp"
 #include "EWIEGA46WW/moc_call_ai.cpp"
 #include "EWIEGA46WW/moc_datamanager.cpp"
+#include "EWIEGA46WW/moc_speechrecognizer.cpp"

@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 12,
-                        "durationMicroseconds": 280,
+                        "durationMicroseconds": 303,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 9
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 13,
-                        "durationMicroseconds": 78,
+                        "durationMicroseconds": 107,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 10
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 21,
-                        "durationMicroseconds": 85,
+                        "durationMicroseconds": 96,
                         "errorMessage": "",
                         "functionName": "theme",
                         "line": 17
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 88,
+                        "durationMicroseconds": 100,
                         "errorMessage": "",
                         "functionName": "accent",
                         "line": 18
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 87,
+                        "durationMicroseconds": 90,
                         "errorMessage": "",
                         "functionName": "primary",
                         "line": 19
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 67,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 24
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 37,
-                        "durationMicroseconds": 72,
+                        "durationMicroseconds": 83,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "particles",
                         "line": 34
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 215,
+                        "durationMicroseconds": 247,
                         "errorMessage": "",
                         "functionName": "touchPoint",
                         "line": 36
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 22,
-                        "durationMicroseconds": 89,
+                        "durationMicroseconds": 99,
                         "errorMessage": "Cannot load property length from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/LoginOn.qml)::particles with type QVariant.",
                         "functionName": "onPaint",
                         "line": 89
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 58,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 33
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 1929,
+                        "durationMicroseconds": 2239,
                         "errorMessage": "QJSValue has no property called x",
                         "functionName": "onCompleted",
                         "line": 39
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 65,
+                        "durationMicroseconds": 67,
                         "errorMessage": "Cannot load property length from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/LoginOn.qml)::particles with type QVariant.",
                         "functionName": "onTriggered",
                         "line": 59
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 111,
+                        "durationMicroseconds": 60,
                         "errorMessage": "Type (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/LoginOn.qml)::parent with type QQuickItem does not have a property touchPoint for writing",
                         "functionName": "onPressed",
                         "line": 117
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 38,
+                        "durationMicroseconds": 45,
                         "errorMessage": "Type (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/LoginOn.qml)::parent with type QQuickItem does not have a property touchPoint for writing",
                         "functionName": "onPositionChanged",
                         "line": 121
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 29,
-                        "durationMicroseconds": 15,
+                        "durationMicroseconds": 18,
                         "errorMessage": "Type (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/LoginOn.qml)::parent with type QQuickItem does not have a property touching for writing",
                         "functionName": "onReleased",
                         "line": 124
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 77,
+                        "durationMicroseconds": 78,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 116
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 16,
-                        "durationMicroseconds": 168,
+                        "durationMicroseconds": 202,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 137
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 17,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 56,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 138
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 102,
+                        "durationMicroseconds": 143,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 134
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 94,
+                        "durationMicroseconds": 120,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 136
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 81,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 144
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 21,
-                        "durationMicroseconds": 41,
+                        "durationMicroseconds": 53,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 145
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 21,
-                        "durationMicroseconds": 94,
+                        "durationMicroseconds": 133,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 146
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 39,
+                        "durationMicroseconds": 54,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 143
@@ -198,7 +198,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 74,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 153
@@ -206,7 +206,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 64,
+                        "durationMicroseconds": 80,
                         "errorMessage": "",
                         "functionName": "loops",
                         "line": 158
@@ -214,7 +214,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 55,
+                        "durationMicroseconds": 69,
                         "errorMessage": "",
                         "functionName": "loops",
                         "line": 164
@@ -222,7 +222,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 65,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 168
@@ -230,7 +230,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 55,
+                        "durationMicroseconds": 78,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 173
@@ -238,7 +238,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 65,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 176
@@ -246,7 +246,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 168,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 181
@@ -254,7 +254,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 66,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 187
@@ -262,7 +262,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 67,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 192
@@ -270,7 +270,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 63,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 195
@@ -278,7 +278,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 68,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 200
@@ -286,7 +286,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 115,
+                        "durationMicroseconds": 148,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 209
@@ -294,7 +294,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 21,
-                        "durationMicroseconds": 40,
+                        "durationMicroseconds": 51,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 210
@@ -302,7 +302,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 21,
-                        "durationMicroseconds": 90,
+                        "durationMicroseconds": 116,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 211
@@ -310,7 +310,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 39,
+                        "durationMicroseconds": 52,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 208
@@ -318,7 +318,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 40,
+                        "durationMicroseconds": 50,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 219
@@ -326,7 +326,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 120,
+                        "durationMicroseconds": 145,
                         "errorMessage": "",
                         "functionName": "pixelSize",
                         "line": 222
@@ -334,7 +334,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 99,
+                        "durationMicroseconds": 135,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 230
@@ -342,7 +342,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 95,
+                        "durationMicroseconds": 127,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 232
@@ -350,7 +350,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 87,
                         "errorMessage": "",
                         "functionName": "currentIndex",
                         "line": 250
@@ -358,7 +358,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 94,
+                        "durationMicroseconds": 120,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 242
@@ -366,7 +366,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 101,
+                        "durationMicroseconds": 123,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 244
@@ -374,7 +374,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 96,
+                        "durationMicroseconds": 125,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 246
@@ -382,7 +382,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 93,
+                        "durationMicroseconds": 148,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 247
@@ -390,7 +390,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 42,
+                        "durationMicroseconds": 57,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 259
@@ -398,7 +398,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 67,
+                        "durationMicroseconds": 90,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 270
@@ -406,7 +406,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 93,
+                        "durationMicroseconds": 129,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 287
@@ -414,7 +414,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 49,
-                        "durationMicroseconds": 175,
+                        "durationMicroseconds": 125,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 289
@@ -422,7 +422,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 45,
+                        "durationMicroseconds": 56,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 293
@@ -430,7 +430,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 334,
+                        "durationMicroseconds": 87,
                         "errorMessage": "",
                         "functionName": "echoMode",
                         "line": 305
@@ -438,7 +438,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 128,
+                        "durationMicroseconds": 126,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 313
@@ -446,7 +446,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 49,
-                        "durationMicroseconds": 102,
+                        "durationMicroseconds": 130,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 315
@@ -454,7 +454,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 80,
+                        "durationMicroseconds": 55,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 319
@@ -462,7 +462,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 117,
+                        "durationMicroseconds": 128,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 331
@@ -470,7 +470,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 49,
-                        "durationMicroseconds": 105,
+                        "durationMicroseconds": 126,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 333
@@ -478,7 +478,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 263,
+                        "durationMicroseconds": 335,
                         "errorMessage": "",
                         "functionName": "text",
                         "line": 338
@@ -486,7 +486,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 56,
+                        "durationMicroseconds": 60,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 337
@@ -494,7 +494,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 359,
+                        "durationMicroseconds": 459,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 345
@@ -502,7 +502,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 48,
+                        "durationMicroseconds": 64,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 344
@@ -510,7 +510,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 125,
+                        "durationMicroseconds": 144,
                         "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: QQuickMaterialStyle::accent with type QVariant -> QColor stored as QVariant",
                         "functionName": "color",
                         "line": 368
@@ -518,7 +518,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 146,
+                        "durationMicroseconds": 199,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 373
@@ -526,7 +526,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 45,
+                        "durationMicroseconds": 58,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 371
@@ -534,7 +534,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 32,
-                        "durationMicroseconds": 89,
+                        "durationMicroseconds": 125,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 385
@@ -542,7 +542,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 78,
+                        "durationMicroseconds": 103,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 401
@@ -550,7 +550,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 95,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 406
@@ -558,7 +558,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 620,
+                        "durationMicroseconds": 825,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "model",
                         "line": 409
@@ -566,7 +566,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 45,
-                        "durationMicroseconds": 179,
+                        "durationMicroseconds": 477,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 421
@@ -574,7 +574,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 51,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 102,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 420
@@ -582,7 +582,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 51,
-                        "durationMicroseconds": 178,
+                        "durationMicroseconds": 302,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "color",
                         "line": 424
@@ -590,7 +590,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 47,
-                        "durationMicroseconds": 200,
+                        "durationMicroseconds": 259,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "text",
                         "line": 428
@@ -598,7 +598,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 59,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 81,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 427
@@ -606,7 +606,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 52,
-                        "durationMicroseconds": 132,
+                        "durationMicroseconds": 195,
                         "errorMessage": "",
                         "functionName": "onPressed",
                         "line": 434
@@ -614,7 +614,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 53,
-                        "durationMicroseconds": 114,
+                        "durationMicroseconds": 182,
                         "errorMessage": "",
                         "functionName": "onReleased",
                         "line": 435
@@ -622,7 +622,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 52,
-                        "durationMicroseconds": 163,
+                        "durationMicroseconds": 223,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "onClicked",
                         "line": 436
@@ -630,7 +630,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 55,
-                        "durationMicroseconds": 45,
+                        "durationMicroseconds": 62,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 433
@@ -638,7 +638,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 70,
+                        "durationMicroseconds": 93,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 460
@@ -646,7 +646,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 64,
+                        "durationMicroseconds": 83,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 467
@@ -654,7 +654,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 49,
+                        "durationMicroseconds": 66,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 476
@@ -662,7 +662,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 48,
+                        "durationMicroseconds": 84,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 484
@@ -670,7 +670,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 34,
-                        "durationMicroseconds": 105,
+                        "durationMicroseconds": 95,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 489
@@ -678,7 +678,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 90,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 494
@@ -686,7 +686,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 54,
+                        "durationMicroseconds": 76,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 499
@@ -694,7 +694,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 61,
+                        "durationMicroseconds": 83,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 502
@@ -702,7 +702,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 72,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 507
@@ -710,7 +710,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 29,
-                        "durationMicroseconds": 223,
+                        "durationMicroseconds": 300,
                         "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: void -> QQmlScriptString stored as QVariant",
                         "functionName": "script",
                         "line": 512
@@ -718,7 +718,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 77,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 524
@@ -726,7 +726,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 70,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 532
@@ -734,7 +734,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 29,
-                        "durationMicroseconds": 191,
+                        "durationMicroseconds": 271,
                         "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: void -> QQmlScriptString stored as QVariant",
                         "functionName": "script",
                         "line": 540
@@ -742,7 +742,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 45,
+                        "durationMicroseconds": 63,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 553
@@ -750,7 +750,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 68,
+                        "durationMicroseconds": 96,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 564
@@ -758,7 +758,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 112,
+                        "durationMicroseconds": 97,
                         "errorMessage": "",
                         "functionName": "inputMethodHints",
                         "line": 575
@@ -766,7 +766,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 131,
+                        "durationMicroseconds": 140,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 581
@@ -774,7 +774,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 49,
-                        "durationMicroseconds": 109,
+                        "durationMicroseconds": 132,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 583
@@ -782,7 +782,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 47,
+                        "durationMicroseconds": 58,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 587
@@ -790,7 +790,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 83,
+                        "durationMicroseconds": 95,
                         "errorMessage": "",
                         "functionName": "inputMethodHints",
                         "line": 601
@@ -798,7 +798,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 145,
+                        "durationMicroseconds": 141,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 607
@@ -806,7 +806,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 49,
-                        "durationMicroseconds": 98,
+                        "durationMicroseconds": 137,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 609
@@ -814,7 +814,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 43,
+                        "durationMicroseconds": 118,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 613
@@ -822,7 +822,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 32,
-                        "durationMicroseconds": 165,
+                        "durationMicroseconds": 273,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 625
@@ -830,7 +830,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 137,
+                        "durationMicroseconds": 170,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 626
@@ -838,7 +838,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 103,
+                        "durationMicroseconds": 136,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 622
@@ -846,7 +846,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 49,
-                        "durationMicroseconds": 94,
+                        "durationMicroseconds": 131,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 624
@@ -854,7 +854,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 94,
+                        "durationMicroseconds": 140,
                         "errorMessage": "Cannot load property countdown from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/LoginOn.qml)::parent with type QQuickItem.",
                         "functionName": "text",
                         "line": 635
@@ -862,7 +862,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 48,
+                        "durationMicroseconds": 62,
                         "errorMessage": "Cannot load property countdown from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/LoginOn.qml)::parent with type QQuickItem.",
                         "functionName": "color",
                         "line": 636
@@ -870,7 +870,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 48,
+                        "durationMicroseconds": 80,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 634
@@ -878,7 +878,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 42,
-                        "durationMicroseconds": 25,
+                        "durationMicroseconds": 39,
                         "errorMessage": "Cannot load property countdown from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/LoginOn.qml)::parent with type QObject.",
                         "functionName": "onTriggered",
                         "line": 644
@@ -886,7 +886,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 55,
+                        "durationMicroseconds": 76,
                         "errorMessage": "Cannot load property countdown from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/LoginOn.qml)::parent with type QQuickItem.",
                         "functionName": "onClicked",
                         "line": 655
@@ -894,7 +894,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 46,
+                        "durationMicroseconds": 91,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 654
@@ -902,7 +902,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 73,
+                        "durationMicroseconds": 120,
                         "errorMessage": "",
                         "functionName": "echoMode",
                         "line": 670
@@ -910,7 +910,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 104,
+                        "durationMicroseconds": 157,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 678
@@ -918,7 +918,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 49,
-                        "durationMicroseconds": 96,
+                        "durationMicroseconds": 138,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 680
@@ -926,7 +926,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 61,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 684
@@ -934,7 +934,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 97,
+                        "durationMicroseconds": 160,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 696
@@ -942,7 +942,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 49,
-                        "durationMicroseconds": 92,
+                        "durationMicroseconds": 135,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 698
@@ -950,7 +950,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 261,
+                        "durationMicroseconds": 331,
                         "errorMessage": "",
                         "functionName": "text",
                         "line": 703
@@ -958,7 +958,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 68,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 702
@@ -966,7 +966,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 389,
+                        "durationMicroseconds": 558,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 710
@@ -974,7 +974,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 49,
+                        "durationMicroseconds": 68,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 709
@@ -982,7 +982,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 64,
+                        "durationMicroseconds": 88,
                         "errorMessage": "",
                         "functionName": "echoMode",
                         "line": 722
@@ -990,7 +990,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 110,
+                        "durationMicroseconds": 143,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 730
@@ -998,7 +998,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 49,
-                        "durationMicroseconds": 95,
+                        "durationMicroseconds": 136,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 732
@@ -1006,7 +1006,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 41,
+                        "durationMicroseconds": 58,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 736
@@ -1014,7 +1014,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 95,
+                        "durationMicroseconds": 132,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 748
@@ -1022,7 +1022,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 49,
-                        "durationMicroseconds": 103,
+                        "durationMicroseconds": 129,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 750
@@ -1030,7 +1030,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 224,
+                        "durationMicroseconds": 317,
                         "errorMessage": "",
                         "functionName": "text",
                         "line": 755
@@ -1038,7 +1038,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 47,
+                        "durationMicroseconds": 60,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 754
@@ -1046,7 +1046,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 399,
+                        "durationMicroseconds": 612,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 762
@@ -1054,7 +1054,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 47,
+                        "durationMicroseconds": 71,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 761
@@ -1062,7 +1062,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 106,
+                        "durationMicroseconds": 145,
                         "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: QQuickMaterialStyle::accent with type QVariant -> QColor stored as QVariant",
                         "functionName": "color",
                         "line": 788
@@ -1070,7 +1070,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 140,
+                        "durationMicroseconds": 197,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 794
@@ -1078,7 +1078,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 48,
+                        "durationMicroseconds": 63,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 792
@@ -1086,7 +1086,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 100,
+                        "durationMicroseconds": 139,
                         "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: QQuickMaterialStyle::accent with type QVariant -> QColor stored as QVariant",
                         "functionName": "color",
                         "line": 806
@@ -1094,7 +1094,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 131,
+                        "durationMicroseconds": 214,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 812
@@ -1102,7 +1102,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 42,
+                        "durationMicroseconds": 112,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 810
@@ -1110,7 +1110,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 32,
-                        "durationMicroseconds": 90,
+                        "durationMicroseconds": 198,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 824
@@ -1118,7 +1118,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 67,
+                        "durationMicroseconds": 139,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 838
@@ -1126,7 +1126,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 134,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 845
@@ -1134,7 +1134,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 61,
+                        "durationMicroseconds": 122,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 852
@@ -1142,7 +1142,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 61,
+                        "durationMicroseconds": 129,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 859
@@ -1150,7 +1150,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 49,
+                        "durationMicroseconds": 94,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 868
@@ -1158,7 +1158,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 74,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 876
@@ -1166,7 +1166,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 34,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 105,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 881
@@ -1174,7 +1174,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 131,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 886
@@ -1182,7 +1182,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 59,
+                        "durationMicroseconds": 93,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 891
@@ -1190,7 +1190,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 74,
+                        "durationMicroseconds": 115,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 894
@@ -1198,7 +1198,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 55,
+                        "durationMicroseconds": 103,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 899
@@ -1206,7 +1206,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 92,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 902
@@ -1214,7 +1214,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 85,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 907
@@ -1222,7 +1222,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 89,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 910
@@ -1230,7 +1230,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 106,
+                        "durationMicroseconds": 77,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 915
@@ -1238,7 +1238,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 29,
-                        "durationMicroseconds": 390,
+                        "durationMicroseconds": 567,
                         "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: int stored as QVariant -> QQmlScriptString stored as QVariant",
                         "functionName": "script",
                         "line": 921
@@ -1246,7 +1246,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 18,
-                        "durationMicroseconds": 122,
+                        "durationMicroseconds": 217,
                         "errorMessage": "",
                         "functionName": "visible",
                         "line": 944
@@ -1254,7 +1254,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 18,
-                        "durationMicroseconds": 112,
+                        "durationMicroseconds": 172,
                         "errorMessage": "",
                         "functionName": "opacity",
                         "line": 945
@@ -1262,7 +1262,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 110,
+                        "durationMicroseconds": 206,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 935
@@ -1270,7 +1270,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 98,
+                        "durationMicroseconds": 139,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 936
@@ -1278,7 +1278,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 88,
                         "errorMessage": "",
                         "functionName": "running",
                         "line": 952
@@ -1286,7 +1286,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 61,
+                        "durationMicroseconds": 89,
                         "errorMessage": "",
                         "functionName": "loops",
                         "line": 953
@@ -1294,7 +1294,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 75,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 957
@@ -1302,7 +1302,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 34,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 87,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 962
@@ -1310,7 +1310,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 72,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 965
@@ -1318,7 +1318,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 34,
-                        "durationMicroseconds": 54,
+                        "durationMicroseconds": 84,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 970
@@ -1326,7 +1326,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 80,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 976
@@ -1334,7 +1334,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 34,
-                        "durationMicroseconds": 55,
+                        "durationMicroseconds": 91,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 981
@@ -1342,7 +1342,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 71,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 984
@@ -1350,7 +1350,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 34,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 77,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 989
@@ -1358,7 +1358,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 60,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 995
@@ -1366,7 +1366,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 144,
+                        "durationMicroseconds": 314,
                         "errorMessage": "",
                         "functionName": "onPressed",
                         "line": 1003
@@ -1374,7 +1374,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 118,
+                        "durationMicroseconds": 280,
                         "errorMessage": "",
                         "functionName": "onReleased",
                         "line": 1004
@@ -1382,7 +1382,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 95,
+                        "durationMicroseconds": 155,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 1005
@@ -1390,7 +1390,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 69,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 1002
@@ -1398,7 +1398,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 76,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 1014
@@ -1406,7 +1406,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 77,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 1017
@@ -1414,7 +1414,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 21,
-                        "durationMicroseconds": 74,
+                        "durationMicroseconds": 118,
                         "errorMessage": "",
                         "functionName": "to",
                         "line": 1020
@@ -1422,7 +1422,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 30,
-                        "durationMicroseconds": 60,
+                        "durationMicroseconds": 93,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 1022
@@ -1430,7 +1430,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 50,
+                        "durationMicroseconds": 75,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 1027
@@ -1438,7 +1438,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 25,
-                        "durationMicroseconds": 217,
+                        "durationMicroseconds": 290,
                         "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: void -> QQmlScriptString stored as QVariant",
                         "functionName": "script",
                         "line": 1030
@@ -1446,7 +1446,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 46,
+                        "durationMicroseconds": 66,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 1040
@@ -1454,7 +1454,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 68,
+                        "durationMicroseconds": 95,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 1046
@@ -1462,7 +1462,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 67,
+                        "durationMicroseconds": 94,
                         "errorMessage": "",
                         "functionName": "currentIndex",
                         "line": 1058
@@ -1470,7 +1470,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 16,
-                        "durationMicroseconds": 127,
+                        "durationMicroseconds": 177,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 1062
@@ -1478,7 +1478,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 256,
+                        "durationMicroseconds": 389,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 1059
@@ -1486,7 +1486,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 98,
+                        "durationMicroseconds": 136,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 1060
@@ -1494,7 +1494,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 145,
+                        "durationMicroseconds": 201,
                         "errorMessage": "",
                         "functionName": "bold",
                         "line": 1073
@@ -1502,7 +1502,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 61,
+                        "durationMicroseconds": 94,
                         "errorMessage": "Cannot load property text from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/LoginOn.qml)::parent with type QQuickItem.",
                         "functionName": "text",
                         "line": 1076
@@ -1510,7 +1510,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 38,
+                        "durationMicroseconds": 50,
                         "errorMessage": "Cannot load property font from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/LoginOn.qml)::parent with type QQuickItem.",
                         "functionName": "font",
                         "line": 1077
@@ -1518,7 +1518,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 423,
+                        "durationMicroseconds": 532,
                         "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: conversion to QVariant -> QColor stored as QVariant",
                         "functionName": "color",
                         "line": 1078
@@ -1526,7 +1526,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 69,
+                        "durationMicroseconds": 96,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
                         "line": 1079
@@ -1534,7 +1534,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 56,
+                        "durationMicroseconds": 78,
                         "errorMessage": "",
                         "functionName": "verticalAlignment",
                         "line": 1080
@@ -1542,7 +1542,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 118,
+                        "durationMicroseconds": 182,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 1088
@@ -1550,7 +1550,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 383,
+                        "durationMicroseconds": 521,
                         "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: conversion to QVariant -> QColor stored as QVariant",
                         "functionName": "color",
                         "line": 1090
@@ -1558,7 +1558,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 37,
-                        "durationMicroseconds": 102,
+                        "durationMicroseconds": 193,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 1086
@@ -1566,7 +1566,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 95,
+                        "durationMicroseconds": 140,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 1087
@@ -1574,7 +1574,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 140,
+                        "durationMicroseconds": 215,
                         "errorMessage": "",
                         "functionName": "bold",
                         "line": 1101
@@ -1582,7 +1582,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 75,
+                        "durationMicroseconds": 76,
                         "errorMessage": "Cannot load property text from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/LoginOn.qml)::parent with type QQuickItem.",
                         "functionName": "text",
                         "line": 1104
@@ -1590,7 +1590,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 35,
+                        "durationMicroseconds": 50,
                         "errorMessage": "Cannot load property font from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/LoginOn.qml)::parent with type QQuickItem.",
                         "functionName": "font",
                         "line": 1105
@@ -1598,7 +1598,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 380,
+                        "durationMicroseconds": 596,
                         "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: conversion to QVariant -> QColor stored as QVariant",
                         "functionName": "color",
                         "line": 1106
@@ -1606,7 +1606,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 67,
+                        "durationMicroseconds": 102,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
                         "line": 1107
@@ -1614,7 +1614,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 56,
+                        "durationMicroseconds": 80,
                         "errorMessage": "",
                         "functionName": "verticalAlignment",
                         "line": 1108
@@ -1622,7 +1622,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 118,
+                        "durationMicroseconds": 180,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 1116
@@ -1630,7 +1630,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 375,
+                        "durationMicroseconds": 499,
                         "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: conversion to QVariant -> QColor stored as QVariant",
                         "functionName": "color",
                         "line": 1118
@@ -1638,7 +1638,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 37,
-                        "durationMicroseconds": 106,
+                        "durationMicroseconds": 139,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 1114
@@ -1646,7 +1646,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 95,
+                        "durationMicroseconds": 125,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 1115
@@ -1654,7 +1654,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 96,
+                        "durationMicroseconds": 144,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 1129
@@ -1662,7 +1662,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 93,
+                        "durationMicroseconds": 139,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 1130
@@ -1670,7 +1670,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 102,
+                        "durationMicroseconds": 141,
                         "errorMessage": "",
                         "functionName": "onPressed",
                         "line": 1178
@@ -1678,7 +1678,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 21,
-                        "durationMicroseconds": 100,
+                        "durationMicroseconds": 133,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 1148
@@ -1686,7 +1686,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 345,
+                        "durationMicroseconds": 184,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 1149
@@ -1694,7 +1694,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 424,
+                        "durationMicroseconds": 290,
                         "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: conversion to QVariant -> QColor stored as QVariant",
                         "functionName": "color",
                         "line": 1150
@@ -1702,7 +1702,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 25,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 73,
                         "errorMessage": "Cannot load property radius from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/LoginOn.qml)::parent with type QQuickItem.",
                         "functionName": "radius",
                         "line": 1164
@@ -1710,7 +1710,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 148,
+                        "durationMicroseconds": 144,
                         "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: QQuickMaterialStyle::accent with type QVariant -> QColor stored as QVariant",
                         "functionName": "color",
                         "line": 1165
@@ -1718,7 +1718,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 49,
+                        "durationMicroseconds": 60,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 1163
@@ -1726,7 +1726,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 30,
-                        "durationMicroseconds": 69,
+                        "durationMicroseconds": 103,
                         "errorMessage": "",
                         "functionName": "running",
                         "line": 1169
@@ -1734,7 +1734,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 65,
+                        "durationMicroseconds": 85,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 1184
@@ -1742,7 +1742,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 73,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 1192
@@ -1750,7 +1750,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 30,
-                        "durationMicroseconds": 68,
+                        "durationMicroseconds": 86,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 1197
@@ -1758,7 +1758,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 16,
-                        "durationMicroseconds": 178,
+                        "durationMicroseconds": 208,
                         "errorMessage": "",
                         "functionName": "x",
                         "line": 1207
@@ -1766,7 +1766,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 16,
-                        "durationMicroseconds": 152,
+                        "durationMicroseconds": 186,
                         "errorMessage": "",
                         "functionName": "y",
                         "line": 1208
@@ -1774,7 +1774,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 21,
-                        "durationMicroseconds": 90,
+                        "durationMicroseconds": 194,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 1211
@@ -1782,7 +1782,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 102,
+                        "durationMicroseconds": 163,
                         "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: QQuickMaterialStyle::accent with type QVariant -> QColor stored as QVariant",
                         "functionName": "color",
                         "line": 1212
@@ -1798,7 +1798,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 101,
+                        "durationMicroseconds": 144,
                         "errorMessage": "",
                         "functionName": "onFinished",
                         "line": 1244
@@ -1806,7 +1806,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 57,
+                        "durationMicroseconds": 83,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 1227
@@ -1814,7 +1814,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 116,
+                        "durationMicroseconds": 173,
                         "errorMessage": "",
                         "functionName": "to",
                         "line": 1230
@@ -1822,7 +1822,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 34,
-                        "durationMicroseconds": 73,
+                        "durationMicroseconds": 83,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 1232
@@ -1830,7 +1830,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 54,
+                        "durationMicroseconds": 69,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 1236
@@ -1838,7 +1838,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 34,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 74,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 1241
@@ -1846,7 +1846,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 67,
                         "errorMessage": "Cannot access value for name mouse",
                         "functionName": "onPressed",
                         "line": 1251
@@ -1854,7 +1854,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 45,
+                        "durationMicroseconds": 67,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 1249
@@ -1862,7 +1862,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 19,
-                        "durationMicroseconds": 104,
+                        "durationMicroseconds": 95,
                         "errorMessage": "",
                         "functionName": "text",
                         "line": 1263
@@ -1870,7 +1870,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 34,
-                        "durationMicroseconds": 61,
+                        "durationMicroseconds": 80,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
                         "line": 1267
@@ -1878,7 +1878,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 32,
-                        "durationMicroseconds": 54,
+                        "durationMicroseconds": 68,
                         "errorMessage": "",
                         "functionName": "verticalAlignment",
                         "line": 1268
@@ -1886,7 +1886,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 136,
+                        "durationMicroseconds": 170,
                         "errorMessage": "",
                         "functionName": "scale",
                         "line": 1270
@@ -1894,7 +1894,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 21,
-                        "durationMicroseconds": 100,
+                        "durationMicroseconds": 124,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 1278
@@ -1902,7 +1902,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 54,
-                        "durationMicroseconds": 360,
+                        "durationMicroseconds": 452,
                         "errorMessage": "",
                         "functionName": "color",
                         "line": 1281
@@ -1910,7 +1910,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 54,
-                        "durationMicroseconds": 308,
+                        "durationMicroseconds": 419,
                         "errorMessage": "",
                         "functionName": "color",
                         "line": 1282
@@ -1918,7 +1918,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 176,
+                        "durationMicroseconds": 213,
                         "errorMessage": "",
                         "functionName": "x",
                         "line": 1291
@@ -1926,7 +1926,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 145,
+                        "durationMicroseconds": 231,
                         "errorMessage": "",
                         "functionName": "y",
                         "line": 1292
@@ -1934,7 +1934,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 92,
+                        "durationMicroseconds": 130,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 1295
@@ -1950,7 +1950,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 230,
+                        "durationMicroseconds": 350,
                         "errorMessage": "",
                         "functionName": "onFinished",
                         "line": 1328
@@ -1958,7 +1958,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 136,
+                        "durationMicroseconds": 111,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 1311
@@ -1966,7 +1966,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 129,
+                        "durationMicroseconds": 170,
                         "errorMessage": "",
                         "functionName": "to",
                         "line": 1314
@@ -1974,7 +1974,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 69,
+                        "durationMicroseconds": 94,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 1316
@@ -1982,7 +1982,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 55,
+                        "durationMicroseconds": 72,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 1320
@@ -1990,7 +1990,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 75,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 1325
@@ -1998,7 +1998,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 108,
+                        "durationMicroseconds": 87,
                         "errorMessage": "",
                         "functionName": "when",
                         "line": 1345
@@ -2006,7 +2006,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 55,
+                        "durationMicroseconds": 68,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 1347
@@ -2014,7 +2014,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 160,
+                        "durationMicroseconds": 260,
                         "errorMessage": "",
                         "functionName": "when",
                         "line": 1337
@@ -2022,7 +2022,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 54,
+                        "durationMicroseconds": 78,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 1339
@@ -2030,7 +2030,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 30,
-                        "durationMicroseconds": 67,
+                        "durationMicroseconds": 81,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 1357
@@ -2038,7 +2038,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 70,
                         "errorMessage": "Cannot access value for name mouse",
                         "functionName": "onPressed",
                         "line": 1364

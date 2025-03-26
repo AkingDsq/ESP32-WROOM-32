@@ -1,53 +1,92 @@
 #include <driver/i2s.h>
-
+/*
+数据引脚(DIN/DOUT)可以分配到大多数GPIO
+时钟(BCK)和字选择(WS)引脚通常可以分配到以下GPIO：
+对于I2S0：GPIO0-15, 16-17(仅输入), 18-19, 21-23, 25-27, 32-39
+对于I2S1：GPIO16-17, 18-19, 21-23, 25-27
+*/
 // 引脚定义
-#define I2S_BCLK 33
-#define I2S_LRCLK 25
-#define I2S_DIN 32
+#define I2S_SCK 18
+#define I2S_WS 19
+#define I2S_SD 23
+// 麦克风相关参数
+#define I2S_PORT I2S_NUM_0
+#define SAMPLE_RATE 16000
+#define SAMPLE_BITS 16
+#define BUFFER_SIZE 1024
+// 语音活动检测阈值
+#define VAD_THRESHOLD 500
+bool isRecording = false;
+unsigned long recordingStartTime = 0;
+const unsigned long maxRecordingTime = 3000; // 最大录音时长
 
 void init_Microphone() {
   // 配置I2S
   i2s_config_t i2s_Microphone_config = {
     .mode = (i2s_mode_t)(I2S_MODE_MASTER | I2S_MODE_RX),
-    .sample_rate = 16000,
-    .bits_per_sample = I2S_BITS_PER_SAMPLE_32BIT,
+    .sample_rate = SAMPLE_RATE,
+    .bits_per_sample = (i2s_bits_per_sample_t)SAMPLE_BITS,
     .channel_format = I2S_CHANNEL_FMT_ONLY_LEFT,
     .communication_format = I2S_COMM_FORMAT_STAND_I2S,
-    .intr_alloc_flags = 0,
+    .intr_alloc_flags = ESP_INTR_FLAG_LEVEL1,
     .dma_buf_count = 8,
     .dma_buf_len = 64,
-    .use_apll = false
+    .use_apll = false,
+    .tx_desc_auto_clear = false,
+    .fixed_mclk = 0
   };
 
   i2s_pin_config_t pin_Microphone_config = {
-    .bck_io_num = I2S_BCLK,
-    .ws_io_num = I2S_LRCLK,
+    .bck_io_num = I2S_SCK,
+    .ws_io_num = I2S_WS,
     .data_out_num = -1, // 未使用
-    .data_in_num = I2S_DIN
+    .data_in_num = I2S_SD
   };
 
   // 初始化I2S驱动
-  i2s_driver_install(I2S_NUM_0, &i2s_Microphone_config, 0, NULL);
-  i2s_set_pin(I2S_NUM_0, &pin_Microphone_config);
+  i2s_driver_install(I2S_PORT, &i2s_Microphone_config, 0, NULL);
+  i2s_set_pin(I2S_PORT, &pin_Microphone_config);
 }
 
-void outPut() {
-  int32_t raw_samples[128];
-  size_t bytes_read;
+// 处理音频数据并发送
+void processAudio() {
+  static int16_t audioBuffer[BUFFER_SIZE];
+  size_t bytesRead;
   
-  // 读取I2S数据
-  i2s_read(I2S_NUM_0, raw_samples, sizeof(raw_samples), &bytes_read, portMAX_DELAY);
+  i2s_read(I2S_PORT, audioBuffer, BUFFER_SIZE * sizeof(int16_t), &bytesRead, portMAX_DELAY);
   
-  // 计算音量（RMS）
-  float sum = 0;
-  int samples = bytes_read / sizeof(int32_t);
-  for (int i = 0; i < samples; i++) {
-    int32_t sample = raw_samples[i] >> 8; // 提取24位有效数据
-    sum += (sample * sample);
+  // 计算音频能量
+  int32_t energy = 0;
+  for (int i = 0; i < bytesRead / sizeof(int16_t); i++) {
+    energy += abs(audioBuffer[i]);
   }
-  float rms = sqrt(sum / samples);
+  energy /= (bytesRead / sizeof(int16_t));
+  Serial.println(energy);
   
-  // 输出音量值
-  Serial.println(rms);
-  delay(50);
+  // // 语音活动检测
+  // if (energy > VAD_THRESHOLD) {
+  //   if (!isRecording) {
+  //     isRecording = true;
+  //     recordingStartTime = millis();
+  //     Serial.println("检测到语音，开始录音...");
+  //   }
+    
+  //   // 发送音频数据到Android应用
+  //   if (WiFi.status() == WL_CONNECTED) {
+  //     udp.beginPacket(udpAddress, udpPort);
+  //     udp.write((uint8_t*)audioBuffer, bytesRead);
+  //     udp.endPacket();
+  //   }
+    
+  //   // 检查是否超过最大录音时长
+  //   if (millis() - recordingStartTime > maxRecordingTime) {
+  //     isRecording = false;
+  //     Serial.println("达到最大录音时间，停止录音。");
+  //   }
+  // } else {
+  //   if (isRecording && (millis() - recordingStartTime > 500)) {
+  //     isRecording = false;
+  //     Serial.println("语音结束，停止录音。");
+  //   }
+  // }
 }

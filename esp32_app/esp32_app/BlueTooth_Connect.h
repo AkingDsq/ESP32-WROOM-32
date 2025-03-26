@@ -7,7 +7,7 @@
 // #include "BluetoothA2DPSink.h"
 // I2SStream i2s_VoiceSink;
 // BluetoothA2DPSink a2dp_sink(i2s_VoiceSink);
-
+#define LED_PIN 2        // LED引脚
 // BLE
 #include <BLEDevice.h>
 #include <BLEUtils.h>
@@ -17,6 +17,7 @@
 #define Temperature_UUID "2A6E" // 温度uuid
 #define Humidity_UUID "2A6F"    // 湿度的uuid
 #define Command_UUID "FFE1"     // 用于接收命令的特性UUID
+#define Voice_CMD_UUID "FFE2"  // 新增：语音命令结果特征值
 
 // 温湿度传感器
 #include <DHT.h>
@@ -27,7 +28,7 @@ DHT dht(DHTPIN, DHTTYPE); // 创建DHT对象
 // BLE服务初始化
 BLEServer *pServer;
 BLEService *pService;
-BLECharacteristic *pTemperatureChar, *pHumidityChar, *pCommandChar;
+BLECharacteristic *pTemperatureChar, *pHumidityChar, *pCommandChar, *pVoiceCmdChar;
 
 // void init_A2DPSink();
 // // 连接经典蓝牙
@@ -93,6 +94,39 @@ class CommandCallbacks: public BLECharacteristicCallbacks {
       }
     }
 };
+// 语音命令特征回调
+class VoiceCommandCallbacks: public BLECharacteristicCallbacks {
+  void onWrite(BLECharacteristic *pCharacteristic) {
+    String value = pCharacteristic->getValue();    
+    if (value.length() > 0) {
+      Serial.print("收到语音命令结果: ");
+      Serial.println(value.c_str());            
+      // 处理语音命令      
+      if (value == "OPEN_LIGHT") {        
+        digitalWrite(LED_PIN, HIGH);
+        Serial.println("语音命令：LED已打开");      
+      }       
+      else if (value == "CLOSE_LIGHT") {      
+        digitalWrite(LED_PIN, LOW);
+        Serial.println("语音命令：LED已关闭");      
+      }      
+      else if (value == "READ_TEMPERATURE") {
+        float temperature = dht.readTemperature();        
+        if (!isnan(temperature)) {
+          Serial.printf("语音命令：当前温度 %.1f°C\n", temperature);          
+          // 这里可以添加播报功能        
+        }      
+      }      
+      else if (value == "READ_HUMIDITY") {
+          float humidity = dht.readHumidity();        
+      if (!isnan(humidity)) {
+          Serial.printf("语音命令：当前湿度 %.1f%%\n", humidity);          
+          // 这里可以添加播报功能        
+        }      
+      }    
+    }  
+  }
+};
 // 初始化BLE连接
 void init_BLE() {
   Serial.begin(115200);
@@ -100,8 +134,8 @@ void init_BLE() {
   // BLE服务初始化
 
   BLEDevice::init("ESP32-BLE");
-  BLEServer *pServer = BLEDevice::createServer();
-  BLEService *pService = pServer->createService(SERVICE_UUID);
+  pServer = BLEDevice::createServer();
+  pService = pServer->createService(SERVICE_UUID);
 
   // 温度特征（支持通知）
   pTemperatureChar = pService->createCharacteristic(
@@ -121,11 +155,17 @@ void init_BLE() {
     BLECharacteristic::PROPERTY_WRITE
   );
   pCommandChar->setCallbacks(new CommandCallbacks());
+  // 语音命令结果特征（可写，用于接收Android识别结果）
+  pVoiceCmdChar = pService->createCharacteristic(    
+    BLEUUID(Voice_CMD_UUID),
+    BLECharacteristic::PROPERTY_WRITE  
+  );
+  pVoiceCmdChar->setCallbacks(new VoiceCommandCallbacks());
 
   pService->start();
   // BLEAdvertising *pAdvertising = pServer->getAdvertising();  // this still is working for backward compatibility
-  BLEAdvertising *pAdvertising = BLEDevice::getAdvertising();
-  pAdvertising->addServiceUUID(SERVICE_UUID);
+  BLEAdvertising *pAdvertising = pServer->getAdvertising();
+  pAdvertising->addServiceUUID(pService->getUUID());
   pAdvertising->setScanResponse(true);  // 允许扫描响应
   pAdvertising->setMinPreferred(0x06); // 提高广播优先级
   BLEDevice::startAdvertising();
@@ -150,7 +190,5 @@ String readSensors() {
   pHumidityChar->setValue(String(humidity));
   pHumidityChar->notify();
   Serial.println("T:" + String(temperature) +  "°C H:" + String(humidity) + "%");
-
-  delay(2000); // 每2秒上报一次
   return "T:" + String(temperature) +  "°C\nH:" + String(humidity) + "%";
 }

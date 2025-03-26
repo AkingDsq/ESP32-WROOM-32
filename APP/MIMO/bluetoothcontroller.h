@@ -16,6 +16,7 @@
 #define Temperature_UUID "00002A6E-0000-1000-8000-00805F9B34FB" // 温度uuid
 #define Humidity_UUID "00002A6F-0000-1000-8000-00805F9B34FB"    // 湿度的uuid
 #define Command_UUID "0000FFE1-0000-1000-8000-00805F9B34FB"     // 用于接收命令的特性UUID
+#define Voice_CMD_UUID "0000FFE2-0000-1000-8000-00805F9B34FB"  // 新增：语音命令结果特征值
 
 class BlueToothController : public QObject
 {

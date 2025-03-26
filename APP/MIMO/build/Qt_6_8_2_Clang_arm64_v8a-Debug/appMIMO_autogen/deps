@@ -51,6 +51,8 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QDateTime \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QDebug \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QDir \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QJniEnvironment \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QJniObject \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QList \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QMap \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QMetaType \
