@@ -1,0 +1,15 @@
+<RCC>
+  <qresource prefix="/models">
+    <file alias="vosk-model-small-cn/am/final.mdl">D:/git/work/ESP32-WROOM-32/APP/MIMO/models/vosk-model-small-cn/am/final.mdl</file>
+    <file alias="vosk-model-small-cn/conf/mfcc.conf">D:/git/work/ESP32-WROOM-32/APP/MIMO/models/vosk-model-small-cn/conf/mfcc.conf</file>
+    <file alias="vosk-model-small-cn/conf/model.conf">D:/git/work/ESP32-WROOM-32/APP/MIMO/models/vosk-model-small-cn/conf/model.conf</file>
+    <file alias="vosk-model-small-cn/graph/phones.txt">D:/git/work/ESP32-WROOM-32/APP/MIMO/models/vosk-model-small-cn/graph/phones.txt</file>
+    <file alias="vosk-model-small-cn/graph/words.txt">D:/git/work/ESP32-WROOM-32/APP/MIMO/models/vosk-model-small-cn/graph/words.txt</file>
+    <file alias="vosk-model-small-cn/ivector/final.dubm">D:/git/work/ESP32-WROOM-32/APP/MIMO/models/vosk-model-small-cn/ivector/final.dubm</file>
+    <file alias="vosk-model-small-cn/ivector/final.ie">D:/git/work/ESP32-WROOM-32/APP/MIMO/models/vosk-model-small-cn/ivector/final.ie</file>
+    <file alias="vosk-model-small-cn/ivector/final.mat">D:/git/work/ESP32-WROOM-32/APP/MIMO/models/vosk-model-small-cn/ivector/final.mat</file>
+    <file alias="vosk-model-small-cn/rescore/G.fst">D:/git/work/ESP32-WROOM-32/APP/MIMO/models/vosk-model-small-cn/rescore/G.fst</file>
+    <file alias="vosk-model-small-cn/rescore/G.carpa">D:/git/work/ESP32-WROOM-32/APP/MIMO/models/vosk-model-small-cn/rescore/G.carpa</file>
+  </qresource>
+</RCC>
+
