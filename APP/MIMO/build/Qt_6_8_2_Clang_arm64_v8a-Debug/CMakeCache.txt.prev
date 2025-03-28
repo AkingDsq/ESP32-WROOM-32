@@ -424,6 +424,9 @@ Qt6Sql_DIR:PATH=E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Sql
 //The directory containing a CMake configuration file for Qt6TextToSpeech.
 Qt6TextToSpeech_DIR:PATH=E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6TextToSpeech
 
+//The directory containing a CMake configuration file for Qt6WebSockets.
+Qt6WebSockets_DIR:PATH=E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6WebSockets
+
 //The directory containing a CMake configuration file for Qt6.
 Qt6_DIR:PATH=E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6
 

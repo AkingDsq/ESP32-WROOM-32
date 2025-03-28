@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/qt/qml/MIMO/">
-    <file alias="Main.qml">D:/git/work/ESP32-WROOM-32/APP/MIMO/Main.qml</file>
-  </qresource>
-</RCC>
-

@@ -1,4 +1,3 @@
-// ./components/LoginOn.qml
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -128,1010 +127,1041 @@ Item {
         }
     }
 
-    // Logo区域
+    // 创建主布局容器 - 使用Column替代ColumnLayout以更好地控制大小
     Item {
-        id: logoArea
-        anchors.top: parent.top
-        anchors.topMargin: 60
-        anchors.horizontalCenter: parent.horizontalCenter
-        width: parent.width * 0.35
-        height: width
+        anchors.fill: parent
 
-        // 旋转的Logo外框
-        Rectangle {
-            id: logoBackground
-            anchors.centerIn: parent
-            width: parent.width
-            height: width
-            radius: width / 2
-            color: "transparent"
-            border.width: 2
-            border.color: "#BB86FC"
-            opacity: 0.7
-
-            RotationAnimation {
-                target: logoBackground
-                property: "rotation"
-                from: 0
-                to: 360
-                duration: 15000
-                loops: Animation.Infinite
-                running: true
-            }
-
-            SequentialAnimation {
-                running: true
-                loops: Animation.Infinite
-
-                ParallelAnimation {
-                    NumberAnimation {
-                        target: logoBackground
-                        property: "scale"
-                        from: 1.0
-                        to: 1.15
-                        duration: 1500
-                        easing.type: Easing.InOutQuad
-                    }
-                    NumberAnimation {
-                        target: logoBackground
-                        property: "opacity"
-                        from: 0.7
-                        to: 0.4
-                        duration: 1500
-                        easing.type: Easing.InOutQuad
-                    }
-                }
-
-                ParallelAnimation {
-                    NumberAnimation {
-                        target: logoBackground
-                        property: "scale"
-                        from: 1.15
-                        to: 1.0
-                        duration: 1500
-                        easing.type: Easing.InOutQuad
-                    }
-                    NumberAnimation {
-                        target: logoBackground
-                        property: "opacity"
-                        from: 0.4
-                        to: 0.7
-                        duration: 1500
-                        easing.type: Easing.InOutQuad
-                    }
-                }
-            }
-        }
-
-        // Logo中心
-        Rectangle {
-            anchors.centerIn: parent
-            width: parent.width * 0.85
-            height: width
-            radius: width / 2
-            gradient: Gradient {
-                GradientStop { position: 0.0; color: "#7B2BFF" }
-                GradientStop { position: 1.0; color: "#BB86FC" }
-            }
-
-            // Logo文字 - 使用当前用户的首字母
-            Text {
-                anchors.centerIn: parent
-                text: "A"  // 使用AkingDsq的首字母
-                color: "white"
-                font.pixelSize: parent.width * 0.5
-                font.bold: true
-            }
-        }
-    }
-
-    // 应用名称
-    Text {
-        anchors.top: logoArea.bottom
-        anchors.topMargin: 20
-        anchors.horizontalCenter: parent.horizontalCenter
-        text: "AkingDsq" // 使用当前用户名
-        color: "white"
-        font.pixelSize: 28
-        font.bold: true
-    }
-
-    // 主内容区域 - 登录/注册表单
-    SwipeView {
-        id: swipeView
-        anchors.top: logoArea.bottom
-        anchors.topMargin: 80
-        anchors.bottom: tabBar.top
-        anchors.bottomMargin: 20
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.leftMargin: 30
-        anchors.rightMargin: 30
-        currentIndex: tabBar.currentIndex
-        interactive: true
-        clip: true
-
-        // 登录页
+        // Logo区域
         Item {
-            id: loginPage
+            id: logoArea
+            anchors.top: parent.top
+            anchors.topMargin: parent.height * 0.05
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: Math.min(parent.width * 0.35, 120)
+            height: width
 
-            ColumnLayout {
-                anchors.fill: parent
-                spacing: 20
+            // 旋转的Logo外框
+            Rectangle {
+                id: logoBackground
+                anchors.centerIn: parent
+                width: parent.width
+                height: width
+                radius: width / 2
+                color: "transparent"
+                border.width: 2
+                border.color: "#BB86FC"
+                opacity: 0.7
 
-                Item { Layout.fillHeight: true; Layout.preferredHeight: 10 }
+                RotationAnimation {
+                    target: logoBackground
+                    property: "rotation"
+                    from: 0
+                    to: 360
+                    duration: 15000
+                    loops: Animation.Infinite
+                    running: true
+                }
 
-                // 欢迎回来文字
-                Label {
-                    text: qsTr("欢迎回来")
-                    font.pixelSize: 26
-                    font.bold: true
+                SequentialAnimation {
+                    running: true
+                    loops: Animation.Infinite
+
+                    ParallelAnimation {
+                        NumberAnimation {
+                            target: logoBackground
+                            property: "scale"
+                            from: 1.0
+                            to: 1.15
+                            duration: 1500
+                            easing.type: Easing.InOutQuad
+                        }
+                        NumberAnimation {
+                            target: logoBackground
+                            property: "opacity"
+                            from: 0.7
+                            to: 0.4
+                            duration: 1500
+                            easing.type: Easing.InOutQuad
+                        }
+                    }
+
+                    ParallelAnimation {
+                        NumberAnimation {
+                            target: logoBackground
+                            property: "scale"
+                            from: 1.15
+                            to: 1.0
+                            duration: 1500
+                            easing.type: Easing.InOutQuad
+                        }
+                        NumberAnimation {
+                            target: logoBackground
+                            property: "opacity"
+                            from: 0.4
+                            to: 0.7
+                            duration: 1500
+                            easing.type: Easing.InOutQuad
+                        }
+                    }
+                }
+            }
+
+            // Logo中心
+            Rectangle {
+                anchors.centerIn: parent
+                width: parent.width * 0.85
+                height: width
+                radius: width / 2
+                gradient: Gradient {
+                    GradientStop { position: 0.0; color: "#7B2BFF" }
+                    GradientStop { position: 1.0; color: "#BB86FC" }
+                }
+
+                // Logo文字 - 使用当前用户的首字母
+                Text {
+                    anchors.centerIn: parent
+                    text: "A"  // 使用AkingDsq的首字母
                     color: "white"
-                    Layout.alignment: Qt.AlignHCenter
+                    font.pixelSize: parent.width * 0.5
+                    font.bold: true
                 }
+            }
+        }
 
-                Item { Layout.fillHeight: true; Layout.preferredHeight: 20 }
+        Item { Layout.fillHeight: true; Layout.preferredHeight: 20 }
 
-                // 用户名/手机号
-                MobileTextField {
-                    id: usernameField
-                    placeholderText: qsTr("用户名/手机号")
-                    Layout.fillWidth: true
-                    leftPadding: 45
-                    text: "AkingDsq" // 预填充当前用户名
+        // 应用名称
+        Text {
+            id: appNameText
+            anchors.top: logoArea.bottom
+            anchors.topMargin: 5
+            anchors.horizontalCenter: parent.horizontalCenter
+            text: "AkingDsq" // 使用当前用户名
+            color: "white"
+            font.pixelSize: 24
+            font.bold: true
+        }
 
-                    Rectangle {
-                        width: 30
-                        height: 30
-                        radius: 15
-                        anchors.left: parent.left
-                        anchors.leftMargin: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        color: "transparent"
+        Item { Layout.fillHeight: true; Layout.preferredHeight: 10 }
 
-                        Text {
-                            anchors.centerIn: parent
-                            text: "👤"
-                            font.pixelSize: 18
-                            color: "#9E9E9E"
-                        }
-                    }
-                }
+        // 主内容区域 - 登录/注册表单
+        SwipeView {
+            id: swipeView
+            anchors.top: appNameText.bottom
+            anchors.topMargin: 15
+            anchors.bottom: fingerprintArea.top
+            anchors.bottomMargin: 5
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.leftMargin: 30
+            anchors.rightMargin: 30
+            currentIndex: tabBar.currentIndex
+            interactive: true
+            clip: true
 
-                // 密码
-                MobileTextField {
-                    id: passwordField
-                    placeholderText: qsTr("密码")
-                    echoMode: TextInput.Password
-                    Layout.fillWidth: true
-                    leftPadding: 45
+            // 登录页
+            Item {
+                id: loginPage
 
-                    Rectangle {
-                        width: 30
-                        height: 30
-                        radius: 15
-                        anchors.left: parent.left
-                        anchors.leftMargin: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        color: "transparent"
+                ColumnLayout {
+                    anchors.fill: parent
+                    anchors.topMargin: 5
+                    spacing: 15
 
-                        Text {
-                            anchors.centerIn: parent
-                            text: "🔒"
-                            font.pixelSize: 18
-                            color: "#9E9E9E"
-                        }
+                    // 欢迎回来文字
+                    Label {
+                        text: qsTr("欢迎回来")
+                        font.pixelSize: 22
+                        font.bold: true
+                        color: "white"
+                        Layout.alignment: Qt.AlignHCenter
                     }
 
-                    // 显示/隐藏密码按钮
-                    Rectangle {
-                        width: 30
-                        height: 30
-                        radius: 15
-                        anchors.right: parent.right
-                        anchors.rightMargin: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        color: "transparent"
+                    Item { Layout.fillHeight: true; Layout.preferredHeight: 10 }
 
-                        Text {
-                            anchors.centerIn: parent
-                            text: passwordField.echoMode === TextInput.Password ? "👁️" : "👁️‍🗨️"
-                            font.pixelSize: 18
-                            color: "#9E9E9E"
-                        }
+                    // 用户名/手机号
+                    MobileTextField {
+                        id: usernameField
+                        placeholderText: qsTr("用户名/手机号")
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: 50
+                        leftPadding: 45
+                        text: "AkingDsq" // 预填充当前用户名
 
-                        MouseArea {
-                            anchors.fill: parent
-                            onClicked: {
-                                passwordField.echoMode = passwordField.echoMode === TextInput.Password ?
-                                                         TextInput.Normal : TextInput.Password
+                        Rectangle {
+                            width: 30
+                            height: 30
+                            radius: 15
+                            anchors.left: parent.left
+                            anchors.leftMargin: 10
+                            anchors.verticalCenter: parent.verticalCenter
+                            color: "transparent"
+
+                            Text {
+                                anchors.centerIn: parent
+                                text: "👤"
+                                font.pixelSize: 18
+                                color: "#9E9E9E"
                             }
                         }
                     }
-                }
 
-                // 记住密码和忘记密码
-                RowLayout {
-                    Layout.fillWidth: true
-                    Layout.topMargin: 5
+                    // 密码
+                    MobileTextField {
+                        id: passwordField
+                        placeholderText: qsTr("密码")
+                        echoMode: TextInput.Password
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: 50
+                        leftPadding: 45
 
-                    Switch {
-                        id: rememberSwitch
-                        text: qsTr("记住密码")
-                        checked: true
-                    }
+                        Rectangle {
+                            width: 30
+                            height: 30
+                            radius: 15
+                            anchors.left: parent.left
+                            anchors.leftMargin: 10
+                            anchors.verticalCenter: parent.verticalCenter
+                            color: "transparent"
 
-                    Item { Layout.fillWidth: true }
-
-                    Label {
-                        text: qsTr("忘记密码?")
-                        color: Material.accent
-
-                        MouseArea {
-                            anchors.fill: parent
-                            anchors.margins: -5
-                            onClicked: console.log("忘记密码")
+                            Text {
+                                anchors.centerIn: parent
+                                text: "🔒"
+                                font.pixelSize: 18
+                                color: "#9E9E9E"
+                            }
                         }
-                    }
-                }
 
-                Item { Layout.fillHeight: true; Layout.preferredHeight: 30 }
+                        // 显示/隐藏密码按钮
+                        Rectangle {
+                            width: 30
+                            height: 30
+                            radius: 15
+                            anchors.right: parent.right
+                            anchors.rightMargin: 10
+                            anchors.verticalCenter: parent.verticalCenter
+                            color: "transparent"
 
-                // 登录按钮
-                MobileButton {
-                    text: qsTr("登 录")
-                    Layout.fillWidth: true
-                    Layout.preferredHeight: 56
-                    onClicked: {
-                        loginSuccessAnim.start()
-                    }
-                }
+                            Text {
+                                anchors.centerIn: parent
+                                text: passwordField.echoMode === TextInput.Password ? "👁️" : "👁️‍🗨️"
+                                font.pixelSize: 18
+                                color: "#9E9E9E"
+                            }
 
-                Item { Layout.fillHeight: true; Layout.preferredHeight: 20 }
-
-                // 快捷登录选项
-                ColumnLayout {
-                    spacing: 15
-                    Layout.fillWidth: true
-
-                    Label {
-                        text: qsTr("—— 快捷登录 ——")
-                        color: "#9E9E9E"
-                        font.pixelSize: 14
-                        Layout.alignment: Qt.AlignHCenter
-                    }
-
-                    RowLayout {
-                        spacing: 30
-                        Layout.alignment: Qt.AlignHCenter
-
-                        Repeater {
-                            model: [
-                                { name: "微信", emoji: "📱", color: "#07C160" },
-                                { name: "支付宝", emoji: "💰", color: "#1677FF" },
-                                { name: "微博", emoji: "📚", color: "#E6162D" }
-                            ]
-
-                            delegate: Item {
-                                Layout.preferredWidth: 50
-                                Layout.preferredHeight: 50
-
-                                Rectangle {
-                                    anchors.fill: parent
-                                    radius: width / 2
-                                    color: "transparent"
-                                    border.width: 1.5
-                                    border.color: modelData.color
-
-                                    Text {
-                                        anchors.centerIn: parent
-                                        text: modelData.emoji
-                                        font.pixelSize: 22
-                                    }
-
-                                    MouseArea {
-                                        anchors.fill: parent
-                                        onPressed: parent.scale = 0.9
-                                        onReleased: parent.scale = 1.0
-                                        onClicked: {
-                                            console.log(modelData.name + "登录")
-                                            quickLoginAnim.start()
-                                        }
-                                    }
-
-                                    Behavior on scale {
-                                        NumberAnimation { duration: 100 }
-                                    }
+                            MouseArea {
+                                anchors.fill: parent
+                                onClicked: {
+                                    passwordField.echoMode = passwordField.echoMode === TextInput.Password ? TextInput.Normal : TextInput.Password
                                 }
                             }
                         }
                     }
-                }
 
-                Item { Layout.fillHeight: true }
-            }
+                    // 记住密码和忘记密码
+                    RowLayout {
+                        Layout.fillWidth: true
+                        Layout.topMargin: 0
 
-            // 登录成功动画
-            SequentialAnimation {
-                id: loginSuccessAnim
-
-                ParallelAnimation {
-                    NumberAnimation {
-                        target: usernameField
-                        property: "scale"
-                        from: 1.0
-                        to: 0.95
-                        duration: 150
-                    }
-                    NumberAnimation {
-                        target: passwordField
-                        property: "scale"
-                        from: 1.0
-                        to: 0.95
-                        duration: 150
-                    }
-                }
-
-                NumberAnimation {
-                    target: loginPage
-                    property: "opacity"
-                    from: 1.0
-                    to: 0.7
-                    duration: 200
-                }
-
-                NumberAnimation {
-                    target: loginPage
-                    property: "opacity"
-                    from: 0.7
-                    to: 1.0
-                    duration: 400
-                    easing.type: Easing.OutBack
-                }
-
-                ParallelAnimation {
-                    NumberAnimation {
-                        target: usernameField
-                        property: "scale"
-                        from: 0.95
-                        to: 1.0
-                        duration: 300
-                        easing.type: Easing.OutBack
-                    }
-                    NumberAnimation {
-                        target: passwordField
-                        property: "scale"
-                        from: 0.95
-                        to: 1.0
-                        duration: 300
-                        easing.type: Easing.OutBack
-                    }
-                }
-
-                ScriptAction {
-                    script: {
-                        console.log("登录成功！")
-                        rootItem.loginSuccess()
-                    }
-                }
-            }
-
-            // 快捷登录成功动画
-            SequentialAnimation {
-                id: quickLoginAnim
-
-                NumberAnimation {
-                    target: loginPage
-                    property: "opacity"
-                    from: 1.0
-                    to: 0.7
-                    duration: 200
-                }
-
-                NumberAnimation {
-                    target: loginPage
-                    property: "opacity"
-                    from: 0.7
-                    to: 1.0
-                    duration: 300
-                }
-
-                ScriptAction {
-                    script: {
-                        console.log("快捷登录成功！")
-                        rootItem.loginSuccess()
-                    }
-                }
-            }
-        }
-
-        // 注册页面
-        Item {
-            id: registerPage
-
-            ColumnLayout {
-                anchors.fill: parent
-                spacing: 15
-
-                Item { Layout.preferredHeight: 10 }
-
-                // 标题
-                Label {
-                    text: qsTr("注册新账号")
-                    font.pixelSize: 26
-                    font.bold: true
-                    color: "white"
-                    Layout.alignment: Qt.AlignHCenter
-                }
-
-                Item { Layout.preferredHeight: 20 }
-
-                // 手机号
-                MobileTextField {
-                    id: phoneField
-                    placeholderText: qsTr("手机号")
-                    Layout.fillWidth: true
-                    leftPadding: 45
-                    inputMethodHints: Qt.ImhDigitsOnly
-
-                    Rectangle {
-                        width: 30
-                        height: 30
-                        radius: 15
-                        anchors.left: parent.left
-                        anchors.leftMargin: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        color: "transparent"
-
-                        Text {
-                            anchors.centerIn: parent
-                            text: "📱"
-                            font.pixelSize: 18
-                            color: "#9E9E9E"
-                        }
-                    }
-                }
-
-                // 验证码
-                MobileTextField {
-                    id: verificationField
-                    placeholderText: qsTr("验证码")
-                    Layout.fillWidth: true
-                    leftPadding: 45
-                    inputMethodHints: Qt.ImhDigitsOnly
-
-                    Rectangle {
-                        width: 30
-                        height: 30
-                        radius: 15
-                        anchors.left: parent.left
-                        anchors.leftMargin: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        color: "transparent"
-
-                        Text {
-                            anchors.centerIn: parent
-                            text: "🔢"
-                            font.pixelSize: 18
-                            color: "#9E9E9E"
-                        }
-                    }
-
-                    // 获取验证码按钮
-                    Rectangle {
-                        anchors.right: parent.right
-                        anchors.rightMargin: 5
-                        anchors.verticalCenter: parent.verticalCenter
-                        width: codeText.width + 24
-                        height: parent.height - 16
-                        radius: 6
-                        color: "#3D3D3D"
-
-                        property int countdown: 60
-
-                        Text {
-                            id: codeText
-                            anchors.centerIn: parent
-                            text: parent.countdown < 60 ? qsTr("重新获取(%1)").arg(parent.countdown) : qsTr("获取验证码")
-                            color: parent.countdown < 60 ? "#9E9E9E" : Material.accent
+                        Switch {
+                            id: rememberSwitch
+                            text: qsTr("记住密码")
+                            checked: true
                             font.pixelSize: 13
                         }
 
-                        Timer {
-                            id: countdownTimer
-                            interval: 1000
-                            repeat: true
-                            onTriggered: {
-                                parent.countdown--;
-                                if (parent.countdown <= 0) {
-                                    stop();
-                                    parent.countdown = 60;
+                        Item { Layout.fillWidth: true }
+
+                        Label {
+                            text: qsTr("忘记密码?")
+                            color: Material.accent
+                            font.pixelSize: 13
+
+                            MouseArea {
+                                anchors.fill: parent
+                                anchors.margins: -5
+                                onClicked: console.log("忘记密码")
+                            }
+                        }
+                    }
+
+                    Item { Layout.fillHeight: true; Layout.preferredHeight: 10 }
+
+                    // 登录按钮
+                    MobileButton {
+                        text: qsTr("登 录")
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: 50
+                        onClicked: {
+                            loginSuccessAnim.start()
+                        }
+                    }
+
+                    // 快捷登录选项
+                    Item {
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        Layout.minimumHeight: 120
+
+                        Column {
+                            anchors.fill: parent
+                            spacing: 10
+
+                            Label {
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                text: qsTr("—— 快捷登录 ——")
+                                color: "#9E9E9E"
+                                font.pixelSize: 14
+                            }
+
+                            Row {
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                spacing: 30
+
+                                Repeater {
+                                    model: [
+                                        { name: "微信", emoji: "📱", color: "#07C160" },
+                                        { name: "支付宝", emoji: "💰", color: "#1677FF" },
+                                        { name: "微博", emoji: "📚", color: "#E6162D" }
+                                    ]
+
+                                    delegate: Item {
+                                        width: 50
+                                        height: 50
+
+                                        Rectangle {
+                                            anchors.fill: parent
+                                            radius: width / 2
+                                            color: "transparent"
+                                            border.width: 1.5
+                                            border.color: modelData.color
+
+                                            Text {
+                                                anchors.centerIn: parent
+                                                text: modelData.emoji
+                                                font.pixelSize: 22
+                                            }
+
+                                            MouseArea {
+                                                anchors.fill: parent
+                                                onPressed: parent.scale = 0.9
+                                                onReleased: parent.scale = 1.0
+                                                onClicked: {
+                                                    console.log(modelData.name + "登录")
+                                                    quickLoginAnim.start()
+                                                }
+                                            }
+
+                                            Behavior on scale {
+                                                NumberAnimation { duration: 100 }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
+                    }
+                }
 
-                        MouseArea {
-                            anchors.fill: parent
-                            onClicked: {
-                                if (parent.countdown === 60) {
-                                    parent.countdown = 59;
-                                    countdownTimer.start();
-                                    console.log("发送验证码");
+                // 登录成功动画
+                SequentialAnimation {
+                    id: loginSuccessAnim
+
+                    ParallelAnimation {
+                        NumberAnimation {
+                            target: usernameField
+                            property: "scale"
+                            from: 1.0
+                            to: 0.95
+                            duration: 150
+                        }
+                        NumberAnimation {
+                            target: passwordField
+                            property: "scale"
+                            from: 1.0
+                            to: 0.95
+                            duration: 150
+                        }
+                    }
+
+                    NumberAnimation {
+                        target: loginPage
+                        property: "opacity"
+                        from: 1.0
+                        to: 0.7
+                        duration: 200
+                    }
+
+                    NumberAnimation {
+                        target: loginPage
+                        property: "opacity"
+                        from: 0.7
+                        to: 1.0
+                        duration: 400
+                        easing.type: Easing.OutBack
+                    }
+
+                    ParallelAnimation {
+                        NumberAnimation {
+                            target: usernameField
+                            property: "scale"
+                            from: 0.95
+                            to: 1.0
+                            duration: 300
+                            easing.type: Easing.OutBack
+                        }
+                        NumberAnimation {
+                            target: passwordField
+                            property: "scale"
+                            from: 0.95
+                            to: 1.0
+                            duration: 300
+                            easing.type: Easing.OutBack
+                        }
+                    }
+
+                    ScriptAction {
+                        script: {
+                            console.log("登录成功！")
+                            rootItem.loginSuccess()
+                        }
+                    }
+                }
+
+                // 快捷登录成功动画
+                SequentialAnimation {
+                    id: quickLoginAnim
+
+                    NumberAnimation {
+                        target: loginPage
+                        property: "opacity"
+                        from: 1.0
+                        to: 0.7
+                        duration: 200
+                    }
+
+                    NumberAnimation {
+                        target: loginPage
+                        property: "opacity"
+                        from: 0.7
+                        to: 1.0
+                        duration: 300
+                    }
+
+                    ScriptAction {
+                        script: {
+                            console.log("快捷登录成功！")
+                            rootItem.loginSuccess()
+                        }
+                    }
+                }
+            }
+
+            // 注册页面
+            Item {
+                id: registerPage
+
+                ColumnLayout {
+                    anchors.fill: parent
+                    anchors.topMargin: 5
+                    spacing: 15
+
+                    // 标题
+                    Label {
+                        text: qsTr("注册新账号")
+                        font.pixelSize: 22
+                        font.bold: true
+                        color: "white"
+                        Layout.alignment: Qt.AlignHCenter
+                    }
+
+                    Item { Layout.fillHeight: true; Layout.preferredHeight: 10 }
+
+                    // 手机号
+                    MobileTextField {
+                        id: phoneField
+                        placeholderText: qsTr("手机号")
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: 50
+                        leftPadding: 45
+                        inputMethodHints: Qt.ImhDigitsOnly
+
+                        Rectangle {
+                            width: 30
+                            height: 30
+                            radius: 15
+                            anchors.left: parent.left
+                            anchors.leftMargin: 10
+                            anchors.verticalCenter: parent.verticalCenter
+                            color: "transparent"
+
+                            Text {
+                                anchors.centerIn: parent
+                                text: "📱"
+                                font.pixelSize: 18
+                                color: "#9E9E9E"
+                            }
+                        }
+                    }
+
+                    // 验证码
+                    MobileTextField {
+                        id: verificationField
+                        placeholderText: qsTr("验证码")
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: 50
+                        leftPadding: 45
+                        inputMethodHints: Qt.ImhDigitsOnly
+
+                        Rectangle {
+                            width: 30
+                            height: 30
+                            radius: 15
+                            anchors.left: parent.left
+                            anchors.leftMargin: 10
+                            anchors.verticalCenter: parent.verticalCenter
+                            color: "transparent"
+
+                            Text {
+                                anchors.centerIn: parent
+                                text: "🔢"
+                                font.pixelSize: 18
+                                color: "#9E9E9E"
+                            }
+                        }
+
+                        // 获取验证码按钮
+                        Rectangle {
+                            anchors.right: parent.right
+                            anchors.rightMargin: 5
+                            anchors.verticalCenter: parent.verticalCenter
+                            width: codeText.width + 24
+                            height: parent.height - 16
+                            radius: 6
+                            color: "#3D3D3D"
+
+                            property int countdown: 60
+
+                            Text {
+                                id: codeText
+                                anchors.centerIn: parent
+                                text: parent.countdown < 60 ? qsTr("重新获取(%1)").arg(parent.countdown) : qsTr("获取验证码")
+                                color: parent.countdown < 60 ? "#9E9E9E" : Material.accent
+                                font.pixelSize: 13
+                            }
+
+                            Timer {
+                                id: countdownTimer
+                                interval: 1000
+                                repeat: true
+                                onTriggered: {
+                                    parent.countdown--;
+                                    if (parent.countdown <= 0) {
+                                        stop();
+                                        parent.countdown = 60;
+                                    }
+                                }
+                            }
+
+                            MouseArea {
+                                anchors.fill: parent
+                                onClicked: {
+                                    if (parent.countdown === 60) {
+                                        parent.countdown = 59;
+                                        countdownTimer.start();
+                                        console.log("发送验证码");
+                                    }
                                 }
                             }
                         }
                     }
-                }
 
-                // 密码
-                MobileTextField {
-                    id: registerPasswordField
-                    placeholderText: qsTr("密码")
-                    echoMode: TextInput.Password
-                    Layout.fillWidth: true
-                    leftPadding: 45
+                    // 密码
+                    MobileTextField {
+                        id: registerPasswordField
+                        placeholderText: qsTr("密码")
+                        echoMode: TextInput.Password
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: 50
+                        leftPadding: 45
 
-                    Rectangle {
-                        width: 30
-                        height: 30
-                        radius: 15
-                        anchors.left: parent.left
-                        anchors.leftMargin: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        color: "transparent"
+                        Rectangle {
+                            width: 30
+                            height: 30
+                            radius: 15
+                            anchors.left: parent.left
+                            anchors.leftMargin: 10
+                            anchors.verticalCenter: parent.verticalCenter
+                            color: "transparent"
 
-                        Text {
-                            anchors.centerIn: parent
-                            text: "🔒"
-                            font.pixelSize: 18
-                            color: "#9E9E9E"
-                        }
-                    }
-
-                    // 显示/隐藏密码按钮
-                    Rectangle {
-                        width: 30
-                        height: 30
-                        radius: 15
-                        anchors.right: parent.right
-                        anchors.rightMargin: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        color: "transparent"
-
-                        Text {
-                            anchors.centerIn: parent
-                            text: registerPasswordField.echoMode === TextInput.Password ? "👁️" : "👁️‍🗨️"
-                            font.pixelSize: 18
-                            color: "#9E9E9E"
+                            Text {
+                                anchors.centerIn: parent
+                                text: "🔒"
+                                font.pixelSize: 18
+                                color: "#9E9E9E"
+                            }
                         }
 
-                        MouseArea {
-                            anchors.fill: parent
-                            onClicked: {
-                                registerPasswordField.echoMode = registerPasswordField.echoMode === TextInput.Password ?
-                                                         TextInput.Normal : TextInput.Password
+                        // 显示/隐藏密码按钮
+                        Rectangle {
+                            width: 30
+                            height: 30
+                            radius: 15
+                            anchors.right: parent.right
+                            anchors.rightMargin: 10
+                            anchors.verticalCenter: parent.verticalCenter
+                            color: "transparent"
+
+                            Text {
+                                anchors.centerIn: parent
+                                text: registerPasswordField.echoMode === TextInput.Password ? "👁️" : "👁️‍🗨️"
+                                font.pixelSize: 18
+                                color: "#9E9E9E"
+                            }
+
+                            MouseArea {
+                                anchors.fill: parent
+                                onClicked: {
+                                    registerPasswordField.echoMode = registerPasswordField.echoMode === TextInput.Password ?
+                                                             TextInput.Normal : TextInput.Password
+                                }
                             }
                         }
                     }
-                }
 
-                // 确认密码
-                MobileTextField {
-                    id: confirmPasswordField
-                    placeholderText: qsTr("确认密码")
-                    echoMode: TextInput.Password
-                    Layout.fillWidth: true
-                    leftPadding: 45
+                    // 确认密码
+                    MobileTextField {
+                        id: confirmPasswordField
+                        placeholderText: qsTr("确认密码")
+                        echoMode: TextInput.Password
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: 50
+                        leftPadding: 45
 
-                    Rectangle {
-                        width: 30
-                        height: 30
-                        radius: 15
-                        anchors.left: parent.left
-                        anchors.leftMargin: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        color: "transparent"
+                        Rectangle {
+                            width: 30
+                            height: 30
+                            radius: 15
+                            anchors.left: parent.left
+                            anchors.leftMargin: 10
+                            anchors.verticalCenter: parent.verticalCenter
+                            color: "transparent"
 
-                        Text {
-                            anchors.centerIn: parent
-                            text: "🔒"
-                            font.pixelSize: 18
-                            color: "#9E9E9E"
-                        }
-                    }
-
-                    // 显示/隐藏密码按钮
-                    Rectangle {
-                        width: 30
-                        height: 30
-                        radius: 15
-                        anchors.right: parent.right
-                        anchors.rightMargin: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        color: "transparent"
-
-                        Text {
-                            anchors.centerIn: parent
-                            text: confirmPasswordField.echoMode === TextInput.Password ? "👁️" : "👁️‍🗨️"
-                            font.pixelSize: 18
-                            color: "#9E9E9E"
+                            Text {
+                                anchors.centerIn: parent
+                                text: "🔒"
+                                font.pixelSize: 18
+                                color: "#9E9E9E"
+                            }
                         }
 
-                        MouseArea {
-                            anchors.fill: parent
-                            onClicked: {
-                                confirmPasswordField.echoMode = confirmPasswordField.echoMode === TextInput.Password ?
-                                                         TextInput.Normal : TextInput.Password
+                        // 显示/隐藏密码按钮
+                        Rectangle {
+                            width: 30
+                            height: 30
+                            radius: 15
+                            anchors.right: parent.right
+                            anchors.rightMargin: 10
+                            anchors.verticalCenter: parent.verticalCenter
+                            color: "transparent"
+
+                            Text {
+                                anchors.centerIn: parent
+                                text: confirmPasswordField.echoMode === TextInput.Password ? "👁️" : "👁️‍🗨️"
+                                font.pixelSize: 18
+                                color: "#9E9E9E"
+                            }
+
+                            MouseArea {
+                                anchors.fill: parent
+                                onClicked: {
+                                    confirmPasswordField.echoMode = confirmPasswordField.echoMode === TextInput.Password ?
+                                                             TextInput.Normal : TextInput.Password
+                                }
                             }
                         }
                     }
-                }
 
-                // 用户协议
-                RowLayout {
-                    Layout.fillWidth: true
-                    Layout.topMargin: 5
+                    // 用户协议
+                    RowLayout {
+                        Layout.fillWidth: true
+                        Layout.topMargin: 0
 
-                    CheckBox {
-                        id: termsCheck
-                        checked: false
+                        CheckBox {
+                            id: termsCheck
+                            checked: false
+                            padding: 0
+                            Layout.preferredHeight: 30
+                        }
+
+                        Text {
+                            text: qsTr("我已阅读并同意")
+                            color: "#CCCCCC"
+                            font.pixelSize: 13
+                        }
+
+                        Text {
+                            text: qsTr("用户协议")
+                            color: Material.accent
+                            font.pixelSize: 13
+
+                            MouseArea {
+                                anchors.fill: parent
+                                anchors.margins: -2
+                                onClicked: console.log("打开用户协议")
+                            }
+                        }
+
+                        Text {
+                            text: qsTr("和")
+                            color: "#CCCCCC"
+                            font.pixelSize: 13
+                        }
+
+                        Text {
+                            text: qsTr("隐私政策")
+                            color: Material.accent
+                            font.pixelSize: 13
+
+                            MouseArea {
+                                anchors.fill: parent
+                                anchors.margins: -2
+                                onClicked: console.log("打开隐私政策")
+                            }
+                        }
+
+                        Item { Layout.fillWidth: true }
                     }
 
-                    Text {
-                        text: qsTr("我已阅读并同意")
-                        color: "#CCCCCC"
-                        font.pixelSize: 14
-                    }
-
-                    Text {
-                        text: qsTr("用户协议")
-                        color: Material.accent
-                        font.pixelSize: 14
-
-                        MouseArea {
-                            anchors.fill: parent
-                            anchors.margins: -2
-                            onClicked: console.log("打开用户协议")
+                    // 注册按钮
+                    MobileButton {
+                        text: qsTr("注 册")
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: 50
+                        onClicked: {
+                            registerSuccessAnim.start()
                         }
                     }
 
-                    Text {
-                        text: qsTr("和")
-                        color: "#CCCCCC"
-                        font.pixelSize: 14
+                    // 填充空间
+                    Item {
+                        Layout.fillHeight: true
+                    }
+                }
+
+                // 注册成功动画
+                SequentialAnimation {
+                    id: registerSuccessAnim
+
+                    ParallelAnimation {
+                        NumberAnimation {
+                            target: phoneField
+                            property: "scale"
+                            from: 1.0
+                            to: 0.95
+                            duration: 100
+                        }
+                        NumberAnimation {
+                            target: verificationField
+                            property: "scale"
+                            from: 1.0
+                            to: 0.95
+                            duration: 100
+                        }
+                        NumberAnimation {
+                            target: registerPasswordField
+                            property: "scale"
+                            from: 1.0
+                            to: 0.95
+                            duration: 100
+                        }
+                        NumberAnimation {
+                            target: confirmPasswordField
+                            property: "scale"
+                            from: 1.0
+                            to: 0.95
+                            duration: 100
+                        }
                     }
 
-                    Text {
-                        text: qsTr("隐私政策")
-                        color: Material.accent
-                        font.pixelSize: 14
+                    NumberAnimation {
+                        target: registerPage
+                        property: "opacity"
+                        from: 1.0
+                        to: 0.7
+                        duration: 200
+                    }
 
-                        MouseArea {
-                            anchors.fill: parent
-                            anchors.margins: -2
-                            onClicked: console.log("打开隐私政策")
+                    NumberAnimation {
+                        target: registerPage
+                        property: "opacity"
+                        from: 0.7
+                        to: 1.0
+                        duration: 400
+                        easing.type: Easing.OutBack
+                    }
+
+                    ParallelAnimation {
+                        NumberAnimation {
+                            target: phoneField
+                            property: "scale"
+                            from: 0.95
+                            to: 1.0
+                            duration: 300
+                            easing.type: Easing.OutBack
+                        }
+                        NumberAnimation {
+                            target: verificationField
+                            property: "scale"
+                            from: 0.95
+                            to: 1.0
+                            duration: 300
+                            easing.type: Easing.OutBack
+                        }
+                        NumberAnimation {
+                            target: registerPasswordField
+                            property: "scale"
+                            from: 0.95
+                            to: 1.0
+                            duration: 300
+                            easing.type: Easing.OutBack
+                        }
+                        NumberAnimation {
+                            target: confirmPasswordField
+                            property: "scale"
+                            from: 0.95
+                            to: 1.0
+                            duration: 300
+                            easing.type: Easing.OutBack
+                        }
+                    }
+
+                    // 注册成功后切换到登录页
+                    ScriptAction {
+                        script: {
+                            console.log("注册成功！")
+                            rootItem.registerSuccess()
+                            // 由于是新用户，先回到登录页让用户登录
+                            swipeView.currentIndex = 0
                         }
                     }
                 }
-
-                Item { Layout.fillHeight: true; Layout.preferredHeight: 20 }
-
-                // 注册按钮
-                MobileButton {
-                    text: qsTr("注 册")
-                    Layout.fillWidth: true
-                    Layout.preferredHeight: 56
-                    onClicked: {
-                        registerSuccessAnim.start()
-                    }
-                }
-
-                Item { Layout.fillHeight: true }
-            }
-
-            // 注册成功动画
-            SequentialAnimation {
-                id: registerSuccessAnim
-
-                ParallelAnimation {
-                    NumberAnimation {
-                        target: phoneField
-                        property: "scale"
-                        from: 1.0
-                        to: 0.95
-                        duration: 100
-                    }
-                    NumberAnimation {
-                        target: verificationField
-                        property: "scale"
-                        from: 1.0
-                        to: 0.95
-                        duration: 100
-                    }
-                    NumberAnimation {
-                        target: registerPasswordField
-                        property: "scale"
-                        from: 1.0
-                        to: 0.95
-                        duration: 100
-                    }
-                    NumberAnimation {
-                        target: confirmPasswordField
-                        property: "scale"
-                        from: 1.0
-                        to: 0.95
-                        duration: 100
-                    }
-                }
-
-                NumberAnimation {
-                    target: registerPage
-                    property: "opacity"
-                    from: 1.0
-                    to: 0.7
-                    duration: 200
-                }
-
-                NumberAnimation {
-                    target: registerPage
-                    property: "opacity"
-                    from: 0.7
-                    to: 1.0
-                    duration: 400
-                    easing.type: Easing.OutBack
-                }
-
-                ParallelAnimation {
-                    NumberAnimation {
-                        target: phoneField
-                        property: "scale"
-                        from: 0.95
-                        to: 1.0
-                        duration: 300
-                        easing.type: Easing.OutBack
-                    }
-                    NumberAnimation {
-                        target: verificationField
-                        property: "scale"
-                        from: 0.95
-                        to: 1.0
-                        duration: 300
-                        easing.type: Easing.OutBack
-                    }
-                    NumberAnimation {
-                        target: registerPasswordField
-                        property: "scale"
-                        from: 0.95
-                        to: 1.0
-                        duration: 300
-                        easing.type: Easing.OutBack
-                    }
-                    NumberAnimation {
-                        target: confirmPasswordField
-                        property: "scale"
-                        from: 0.95
-                        to: 1.0
-                        duration: 300
-                        easing.type: Easing.OutBack
-                    }
-                }
-
-                // 注册成功后切换到登录页
-                ScriptAction {
-                    script: {
-                        console.log("注册成功！")
-                        rootItem.registerSuccess()
-                        // 由于是新用户，先回到登录页让用户登录
-                        swipeView.currentIndex = 0
-                    }
-                }
-            }
-        }
-    }
-
-    // 指纹登录按钮 - 在登录页面下显示
-    Rectangle {
-        id: fingerprintButton
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.bottom: tabBar.top
-        anchors.bottomMargin: 20
-        width: 60
-        height: 60
-        radius: 30
-        color: "transparent"
-        border.width: 2
-        border.color: "#BB86FC"
-        visible: swipeView.currentIndex === 0
-        opacity: visible ? 1.0 : 0.0
-
-        Behavior on opacity {
-            NumberAnimation { duration: 300 }
-        }
-
-        SequentialAnimation {
-            running: fingerprintButton.visible
-            loops: Animation.Infinite
-
-            ParallelAnimation {
-                NumberAnimation {
-                    target: fingerprintButton
-                    property: "scale"
-                    from: 1.0
-                    to: 1.1
-                    duration: 1000
-                    easing.type: Easing.InOutQuad
-                }
-                NumberAnimation {
-                    target: fingerprintButton
-                    property: "opacity"
-                    from: 1.0
-                    to: 0.7
-                    duration: 1000
-                    easing.type: Easing.InOutQuad
-                }
-            }
-
-            ParallelAnimation {
-                NumberAnimation {
-                    target: fingerprintButton
-                    property: "scale"
-                    from: 1.1
-                    to: 1.0
-                    duration: 1000
-                    easing.type: Easing.InOutQuad
-                }
-                NumberAnimation {
-                    target: fingerprintButton
-                    property: "opacity"
-                    from: 0.7
-                    to: 1.0
-                    duration: 1000
-                    easing.type: Easing.InOutQuad
-                }
             }
         }
 
-        Text {
-            anchors.centerIn: parent
-            text: "👆"
-            font.pixelSize: 26
-            color: "#BB86FC"
-        }
-
-        MouseArea {
-            anchors.fill: parent
-            onPressed: parent.scale = 0.9
-            onReleased: parent.scale = 1.0
-            onClicked: {
-                fingerprintScanAnim.start()
-            }
-        }
-
-        // 指纹扫描动画
-        SequentialAnimation {
-            id: fingerprintScanAnim
-
-            PropertyAction { target: scannerEffect; property: "visible"; value: true }
-
-            NumberAnimation {
-                target: scanLine
-                property: "y"
-                from: 0
-                to: fingerprintButton.height
-                duration: 1200
-                easing.type: Easing.InOutQuad
-            }
-
-            PauseAnimation { duration: 300 }
-
-            PropertyAction { target: scannerEffect; property: "visible"; value: false }
-
-            ScriptAction {
-                script: {
-                    console.log("指纹登录成功")
-                    rootItem.loginSuccess()
-                }
-            }
-        }
-
-        // 指纹扫描效果
+        // 指纹登录区域
         Item {
-            id: scannerEffect
-            anchors.fill: parent
-            visible: false
-            clip: true
+            id: fingerprintArea
+            anchors.bottom: tabBar.top
+            anchors.bottomMargin: 10
+            anchors.horizontalCenter: parent.horizontalCenter
+            height: 70
+            width: 70
 
+            // 指纹登录按钮 - 在登录页面下显示
             Rectangle {
-                id: scanLine
-                width: parent.width
-                height: 3
-                radius: 1.5
-                color: "#BB86FC"
-                y: 0
-            }
-        }
-    }
-
-    // 底部标签栏 - 不再使用footer属性
-    TabBar {
-        id: tabBar
-        currentIndex: swipeView.currentIndex
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 20
-        width: parent.width * 0.8
-        height: 50
-
-        background: Rectangle {
-            color: "transparent"
-        }
-
-        // 自定义标签按钮
-        TabButton {
-            text: qsTr("登录")
-            font.pixelSize: 16
-            font.bold: TabBar.index === tabBar.currentIndex
-
-            contentItem: Text {
-                text: parent.text
-                font: parent.font
-                color: parent.TabBar.index === tabBar.currentIndex ? Material.accent : "#9E9E9E"
-                horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
-            }
-
-            background: Rectangle {
+                id: fingerprintButton
+                anchors.centerIn: parent
+                width: 60
+                height: 60
+                radius: 30
                 color: "transparent"
-                Rectangle {
-                    anchors.bottom: parent.bottom
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    width: parent.width * 0.7
-                    height: 2
-                    color: parent.TabBar.index === tabBar.currentIndex ? Material.accent : "transparent"
-                    Behavior on color {
-                        ColorAnimation { duration: 200 }
+                border.width: 2
+                border.color: "#BB86FC"
+                visible: swipeView.currentIndex === 0
+                opacity: visible ? 1.0 : 0.0
+
+                Behavior on opacity {
+                    NumberAnimation { duration: 300 }
+                }
+
+                SequentialAnimation {
+                    running: fingerprintButton.visible
+                    loops: Animation.Infinite
+
+                    ParallelAnimation {
+                        NumberAnimation {
+                            target: fingerprintButton
+                            property: "scale"
+                            from: 1.0
+                            to: 1.1
+                            duration: 1000
+                            easing.type: Easing.InOutQuad
+                        }
+                        NumberAnimation {
+                            target: fingerprintButton
+                            property: "opacity"
+                            from: 1.0
+                            to: 0.7
+                            duration: 1000
+                            easing.type: Easing.InOutQuad
+                        }
+                    }
+
+                    ParallelAnimation {
+                        NumberAnimation {
+                            target: fingerprintButton
+                            property: "scale"
+                            from: 1.1
+                            to: 1.0
+                            duration: 1000
+                            easing.type: Easing.InOutQuad
+                        }
+                        NumberAnimation {
+                            target: fingerprintButton
+                            property: "opacity"
+                            from: 0.7
+                            to: 1.0
+                            duration: 1000
+                            easing.type: Easing.InOutQuad
+                        }
+                    }
+                }
+
+                Text {
+                    anchors.centerIn: parent
+                    text: "👆"
+                    font.pixelSize: 26
+                    color: "#BB86FC"
+                }
+
+                MouseArea {
+                    anchors.fill: parent
+                    onPressed: parent.scale = 0.9
+                    onReleased: parent.scale = 1.0
+                    onClicked: {
+                        fingerprintScanAnim.start()
+                    }
+                }
+
+                // 指纹扫描动画
+                SequentialAnimation {
+                    id: fingerprintScanAnim
+
+                    PropertyAction { target: scannerEffect; property: "visible"; value: true }
+
+                    NumberAnimation {
+                        target: scanLine
+                        property: "y"
+                        from: 0
+                        to: fingerprintButton.height
+                        duration: 1200
+                        easing.type: Easing.InOutQuad
+                    }
+
+                    PauseAnimation { duration: 300 }
+
+                    PropertyAction { target: scannerEffect; property: "visible"; value: false }
+
+                    ScriptAction {
+                        script: {
+                            console.log("指纹登录成功")
+                            rootItem.loginSuccess()
+                        }
+                    }
+                }
+
+                // 指纹扫描效果
+                Item {
+                    id: scannerEffect
+                    anchors.fill: parent
+                    visible: false
+                    clip: true
+
+                    Rectangle {
+                        id: scanLine
+                        width: parent.width
+                        height: 3
+                        radius: 1.5
+                        color: "#BB86FC"
+                        y: 0
                     }
                 }
             }
         }
 
-        TabButton {
-            text: qsTr("注册")
-            font.pixelSize: 16
-            font.bold: TabBar.index === tabBar.currentIndex
-
-            contentItem: Text {
-                text: parent.text
-                font: parent.font
-                color: parent.TabBar.index === tabBar.currentIndex ? Material.accent : "#9E9E9E"
-                horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
-            }
+        // 底部标签栏
+        TabBar {
+            id: tabBar
+            currentIndex: swipeView.currentIndex
+            anchors.bottom: dateText.top
+            anchors.bottomMargin: 5
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: parent.width
+            height: 40
 
             background: Rectangle {
                 color: "transparent"
-                Rectangle {
-                    anchors.bottom: parent.bottom
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    width: parent.width * 0.7
-                    height: 2
-                    color: parent.TabBar.index === tabBar.currentIndex ? Material.accent : "transparent"
-                    Behavior on color {
-                        ColorAnimation { duration: 200 }
+            }
+
+            // 自定义标签按钮
+            TabButton {
+                text: qsTr("登录")
+                font.pixelSize: 16
+                font.bold: TabBar.index === tabBar.currentIndex
+
+                contentItem: Text {
+                    text: parent.text
+                    font: parent.font
+                    color: parent.TabBar.index === tabBar.currentIndex ? Material.accent : "#9E9E9E"
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+
+                background: Rectangle {
+                    color: "transparent"
+                    Rectangle {
+                        anchors.bottom: parent.bottom
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        width: parent.width * 0.7
+                        height: 2
+                        color: parent.TabBar.index === tabBar.currentIndex ? Material.accent : "transparent"
+                        Behavior on color {
+                            ColorAnimation { duration: 200 }
+                        }
+                    }
+                }
+            }
+
+            TabButton {
+                text: qsTr("注册")
+                font.pixelSize: 16
+                font.bold: TabBar.index === tabBar.currentIndex
+
+                contentItem: Text {
+                    text: parent.text
+                    font: parent.font
+                    color: parent.TabBar.index === tabBar.currentIndex ? Material.accent : "#9E9E9E"
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+
+                background: Rectangle {
+                    color: "transparent"
+                    Rectangle {
+                        anchors.bottom: parent.bottom
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        width: parent.width * 0.7
+                        height: 2
+                        color: parent.TabBar.index === tabBar.currentIndex ? Material.accent : "transparent"
+                        Behavior on color {
+                            ColorAnimation { duration: 200 }
+                        }
                     }
                 }
             }
         }
-    }
 
-    // 时间戳显示（底部小字）
-    Text {
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 10
-        text: "2025-03-25 08:45:57"  // 使用当前日期时间
-        color: "#666666"
-        font.pixelSize: 12
+        // 时间戳显示（底部小字）
+        Text {
+            id: dateText
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 10
+            text: "2025-03-28 08:57:52"  // 使用当前日期时间
+            color: "#666666"
+            font.pixelSize: 12
+        }
     }
 
     // 自定义输入框组件

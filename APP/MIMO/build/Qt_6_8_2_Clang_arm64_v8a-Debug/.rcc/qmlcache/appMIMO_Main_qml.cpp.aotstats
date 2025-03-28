@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 21,
-                        "durationMicroseconds": 431,
+                        "durationMicroseconds": 332,
                         "errorMessage": "",
                         "functionName": "theme",
                         "line": 20
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 227,
+                        "durationMicroseconds": 124,
                         "errorMessage": "",
                         "functionName": "accent",
                         "line": 21
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 219,
+                        "durationMicroseconds": 103,
                         "errorMessage": "",
                         "functionName": "primary",
                         "line": 22
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 26,
-                        "durationMicroseconds": 267,
+                        "durationMicroseconds": 156,
                         "errorMessage": "",
                         "functionName": "onSourceChanged",
                         "line": 31
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 128,
+                        "durationMicroseconds": 68,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 27
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 21,
-                        "durationMicroseconds": 138,
+                        "durationMicroseconds": 75,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 41
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 26,
-                        "durationMicroseconds": 146,
+                        "durationMicroseconds": 77,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 46
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 1683,
+                        "durationMicroseconds": 1100,
                         "errorMessage": "Cannot generate efficient code for SetUnwindHandlerh",
                         "functionName": "onCompleted",
                         "line": 51
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 17,
-                        "durationMicroseconds": 123,
+                        "durationMicroseconds": 95,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 63
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 9,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 44,
                         "errorMessage": "Cannot access value for name currentUser",
                         "functionName": "onLoginSuccess",
                         "line": 66
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 9,
-                        "durationMicroseconds": 192,
+                        "durationMicroseconds": 139,
                         "errorMessage": "",
                         "functionName": "onRegisterSuccess",
                         "line": 75
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 9,
-                        "durationMicroseconds": 305,
+                        "durationMicroseconds": 253,
                         "errorMessage": "",
                         "functionName": "onLogout",
                         "line": 81

@@ -7,6 +7,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 6.5 REQUIRED COMPONENTS Quick)
 
+# openssl
+set(OPENSSL_ROOT_DIR "E:/Qt/Android/android_openssl-master/ssl_1.1/arm64-v8a")
+set(OPENSSL_USE_STATIC_LIBS TRUE)  # Android必须静态链接
+# 手动指定库文件路径
+set(OPENSSL_CRYPTO_LIBRARY "${OPENSSL_ROOT_DIR}/libcrypto.a")
+set(OPENSSL_SSL_LIBRARY "${OPENSSL_ROOT_DIR}/libssl.a")
+set(OPENSSL_INCLUDE_DIR "E:/Qt/Android/android_openssl-master/ssl_1.1/include")
+find_package(OpenSSL REQUIRED)# 查找OpenSSL库
 
 qt_standard_project_setup(REQUIRES 6.5)
 
@@ -33,6 +41,7 @@ qt_add_qml_module(appMIMO
         QML_FILES components/LoginOn.qml
         SOURCES datamanager.h datamanager.cpp
         QML_FILES components/Home.qml
+        RESOURCES android/src/org/qtproject/app/SpeechResultReceiver.java
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -69,6 +78,9 @@ set_target_properties(qsqlmysql PROPERTIES
     IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/android_arm64-v8a/libqsqlmysql.so
 )
 
+# 网络连接
+find_package(Qt6 REQUIRED COMPONENTS WebSockets)
+
 target_link_libraries(appMIMO
     PRIVATE Qt6::Quick
     #${OpenCV_LIBS}  # 关联OpenCV库
@@ -77,6 +89,14 @@ target_link_libraries(appMIMO
     PRIVATE Qt6::Multimedia  # 音视频
     PRIVATE Qt6::Bluetooth #蓝牙
     PRIVATE Qt6::Sql #数据库
+    PRIVATE Qt6::WebSockets # 网络连接
+)
+
+# openssl
+target_include_directories(appMIMO PRIVATE ${OPENSSL_INCLUDE_DIR})
+target_link_libraries(appMIMO PRIVATE
+    ${OPENSSL_SSL_LIBRARY}
+    ${OPENSSL_CRYPTO_LIBRARY}
 )
 
 include(GNUInstallDirs)

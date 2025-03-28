@@ -20,6 +20,8 @@ set(src_and_dest_list
     "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/MIMO/android/gradlew"
     "D:/git/work/ESP32-WROOM-32/APP/MIMO/android/gradlew.bat"
     "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/MIMO/android/gradlew.bat"
+    "D:/git/work/ESP32-WROOM-32/APP/MIMO/android/src/org/qtproject/app/SpeechResultReceiver.java"
+    "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/MIMO/android/src/org/qtproject/app/SpeechResultReceiver.java"
 
 )
 set(timestamp_file "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.qt/appMIMO_res.txt")

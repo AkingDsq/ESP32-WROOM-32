@@ -2,7 +2,7 @@
     "classes": [
         {
             "className": "Call_AI",
-            "lineNumber": 7,
+            "lineNumber": 10,
             "object": true,
             "qualifiedClassName": "Call_AI",
             "signals": [
@@ -30,6 +30,18 @@
                     ],
                     "index": 1,
                     "name": "call",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 2,
+                    "name": "on_yes_clicked",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 3,
+                    "name": "handleReplyFinished",
                     "returnType": "void"
                 }
             ],

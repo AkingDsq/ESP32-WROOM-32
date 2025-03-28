@@ -1,2 +1,0 @@
-set(__QT_DEPLOY_TARGET_appMIMO_FILE D:/git/work/ESP32-WROOM-32/APP/MIMO/build/FS4412-Debug/libappMIMO_armeabi-v7a.so)
-set(__QT_DEPLOY_TARGET_appMIMO_TYPE MODULE_LIBRARY)

@@ -1,9 +1,0 @@
---resource
-D:/git/work/ESP32-WROOM-32/APP/MIMO/build/FS4412-Debug/.qt/rcc/qmake_MIMO.qrc
---resource
-D:/git/work/ESP32-WROOM-32/APP/MIMO/build/FS4412-Debug/.qt/rcc/appMIMO_raw_qml_0.qrc
-/qt/qml/MIMO/Main.qml
-/qt/qml/MIMO/components/BottonButtonChoose.qml
-/qt/qml/MIMO/components/Volume.qml
-/qt/qml/MIMO/components/LocalData.qml
-/qt/qml/MIMO/components/camera.qml

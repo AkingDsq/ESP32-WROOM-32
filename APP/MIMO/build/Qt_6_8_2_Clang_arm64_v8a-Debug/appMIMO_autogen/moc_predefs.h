@@ -13,6 +13,7 @@
 #define QT_QUICK_LIB 1
 #define QT_SQL_LIB 1
 #define QT_TEXTTOSPEECH_LIB 1
+#define QT_WEBSOCKETS_LIB 1
 #define SIZEOF_DPTR (sizeof(void*))
 #define _GNU_SOURCE 1
 #define _LP64 1

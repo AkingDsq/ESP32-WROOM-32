@@ -1,9 +1,0 @@
-module MIMO
-typeinfo appMIMO.qmltypes
-prefer :/qt/qml/MIMO/
-Main 1.0 Main.qml
-BottonButtonChoose 1.0 components/BottonButtonChoose.qml
-Volume 1.0 components/Volume.qml
-Cancel_CallAI 1.0 components/Cancel_CallAI.qml
-LoginOn 1.0 components/LoginOn.qml
-

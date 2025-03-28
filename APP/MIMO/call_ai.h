@@ -4,6 +4,9 @@
 #include <QObject>
 #include <QTextToSpeech>
 
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
+
 class Call_AI : public QObject{
 
     Q_OBJECT
@@ -14,6 +17,8 @@ public:
 
 public slots:
     void call(QString param);
+    void on_yes_clicked();
+    void handleReplyFinished();
 
 signals:
     // 可选：从 C++ 向 QML 发送反馈
@@ -22,6 +27,12 @@ signals:
 private:
     QTextToSpeech *speech; // 成员变量
     bool isTtsReady;       // 标记引擎是否就绪
+
+private slots:
+
+
+private:
+    QNetworkAccessManager* networkManager;
 };
 
 #endif // CALL_AI_H

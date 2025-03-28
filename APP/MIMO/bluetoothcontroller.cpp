@@ -43,7 +43,6 @@ bool BlueToothController::checkBluetoothPermission(){
         qApp->requestPermission(permission, [this](const QPermission &perm){
             if (perm.status() == Qt::PermissionStatus::Granted) {
                 qDebug() << "蓝牙权限已授予";
-                startScan();
             } else {
                 qDebug() << "用户拒绝蓝牙权限";
                 return false;
@@ -51,7 +50,7 @@ bool BlueToothController::checkBluetoothPermission(){
         });
         break;
     case Qt::PermissionStatus::Denied:  // 用户已明确拒绝应用程序请求的权限，或已知该权限不可访问或不适用于给定平台上的应用程序。
-        qDebug() << "用户已明确拒绝应用程序请求的权限";
+        qDebug() << "用户已明确拒绝应用程序请求的蓝牙权限";
         return false;
     case Qt::PermissionStatus::Granted:  // 用户已明确授予应用程序权限，或已知该权限在给定平台上不需要用户授权。
         qDebug() << "用户已明确授予应用程序蓝牙权限";
@@ -69,7 +68,6 @@ bool BlueToothController::checkLocationPermission(){
         qApp->requestPermission(locationPermission, [this](const QPermission &perm){
             if (perm.status() == Qt::PermissionStatus::Granted) {
                 qDebug() << "位置权限已授予";
-                startScan();
             } else {
                 qDebug() << "用户拒绝位置权限";
                 return false;
@@ -77,10 +75,34 @@ bool BlueToothController::checkLocationPermission(){
         });
         break;
     case Qt::PermissionStatus::Denied:  // 用户已明确拒绝应用程序请求的权限，或已知该权限不可访问或不适用于给定平台上的应用程序。
-        qDebug() << "用户已明确拒绝应用程序请求的权限";
+        qDebug() << "用户已明确拒绝应用程序请求的本地位置权限";
         return false;
     case Qt::PermissionStatus::Granted:  // 用户已明确授予应用程序权限，或已知该权限在给定平台上不需要用户授权。
         qDebug() << "用户已明确授予应用程序位置权限";
+    }
+
+    return true;
+}
+// 检测麦克风权限
+bool BlueToothController::checkMicrophonePermission(){
+    QMicrophonePermission microphonePermission{};
+    switch (qApp->checkPermission(microphonePermission)) {
+    case Qt::PermissionStatus::Undetermined:     //权限状态未知。应通过QCoreApplication::requestPermission() 申请权限，以确定实际状态。
+        qDebug() << "权限状态未知";
+        qApp->requestPermission(microphonePermission, [](const QPermission &perm){
+            if (perm.status() == Qt::PermissionStatus::Granted) {
+                qDebug() << "麦克风权限已授予";
+            } else {
+                qDebug() << "用户拒绝麦克风权限";
+                return false;
+            }
+        });
+        break;
+    case Qt::PermissionStatus::Denied:  // 用户已明确拒绝应用程序请求的权限，或已知该权限不可访问或不适用于给定平台上的应用程序。
+        qDebug() << "用户已明确拒绝应用程序请求的麦克风权限";
+        return false;
+    case Qt::PermissionStatus::Granted:  // 用户已明确授予应用程序权限，或已知该权限在给定平台上不需要用户授权。
+        qDebug() << "用户已明确授予应用程序麦克风权限";
     }
 
     return true;
@@ -112,6 +134,21 @@ void BlueToothController::sendCommand(QString command)
     QByteArray data = command.toUtf8();
     service->writeCharacteristic(m_commandCharacteristic, data);
     emit commandSent(true);
+}
+
+// 发送语音命令到ESP32
+void BlueToothController::sendVoiceCommand(QString command)
+{
+    if (!m_connected || !m_commandVoiceCharacteristic.isValid()) {
+        qWarning() << "无法发送命令";
+        emit commandVoiceSent(false);
+        return;
+    }
+
+    qDebug() << "发送命令:" << command;
+    QByteArray data = command.toUtf8();
+    service->writeCharacteristic(m_commandVoiceCharacteristic, data);
+    emit commandVoiceSent(true);
 }
 
 // 连接设备,连接串口
@@ -291,14 +328,14 @@ void BlueToothController::serviceStateChanged(QLowEnergyService::ServiceState st
 
         // 语音控制特征
         qDebug() << "语音控制特征:" + QBluetoothUuid(Voice_CMD_UUID).toString();
-        QLowEnergyCharacteristic voiceChar = service->characteristic(QBluetoothUuid(Voice_CMD_UUID));
-        if (voiceChar.isValid()) {
+        m_commandVoiceCharacteristic = service->characteristic(QBluetoothUuid(Voice_CMD_UUID));
+        if (m_commandVoiceCharacteristic.isValid()) {
             qDebug() << "找到语音控制特征";
-            service->readCharacteristic(voiceChar);
+            service->readCharacteristic(m_commandVoiceCharacteristic);
 
             // 描述符值可通过管理该描述符所属服务的QLowEnergyService 实例写入。QLowEnergyService::writeDescriptor() 函数将写入新值。成功后将发出QLowEnergyService::descriptorWritten() 信号。该对象的缓存value() 也会相应更新。
-            if (voiceChar.properties() & QLowEnergyCharacteristic::Notify) {
-                QLowEnergyDescriptor notification = voiceChar.descriptor(QBluetoothUuid::DescriptorType::ClientCharacteristicConfiguration);
+            if (m_commandVoiceCharacteristic.properties() & QLowEnergyCharacteristic::Notify) {
+                QLowEnergyDescriptor notification = m_commandVoiceCharacteristic.descriptor(QBluetoothUuid::DescriptorType::ClientCharacteristicConfiguration);
                 if (notification.isValid()) {
                     service->writeDescriptor(notification, QByteArray::fromHex("0100"));
                     // 检查写入结果

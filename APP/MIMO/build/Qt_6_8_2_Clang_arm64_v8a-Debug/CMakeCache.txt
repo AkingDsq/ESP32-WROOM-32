@@ -316,6 +316,15 @@ MIMO_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 MIMO_SOURCE_DIR:STATIC=D:/git/work/ESP32-WROOM-32/APP/MIMO
 
+//Path to a library.
+OPENSSL_CRYPTO_LIBRARY:FILEPATH=OPENSSL_CRYPTO_LIBRARY-NOTFOUND
+
+//Path to a file.
+OPENSSL_INCLUDE_DIR:PATH=OPENSSL_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+OPENSSL_SSL_LIBRARY:FILEPATH=OPENSSL_SSL_LIBRARY-NOTFOUND
+
 //Arguments to supply to pkg-config
 PKG_CONFIG_ARGN:STRING=
 
@@ -423,6 +432,9 @@ Qt6Sql_DIR:PATH=E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Sql
 
 //The directory containing a CMake configuration file for Qt6TextToSpeech.
 Qt6TextToSpeech_DIR:PATH=E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6TextToSpeech
+
+//The directory containing a CMake configuration file for Qt6WebSockets.
+Qt6WebSockets_DIR:PATH=E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6WebSockets
 
 //The directory containing a CMake configuration file for Qt6.
 Qt6_DIR:PATH=E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6
@@ -611,6 +623,8 @@ EGL_LIBRARY-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_EGL:INTERNAL=[E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include][1][E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/23/libEGL.so][v1.5()]
 //Details about finding GLESv2
 FIND_PACKAGE_MESSAGE_DETAILS_GLESv2:INTERNAL=[E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include][E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/23/libGLESv2.so][1][1][v()]
+//Details about finding OpenSSL
+FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[E:/Qt/Android/android_openssl-master/ssl_1.1/arm64-v8a/libcrypto.a][E:/Qt/Android/android_openssl-master/ssl_1.1/include][c ][v1.1.1u()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding WrapAtomic
@@ -631,6 +645,12 @@ HAVE_GLESv2-ADVANCED:INTERNAL=1
 HAVE_GLESv2:INTERNAL=1
 //Test HAVE_STDATOMIC
 HAVE_STDATOMIC:INTERNAL=1
+//ADVANCED property for variable: OPENSSL_CRYPTO_LIBRARY
+OPENSSL_CRYPTO_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSSL_INCLUDE_DIR
+OPENSSL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSSL_SSL_LIBRARY
+OPENSSL_SSL_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_ARGN
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
@@ -1463,6 +1483,28 @@ Vulkan_LIBRARY-ADVANCED:INTERNAL=1
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/MIMO
+_OPENSSL_CFLAGS:INTERNAL=
+_OPENSSL_CFLAGS_I:INTERNAL=
+_OPENSSL_CFLAGS_OTHER:INTERNAL=
+_OPENSSL_FOUND:INTERNAL=
+_OPENSSL_INCLUDEDIR:INTERNAL=
+_OPENSSL_LIBDIR:INTERNAL=
+_OPENSSL_LIBS:INTERNAL=
+_OPENSSL_LIBS_L:INTERNAL=
+_OPENSSL_LIBS_OTHER:INTERNAL=
+_OPENSSL_LIBS_PATHS:INTERNAL=
+_OPENSSL_MODULE_NAME:INTERNAL=
+_OPENSSL_PREFIX:INTERNAL=
+_OPENSSL_STATIC_CFLAGS:INTERNAL=
+_OPENSSL_STATIC_CFLAGS_I:INTERNAL=
+_OPENSSL_STATIC_CFLAGS_OTHER:INTERNAL=
+_OPENSSL_STATIC_LIBDIR:INTERNAL=
+_OPENSSL_STATIC_LIBS:INTERNAL=
+_OPENSSL_STATIC_LIBS_L:INTERNAL=
+_OPENSSL_STATIC_LIBS_OTHER:INTERNAL=
+_OPENSSL_STATIC_LIBS_PATHS:INTERNAL=
+_OPENSSL_VERSION:INTERNAL=
 __pkg_config_checked_PKG_EGL:INTERNAL=1
+__pkg_config_checked__OPENSSL:INTERNAL=1
 __qt_qml_macros_module_base_dir:INTERNAL=E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Qml
 

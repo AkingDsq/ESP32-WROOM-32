@@ -39,6 +39,7 @@ private:
     QBluetoothDeviceDiscoveryAgent *agent = nullptr; // 扫描
     QLowEnergyController *controller = nullptr;
     QLowEnergyCharacteristic m_commandCharacteristic; // 发送命令特征
+    QLowEnergyCharacteristic m_commandVoiceCharacteristic; // 发送命令特征
 
     QString m_temperature;
     QString m_humidity;
@@ -49,13 +50,18 @@ signals:
     void humidityChanged(QString humidity);
     void connectionStatusChanged(bool connected);
     void commandSent(bool success);
+    void commandVoiceSent(bool success);
 
 public slots:
+    // 检测各权限
     bool checkBluetoothPermission();
     bool checkLocationPermission();
+    bool checkMicrophonePermission();
+
     void startScan(); // 扫描蓝牙设备
     void connectDevice(QString address, QBluetoothDeviceInfo info);// 连接服务
     void sendCommand(QString command); // 发送特征
+    void sendVoiceCommand(QString command); // 发送语音命令
 
 private slots:
     void onDeviceDiscovered(QBluetoothDeviceInfo info); // 扫描到的服务

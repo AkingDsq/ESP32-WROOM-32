@@ -14,6 +14,7 @@
     <file alias="android/gradle.properties">D:/git/work/ESP32-WROOM-32/APP/MIMO/android/gradle.properties</file>
     <file alias="android/gradlew">D:/git/work/ESP32-WROOM-32/APP/MIMO/android/gradlew</file>
     <file alias="android/gradlew.bat">D:/git/work/ESP32-WROOM-32/APP/MIMO/android/gradlew.bat</file>
+    <file alias="android/src/org/qtproject/app/SpeechResultReceiver.java">D:/git/work/ESP32-WROOM-32/APP/MIMO/android/src/org/qtproject/app/SpeechResultReceiver.java</file>
   </qresource>
 </RCC>
 

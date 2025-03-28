@@ -51,17 +51,21 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QDateTime \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QDebug \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QDir \
-	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QJniEnvironment \
-	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QJniObject \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QFlags \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QIODevice \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QJsonObject \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QList \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QMap \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QMetaType \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QObject \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QPermissions \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QScopedPointer \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QSharedDataPointer \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QSharedPointer \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QStandardPaths \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QString \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QTimer \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QUrl \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QUuid \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QVariant \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QVariantMap \
@@ -71,6 +75,7 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/q20memory.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/q20type_traits.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/q23utility.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/q26numeric.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qalgorithms.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qanystringview.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qarraydata.h \
@@ -80,12 +85,15 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qatomic.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qatomic_cxx11.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qbasicatomic.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qbasictimer.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qbindingstorage.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qbytearray.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qbytearrayalgorithms.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qbytearraylist.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qbytearrayview.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qcalendar.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qcborcommon.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qcborvalue.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qchar.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qcompare.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qcompare_impl.h \
@@ -138,6 +146,8 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qjniobject.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qjnitypes.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qjnitypes_impl.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qjsonobject.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qjsonvalue.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qlatin1stringview.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qlist.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qlocale.h \
@@ -163,6 +173,7 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qprocessordetection.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qpromise.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qrefcount.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qregularexpression.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qresultstore.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qrunnable.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qscopedpointer.h \
@@ -200,6 +211,7 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qtextstream.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qthread.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qthreadpool.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qtimer.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qtimezone.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qtmetamacros.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qtnoop.h \
@@ -212,6 +224,7 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qtversionchecks.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qtypeinfo.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qtypes.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qurl.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qutf8stringview.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/quuid.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qvariant.h \
@@ -220,6 +233,46 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qversiontagging.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qxptype_traits.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qyieldcpu.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtGui/qtgui-config.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtGui/qtguiexports.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtGui/qtguiglobal.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtMultimedia/QAudioDevice \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtMultimedia/QAudioSource \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtMultimedia/QMediaDevices \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtMultimedia/qaudio.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtMultimedia/qaudiodevice.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtMultimedia/qaudioformat.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtMultimedia/qaudiosource.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtMultimedia/qmediadevices.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtMultimedia/qtaudio.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtMultimedia/qtmultimedia-config.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtMultimedia/qtmultimediaexports.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtMultimedia/qtmultimediaglobal.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/QAbstractSocket \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/QNetworkAccessManager \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/QNetworkProxy \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/QNetworkReply \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/QNetworkRequest \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/QSslConfiguration \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/QSslError \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/qabstractsocket.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/qhostaddress.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/qhttpheaders.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/qnetworkaccessmanager.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/qnetworkproxy.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/qnetworkreply.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/qnetworkrequest.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/qssl.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/qsslcertificate.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/qsslconfiguration.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/qsslerror.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/qsslsocket.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/qtcpsocket.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/qtnetwork-config.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/qtnetworkexports.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtNetwork/qtnetworkglobal.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtSql/QSqlDatabase \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtSql/QSqlError \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtSql/QSqlQuery \
@@ -233,6 +286,11 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtTextToSpeech/qtexttospeech.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtTextToSpeech/qtexttospeech_global.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtTextToSpeech/qvoice.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtWebSockets/QWebSocket \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtWebSockets/qtwebsocketsexports.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtWebSockets/qwebsocket.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtWebSockets/qwebsocketprotocol.h \
+	E:/Qt/6.8.2/android_arm64_v8a/include/QtWebSockets/qwebsockets_global.h \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules/ECMFindModuleHelpersStub.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules/FindEGL.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6/3rdparty/extra-cmake-modules/modules/ECMFindModuleHelpers.cmake \
@@ -458,6 +516,10 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwavefrontmeshpluginConfig.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwavefrontmeshpluginTargets-relwithdebinfo.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwavefrontmeshpluginTargets.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsAdditionalTargetInfo.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsConfig.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsTargets-relwithdebinfo.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsTargets.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlxmllistmodelpluginAdditionalTargetInfo.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlxmllistmodelpluginConfig.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlxmllistmodelpluginTargets-relwithdebinfo.cmake \
@@ -715,6 +777,14 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6TextToSpeech/Qt6TextToSpeechTargets-relwithdebinfo.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6TextToSpeech/Qt6TextToSpeechTargets.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6TextToSpeech/Qt6TextToSpeechVersionlessAliasTargets.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6WebSockets/Qt6WebSocketsAdditionalTargetInfo.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfig.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfigVersion.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfigVersionImpl.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6WebSockets/Qt6WebSocketsDependencies.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6WebSockets/Qt6WebSocketsTargets-relwithdebinfo.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6WebSockets/Qt6WebSocketsTargets.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6WebSockets/Qt6WebSocketsVersionlessAliasTargets.cmake \
 	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake \
 	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake \
 	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake \
@@ -1492,6 +1562,7 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Clang.cmake \
 	E:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU.cmake \
 	E:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FeatureSummary.cmake \
+	E:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindOpenSSL.cmake \
 	E:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake \
 	E:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake \
 	E:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPkgConfig.cmake \
