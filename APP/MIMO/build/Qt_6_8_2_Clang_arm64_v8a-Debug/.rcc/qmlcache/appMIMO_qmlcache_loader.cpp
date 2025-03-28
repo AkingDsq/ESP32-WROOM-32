@@ -40,6 +40,13 @@ namespace _qt_qml_MIMO_components_Home_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _qt_qml_MIMO_components_DeviceControl_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -59,6 +66,7 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/camera.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_camera_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/LoginOn.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_LoginOn_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/Home.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_Home_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/DeviceControl.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_DeviceControl_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

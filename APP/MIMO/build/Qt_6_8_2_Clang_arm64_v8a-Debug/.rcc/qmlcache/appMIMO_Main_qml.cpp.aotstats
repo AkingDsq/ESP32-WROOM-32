@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 21,
-                        "durationMicroseconds": 332,
+                        "durationMicroseconds": 2516,
                         "errorMessage": "",
                         "functionName": "theme",
                         "line": 20
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 124,
+                        "durationMicroseconds": 347,
                         "errorMessage": "",
                         "functionName": "accent",
                         "line": 21
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 103,
+                        "durationMicroseconds": 130,
                         "errorMessage": "",
                         "functionName": "primary",
                         "line": 22
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 26,
-                        "durationMicroseconds": 156,
+                        "durationMicroseconds": 155,
                         "errorMessage": "",
                         "functionName": "onSourceChanged",
                         "line": 31
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 21,
-                        "durationMicroseconds": 75,
+                        "durationMicroseconds": 72,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 41
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 26,
-                        "durationMicroseconds": 77,
+                        "durationMicroseconds": 74,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 46
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 1100,
+                        "durationMicroseconds": 1459,
                         "errorMessage": "Cannot generate efficient code for SetUnwindHandlerh",
                         "functionName": "onCompleted",
                         "line": 51
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 17,
-                        "durationMicroseconds": 95,
+                        "durationMicroseconds": 173,
                         "errorMessage": "",
                         "functionName": "target",
                         "line": 63
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 9,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 75,
                         "errorMessage": "Cannot access value for name currentUser",
                         "functionName": "onLoginSuccess",
                         "line": 66
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 9,
-                        "durationMicroseconds": 139,
+                        "durationMicroseconds": 219,
                         "errorMessage": "",
                         "functionName": "onRegisterSuccess",
                         "line": 75
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 9,
-                        "durationMicroseconds": 253,
+                        "durationMicroseconds": 266,
                         "errorMessage": "",
                         "functionName": "onLogout",
                         "line": 81

@@ -1,4 +1,4 @@
-set(qml_import_scanner_imports_count 33)
+set(qml_import_scanner_imports_count 27)
 set(qml_import_scanner_import_0 "CLASSNAME;QtQuick2Plugin;LINKTARGET;Qt6::qtquick2plugin;NAME;QtQuick;PATH;E:/Qt/6.8.2/android_arm64_v8a/qml/QtQuick;PLUGIN;qml_QtQuick_qtquick2plugin;PLUGINISOPTIONAL;;PREFER;:/qt-project.org/imports/QtQuick/;RELATIVEPATH;QtQuick;TYPE;module;")
 set(qml_import_scanner_import_1 "CLASSNAME;QtQmlPlugin;LINKTARGET;Qt6::qmlplugin;NAME;QtQml;PATH;E:/Qt/6.8.2/android_arm64_v8a/qml/QtQml;PLUGIN;qml_QtQml_qmlplugin;PLUGINISOPTIONAL;;PREFER;:/qt-project.org/imports/QtQml/;RELATIVEPATH;QtQml;TYPE;module;")
 set(qml_import_scanner_import_2 "NAME;QML;PATH;E:/Qt/6.8.2/android_arm64_v8a/qml/QML;PREFER;:/qt-project.org/imports/QML/;RELATIVEPATH;QML;TYPE;module;")
@@ -26,10 +26,4 @@ set(qml_import_scanner_import_23 "CLASSNAME;QtQuickEffectsPlugin;LINKTARGET;Qt6:
 set(qml_import_scanner_import_24 "CLASSNAME;QtQuickLayoutsPlugin;LINKTARGET;Qt6::qquicklayoutsplugin;NAME;QtQuick.Layouts;PATH;E:/Qt/6.8.2/android_arm64_v8a/qml/QtQuick/Layouts;PLUGIN;qml_QtQuick_Layouts_qquicklayoutsplugin;PLUGINISOPTIONAL;;PREFER;:/qt-project.org/imports/QtQuick/Layouts/;RELATIVEPATH;QtQuick/Layouts;TYPE;module;")
 set(qml_import_scanner_import_25 "CLASSNAME;QmlShapesPlugin;LINKTARGET;Qt6::qmlshapesplugin;NAME;QtQuick.Shapes;PATH;E:/Qt/6.8.2/android_arm64_v8a/qml/QtQuick/Shapes;PLUGIN;qml_QtQuick_Shapes_qmlshapesplugin;PREFER;:/qt-project.org/imports/QtQuick/Shapes/;RELATIVEPATH;QtQuick/Shapes;TYPE;module;")
 set(qml_import_scanner_import_26 "CLASSNAME;QtQuickControls2BasicStyleImplPlugin;LINKTARGET;Qt6::qtquickcontrols2basicstyleimplplugin;NAME;QtQuick.Controls.Basic.impl;PATH;E:/Qt/6.8.2/android_arm64_v8a/qml/QtQuick/Controls/Basic/impl;PLUGIN;qml_QtQuick_Controls_Basic_impl_qtquickcontrols2basicstyleimplplugin;PLUGINISOPTIONAL;;PREFER;:/qt-project.org/imports/QtQuick/Controls/Basic/impl/;RELATIVEPATH;QtQuick/Controls/Basic/impl;TYPE;module;")
-set(qml_import_scanner_import_27 "NAME;./components;PATH;D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Desktop_Qt_6_8_0_MSVC2022_64bit-Debug/MIMO/components;TYPE;directory;")
-set(qml_import_scanner_import_28 "CLASSNAME;QQmlLocalStoragePlugin;LINKTARGET;Qt6::qmllocalstorageplugin;NAME;QtQuick.LocalStorage;PATH;E:/Qt/6.8.2/android_arm64_v8a/qml/QtQuick/LocalStorage;PLUGIN;qml_QtQuick_LocalStorage_qmllocalstorageplugin;PLUGINISOPTIONAL;;PREFER;:/qt-project.org/imports/QtQuick/LocalStorage/;RELATIVEPATH;QtQuick/LocalStorage;TYPE;module;")
-set(qml_import_scanner_import_29 "NAME;./components;PATH;D:/git/work/ESP32-WROOM-32/APP/MIMO/build/FS4412-Debug/MIMO/components;TYPE;directory;")
-set(qml_import_scanner_import_30 "NAME;./components;PATH;D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_0_Clang_arm64_v8a-Debug/MIMO/components;TYPE;directory;")
-set(qml_import_scanner_import_31 "NAME;./components;PATH;D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_0_Clang_arm64_v8a-Release/MIMO/components;TYPE;directory;")
-set(qml_import_scanner_import_32 "NAME;Call_AI;TYPE;module;")
 

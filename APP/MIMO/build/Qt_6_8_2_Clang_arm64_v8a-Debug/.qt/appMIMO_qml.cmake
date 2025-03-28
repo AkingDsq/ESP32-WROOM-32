@@ -12,6 +12,8 @@ set(src_and_dest_list
     "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/MIMO/components/LoginOn.qml"
     "D:/git/work/ESP32-WROOM-32/APP/MIMO/components/Home.qml"
     "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/MIMO/components/Home.qml"
+    "D:/git/work/ESP32-WROOM-32/APP/MIMO/components/DeviceControl.qml"
+    "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/MIMO/components/DeviceControl.qml"
 
 )
 set(timestamp_file "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.qt/appMIMO_qml.txt")

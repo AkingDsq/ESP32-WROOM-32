@@ -42,6 +42,7 @@ qt_add_qml_module(appMIMO
         SOURCES datamanager.h datamanager.cpp
         QML_FILES components/Home.qml
         RESOURCES android/src/org/qtproject/app/SpeechResultReceiver.java
+        QML_FILES components/DeviceControl.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
