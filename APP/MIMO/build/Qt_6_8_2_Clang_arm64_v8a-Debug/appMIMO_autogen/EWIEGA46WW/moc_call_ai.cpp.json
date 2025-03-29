@@ -34,15 +34,21 @@
                 },
                 {
                     "access": "public",
+                    "arguments": [
+                        {
+                            "name": "question",
+                            "type": "QString"
+                        }
+                    ],
                     "index": 2,
-                    "name": "on_yes_clicked",
+                    "name": "requestAI",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
                     "index": 3,
                     "name": "handleReplyFinished",
-                    "returnType": "void"
+                    "returnType": "QString"
                 }
             ],
             "superClasses": [

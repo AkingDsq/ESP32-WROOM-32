@@ -370,6 +370,9 @@ QT_QMAKE_EXECUTABLE:FILEPATH=E:/Qt/6.8.2/android_arm64_v8a/bin/qmake.bat
 //No help, variable specified on the command line.
 QT_USE_TARGET_ANDROID_BUILD_DIR:BOOL=ON
 
+//The directory containing a CMake configuration file for Qt6AndroidExtras.
+Qt6AndroidExtras_DIR:PATH=Qt6AndroidExtras_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for Qt6Bluetooth.
 Qt6Bluetooth_DIR:PATH=E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Bluetooth
 

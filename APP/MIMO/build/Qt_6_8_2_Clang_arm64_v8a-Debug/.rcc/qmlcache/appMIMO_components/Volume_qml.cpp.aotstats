@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 1282,
+                        "durationMicroseconds": 887,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 19
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 37,
-                        "durationMicroseconds": 637,
+                        "durationMicroseconds": 770,
                         "errorMessage": "",
                         "functionName": "center",
                         "line": 22
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 42,
-                        "durationMicroseconds": 573,
+                        "durationMicroseconds": 958,
                         "errorMessage": "",
                         "functionName": "currentAngle",
                         "line": 25
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 18,
-                        "durationMicroseconds": 98,
+                        "durationMicroseconds": 148,
                         "errorMessage": "Cannot access value for name trackColor",
                         "functionName": "onPaint",
                         "line": 36
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 95,
+                        "durationMicroseconds": 133,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 33
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 29,
+                        "durationMicroseconds": 49,
                         "errorMessage": "Cannot access value for name progressColor",
                         "functionName": "color",
                         "line": 67
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 12,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 49,
                         "errorMessage": "Cannot access value for name center",
                         "functionName": "x",
                         "line": 71
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 12,
-                        "durationMicroseconds": 24,
+                        "durationMicroseconds": 41,
                         "errorMessage": "Cannot access value for name center",
                         "functionName": "y",
                         "line": 72
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 54,
                         "errorMessage": "Cannot access value for name progressColor",
                         "functionName": "color",
                         "line": 69
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 26,
+                        "durationMicroseconds": 39,
                         "errorMessage": "Cannot access value for name mouse",
                         "functionName": "onPositionChanged",
                         "line": 101
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 27,
                         "errorMessage": "Cannot access value for name mouse",
                         "functionName": "onClicked",
                         "line": 102
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 74,
+                        "durationMicroseconds": 131,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 84
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 15,
-                        "durationMicroseconds": 25,
+                        "durationMicroseconds": 39,
                         "errorMessage": "Cannot access value for name currentValue",
                         "functionName": "text",
                         "line": 108
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 17,
+                        "durationMicroseconds": 22,
                         "errorMessage": "Cannot access value for name progressColor",
                         "functionName": "color",
                         "line": 110
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 59,
+                        "durationMicroseconds": 97,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 107

@@ -19,6 +19,7 @@ find_package(OpenSSL REQUIRED)# 查找OpenSSL库
 qt_standard_project_setup(REQUIRES 6.5)
 
 qt_add_executable(appMIMO
+    #MANUAL_FINALIZATION
     main.cpp
 )
 
@@ -58,6 +59,15 @@ set_target_properties(appMIMO PROPERTIES
 )
 #蓝牙相机麦克风
 find_package(Qt6 REQUIRED COMPONENTS Core)
+
+# # Android资源配置
+# if(ANDROID)
+#     # 添加 Android 资源文件（需将 config.ini 放在 android/assets 目录）
+#     qt_android_add_assets(appMIMO "android_assets"
+#         "INCLUDES" "config.ini"
+#         "DESTINATION" "assets"
+#     )
+# endif()
 
 # 语音识别
 find_package(Qt6 REQUIRED COMPONENTS TextToSpeech)

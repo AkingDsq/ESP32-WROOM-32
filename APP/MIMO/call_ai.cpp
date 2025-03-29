@@ -5,6 +5,8 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonArray>
+#include <QStandardPaths>
+#include <QFile>
 
 Call_AI::Call_AI() {
     // 文字转语音模块
@@ -18,7 +20,16 @@ Call_AI::Call_AI() {
     speech->setLocale(QLocale::Chinese);
     //speech->setVoice(QVoice::);
 
+    // network
     networkManager = new QNetworkAccessManager(this);
+
+    // 初始化配置文件路径
+    configPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/config.ini";
+    // 首次运行时从assets复制配置文件
+    if(!QFile::exists(configPath)) {
+        QFile::copy("assets:/config.ini", configPath);
+        QFile::setPermissions(configPath, QFile::WriteOwner | QFile::ReadOwner);
+    }
 }
 Call_AI::~Call_AI() {
 }
@@ -34,22 +45,20 @@ void Call_AI::call(QString param){
         // 可以在此处重试或提示用户
     }
 }
-void Call_AI::on_yes_clicked() {
+void Call_AI::requestAI(QString question) {
     qDebug() << "What is the capital of France?";
-    QString question = "";
     if (question.isEmpty()) return;
 
     // 从安全位置读取API Key（示例从配置文件读取）
-    QString appPath = "C:/Users/dsq2/Desktop";
-    QSettings settings(appPath + "/config.ini", QSettings::IniFormat);
+    QSettings settings(configPath + "/config.ini", QSettings::IniFormat);
 
     QString apiKey = settings.value("API/Key").toString();
 
     // 构造请求
-    //QNetworkRequest request(QUrl("https://api.deepseek.com/v1/chat/completions"));
-    QNetworkRequest request(QUrl("http://127.0.0.1:1234/v1/chat/completions"));
+    QNetworkRequest request(QUrl("https://api.deepseek.com/v1/chat/completions"));
+    //QNetworkRequest request(QUrl("http://127.0.0.1:1234/v1/chat/completions"));
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
-    //request.setRawHeader("Authorization", QString("Bearer %1").arg(apiKey).toUtf8());
+    request.setRawHeader("Authorization", QString("Bearer %1").arg(apiKey).toUtf8());
 
     // 构造请求体
     QJsonObject jsonBody;
@@ -65,17 +74,17 @@ void Call_AI::on_yes_clicked() {
     connect(reply, &QNetworkReply::finished, this, &Call_AI::handleReplyFinished);
 }
 
-void Call_AI::handleReplyFinished() {
+QString Call_AI::handleReplyFinished() {
     QNetworkReply* reply = qobject_cast<QNetworkReply*>(sender());
 
     if (reply->error() == QNetworkReply::NoError) {
         QJsonDocument doc = QJsonDocument::fromJson(reply->readAll());
         QJsonObject root = doc.object();
         QString answer = root["choices"].toArray()[0].toObject()["message"].toObject()["content"].toString();
-        //answer_text->append("助手：" + answer);
+        return "助手：" + answer;
     }
     else {
-        //answer_text->setText("错误: " + reply->errorString());
+        return "错误: " + reply->errorString();
     }
     reply->deleteLater();
 }

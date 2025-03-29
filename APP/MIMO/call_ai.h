@@ -17,8 +17,8 @@ public:
 
 public slots:
     void call(QString param);
-    void on_yes_clicked();
-    void handleReplyFinished();
+    void requestAI(QString question); // 请求deepseek
+    QString handleReplyFinished();
 
 signals:
     // 可选：从 C++ 向 QML 发送反馈
@@ -33,6 +33,7 @@ private slots:
 
 private:
     QNetworkAccessManager* networkManager;
+    QString configPath;
 };
 
 #endif // CALL_AI_H

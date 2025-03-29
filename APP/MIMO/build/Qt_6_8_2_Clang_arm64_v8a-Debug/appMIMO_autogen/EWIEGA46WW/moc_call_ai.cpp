@@ -44,7 +44,8 @@ static constexpr auto qt_meta_stringdata_ZN7Call_AIE = QtMocHelpers::stringData(
     "response",
     "call",
     "param",
-    "on_yes_clicked",
+    "requestAI",
+    "question",
     "handleReplyFinished"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
@@ -69,16 +70,16 @@ Q_CONSTINIT static const uint qt_meta_data_ZN7Call_AIE[] = {
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
        4,    1,   41,    2, 0x0a,    3 /* Public */,
-       6,    0,   44,    2, 0x0a,    5 /* Public */,
-       7,    0,   45,    2, 0x0a,    6 /* Public */,
+       6,    1,   44,    2, 0x0a,    5 /* Public */,
+       8,    0,   47,    2, 0x0a,    7 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString,    3,
 
  // slots: parameters
     QMetaType::Void, QMetaType::QString,    5,
-    QMetaType::Void,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,    7,
+    QMetaType::QString,
 
        0        // eod
 };
@@ -98,10 +99,11 @@ Q_CONSTINIT const QMetaObject Call_AI::staticMetaObject = { {
         // method 'call'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
-        // method 'on_yes_clicked'
+        // method 'requestAI'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'handleReplyFinished'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>
     >,
     nullptr
 } };
@@ -113,8 +115,9 @@ void Call_AI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         switch (_id) {
         case 0: _t->aiResponseReceived((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 1: _t->call((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 2: _t->on_yes_clicked(); break;
-        case 3: _t->handleReplyFinished(); break;
+        case 2: _t->requestAI((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 3: { QString _r = _t->handleReplyFinished();
+            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     }
