@@ -9,11 +9,37 @@
 // WiFi
 #include "WiFi_Connect.h"
 
+#define LED_PIN 33        // LED引脚
+
 // 传感器传输数据线程
 void sensorTask(void *pvParam) {
   while(1) {
     TH_display(readSensors());
     vTaskDelay(2000 / portTICK_PERIOD_MS);
+  }
+}
+// 温度传感器数据警告线程
+void TemWaringTask(void *pvParam) {
+  while(1) {
+    if(readTem() > 30){
+      digitalWrite(2, HIGH);
+      delay(500);
+      digitalWrite(2, LOW);
+      delay(500);
+    }
+    vTaskDelay(500 / portTICK_PERIOD_MS);
+  }
+}
+// 湿度传感器数据警告线程
+void HumWaringTask(void *pvParam) {
+  while(1) {
+    if(readHum() > 60){
+      digitalWrite(2, HIGH);
+      delay(500);
+      digitalWrite(2, LOW);
+      delay(500);
+    }
+    vTaskDelay(500 / portTICK_PERIOD_MS);
   }
 }
 // 麦克风处理任务
@@ -26,6 +52,12 @@ void audioTask(void *pvParameter) {
 
 void setup() {
   Serial.begin(115200);
+
+  pinMode(2, OUTPUT); // 再设为输出
+  pinMode(LED_PIN, OUTPUT);
+  digitalWrite(LED_PIN, HIGH);
+  delay(1000);
+  Serial.println(String(LED_PIN) + ": " + String(digitalRead(LED_PIN)));
 
   // 显示屏
   oled_init();

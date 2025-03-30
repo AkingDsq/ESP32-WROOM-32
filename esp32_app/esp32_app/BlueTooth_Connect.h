@@ -7,7 +7,7 @@
 // #include "BluetoothA2DPSink.h"
 // I2SStream i2s_VoiceSink;
 // BluetoothA2DPSink a2dp_sink(i2s_VoiceSink);
-#define LED_PIN 2        // LED引脚
+#define LED_PIN 33        // LED引脚
 // BLE
 #include <BLEDevice.h>
 #include <BLEUtils.h>
@@ -75,11 +75,13 @@ class CommandCallbacks: public BLECharacteristicCallbacks {
         // 处理接收到的命令
         if (value == "LED_ON") {
           // 打开LED
-
+          digitalWrite(LED_PIN, HIGH);
+          Serial.println("语音命令：LED已打开");
         } 
         else if (value == "LED_OFF") {
           // 关闭LED
-
+          digitalWrite(LED_PIN, LOW);
+          Serial.println("语音命令：LED已关闭");
         }
         if (value == "callAI") {
           // 打开LED
@@ -129,6 +131,8 @@ class VoiceCommandCallbacks: public BLECharacteristicCallbacks {
 };
 // 初始化BLE连接
 void init_BLE() {
+  //pinmode(LED_PIN, output)
+
   Serial.begin(115200);
   Serial.println("Starting BLE work!");
   // BLE服务初始化
@@ -191,4 +195,10 @@ String readSensors() {
   pHumidityChar->notify();
   Serial.println("T:" + String(temperature) +  "°C H:" + String(humidity) + "%");
   return "T:" + String(temperature) +  "°C\nH:" + String(humidity) + "%";
+}
+float readTem(){
+  return dht.readTemperature();
+}
+float readHum(){
+  return dht.readHumidity();
 }

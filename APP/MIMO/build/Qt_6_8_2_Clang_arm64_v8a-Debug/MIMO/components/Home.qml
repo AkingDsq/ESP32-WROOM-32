@@ -305,6 +305,13 @@ Item {
 
                                 onToggleDevice: {
                                     deviceStatus = !deviceStatus
+                                    if(deviceStatus){
+                                        blueToothController.sendCommand("LED_ON")
+                                    }
+                                    else{
+                                        blueToothController.sendCommand("LED_OFF")
+                                    }
+
                                     console.log("主灯状态: " + deviceStatus)
                                 }
                             }
