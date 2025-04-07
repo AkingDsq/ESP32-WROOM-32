@@ -16,7 +16,6 @@
 #define Temperature_UUID "00002A6E-0000-1000-8000-00805F9B34FB" // 温度uuid
 #define Humidity_UUID "00002A6F-0000-1000-8000-00805F9B34FB"    // 湿度的uuid
 #define Command_UUID "0000FFE1-0000-1000-8000-00805F9B34FB"     // 用于接收命令的特性UUID
-#define Voice_CMD_UUID "0000FFE2-0000-1000-8000-00805F9B34FB"  // 新增：语音命令结果特征值
 
 class BlueToothController : public QObject
 {
@@ -33,13 +32,11 @@ public:
 
 
 private:
-
     QLowEnergyService *service = nullptr;          // BLE——Service
     QBluetoothLocalDevice *localDevice = nullptr;  // 访问本地蓝牙
     QBluetoothDeviceDiscoveryAgent *agent = nullptr; // 扫描
     QLowEnergyController *controller = nullptr;
     QLowEnergyCharacteristic m_commandCharacteristic; // 发送命令特征
-    QLowEnergyCharacteristic m_commandVoiceCharacteristic; // 发送命令特征
 
     QString m_temperature;
     QString m_humidity;
@@ -61,7 +58,8 @@ public slots:
     void startScan(); // 扫描蓝牙设备
     void connectDevice(QString address, QBluetoothDeviceInfo info);// 连接服务
     void sendCommand(QString command); // 发送特征
-    void sendVoiceCommand(QString command); // 发送语音命令
+
+    //void onVoiceCommandReceived(QString command); // 语音指令
 
 private slots:
     void onDeviceDiscovered(QBluetoothDeviceInfo info); // 扫描到的服务

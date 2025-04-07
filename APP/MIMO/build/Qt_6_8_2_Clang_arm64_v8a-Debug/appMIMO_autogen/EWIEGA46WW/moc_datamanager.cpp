@@ -37,7 +37,16 @@ struct qt_meta_tag_ZN11DataManagerE_t {};
 
 #ifdef QT_MOC_HAS_STRINGDATA
 static constexpr auto qt_meta_stringdata_ZN11DataManagerE = QtMocHelpers::stringData(
-    "DataManager"
+    "DataManager",
+    "checkUserExists",
+    "",
+    "username",
+    "checkPhoneExists",
+    "phone",
+    "validateUser",
+    "password",
+    "registerUser",
+    "updateUserLastLogin"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -49,12 +58,26 @@ Q_CONSTINIT static const uint qt_meta_data_ZN11DataManagerE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       0,    0, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
+
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    1,   44,    2, 0x0a,    1 /* Public */,
+       4,    1,   47,    2, 0x0a,    3 /* Public */,
+       6,    2,   50,    2, 0x0a,    5 /* Public */,
+       8,    3,   55,    2, 0x0a,    8 /* Public */,
+       9,    1,   62,    2, 0x0a,   12 /* Public */,
+
+ // slots: parameters
+    QMetaType::Bool, QMetaType::QString,    3,
+    QMetaType::Bool, QMetaType::QString,    5,
+    QMetaType::Bool, QMetaType::QString, QMetaType::QString,    3,    7,
+    QMetaType::Bool, QMetaType::QString, QMetaType::QString, QMetaType::QString,    3,    7,    5,
+    QMetaType::Bool, QMetaType::QString,    3,
 
        0        // eod
 };
@@ -67,7 +90,25 @@ Q_CONSTINIT const QMetaObject DataManager::staticMetaObject = { {
     nullptr,
     qt_incomplete_metaTypeArray<qt_meta_tag_ZN11DataManagerE_t,
         // Q_OBJECT / Q_GADGET
-        QtPrivate::TypeAndForceComplete<DataManager, std::true_type>
+        QtPrivate::TypeAndForceComplete<DataManager, std::true_type>,
+        // method 'checkUserExists'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'checkPhoneExists'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'validateUser'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'registerUser'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'updateUserLastLogin'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>
     >,
     nullptr
 } };
@@ -75,10 +116,21 @@ Q_CONSTINIT const QMetaObject DataManager::staticMetaObject = { {
 void DataManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     auto *_t = static_cast<DataManager *>(_o);
-    (void)_t;
-    (void)_c;
-    (void)_id;
-    (void)_a;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: { bool _r = _t->checkUserExists((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 1: { bool _r = _t->checkPhoneExists((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 2: { bool _r = _t->validateUser((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 3: { bool _r = _t->registerUser((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 4: { bool _r = _t->updateUserLastLogin((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        default: ;
+        }
+    }
 }
 
 const QMetaObject *DataManager::metaObject() const
@@ -97,6 +149,18 @@ void *DataManager::qt_metacast(const char *_clname)
 int DataManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QObject::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 5)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 5;
+    }
+    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 5)
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+        _id -= 5;
+    }
     return _id;
 }
 QT_WARNING_POP

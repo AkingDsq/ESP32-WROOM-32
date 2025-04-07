@@ -4,18 +4,24 @@
 #include <QSurfaceFormat>
 // 长按唤起AI助手
 #include "call_ai.h"
-//#include "datamanager.h"
+// SQLite数据库管理
+#include "datamanager.h"
+// BLE蓝牙
 #include "bluetoothcontroller.h"
-//
+// 语音识别
 #include "speechrecognizer.h"
 
 int main(int argc, char *argv[])
 {
-    QGuiApplication app(argc, argv);
+    // 方法1：检查文件是否存在
+    QString path = ":/config.ini";
+    if (QFile::exists(path)) {
+        qDebug() << "资源存在";
+    } else {
+        qDebug() << "资源路径错误或未编译";
+    }
 
-    // 验证 SSL 支持
-    qDebug() << "SSL Support:" << QSslSocket::supportsSsl();
-    qDebug() << "Library Version:" << QSslSocket::sslLibraryVersionString();
+    QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
 
@@ -25,13 +31,11 @@ int main(int argc, char *argv[])
         &app,
         []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
-    // // 创建数据库管理器实例
-    // DataManager dbManager;
-    // if (!dbManager.initDatabase()) {
-    //     qDebug() << "Failed to initialize database!";
-    //     return -1;
-    // }
-    // engine.rootContext()->setContextProperty("dbManager", &dbManager);
+
+    // 创建数据库管理器实例
+    DataManager dbManager;
+    engine.rootContext()->setContextProperty("dbManager", &dbManager);
+    qDebug() << "C++对象dbManager注册状态:" << engine.rootContext()->contextProperty("dbManager").isValid();
 
     // c++ -》 qml
     Call_AI aiController;
@@ -42,6 +46,9 @@ int main(int argc, char *argv[])
     BlueToothController blueToothController;
     engine.rootContext()->setContextProperty("blueToothController", &blueToothController);
     qDebug() << "C++对象blueToothController注册状态:" << engine.rootContext()->contextProperty("blueToothController").isValid();
+
+    // 语音控制
+    //connect(aiController, &Call_AI::commandReady,  blueToothController, &BlueToothController::onVoiceCommandReceived);
 
     // speechrecognizer
     SpeechRecognizer* speechRecognizer = new SpeechRecognizer(&app);

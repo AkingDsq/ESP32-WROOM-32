@@ -8,9 +8,13 @@ Item {
     width: parent.width
     height: parent.height
 
+
+    signal logining()
+    signal registering()
     // 信号声明 - 用于登录成功后通知
     signal loginSuccess()
     signal registerSuccess()
+
 
     // 使用Material主题并自定义颜色
     Material.theme: Material.Dark
@@ -389,11 +393,12 @@ Item {
 
                     // 登录按钮
                     MobileButton {
+                        id: loginButton
                         text: qsTr("登 录")
                         Layout.fillWidth: true
                         Layout.preferredHeight: 50
                         onClicked: {
-                            loginSuccessAnim.start()
+                            rootItem.logining()
                         }
                     }
 
@@ -1393,8 +1398,37 @@ Item {
             propagateComposedEvents: true
             onPressed: {
                 buttonRipple.start(mouseX, mouseY)
-                mouse.accepted = false
+                //mouse.accepted = false
+            }
+        }
+    }
+
+    // 连接信号
+    Connections {
+        target: rootItem
+
+        // 登录
+        function onLogining() {
+            console.log("准备登录")
+            // 检测用户名或手机号是否存在
+            if(dbManager.checkUserExists(usernameField.text) || dbManager.checkPhoneExists(usernameField.text)){
+                console.log("正在检测密码")
+                // 与密码匹配
+                if(dbManager.validateUser(usernameField.text, passwordField.text)){
+                    // 更新上次登录时间
+                    dbManager.updateUserLastLogin(usernameField.text)
+                    // 成功登录动画
+                    loginSuccessAnim.start()
+                }
+                else{
+                    console.log("登录失败，密码错误")
+                }
+            }
+            else{
+                console.log("登录失败，用户名或手机号不存在")
             }
         }
     }
 }
+
+

@@ -29,11 +29,6 @@ public:
     bool deleteUser(int id);
     // 搜索用户
     QVariantList searchUsers(QString keyword);
-    // User authentication
-    bool checkUserExists(QString username);
-    bool validateUser(QString username, QString password);
-    bool registerUser(QString username, QString password, QString phone);
-    bool updateUserLastLogin(QString username);
 
     // User preferences
     bool saveUserPreferences(QString username, QVariantMap preferences);
@@ -59,7 +54,12 @@ private:
     bool executeQuery(QSqlQuery query);
 
 public slots:
-
+    // User authentication
+    bool checkUserExists(QString username);
+    bool checkPhoneExists(QString phone);
+    bool validateUser(QString username, QString password);
+    bool registerUser(QString username, QString password, QString phone);
+    bool updateUserLastLogin(QString username);
 signals:
 };
 

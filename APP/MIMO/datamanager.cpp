@@ -3,7 +3,8 @@
 DataManager::DataManager(QObject *parent)
     : QObject{parent}
 {
-
+    // 初始化
+    if(initDatabase()) qDebug() << "初始化成功";
 }
 DataManager::~DataManager()
 {
@@ -27,6 +28,12 @@ bool DataManager::initDatabase()
     QString dbFilePath = dir.absoluteFilePath("mimo.db");
     qDebug() << "数据库位置:" << dbFilePath;
 
+    if(QFile::exists(dbFilePath)){
+        if(QFile::remove(dbFilePath)){
+            qDebug() << "数据库已删除";
+        }
+    }
+
     // 初始化数据库
     m_db = QSqlDatabase::addDatabase("QSQLITE");
     m_db.setDatabaseName(dbFilePath);
@@ -49,6 +56,7 @@ bool DataManager::initDatabase()
 
 bool DataManager::createTables()
 {
+    qDebug() << "创建表格";
     // 用户表id,username,password,phone,last_login,created_at
     QSqlQuery userTableQuery;
     if (!userTableQuery.exec(
@@ -59,71 +67,71 @@ bool DataManager::createTables()
             "phone TEXT, "
             "last_login TEXT, "
             "created_at TEXT NOT NULL)")) {
-        m_lastError = "Failed to create users table: " + userTableQuery.lastError().text();
+        m_lastError = "创建users table失败: " + userTableQuery.lastError().text();
         return false;
     }
 
-    // 个性化表
-    QSqlQuery prefsTableQuery;
-    if (!prefsTableQuery.exec(
-            "CREATE TABLE IF NOT EXISTS user_preferences ("
-            "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-            "username TEXT NOT NULL, "
-            "key TEXT NOT NULL, "
-            "value TEXT, "
-            "UNIQUE(username, key), "
-            "FOREIGN KEY(username) REFERENCES users(username))")) {
-        m_lastError = "Failed to create preferences table: " + prefsTableQuery.lastError().text();
-        return false;
-    }
+    // // 个性化表
+    // QSqlQuery prefsTableQuery;
+    // if (!prefsTableQuery.exec(
+    //         "CREATE TABLE IF NOT EXISTS user_preferences ("
+    //         "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+    //         "username TEXT NOT NULL, "
+    //         "key TEXT NOT NULL, "
+    //         "value TEXT, "
+    //         "UNIQUE(username, key), "
+    //         "FOREIGN KEY(username) REFERENCES users(username))")) {
+    //     m_lastError = "Failed to create preferences table: " + prefsTableQuery.lastError().text();
+    //     return false;
+    // }
 
-    // 房间表
-    QSqlQuery roomsTableQuery;
-    if (!roomsTableQuery.exec(
-            "CREATE TABLE IF NOT EXISTS rooms ("
-            "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-            "username TEXT NOT NULL, "
-            "room_name TEXT NOT NULL, "
-            "created_at TEXT NOT NULL, "
-            "UNIQUE(username, room_name), "
-            "FOREIGN KEY(username) REFERENCES users(username))")) {
-        m_lastError = "Failed to create rooms table: " + roomsTableQuery.lastError().text();
-        return false;
-    }
+    // // 房间表
+    // QSqlQuery roomsTableQuery;
+    // if (!roomsTableQuery.exec(
+    //         "CREATE TABLE IF NOT EXISTS rooms ("
+    //         "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+    //         "username TEXT NOT NULL, "
+    //         "room_name TEXT NOT NULL, "
+    //         "created_at TEXT NOT NULL, "
+    //         "UNIQUE(username, room_name), "
+    //         "FOREIGN KEY(username) REFERENCES users(username))")) {
+    //     m_lastError = "Failed to create rooms table: " + roomsTableQuery.lastError().text();
+    //     return false;
+    // }
 
-    // Devices table
-    QSqlQuery devicesTableQuery;
-    if (!devicesTableQuery.exec(
-            "CREATE TABLE IF NOT EXISTS devices ("
-            "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-            "username TEXT NOT NULL, "
-            "device_id TEXT NOT NULL, "
-            "device_name TEXT, "
-            "device_type TEXT, "
-            "room_name TEXT, "
-            "created_at TEXT NOT NULL, "
-            "UNIQUE(username, device_id), "
-            "FOREIGN KEY(username) REFERENCES users(username), "
-            "FOREIGN KEY(username, room_name) REFERENCES rooms(username, room_name))")) {
-        m_lastError = "Failed to create devices table: " + devicesTableQuery.lastError().text();
-        return false;
-    }
+    // // 设备表
+    // QSqlQuery devicesTableQuery;
+    // if (!devicesTableQuery.exec(
+    //         "CREATE TABLE IF NOT EXISTS devices ("
+    //         "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+    //         "username TEXT NOT NULL, "
+    //         "device_id TEXT NOT NULL, "
+    //         "device_name TEXT, "
+    //         "device_type TEXT, "
+    //         "room_name TEXT, "
+    //         "created_at TEXT NOT NULL, "
+    //         "UNIQUE(username, device_id), "
+    //         "FOREIGN KEY(username) REFERENCES users(username), "
+    //         "FOREIGN KEY(username, room_name) REFERENCES rooms(username, room_name))")) {
+    //     m_lastError = "Failed to create devices table: " + devicesTableQuery.lastError().text();
+    //     return false;
+    // }
 
-    // Device settings table
-    QSqlQuery deviceSettingsTableQuery;
-    if (!deviceSettingsTableQuery.exec(
-            "CREATE TABLE IF NOT EXISTS device_settings ("
-            "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-            "username TEXT NOT NULL, "
-            "device_id TEXT NOT NULL, "
-            "key TEXT NOT NULL, "
-            "value TEXT, "
-            "updated_at TEXT NOT NULL, "
-            "UNIQUE(username, device_id, key), "
-            "FOREIGN KEY(username, device_id) REFERENCES devices(username, device_id))")) {
-        m_lastError = "Failed to create device_settings table: " + deviceSettingsTableQuery.lastError().text();
-        return false;
-    }
+    // // 设备设置表
+    // QSqlQuery deviceSettingsTableQuery;
+    // if (!deviceSettingsTableQuery.exec(
+    //         "CREATE TABLE IF NOT EXISTS device_settings ("
+    //         "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+    //         "username TEXT NOT NULL, "
+    //         "device_id TEXT NOT NULL, "
+    //         "key TEXT NOT NULL, "
+    //         "value TEXT, "
+    //         "updated_at TEXT NOT NULL, "
+    //         "UNIQUE(username, device_id, key), "
+    //         "FOREIGN KEY(username, device_id) REFERENCES devices(username, device_id))")) {
+    //     m_lastError = "Failed to create device_settings table: " + deviceSettingsTableQuery.lastError().text();
+    //     return false;
+    // }
 
     // 初始化各数据库表格
     QSqlQuery checkUserQuery;
@@ -133,44 +141,50 @@ bool DataManager::createTables()
     }
 
     int userCount = checkUserQuery.value(0).toInt();
+    qDebug() << "userCount1:" << userCount;
     if (userCount == 0) {
-        // Create default user
+        // 添加初始用户
         QSqlQuery insertUserQuery;
-        QString hashedPassword = QString(QCryptographicHash::hash("password", QCryptographicHash::Sha256).toHex());
+        QString password = "123456";
+        QString hashedPassword = QString(QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256).toHex());
 
         insertUserQuery.prepare(
-            "INSERT INTO users (username, password, phone, created_at) "
-            "VALUES (:username, :password, :phone, :created_at)");
+            "INSERT INTO users (username, password, phone, last_login, created_at) "
+            "VALUES (:username, :password, :phone, :last_login, :created_at)");
         insertUserQuery.bindValue(":username", "AkingDsq");
         insertUserQuery.bindValue(":password", hashedPassword);
-        insertUserQuery.bindValue(":phone", "13800138000");
+        insertUserQuery.bindValue(":phone", "18079463112");
+        insertUserQuery.bindValue(":last_login", QDateTime::currentDateTime().toString(Qt::ISODate));
         insertUserQuery.bindValue(":created_at", QDateTime::currentDateTime().toString(Qt::ISODate));
 
         if (!executeQuery(insertUserQuery)) {
             return false;
         }
 
-        // Add default rooms
-        QStringList defaultRooms = {"客厅", "卧室", "厨房", "卫生间", "办公室"};
-        for (const QString &room : defaultRooms) {
-            addRoom("AkingDsq", room);
-        }
+        // // Add default rooms
+        // QStringList defaultRooms = {"客厅", "卧室", "厨房", "卫生间", "办公室"};
+        // for (const QString &room : defaultRooms) {
+        //     addRoom("AkingDsq", room);
+        // }
     }
-
+    if(checkUserExists("AkingDsq")){
+        qDebug() << "用户AkingDsq存在";
+    }
+    else qDebug() << "用户AkingDsq不存在";
     return true;
 }
 
 bool DataManager::executeQuery(QSqlQuery query)
 {
     if (!query.exec()) {
-        m_lastError = "Query failed: " + query.lastError().text();
+        m_lastError = "语句失败: " + query.lastError().text();
         qDebug() << m_lastError;
-        qDebug() << "Query was: " << query.lastQuery();
+        qDebug() << "当前语句是: " << query.lastQuery();
         return false;
     }
     return true;
 }
-
+// 检测用户username是否存在
 bool DataManager::checkUserExists(QString username)
 {
     QSqlQuery query;
@@ -183,10 +197,23 @@ bool DataManager::checkUserExists(QString username)
 
     return query.value(0).toInt() > 0;
 }
+// 检测手机号是否存在
+bool DataManager::checkPhoneExists(QString phone){
+    QSqlQuery query;
+    query.prepare("SELECT COUNT(*) FROM users WHERE phone = :phone");
+    query.bindValue(":phone", phone);
 
+    if (!executeQuery(query) || !query.next()) {
+        return false;
+    }
+
+    return query.value(0).toInt() > 0;
+}
+
+// 检查用户名与密码是否匹配
 bool DataManager::validateUser(QString username, QString password)
 {
-    // Hash the provided password
+    // 加密
     QString hashedPassword = QString(QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256).toHex());
 
     QSqlQuery query;
@@ -206,30 +233,31 @@ bool DataManager::validateUser(QString username, QString password)
 
     return valid;
 }
-
+// 注册用户
 bool DataManager::registerUser(QString username, QString password, QString phone)
 {
-    // Check if user already exists
+    // 检测是否存在
     if (checkUserExists(username)) {
-        m_lastError = "Username already taken";
+        m_lastError = "用户已存在";
         return false;
     }
 
-    // Hash the password for security
+    // 加密密码
     QString hashedPassword = QString(QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256).toHex());
 
     QSqlQuery query;
     query.prepare(
-        "INSERT INTO users (username, password, phone, created_at) "
-        "VALUES (:username, :password, :phone, :created_at)");
+        "INSERT INTO users (username, password, phone, last_login, created_at) "
+        "VALUES (:username, :password, :phone, :last_login, :created_at)");
     query.bindValue(":username", username);
     query.bindValue(":password", hashedPassword);
     query.bindValue(":phone", phone);
+    query.bindValue(":last_login", QDateTime::currentDateTime().toString(Qt::ISODate));
     query.bindValue(":created_at", QDateTime::currentDateTime().toString(Qt::ISODate));
 
     return executeQuery(query);
 }
-
+// 更新用户上次登入时间
 bool DataManager::updateUserLastLogin(QString username)
 {
     QSqlQuery query;
@@ -239,7 +267,7 @@ bool DataManager::updateUserLastLogin(QString username)
 
     return executeQuery(query);
 }
-
+// 保存用户偏好
 bool DataManager::saveUserPreferences(QString username, QVariantMap preferences)
 {
     // Start a transaction for multiple inserts
@@ -270,7 +298,7 @@ bool DataManager::saveUserPreferences(QString username, QVariantMap preferences)
 
     return success;
 }
-
+// 获取
 QVariantMap DataManager::getUserPreferences(QString username)
 {
     QVariantMap preferences;
@@ -291,7 +319,7 @@ QVariantMap DataManager::getUserPreferences(QString username)
 
     return preferences;
 }
-
+// 添加房间
 bool DataManager::addRoom(QString username, QString roomName)
 {
     QSqlQuery query;
@@ -304,7 +332,7 @@ bool DataManager::addRoom(QString username, QString roomName)
 
     return executeQuery(query);
 }
-
+// 删除房间
 bool DataManager::deleteRoom(QString username, QString roomName)
 {
     QSqlQuery query;
@@ -314,7 +342,7 @@ bool DataManager::deleteRoom(QString username, QString roomName)
 
     return executeQuery(query);
 }
-
+// 获取房间
 QStringList DataManager::getRooms(QString username)
 {
     QStringList rooms;

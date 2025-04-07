@@ -5,6 +5,80 @@
             "lineNumber": 13,
             "object": true,
             "qualifiedClassName": "DataManager",
+            "slots": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "username",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "checkUserExists",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "phone",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 1,
+                    "name": "checkPhoneExists",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "username",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "password",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 2,
+                    "name": "validateUser",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "username",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "password",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "phone",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 3,
+                    "name": "registerUser",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "username",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 4,
+                    "name": "updateUserLastLogin",
+                    "returnType": "bool"
+                }
+            ],
             "superClasses": [
                 {
                     "access": "public",

@@ -2,7 +2,7 @@
     "classes": [
         {
             "className": "BlueToothController",
-            "lineNumber": 21,
+            "lineNumber": 20,
             "object": true,
             "properties": [
                 {
@@ -151,18 +151,6 @@
                     "returnType": "void"
                 },
                 {
-                    "access": "public",
-                    "arguments": [
-                        {
-                            "name": "command",
-                            "type": "QString"
-                        }
-                    ],
-                    "index": 11,
-                    "name": "sendVoiceCommand",
-                    "returnType": "void"
-                },
-                {
                     "access": "private",
                     "arguments": [
                         {
@@ -170,13 +158,13 @@
                             "type": "QBluetoothDeviceInfo"
                         }
                     ],
-                    "index": 12,
+                    "index": 11,
                     "name": "onDeviceDiscovered",
                     "returnType": "void"
                 },
                 {
                     "access": "private",
-                    "index": 13,
+                    "index": 12,
                     "name": "onScanFinished",
                     "returnType": "void"
                 },
@@ -188,7 +176,7 @@
                             "type": "QBluetoothUuid"
                         }
                     ],
-                    "index": 14,
+                    "index": 13,
                     "name": "serviceDiscovered",
                     "returnType": "void"
                 },
@@ -200,7 +188,7 @@
                             "type": "QLowEnergyService::ServiceState"
                         }
                     ],
-                    "index": 15,
+                    "index": 14,
                     "name": "serviceStateChanged",
                     "returnType": "void"
                 },
@@ -216,7 +204,7 @@
                             "type": "QByteArray"
                         }
                     ],
-                    "index": 16,
+                    "index": 15,
                     "name": "characteristicChanged",
                     "returnType": "void"
                 },
@@ -228,7 +216,7 @@
                             "type": "QLowEnergyController::ControllerState"
                         }
                     ],
-                    "index": 17,
+                    "index": 16,
                     "name": "controllerStateChanged",
                     "returnType": "void"
                 },
@@ -240,7 +228,7 @@
                             "type": "QLowEnergyController::Error"
                         }
                     ],
-                    "index": 18,
+                    "index": 17,
                     "name": "errorOccurred",
                     "returnType": "void"
                 }

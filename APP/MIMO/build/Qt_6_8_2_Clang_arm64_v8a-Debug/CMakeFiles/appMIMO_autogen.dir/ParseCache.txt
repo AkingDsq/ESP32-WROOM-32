@@ -1772,17 +1772,59 @@ D:/git/work/ESP32-WROOM-32/APP/MIMO/bluetoothcontroller.h
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/xlocale.h
 D:/git/work/ESP32-WROOM-32/APP/MIMO/call_ai.h
  mmc:Q_OBJECT
+ mdp:D:/git/work/ESP32-WROOM-32/APP/MIMO/bluetoothcontroller.h
  mdp:D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/appMIMO_autogen/moc_predefs.h
  mdp:D:/git/work/ESP32-WROOM-32/APP/MIMO/call_ai.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/QBluetoothAddress
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/QBluetoothDeviceDiscoveryAgent
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/QBluetoothDeviceInfo
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/QBluetoothHostInfo
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/QBluetoothLocalDevice
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/QBluetoothSocket
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/QBluetoothUuid
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/QLowEnergyAdvertisingData
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/QLowEnergyCharacteristic
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/QLowEnergyConnectionParameters
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/QLowEnergyController
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/QLowEnergyDescriptor
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/QLowEnergyService
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/qbluetooth.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/qbluetoothaddress.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/qbluetoothdevicediscoveryagent.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/qbluetoothdeviceinfo.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/qbluetoothhostinfo.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/qbluetoothlocaldevice.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/qbluetoothserviceinfo.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/qbluetoothsocket.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/qbluetoothuuid.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/qlowenergyadvertisingdata.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/qlowenergycharacteristic.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/qlowenergyconnectionparameters.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/qlowenergycontroller.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/qlowenergydescriptor.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/qlowenergyservice.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/qtbluetooth-config.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/qtbluetoothexports.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/qtbluetoothglobal.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QByteArray
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QCoreApplication
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QDebug
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QFlags
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QIODevice
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QList
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QMap
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QMetaType
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QObject
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QPermissions
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QScopedPointer
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QSharedDataPointer
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QSharedPointer
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QString
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QUrl
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QUuid
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QVariant
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QVariantMap
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/QtGlobal
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/q20functional.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/q20iterator.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/q20memory.h
@@ -1815,17 +1857,28 @@ D:/git/work/ESP32-WROOM-32/APP/MIMO/call_ai.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qcontainerinfo.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qcontainertools_impl.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qcontiguouscache.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qcoreapplication.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qcoreapplication_platform.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qcoreevent.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qcryptographichash.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qdarwinhelpers.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qdatastream.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qdatetime.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qdeadlinetimer.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qdebug.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qelapsedtimer.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qendian.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qeventloop.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qexception.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qexceptionhandling.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qflags.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qfloat16.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qforeach.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qfunctionaltools_impl.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qfunctionpointer.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qfuture.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qfuture_impl.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qfutureinterface.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qgenericatomic.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qglobal.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qglobalstatic.h
@@ -1835,6 +1888,11 @@ D:/git/work/ESP32-WROOM-32/APP/MIMO/call_ai.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qiodevicebase.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qiterable.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qiterator.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qjniarray.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qjnienvironment.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qjniobject.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qjnitypes.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qjnitypes_impl.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qlatin1stringview.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qlist.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qlocale.h
@@ -1845,7 +1903,9 @@ D:/git/work/ESP32-WROOM-32/APP/MIMO/call_ai.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qmetacontainer.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qmetatype.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qminmax.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qmutex.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qnamespace.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qnativeinterface.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qnumeric.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qobject.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qobject_impl.h
@@ -1853,8 +1913,12 @@ D:/git/work/ESP32-WROOM-32/APP/MIMO/call_ai.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qobjectdefs_impl.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qoverload.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qpair.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qpermissions.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qprocessordetection.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qpromise.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qrefcount.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qresultstore.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qrunnable.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qscopedpointer.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qscopeguard.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qset.h
@@ -1887,10 +1951,13 @@ D:/git/work/ESP32-WROOM-32/APP/MIMO/call_ai.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qtdeprecationmarkers.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qtenvironmentvariables.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qtextstream.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qthread.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qthreadpool.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qtmetamacros.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qtnoop.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qtpreprocessorsupport.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qtresource.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qtsan_impl.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qttranslation.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qttypetraits.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qtversion.h
@@ -1899,7 +1966,9 @@ D:/git/work/ESP32-WROOM-32/APP/MIMO/call_ai.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qtypes.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qurl.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qutf8stringview.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/quuid.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qvariant.h
+ mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qvariantmap.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qvarlengtharray.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qversiontagging.h
  mdp:E:/Qt/6.8.2/android_arm64_v8a/include/QtCore/qxptype_traits.h
@@ -2232,6 +2301,7 @@ D:/git/work/ESP32-WROOM-32/APP/MIMO/call_ai.h
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/__config_site
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/__debug
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/__debug_utils/randomize_range.h
+ mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/__errc
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/__format/concepts.h
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/__format/enable_insertable.h
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/__format/format_error.h
@@ -2347,6 +2417,7 @@ D:/git/work/ESP32-WROOM-32/APP/MIMO/call_ai.h
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/__memory/voidify.h
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/__memory_resource/memory_resource.h
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/__memory_resource/polymorphic_allocator.h
+ mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/__mutex_base
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/__node_handle
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/__numeric/accumulate.h
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/__numeric/adjacent_difference.h
@@ -2548,6 +2619,7 @@ D:/git/work/ESP32-WROOM-32/APP/MIMO/call_ai.h
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/bit
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/cassert
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/cctype
+ mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/cerrno
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/chrono
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/climits
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/cmath
@@ -2564,6 +2636,7 @@ D:/git/work/ESP32-WROOM-32/APP/MIMO/call_ai.h
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/exception
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/float.h
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/functional
+ mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/future
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/initializer_list
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/iosfwd
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/iterator
@@ -2571,6 +2644,7 @@ D:/git/work/ESP32-WROOM-32/APP/MIMO/call_ai.h
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/list
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/map
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/memory
+ mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/mutex
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/new
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/numeric
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/optional
@@ -2580,6 +2654,8 @@ D:/git/work/ESP32-WROOM-32/APP/MIMO/call_ai.h
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/stdexcept
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/string
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/string_view
+ mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/system_error
+ mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/thread
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/tuple
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/type_traits
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/typeinfo
@@ -2591,6 +2667,7 @@ D:/git/work/ESP32-WROOM-32/APP/MIMO/call_ai.h
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/ctype.h
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/errno.h
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/features.h
+ mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/jni.h
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/limits.h
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/linux/compiler.h
  mdp:E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/linux/compiler_types.h

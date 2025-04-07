@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.16)
 
 project(MIMO VERSION 0.1 LANGUAGES CXX)
 
+set(CMAKE_AUTOMOC ON)  # 处理 Q_OBJECT 宏
+set(CMAKE_AUTORCC ON)  # 处理资源文件
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -44,6 +46,7 @@ qt_add_qml_module(appMIMO
         QML_FILES components/Home.qml
         RESOURCES android/src/org/qtproject/app/SpeechResultReceiver.java
         QML_FILES components/DeviceControl.qml
+        RESOURCES resources/resources.qrc
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

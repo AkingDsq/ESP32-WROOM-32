@@ -17,7 +17,6 @@
 #define Temperature_UUID "2A6E" // 温度uuid
 #define Humidity_UUID "2A6F"    // 湿度的uuid
 #define Command_UUID "FFE1"     // 用于接收命令的特性UUID
-#define Voice_CMD_UUID "FFE2"  // 新增：语音命令结果特征值
 
 // 温湿度传感器
 #include <DHT.h>
@@ -28,7 +27,7 @@ DHT dht(DHTPIN, DHTTYPE); // 创建DHT对象
 // BLE服务初始化
 BLEServer *pServer;
 BLEService *pService;
-BLECharacteristic *pTemperatureChar, *pHumidityChar, *pCommandChar, *pVoiceCmdChar;
+BLECharacteristic *pTemperatureChar, *pHumidityChar, *pCommandChar;
 
 // void init_A2DPSink();
 // // 连接经典蓝牙
@@ -76,59 +75,28 @@ class CommandCallbacks: public BLECharacteristicCallbacks {
         if (value == "LED_ON") {
           // 打开LED
           digitalWrite(LED_PIN, HIGH);
-          Serial.println("语音命令：LED已打开");
+          Serial.println("LED已打开");
         } 
         else if (value == "LED_OFF") {
           // 关闭LED
           digitalWrite(LED_PIN, LOW);
-          Serial.println("语音命令：LED已关闭");
+          Serial.println("LED已关闭");
         }
-        if (value == "callAI") {
-          // 打开LED
-          Serial.println("正在执行命令");
-          pTemperatureChar->setValue("30");
+        else if (value == "callTem") {
+          float temperature = dht.readTemperature();
+          pTemperatureChar->setValue(String(temperature));
           pTemperatureChar->notify();
-          pHumidityChar->setValue("50");
-          pHumidityChar->notify();
-
+        }
+        else if (value == "callHem") {
+          float humidity = dht.readHumidity();
+          pTemperatureChar->setValue(String(humidity));
+          pTemperatureChar->notify();
         } 
         // 添加更多命令处理...
       }
     }
 };
-// 语音命令特征回调
-class VoiceCommandCallbacks: public BLECharacteristicCallbacks {
-  void onWrite(BLECharacteristic *pCharacteristic) {
-    String value = pCharacteristic->getValue();    
-    if (value.length() > 0) {
-      Serial.print("收到语音命令结果: ");
-      Serial.println(value.c_str());            
-      // 处理语音命令      
-      if (value == "OPEN_LIGHT") {        
-        digitalWrite(LED_PIN, HIGH);
-        Serial.println("语音命令：LED已打开");      
-      }       
-      else if (value == "CLOSE_LIGHT") {      
-        digitalWrite(LED_PIN, LOW);
-        Serial.println("语音命令：LED已关闭");      
-      }      
-      else if (value == "READ_TEMPERATURE") {
-        float temperature = dht.readTemperature();        
-        if (!isnan(temperature)) {
-          Serial.printf("语音命令：当前温度 %.1f°C\n", temperature);          
-          // 这里可以添加播报功能        
-        }      
-      }      
-      else if (value == "READ_HUMIDITY") {
-          float humidity = dht.readHumidity();        
-      if (!isnan(humidity)) {
-          Serial.printf("语音命令：当前湿度 %.1f%%\n", humidity);          
-          // 这里可以添加播报功能        
-        }      
-      }    
-    }  
-  }
-};
+
 // 初始化BLE连接
 void init_BLE() {
   //pinmode(LED_PIN, output)
@@ -159,12 +127,6 @@ void init_BLE() {
     BLECharacteristic::PROPERTY_WRITE
   );
   pCommandChar->setCallbacks(new CommandCallbacks());
-  // 语音命令结果特征（可写，用于接收Android识别结果）
-  pVoiceCmdChar = pService->createCharacteristic(    
-    BLEUUID(Voice_CMD_UUID),
-    BLECharacteristic::PROPERTY_WRITE  
-  );
-  pVoiceCmdChar->setCallbacks(new VoiceCommandCallbacks());
 
   pService->start();
   // BLEAdvertising *pAdvertising = pServer->getAdvertising();  // this still is working for backward compatibility

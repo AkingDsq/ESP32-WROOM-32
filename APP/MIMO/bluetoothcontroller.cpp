@@ -135,21 +135,10 @@ void BlueToothController::sendCommand(QString command)
     service->writeCharacteristic(m_commandCharacteristic, data);
     emit commandSent(true);
 }
-
-// 发送语音命令到ESP32
-void BlueToothController::sendVoiceCommand(QString command)
-{
-    if (!m_connected || !m_commandVoiceCharacteristic.isValid()) {
-        qWarning() << "无法发送命令";
-        emit commandVoiceSent(false);
-        return;
-    }
-
-    qDebug() << "发送命令:" << command;
-    QByteArray data = command.toUtf8();
-    service->writeCharacteristic(m_commandVoiceCharacteristic, data);
-    emit commandVoiceSent(true);
-}
+// // 语音指令
+// void BlueToothController::onVoiceCommandReceived(QString command){
+//     sendCommand(command);
+// }
 
 // 连接设备,连接串口
 void BlueToothController::onDeviceDiscovered(QBluetoothDeviceInfo info)
@@ -169,7 +158,6 @@ void BlueToothController::onDeviceDiscovered(QBluetoothDeviceInfo info)
         qDebug() << "找到了ESP32-BLE";
         agent->stop();
         connectDevice(info.address().toString(), info);
-
     }
 }
 // 连接设备
@@ -324,32 +312,6 @@ void BlueToothController::serviceStateChanged(QLowEnergyService::ServiceState st
             qDebug() << "发现命令特性";
         } else {
             qWarning() << "未发现命令特性";
-        }
-
-        // 语音控制特征
-        qDebug() << "语音控制特征:" + QBluetoothUuid(Voice_CMD_UUID).toString();
-        m_commandVoiceCharacteristic = service->characteristic(QBluetoothUuid(Voice_CMD_UUID));
-        if (m_commandVoiceCharacteristic.isValid()) {
-            qDebug() << "找到语音控制特征";
-            service->readCharacteristic(m_commandVoiceCharacteristic);
-
-            // 描述符值可通过管理该描述符所属服务的QLowEnergyService 实例写入。QLowEnergyService::writeDescriptor() 函数将写入新值。成功后将发出QLowEnergyService::descriptorWritten() 信号。该对象的缓存value() 也会相应更新。
-            if (m_commandVoiceCharacteristic.properties() & QLowEnergyCharacteristic::Notify) {
-                QLowEnergyDescriptor notification = m_commandVoiceCharacteristic.descriptor(QBluetoothUuid::DescriptorType::ClientCharacteristicConfiguration);
-                if (notification.isValid()) {
-                    service->writeDescriptor(notification, QByteArray::fromHex("0100"));
-                    // 检查写入结果
-                    if (service->error() != QLowEnergyService::NoError) {
-                        qWarning() << "启用语音控制通知失败:" << service->error();
-                    } else {
-                        qDebug() << "语音控制通知已启用";
-                    }
-                }
-            }
-        }
-        else{
-            qDebug() << "语音控制特征无效，UUID可能不匹配";
-            return;
         }
 
         m_connected = true;

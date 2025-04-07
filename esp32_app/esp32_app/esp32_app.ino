@@ -65,12 +65,12 @@ void setup() {
   init_TH();
   init_BLE();
   //init_A2DPSink();
-  init_Microphone();
+  //init_Microphone();
   // WiFi
   WiFi_init();
 
   xTaskCreate(sensorTask, "SensorTask", 4096, NULL, 1, NULL);
-  xTaskCreate(audioTask, "AudioTask", 4096, NULL, 1, NULL);
+  //xTaskCreate(audioTask, "AudioTask", 4096, NULL, 1, NULL);
 
   Serial.println("OK");
 }

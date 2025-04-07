@@ -254,6 +254,8 @@ void SpeechRecognizer::sendStartFrame()
     businessObj["vad_eos"] = 3000;        // 静默检测超时时间，单位ms，取值范围[1000-15000]
     businessObj["dwa"] = "wpgs";          // 开启动态修正功能
     businessObj["pd"] = "medical";        // 领域个性化参数：医疗
+    businessObj["nunum"] = 1;             // Enable number detection
+    businessObj["ptt"] = 0;               // Disable punctuation prediction
 
     QJsonObject dataObj;
     dataObj["format"] = "audio/L16;rate=16000";  // 音频格式
@@ -281,7 +283,7 @@ void SpeechRecognizer::sendStartFrame()
         {"language", "zh_cn"},
         {"domain", "iat"},
         {"accent", "mandarin"},
-        {"vad_eos", 3000},
+        {"vad_eos", 5000},
         {"dwa", "wpgs"},
         {"pd", "medical"}
     };
@@ -296,20 +298,16 @@ void SpeechRecognizer::sendAudioData(const QByteArray &data)
         QByteArray frameData = data.mid(offset, frameSize);
         offset += frameSize;
 
-        // 确定当前帧的状态
-        int status = 1; // 默认是中间帧
-
-        if (m_audioStatus == 0) {
-            // 第一帧已经发送，后续为中间帧
-            m_audioStatus = 1;
-        }
-
         // 构造音频数据帧
         QJsonObject dataObj;
-        dataObj["status"] = status;
+        dataObj["status"] = m_audioStatus; // Use the current audio status
         dataObj["format"] = "audio/L16;rate=16000";
         dataObj["encoding"] = "raw";
         dataObj["audio"] = QString(frameData.toBase64());
+
+        if (m_audioStatus == 0) {
+            m_audioStatus = 1; // After first frame, set to middle frame
+        }
 
         // 构造音频数据帧时使用成员变量
         QJsonObject frameObj;
@@ -394,26 +392,40 @@ void SpeechRecognizer::processResponse(const QJsonObject &jsonObj)
 
             // 处理实时识别结果
             if (!text.isEmpty()) {
-                if (resultObj.contains("pgs") && resultObj["pgs"].toString() == "rpl") {
-                    // 动态修正，替换前面的结果
-                    if (resultObj.contains("rg")) {
-                        QJsonArray rgArray = resultObj["rg"].toArray();
-                        if (rgArray.size() >= 2) {
-                            int startIdx = rgArray[0].toInt();
-                            int endIdx = rgArray[1].toInt();
-                            // 替换部分文本
-                            if (startIdx >= 0 && endIdx > startIdx && startIdx < m_currentText.length()) {
-                                m_currentText = m_currentText.left(startIdx) + text;
+                // Check for "wpgs" mode (real-time word modification)
+                if (resultObj.contains("pgs")) {
+                    QString pgs = resultObj["pgs"].toString();
+                    if (pgs == "rpl") {
+                        // 动态修正，替换前面的结果
+                        if (resultObj.contains("rg")) {
+                            QJsonArray rgArray = resultObj["rg"].toArray();
+                            if (rgArray.size() >= 2) {
+                                int startIdx = rgArray[0].toInt();
+                                int endIdx = rgArray[1].toInt();
+
+                                // 替换部分文本
+                                if (startIdx >= 0 && endIdx > startIdx && startIdx < m_currentText.length()) {
+                                    // Keep text before startIdx, replace text between startIdx and endIdx with new text
+                                    m_currentText = m_currentText.left(startIdx) + text;
+                                } else {
+                                    // If indices aren't valid, append the text
+                                    m_currentText += text;
+                                }
+
                                 emit recognitionResult(m_currentText, false);
                             }
                         }
+                    } else if (pgs == "apd") {
+                        // Append mode - add to existing text
+                        m_currentText += text;
+                        emit recognitionResult(m_currentText, false);
                     }
                 } else {
                     // 添加新文本
                     if (isFinal) {
                         m_currentText += text;
                         emit recognitionResult(m_currentText, true);
-                        m_currentText.clear();
+                        m_currentText.clear(); // Clear after final result
                     } else {
                         m_currentText += text;
                         emit recognitionResult(m_currentText, false);

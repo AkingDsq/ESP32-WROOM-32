@@ -12,6 +12,7 @@ appMIMO_autogen/timestamp: \
 	D:/git/work/ESP32-WROOM-32/APP/MIMO/datamanager.cpp \
 	D:/git/work/ESP32-WROOM-32/APP/MIMO/datamanager.h \
 	D:/git/work/ESP32-WROOM-32/APP/MIMO/main.cpp \
+	D:/git/work/ESP32-WROOM-32/APP/MIMO/resources/resources.qrc \
 	D:/git/work/ESP32-WROOM-32/APP/MIMO/speechrecognizer.cpp \
 	D:/git/work/ESP32-WROOM-32/APP/MIMO/speechrecognizer.h \
 	E:/Qt/6.8.2/android_arm64_v8a/include/QtBluetooth/QBluetoothAddress \

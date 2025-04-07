@@ -1344,7 +1344,7 @@ Item {
 
                             Rectangle {
                                 width: parent.width
-                                height: 200
+                                height: 100
                                 radius: 10
                                 color: "#2A2A2A"
                                 border.width: 1
@@ -1373,7 +1373,7 @@ Item {
                             Rectangle {
                                 id: show
                                 width: parent.width
-                                height: 120
+                                height: 250
                                 radius: 15
 
                                 // 渐变背景
@@ -2200,7 +2200,11 @@ Item {
                 } else {
                     // 长按后释放停止录音
                     if (isRecording) {
+                        // 接入deepseek获取回复
+                        aiController.requestAI(resultText.text);
+                        // 停止录音和网络连接
                         speechRecognizer.stopRecognize()
+                        // 状态恢复
                         isRecording = false
                         aiCall.isLongPressed = false
                         back.start();
@@ -2221,6 +2225,8 @@ Item {
                 id: longPressTimer
                 interval: aiCall.longPressThreshold
                 onTriggered: {
+                    //aiController.call();
+
                     longPressTimer.stop()
                     aiCall.isLongPressed = true
 

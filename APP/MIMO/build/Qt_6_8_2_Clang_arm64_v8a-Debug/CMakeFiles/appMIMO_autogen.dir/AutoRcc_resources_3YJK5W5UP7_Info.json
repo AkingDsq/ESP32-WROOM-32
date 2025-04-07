@@ -1,0 +1,22 @@
+{
+	"BUILD_DIR" : "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/appMIMO_autogen",
+	"CMAKE_BINARY_DIR" : "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "D:/git/work/ESP32-WROOM-32/APP/MIMO",
+	"CMAKE_SOURCE_DIR" : "D:/git/work/ESP32-WROOM-32/APP/MIMO",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Ninja",
+	"INCLUDE_DIR" : "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/appMIMO_autogen/include",
+	"INPUTS" : [ "D:/git/work/ESP32-WROOM-32/APP/MIMO/resources/config.ini" ],
+	"LOCK_FILE" : "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/CMakeFiles/appMIMO_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "3YJK5W5UP7",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "E:/Qt/6.8.2/mingw_64/bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/CMakeFiles/appMIMO_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Used.txt",
+	"SOURCE" : "D:/git/work/ESP32-WROOM-32/APP/MIMO/resources/resources.qrc",
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

@@ -43,10 +43,11 @@ static constexpr auto qt_meta_stringdata_ZN7Call_AIE = QtMocHelpers::stringData(
     "",
     "response",
     "call",
-    "param",
     "requestAI",
     "question",
-    "handleReplyFinished"
+    "handleReplyFinished",
+    "saying",
+    "param"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -58,7 +59,7 @@ Q_CONSTINIT static const uint qt_meta_data_ZN7Call_AIE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -66,20 +67,22 @@ Q_CONSTINIT static const uint qt_meta_data_ZN7Call_AIE[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   38,    2, 0x06,    1 /* Public */,
+       1,    1,   44,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       4,    1,   41,    2, 0x0a,    3 /* Public */,
-       6,    1,   44,    2, 0x0a,    5 /* Public */,
-       8,    0,   47,    2, 0x0a,    7 /* Public */,
+       4,    0,   47,    2, 0x0a,    3 /* Public */,
+       5,    1,   48,    2, 0x0a,    4 /* Public */,
+       7,    0,   51,    2, 0x0a,    6 /* Public */,
+       8,    1,   52,    2, 0x0a,    7 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString,    3,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::QString,    5,
-    QMetaType::Void, QMetaType::QString,    7,
-    QMetaType::QString,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,    6,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,    9,
 
        0        // eod
 };
@@ -98,11 +101,13 @@ Q_CONSTINIT const QMetaObject Call_AI::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'call'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'requestAI'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'handleReplyFinished'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'saying'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>
     >,
     nullptr
@@ -114,10 +119,10 @@ void Call_AI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->aiResponseReceived((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 1: _t->call((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 1: _t->call(); break;
         case 2: _t->requestAI((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 3: { QString _r = _t->handleReplyFinished();
-            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
+        case 3: _t->handleReplyFinished(); break;
+        case 4: _t->saying((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         default: ;
         }
     }
@@ -152,14 +157,14 @@ int Call_AI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }
