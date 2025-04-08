@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 19,
-                        "durationMicroseconds": 846,
+                        "durationMicroseconds": 953,
                         "errorMessage": "",
                         "functionName": "color",
                         "line": 26
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 142,
+                        "durationMicroseconds": 135,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 35
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 61,
                         "errorMessage": "Cannot access value for name deviceIcon",
                         "functionName": "text",
                         "line": 46
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 35,
+                        "durationMicroseconds": 39,
                         "errorMessage": "Cannot access value for name deviceStatus",
                         "functionName": "bold",
                         "line": 55
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 37,
+                        "durationMicroseconds": 36,
                         "errorMessage": "Cannot access value for name deviceStatus",
                         "functionName": "color",
                         "line": 64
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 26,
-                        "durationMicroseconds": 47,
+                        "durationMicroseconds": 46,
                         "errorMessage": "Cannot access value for name deviceType",
                         "functionName": "visible",
                         "line": 83
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 161,
+                        "durationMicroseconds": 167,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 86
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 94,
+                        "durationMicroseconds": 76,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 84
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 55,
+                        "durationMicroseconds": 43,
                         "errorMessage": "Cannot access value for name brightness",
                         "functionName": "text",
                         "line": 89
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 218,
+                        "durationMicroseconds": 176,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 92
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 112,
+                        "durationMicroseconds": 128,
                         "errorMessage": "Cannot load property leftPadding from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/DeviceControl.qml)::parent with type QQuickItem.",
                         "functionName": "x",
                         "line": 104
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 108,
+                        "durationMicroseconds": 106,
                         "errorMessage": "Cannot load property topPadding from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/DeviceControl.qml)::parent with type QQuickItem.",
                         "functionName": "y",
                         "line": 105
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 90,
+                        "durationMicroseconds": 94,
                         "errorMessage": "Cannot load property availableWidth from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/DeviceControl.qml)::parent with type QQuickItem.",
                         "functionName": "width",
                         "line": 106
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 107,
+                        "durationMicroseconds": 118,
                         "errorMessage": "Cannot load property visualPosition from QQuickItem::parent with type QQuickItem.",
                         "functionName": "width",
                         "line": 112
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 37,
-                        "durationMicroseconds": 146,
+                        "durationMicroseconds": 197,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 113
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 96,
+                        "durationMicroseconds": 109,
                         "errorMessage": "Cannot load property leftPadding from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/DeviceControl.qml)::parent with type QQuickItem.",
                         "functionName": "x",
                         "line": 120
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 97,
+                        "durationMicroseconds": 95,
                         "errorMessage": "Cannot load property topPadding from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/DeviceControl.qml)::parent with type QQuickItem.",
                         "functionName": "y",
                         "line": 121
@@ -198,7 +198,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 26,
-                        "durationMicroseconds": 47,
+                        "durationMicroseconds": 53,
                         "errorMessage": "Cannot access value for name deviceType",
                         "functionName": "visible",
                         "line": 139
@@ -206,7 +206,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 157,
+                        "durationMicroseconds": 180,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 142
@@ -214,7 +214,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 109,
+                        "durationMicroseconds": 90,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 140
@@ -222,7 +222,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 57,
                         "errorMessage": "Cannot access value for name temperature",
                         "functionName": "text",
                         "line": 145
@@ -230,7 +230,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 209,
+                        "durationMicroseconds": 205,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 148
@@ -246,7 +246,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 88,
+                        "durationMicroseconds": 92,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 164
@@ -254,7 +254,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 61,
+                        "durationMicroseconds": 79,
                         "errorMessage": "Cannot access value for name temperature",
                         "functionName": "onClicked",
                         "line": 173
@@ -262,7 +262,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 112,
+                        "durationMicroseconds": 94,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 172
@@ -270,7 +270,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 48,
                         "errorMessage": "Cannot access value for name temperature",
                         "functionName": "text",
                         "line": 191
@@ -278,7 +278,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 86,
+                        "durationMicroseconds": 94,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 190
@@ -286,7 +286,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 101,
+                        "durationMicroseconds": 86,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 206
@@ -294,7 +294,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 59,
+                        "durationMicroseconds": 61,
                         "errorMessage": "Cannot access value for name temperature",
                         "functionName": "onClicked",
                         "line": 215
@@ -302,7 +302,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 98,
+                        "durationMicroseconds": 101,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 214
@@ -310,7 +310,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 202,
+                        "durationMicroseconds": 208,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 227
@@ -318,7 +318,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 466,
+                        "durationMicroseconds": 455,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "model",
                         "line": 232
@@ -326,7 +326,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 39,
+                        "durationMicroseconds": 70,
                         "errorMessage": "Cannot access value for name index",
                         "functionName": "color",
                         "line": 238
@@ -334,7 +334,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 379,
+                        "durationMicroseconds": 431,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "text",
                         "line": 242
@@ -342,7 +342,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 268,
+                        "durationMicroseconds": 315,
                         "errorMessage": "Cannot access value for name index",
                         "functionName": "color",
                         "line": 243
@@ -350,7 +350,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 51,
-                        "durationMicroseconds": 99,
+                        "durationMicroseconds": 148,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 241
@@ -358,7 +358,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 44,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 77,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 249
@@ -366,7 +366,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 82,
+                        "durationMicroseconds": 104,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 248
@@ -374,7 +374,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 26,
-                        "durationMicroseconds": 42,
+                        "durationMicroseconds": 62,
                         "errorMessage": "Cannot access value for name deviceType",
                         "functionName": "visible",
                         "line": 260
@@ -382,7 +382,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 133,
+                        "durationMicroseconds": 170,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 263
@@ -390,7 +390,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 80,
+                        "durationMicroseconds": 94,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 261
@@ -398,7 +398,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 179,
+                        "durationMicroseconds": 293,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 269
@@ -422,7 +422,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 87,
+                        "durationMicroseconds": 114,
                         "errorMessage": "Cannot load property leftPadding from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/DeviceControl.qml)::parent with type QQuickItem.",
                         "functionName": "x",
                         "line": 281
@@ -430,7 +430,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 85,
+                        "durationMicroseconds": 94,
                         "errorMessage": "Cannot load property topPadding from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/DeviceControl.qml)::parent with type QQuickItem.",
                         "functionName": "y",
                         "line": 282
@@ -438,7 +438,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 85,
+                        "durationMicroseconds": 94,
                         "errorMessage": "Cannot load property availableWidth from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/DeviceControl.qml)::parent with type QQuickItem.",
                         "functionName": "width",
                         "line": 283
@@ -446,7 +446,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 97,
+                        "durationMicroseconds": 110,
                         "errorMessage": "Cannot load property visualPosition from QQuickItem::parent with type QQuickItem.",
                         "functionName": "width",
                         "line": 289
@@ -454,7 +454,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 37,
-                        "durationMicroseconds": 126,
+                        "durationMicroseconds": 188,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 290
@@ -462,7 +462,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 89,
+                        "durationMicroseconds": 296,
                         "errorMessage": "Cannot load property leftPadding from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/DeviceControl.qml)::parent with type QQuickItem.",
                         "functionName": "x",
                         "line": 297
@@ -470,7 +470,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 78,
+                        "durationMicroseconds": 114,
                         "errorMessage": "Cannot load property topPadding from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/DeviceControl.qml)::parent with type QQuickItem.",
                         "functionName": "y",
                         "line": 298
@@ -478,7 +478,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 182,
+                        "durationMicroseconds": 283,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 310
@@ -486,7 +486,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 149,
+                        "durationMicroseconds": 115,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 320
@@ -494,7 +494,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 72,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 328
@@ -502,7 +502,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 81,
+                        "durationMicroseconds": 98,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 327
@@ -510,7 +510,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 135,
+                        "durationMicroseconds": 101,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 341
@@ -518,7 +518,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 214,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 349
@@ -526,7 +526,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 87,
+                        "durationMicroseconds": 129,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 348
@@ -534,7 +534,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 26,
-                        "durationMicroseconds": 73,
+                        "durationMicroseconds": 100,
                         "errorMessage": "Cannot access value for name deviceStatus",
                         "functionName": "visible",
                         "line": 359
@@ -542,7 +542,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 33,
+                        "durationMicroseconds": 40,
                         "errorMessage": "Cannot access value for name deviceStatus",
                         "functionName": "text",
                         "line": 361
@@ -550,7 +550,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 85,
+                        "durationMicroseconds": 117,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 360
@@ -558,7 +558,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 80,
+                        "durationMicroseconds": 99,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 378
@@ -566,7 +566,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 58,
-                        "durationMicroseconds": 39,
+                        "durationMicroseconds": 63,
                         "errorMessage": "Cannot access value for name deviceStatus",
                         "functionName": "color",
                         "line": 380
@@ -574,7 +574,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 58,
-                        "durationMicroseconds": 32,
+                        "durationMicroseconds": 42,
                         "errorMessage": "Cannot access value for name deviceStatus",
                         "functionName": "color",
                         "line": 381
@@ -582,7 +582,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 49,
+                        "durationMicroseconds": 45,
                         "errorMessage": "Cannot access value for name deviceStatus",
                         "functionName": "text",
                         "line": 386
@@ -590,7 +590,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 82,
+                        "durationMicroseconds": 113,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 385
@@ -598,7 +598,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 32,
-                        "durationMicroseconds": 294,
+                        "durationMicroseconds": 362,
                         "errorMessage": "",
                         "functionName": "onPressed",
                         "line": 394
@@ -606,7 +606,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 229,
+                        "durationMicroseconds": 295,
                         "errorMessage": "",
                         "functionName": "onReleased",
                         "line": 395
@@ -614,7 +614,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 494,
+                        "durationMicroseconds": 408,
                         "errorMessage": "method toggleDevice cannot be resolved.",
                         "functionName": "onClicked",
                         "line": 396
@@ -622,7 +622,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 131,
+                        "durationMicroseconds": 137,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 393

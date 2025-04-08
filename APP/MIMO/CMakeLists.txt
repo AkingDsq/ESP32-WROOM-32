@@ -7,7 +7,7 @@ set(CMAKE_AUTORCC ON)  # 处理资源文件
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 6.5 REQUIRED COMPONENTS Quick)
+find_package(Qt6 6.5 REQUIRED COMPONENTS Quick Widgets)
 
 # openssl
 set(OPENSSL_ROOT_DIR "E:/Qt/Android/android_openssl-master/ssl_1.1/arm64-v8a")
@@ -47,6 +47,9 @@ qt_add_qml_module(appMIMO
         RESOURCES android/src/org/qtproject/app/SpeechResultReceiver.java
         QML_FILES components/DeviceControl.qml
         RESOURCES resources/resources.qrc
+        QML_FILES components/TemperatureHumidityChart.qml
+        QML_FILES components/EventsBarChart.qml
+        QML_FILES components/SensorCard.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -91,12 +94,15 @@ add_library(qsqlmysql SHARED IMPORTED)
 set_target_properties(qsqlmysql PROPERTIES
     IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/android_arm64-v8a/libqsqlmysql.so
 )
+# 图表Charts
+find_package(Qt6 REQUIRED COMPONENTS Charts)
 
 # 网络连接
 find_package(Qt6 REQUIRED COMPONENTS WebSockets)
 
 target_link_libraries(appMIMO
     PRIVATE Qt6::Quick
+    PRIVATE Qt6::Widgets
     #${OpenCV_LIBS}  # 关联OpenCV库
     Qt6::TextToSpeech  # 语音识别
     PRIVATE Qt6::Core #添加蓝牙相机麦克风
@@ -104,6 +110,7 @@ target_link_libraries(appMIMO
     PRIVATE Qt6::Bluetooth #蓝牙
     PRIVATE Qt6::Sql #数据库
     PRIVATE Qt6::WebSockets # 网络连接
+    PRIVATE Qt6::Charts # 图表
 )
 
 # openssl

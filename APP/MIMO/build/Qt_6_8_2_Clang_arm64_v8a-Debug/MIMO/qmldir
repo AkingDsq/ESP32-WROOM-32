@@ -6,4 +6,7 @@ Volume 1.0 components/Volume.qml
 LoginOn 1.0 components/LoginOn.qml
 Home 1.0 components/Home.qml
 DeviceControl 1.0 components/DeviceControl.qml
+TemperatureHumidityChart 1.0 components/TemperatureHumidityChart.qml
+EventsBarChart 1.0 components/EventsBarChart.qml
+SensorCard 1.0 components/SensorCard.qml
 

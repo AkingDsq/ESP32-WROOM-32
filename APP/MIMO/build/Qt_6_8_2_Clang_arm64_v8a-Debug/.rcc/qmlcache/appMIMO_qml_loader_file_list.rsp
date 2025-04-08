@@ -8,3 +8,6 @@ D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.qt/rcc
 /qt/qml/MIMO/components/LoginOn.qml
 /qt/qml/MIMO/components/Home.qml
 /qt/qml/MIMO/components/DeviceControl.qml
+/qt/qml/MIMO/components/TemperatureHumidityChart.qml
+/qt/qml/MIMO/components/EventsBarChart.qml
+/qt/qml/MIMO/components/SensorCard.qml

@@ -8,7 +8,7 @@ Item {
     width: parent.width
     height: parent.height
 
-
+    // 准备登入注册信号
     signal logining()
     signal registering()
     // 信号声明 - 用于登录成功后通知
@@ -398,6 +398,7 @@ Item {
                         Layout.fillWidth: true
                         Layout.preferredHeight: 50
                         onClicked: {
+                            // 点击检测登入
                             rootItem.logining()
                         }
                     }
@@ -1398,7 +1399,7 @@ Item {
             propagateComposedEvents: true
             onPressed: {
                 buttonRipple.start(mouseX, mouseY)
-                //mouse.accepted = false
+                mouse.accepted = false
             }
         }
     }
@@ -1410,6 +1411,15 @@ Item {
         // 登录
         function onLogining() {
             console.log("准备登录")
+            if(!usernameField.text || usernameField.text.trim() === ""){
+                console.log("用户名为空")
+                return
+            }
+            if(!passwordField.text || passwordField.text.trim() === ""){
+                console.log("密码为空")
+                return
+            }
+
             // 检测用户名或手机号是否存在
             if(dbManager.checkUserExists(usernameField.text) || dbManager.checkPhoneExists(usernameField.text)){
                 console.log("正在检测密码")
@@ -1426,6 +1436,44 @@ Item {
             }
             else{
                 console.log("登录失败，用户名或手机号不存在")
+            }
+        }
+    }
+    // 连接信号
+    Connections {
+        target: rootItem
+
+        // 登录
+        function onRegistering() {
+            console.log("准备注册")
+            if(!phoneField.text || phoneField.text.trim() === ""){
+                console.log("手机号为空")
+                return
+            }
+            if(!verificationField.text || verificationField.text.trim() === ""){
+                console.log("验证码为空")
+                return
+            }
+            if(!registerPasswordField.text || registerPasswordField.text.trim() === ""){
+                console.log("密码为空")
+                return
+            }
+            if(!confirmPasswordField.text || confirmPasswordField.text.trim() === ""){
+                console.log("验证密码为空")
+                return
+            }
+            if(confirmPasswordField.text != registerPasswordField.text){
+                console.log("两次密码不同")
+                return
+            }
+
+            // 检测用户名或手机号是否存在
+            if(dbManager.checkPhoneExists(phoneField.text)){
+                console.log("注册失败，手机号已存在")
+            }
+            else{
+                // 注册逻辑
+
             }
         }
     }

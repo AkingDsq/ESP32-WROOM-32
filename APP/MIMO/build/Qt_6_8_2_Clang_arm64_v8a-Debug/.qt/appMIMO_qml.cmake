@@ -14,6 +14,12 @@ set(src_and_dest_list
     "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/MIMO/components/Home.qml"
     "D:/git/work/ESP32-WROOM-32/APP/MIMO/components/DeviceControl.qml"
     "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/MIMO/components/DeviceControl.qml"
+    "D:/git/work/ESP32-WROOM-32/APP/MIMO/components/TemperatureHumidityChart.qml"
+    "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/MIMO/components/TemperatureHumidityChart.qml"
+    "D:/git/work/ESP32-WROOM-32/APP/MIMO/components/EventsBarChart.qml"
+    "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/MIMO/components/EventsBarChart.qml"
+    "D:/git/work/ESP32-WROOM-32/APP/MIMO/components/SensorCard.qml"
+    "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/MIMO/components/SensorCard.qml"
 
 )
 set(timestamp_file "D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.qt/appMIMO_qml.txt")

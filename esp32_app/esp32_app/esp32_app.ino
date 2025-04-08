@@ -7,7 +7,7 @@
 // Microphone
 #include "Microphone.h"
 // WiFi
-#include "WiFi_Connect.h"
+//#include "WiFi_Connect.h"
 
 #define LED_PIN 33        // LED引脚
 
@@ -67,7 +67,7 @@ void setup() {
   //init_A2DPSink();
   //init_Microphone();
   // WiFi
-  WiFi_init();
+  //WiFi_init();
 
   xTaskCreate(sensorTask, "SensorTask", 4096, NULL, 1, NULL);
   //xTaskCreate(audioTask, "AudioTask", 4096, NULL, 1, NULL);

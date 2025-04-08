@@ -47,6 +47,27 @@ namespace _qt_qml_MIMO_components_DeviceControl_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _qt_qml_MIMO_components_TemperatureHumidityChart_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_MIMO_components_EventsBarChart_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_MIMO_components_SensorCard_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -67,6 +88,9 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/LoginOn.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_LoginOn_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/Home.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_Home_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/DeviceControl.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_DeviceControl_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/TemperatureHumidityChart.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_TemperatureHumidityChart_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/EventsBarChart.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_EventsBarChart_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/SensorCard.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_SensorCard_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

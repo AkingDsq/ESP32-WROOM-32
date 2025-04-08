@@ -2,9 +2,82 @@
     "classes": [
         {
             "className": "DataManager",
-            "lineNumber": 13,
+            "lineNumber": 14,
             "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "tempData",
+                    "notify": "dataChanged",
+                    "read": "tempData",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QVariantList",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "humidityData",
+                    "notify": "dataChanged",
+                    "read": "humidityData",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QVariantList",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "name": "timeLabels",
+                    "notify": "dataChanged",
+                    "read": "timeLabels",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QVariantList",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 3,
+                    "name": "dataDisplayMode",
+                    "notify": "dataDisplayModeChanged",
+                    "read": "dataDisplayMode",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setDataDisplayMode"
+                }
+            ],
             "qualifiedClassName": "DataManager",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "dataChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 1,
+                    "name": "dataDisplayModeChanged",
+                    "returnType": "void"
+                }
+            ],
             "slots": [
                 {
                     "access": "public",
@@ -14,7 +87,7 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 0,
+                    "index": 2,
                     "name": "checkUserExists",
                     "returnType": "bool"
                 },
@@ -26,7 +99,7 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 1,
+                    "index": 3,
                     "name": "checkPhoneExists",
                     "returnType": "bool"
                 },
@@ -42,7 +115,7 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 2,
+                    "index": 4,
                     "name": "validateUser",
                     "returnType": "bool"
                 },
@@ -62,7 +135,7 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 3,
+                    "index": 5,
                     "name": "registerUser",
                     "returnType": "bool"
                 },
@@ -74,9 +147,55 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 4,
+                    "index": 6,
                     "name": "updateUserLastLogin",
                     "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "temperature",
+                            "type": "double"
+                        },
+                        {
+                            "name": "humidity",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 7,
+                    "name": "addSensorData",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "periodType",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 8,
+                    "name": "loadDataForPeriod",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "index": 9,
+                    "name": "dataDisplayMode",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "mode",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 10,
+                    "name": "setDataDisplayMode",
+                    "returnType": "void"
                 }
             ],
             "superClasses": [

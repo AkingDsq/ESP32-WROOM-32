@@ -1,4 +1,4 @@
-#include <QGuiApplication>
+#include <QApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QSurfaceFormat>
@@ -13,15 +13,7 @@
 
 int main(int argc, char *argv[])
 {
-    // 方法1：检查文件是否存在
-    QString path = ":/config.ini";
-    if (QFile::exists(path)) {
-        qDebug() << "资源存在";
-    } else {
-        qDebug() << "资源路径错误或未编译";
-    }
-
-    QGuiApplication app(argc, argv);
+    QApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
 

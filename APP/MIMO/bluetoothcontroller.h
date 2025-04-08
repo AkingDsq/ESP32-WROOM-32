@@ -59,8 +59,6 @@ public slots:
     void connectDevice(QString address, QBluetoothDeviceInfo info);// 连接服务
     void sendCommand(QString command); // 发送特征
 
-    //void onVoiceCommandReceived(QString command); // 语音指令
-
 private slots:
     void onDeviceDiscovered(QBluetoothDeviceInfo info); // 扫描到的服务
     void onScanFinished(); // 扫描结束

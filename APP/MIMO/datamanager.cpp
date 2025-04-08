@@ -5,6 +5,13 @@ DataManager::DataManager(QObject *parent)
 {
     // 初始化
     if(initDatabase()) qDebug() << "初始化成功";
+
+    // 设置数据清理定时器 - 每天执行一次
+    m_cleanupTimer = new QTimer(this);
+    connect(m_cleanupTimer, &QTimer::timeout, this, &DataManager::cleanupOldData);
+    m_cleanupTimer->start(24 * 60 * 60 * 1000); // 24小时
+    // 在启动时执行一次清理
+    cleanupOldData();
 }
 DataManager::~DataManager()
 {
@@ -28,11 +35,11 @@ bool DataManager::initDatabase()
     QString dbFilePath = dir.absoluteFilePath("mimo.db");
     qDebug() << "数据库位置:" << dbFilePath;
 
-    if(QFile::exists(dbFilePath)){
-        if(QFile::remove(dbFilePath)){
-            qDebug() << "数据库已删除";
-        }
-    }
+    // if(QFile::exists(dbFilePath)){
+    //     if(QFile::remove(dbFilePath)){
+    //         qDebug() << "数据库已删除";
+    //     }
+    // }
 
     // 初始化数据库
     m_db = QSqlDatabase::addDatabase("QSQLITE");
@@ -133,6 +140,26 @@ bool DataManager::createTables()
     //     return false;
     // }
 
+    // 温湿度数据表
+    QSqlQuery sensor_dataTableQuery;
+    if (!sensor_dataTableQuery.exec(
+            "CREATE TABLE IF NOT EXISTS sensor_data ("
+            "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+            "timestamp INTEGER NOT NULL,"
+            "temperature REAL,"
+            "humidity REAL"
+            ")")) {
+        m_lastError = "创建温度数据表失败: " + sensor_dataTableQuery.lastError().text();
+        return false;
+    }
+    // 为timestamp创建索引以加速查询
+    QSqlQuery indexQuery;
+    if (!indexQuery.exec("CREATE INDEX IF NOT EXISTS idx_timestamp ON sensor_data(timestamp)")) {
+        qDebug() << "创建时间戳索引失败: " + indexQuery.lastError().text();
+        // 这里不返回false，因为索引创建失败不是致命错误
+    }
+    //addInitialSensorData();
+
     // 初始化各数据库表格
     QSqlQuery checkUserQuery;
     checkUserQuery.prepare("SELECT COUNT(*) FROM users");
@@ -141,7 +168,7 @@ bool DataManager::createTables()
     }
 
     int userCount = checkUserQuery.value(0).toInt();
-    qDebug() << "userCount1:" << userCount;
+    qDebug() << "userCount:" << userCount;
     if (userCount == 0) {
         // 添加初始用户
         QSqlQuery insertUserQuery;
@@ -167,10 +194,11 @@ bool DataManager::createTables()
         //     addRoom("AkingDsq", room);
         // }
     }
-    if(checkUserExists("AkingDsq")){
-        qDebug() << "用户AkingDsq存在";
-    }
-    else qDebug() << "用户AkingDsq不存在";
+
+    //================初始化温湿度表============================//
+    // 加载今日数据作为默认数据
+    loadDataForPeriod(0);
+
     return true;
 }
 
@@ -184,6 +212,27 @@ bool DataManager::executeQuery(QSqlQuery query)
     }
     return true;
 }
+// 获取用户创建时间
+QDateTime DataManager::getUserCreatedTime(QString username)
+{
+    QDateTime createTime;
+
+    QSqlQuery query;
+    query.prepare("SELECT created_at FROM users WHERE username = :username");
+    query.bindValue(":username", username);
+
+    if (!executeQuery(query)) {
+        return createTime;
+    }
+
+    if (query.next()) {
+        // 获取字段值并转换
+        createTime = query.value(0).toDateTime();
+    }
+
+    return createTime;
+}
+
 // 检测用户username是否存在
 bool DataManager::checkUserExists(QString username)
 {
@@ -443,3 +492,122 @@ QVariantMap DataManager::getDeviceSettings(const QString &username, const QStrin
 
     return settings;
 }
+
+//===============================================温湿度表=================================================//
+// 添加数据
+bool DataManager::addSensorData(double temperature, double humidity)
+{
+    QSqlQuery query;
+    query.prepare("INSERT INTO sensor_data (timestamp, temperature, humidity) "
+                  "VALUES (:timestamp, :temperature, :humidity)");
+
+    qint64 timestamp = QDateTime::currentSecsSinceEpoch();
+    query.bindValue(":timestamp", timestamp);
+    query.bindValue(":temperature", temperature);
+    query.bindValue(":humidity", humidity);
+
+    if (!query.exec()) {
+        qDebug() << "添加传感器数据失败: " + query.lastError().text();
+        return false;
+    }
+
+    // 重新加载当前周期的数据
+    loadDataForPeriod(m_dataDisplayMode);  // 默认加载今日数据
+    return true;
+}
+// 加载数据
+bool DataManager::loadDataForPeriod(int periodType)
+{
+    m_tempData.clear();
+    m_humidityData.clear();
+    m_timeLabels.clear();
+
+    QSqlQuery query;
+    qint64 startTimestamp;
+
+    QDateTime end = QDateTime::currentDateTime();
+
+    if (periodType == 0) {  // 今天
+        QDateTime startOfDay = QDateTime::currentDateTime();
+        startOfDay.setTime(QTime(0, 0, 0));
+        startTimestamp = startOfDay.toSecsSinceEpoch();
+    } else {  // 本周
+        QDateTime startOfWeek = QDateTime::currentDateTime();
+        startOfWeek = startOfWeek.addDays(-(startOfWeek.date().dayOfWeek() - 1));
+        startOfWeek.setTime(QTime(0, 0, 0));
+        startTimestamp = startOfWeek.toSecsSinceEpoch();
+    }
+
+    query.prepare("SELECT timestamp, temperature, humidity "
+                  "FROM sensor_data WHERE timestamp >= :start ORDER BY timestamp");
+    query.bindValue(":start", startTimestamp);
+
+    if (!query.exec()) {
+        qDebug() << "加载传感器数据失败: " + query.lastError().text();
+        return false;
+    }
+
+    while (query.next()) {
+        qint64 timestamp = query.value(0).toLongLong();
+        QDateTime dateTime = QDateTime::fromSecsSinceEpoch(timestamp);
+
+        m_tempData.append(query.value(1).toDouble());
+        m_humidityData.append(query.value(2).toDouble());
+
+        // 格式化时间标签
+        QString timeLabel;
+        if (periodType == 0) {
+            timeLabel = dateTime.toString("HH:mm");
+        } else {
+            timeLabel = dateTime.toString("ddd HH:mm");
+        }
+        m_timeLabels.append(timeLabel);
+    }
+
+    emit dataChanged();
+    return true;
+}
+// 清理旧数据的实现
+void DataManager::cleanupOldData()
+{
+    qDebug() << "执行数据清理作业...";
+
+    QSqlQuery query;
+    qint64 oneWeekAgo = QDateTime::currentSecsSinceEpoch() - (7 * 24 * 60 * 60); // 7天前的时间戳
+
+    // 开始事务处理
+    m_db.transaction();
+
+    // 清理传感器数据表
+    query.prepare("DELETE FROM sensor_data WHERE timestamp < :old_time");
+    query.bindValue(":old_time", oneWeekAgo);
+
+    if (!query.exec()) {
+        m_db.rollback();
+        qDebug() << "清理旧数据失败: " + query.lastError().text();
+        return;
+    }
+
+    // 清理事件表
+    query.prepare("DELETE FROM events WHERE timestamp < :old_time");
+    query.bindValue(":old_time", oneWeekAgo);
+
+    if (!query.exec()) {
+        m_db.rollback();
+        qDebug() << "清理旧事件数据失败: " + query.lastError().text();
+        return;
+    }
+
+    // 提交事务
+    if (!m_db.commit()) {
+        m_db.rollback();
+        qDebug() << "提交事务失败: " + m_db.lastError().text();
+        return;
+    }
+
+    qDebug() << "数据清理完成";
+
+    // 通知界面更新数据
+    loadDataForPeriod(m_dataDisplayMode);
+}
+//================================================================================================//

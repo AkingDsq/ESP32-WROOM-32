@@ -340,6 +340,14 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Bluetooth/Qt6BluetoothTargets-relwithdebinfo.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Bluetooth/Qt6BluetoothTargets.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Bluetooth/Qt6BluetoothVersionlessAliasTargets.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Charts/Qt6ChartsAdditionalTargetInfo.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Charts/Qt6ChartsConfig.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Charts/Qt6ChartsConfigVersion.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Charts/Qt6ChartsConfigVersionImpl.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Charts/Qt6ChartsDependencies.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Charts/Qt6ChartsTargets-relwithdebinfo.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Charts/Qt6ChartsTargets.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Charts/Qt6ChartsVersionlessAliasTargets.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Concurrent/Qt6ConcurrentAdditionalTargetInfo.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Concurrent/Qt6ConcurrentConfig.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Concurrent/Qt6ConcurrentConfigVersion.cmake \
@@ -448,6 +456,14 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6OpenGL/Qt6OpenGLTargets-relwithdebinfo.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6OpenGL/Qt6OpenGLTargets.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6OpenGL/Qt6OpenGLVersionlessAliasTargets.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsAdditionalTargetInfo.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfig.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfigVersion.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfigVersionImpl.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsDependencies.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsTargets-relwithdebinfo.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsTargets.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsVersionlessAliasTargets.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsPlatformpluginAdditionalTargetInfo.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsPlatformpluginConfig.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsPlatformpluginTargets-relwithdebinfo.cmake \
@@ -786,6 +802,20 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6WebSockets/Qt6WebSocketsTargets-relwithdebinfo.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6WebSockets/Qt6WebSocketsTargets.cmake \
 	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6WebSockets/Qt6WebSocketsVersionlessAliasTargets.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Widgets/Qt6QAndroidStylePluginAdditionalTargetInfo.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Widgets/Qt6QAndroidStylePluginConfig.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Widgets/Qt6QAndroidStylePluginTargets-relwithdebinfo.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Widgets/Qt6QAndroidStylePluginTargets.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Widgets/Qt6WidgetsPlugins.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Widgets/Qt6WidgetsTargets-relwithdebinfo.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake \
+	E:/Qt/6.8.2/android_arm64_v8a/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessAliasTargets.cmake \
 	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake \
 	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake \
 	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake \
@@ -794,6 +824,14 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake \
 	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake \
 	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake \
+	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake \
+	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake \
+	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake \
+	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake \
+	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake \
+	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake \
+	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake \
+	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake \
 	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6HostInfo/Qt6HostInfoConfig.cmake \
 	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlTools/Qt6QmlToolsAdditionalTargetInfo.cmake \
 	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlTools/Qt6QmlToolsConfig.cmake \
@@ -803,6 +841,14 @@ appMIMO_autogen/timestamp: \
 	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlTools/Qt6QmlToolsTargets-relwithdebinfo.cmake \
 	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlTools/Qt6QmlToolsTargets.cmake \
 	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlTools/Qt6QmlToolsVersionlessTargets.cmake \
+	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake \
+	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake \
+	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake \
+	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake \
+	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake \
+	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-relwithdebinfo.cmake \
+	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake \
+	E:/Qt/6.8.2/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake \
 	E:/Qt/Android/Sdk/ndk/26.1.10909125/build/cmake/adjust_api_level.cmake \
 	E:/Qt/Android/Sdk/ndk/26.1.10909125/build/cmake/android.toolchain.cmake \
 	E:/Qt/Android/Sdk/ndk/26.1.10909125/build/cmake/flags.cmake \

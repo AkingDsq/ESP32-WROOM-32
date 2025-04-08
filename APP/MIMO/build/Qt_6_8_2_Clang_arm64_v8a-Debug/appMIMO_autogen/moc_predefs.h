@@ -1,9 +1,11 @@
 #define ABI_ID "ELF"
 #define QT_BLUETOOTH_LIB 1
+#define QT_CHARTS_LIB 1
 #define QT_CORE_LIB 1
 #define QT_GUI_LIB 1
 #define QT_MULTIMEDIA_LIB 1
 #define QT_NETWORK_LIB 1
+#define QT_OPENGLWIDGETS_LIB 1
 #define QT_OPENGL_LIB 1
 #define QT_QMLINTEGRATION_LIB 1
 #define QT_QMLMETA_LIB 1
@@ -14,6 +16,7 @@
 #define QT_SQL_LIB 1
 #define QT_TEXTTOSPEECH_LIB 1
 #define QT_WEBSOCKETS_LIB 1
+#define QT_WIDGETS_LIB 1
 #define SIZEOF_DPTR (sizeof(void*))
 #define _GNU_SOURCE 1
 #define _LP64 1
