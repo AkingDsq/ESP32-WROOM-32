@@ -515,7 +515,7 @@ bool DataManager::addSensorData(double temperature, double humidity)
     loadDataForPeriod(m_dataDisplayMode);  // 默认加载今日数据
     return true;
 }
-// 加载数据
+// 加载数据,0: 加载最近1天，1加载最近7天
 bool DataManager::loadDataForPeriod(int periodType)
 {
     m_tempData.clear();
@@ -524,23 +524,21 @@ bool DataManager::loadDataForPeriod(int periodType)
 
     QSqlQuery query;
     qint64 startTimestamp;
+    qint64 endTimestamp = QDateTime::currentDateTime().toSecsSinceEpoch();
 
-    QDateTime end = QDateTime::currentDateTime();
-
-    if (periodType == 0) {  // 今天
-        QDateTime startOfDay = QDateTime::currentDateTime();
-        startOfDay.setTime(QTime(0, 0, 0));
-        startTimestamp = startOfDay.toSecsSinceEpoch();
-    } else {  // 本周
-        QDateTime startOfWeek = QDateTime::currentDateTime();
-        startOfWeek = startOfWeek.addDays(-(startOfWeek.date().dayOfWeek() - 1));
-        startOfWeek.setTime(QTime(0, 0, 0));
-        startTimestamp = startOfWeek.toSecsSinceEpoch();
+    // 动态计算起点时间
+    QDateTime startTime = QDateTime::currentDateTime();
+    if (periodType == 0) {  // 过去24小时
+        startTime = startTime.addDays(-1);
+    } else {  // 过去7天
+        startTime = startTime.addDays(-7);
     }
+    startTimestamp = startTime.toSecsSinceEpoch();
 
     query.prepare("SELECT timestamp, temperature, humidity "
-                  "FROM sensor_data WHERE timestamp >= :start ORDER BY timestamp");
+                  "FROM sensor_data WHERE timestamp >= :start AND timestamp <= :end ORDER BY timestamp");
     query.bindValue(":start", startTimestamp);
+    query.bindValue(":end", endTimestamp);
 
     if (!query.exec()) {
         qDebug() << "加载传感器数据失败: " + query.lastError().text();

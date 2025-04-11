@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 319,
+                        "durationMicroseconds": 280,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "days",
                         "line": 10
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 26,
-                        "durationMicroseconds": 120,
+                        "durationMicroseconds": 118,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "counts",
                         "line": 11
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 5,
-                        "durationMicroseconds": 399,
+                        "durationMicroseconds": 302,
                         "errorMessage": "",
                         "functionName": "updateChart",
                         "line": 129
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 129,
+                        "durationMicroseconds": 118,
                         "errorMessage": "",
                         "functionName": "onDaysChanged",
                         "line": 135
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 107,
+                        "durationMicroseconds": 91,
                         "errorMessage": "",
                         "functionName": "onCountsChanged",
                         "line": 136
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 297,
+                        "durationMicroseconds": 230,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 20
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 218,
+                        "durationMicroseconds": 193,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 21
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 204,
+                        "durationMicroseconds": 195,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 28
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 175,
+                        "durationMicroseconds": 231,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 29
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 198,
+                        "durationMicroseconds": 186,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 30
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 188,
+                        "durationMicroseconds": 176,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 31
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 22,
-                        "durationMicroseconds": 3447,
+                        "durationMicroseconds": 3010,
                         "errorMessage": "Cannot generate efficient code for call to untyped JavaScript function",
                         "functionName": "onPaint",
                         "line": 41
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 159,
+                        "durationMicroseconds": 135,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 39
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 22,
-                        "durationMicroseconds": 110,
+                        "durationMicroseconds": 92,
                         "errorMessage": "Cannot access value for name days",
                         "functionName": "onPaint",
                         "line": 66
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 124,
+                        "durationMicroseconds": 94,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 63
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 228,
+                        "durationMicroseconds": 197,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 107
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 214,
+                        "durationMicroseconds": 171,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 108
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 198,
+                        "durationMicroseconds": 124,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 109
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 43,
+                        "durationMicroseconds": 28,
                         "errorMessage": "Cannot access value for name days",
                         "functionName": "model",
                         "line": 113
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 67,
+                        "durationMicroseconds": 40,
                         "errorMessage": "Cannot access value for name days",
                         "functionName": "width",
                         "line": 116
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 37,
+                        "durationMicroseconds": 21,
                         "errorMessage": "Cannot access value for name days",
                         "functionName": "text",
                         "line": 118
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 42,
-                        "durationMicroseconds": 147,
+                        "durationMicroseconds": 87,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
                         "line": 121
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 122,
+                        "durationMicroseconds": 69,
                         "errorMessage": "",
                         "functionName": "verticalAlignment",
                         "line": 122
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 116,
+                        "durationMicroseconds": 69,
                         "errorMessage": "",
                         "functionName": "onCompleted",
                         "line": 138

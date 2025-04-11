@@ -349,3 +349,8 @@ void BlueToothController::errorOccurred(QLowEnergyController::Error error)
 {
     qWarning() << "Controller error:" << error;
 }
+
+void BlueToothController::onAdjustBrightness(int id, int value){
+    //sendCommand("a");
+    qDebug() << "灯光：" << id << " 调整亮度：" << value;
+}

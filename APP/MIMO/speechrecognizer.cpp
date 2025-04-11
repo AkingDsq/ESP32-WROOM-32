@@ -48,6 +48,9 @@ void SpeechRecognizer::init(const QString &appId, const QString &apiKey, const Q
 
 bool SpeechRecognizer::startRecognize()
 {
+    // Qt app录音模式
+    model = false;
+
     if (m_isRecording) {
         return false;
     }
@@ -108,6 +111,9 @@ void SpeechRecognizer::stopRecognize()
         m_audioSource->stop();
     }
 
+    // 清理缓存
+    m_pendingAudioBuffer.clear();
+
     // 停止心跳定时器
     m_heartbeatTimer.stop();
 
@@ -161,12 +167,23 @@ void SpeechRecognizer::onConnected()
     qDebug() << "WebSocket connected";
     emit connectionStatusChanged(true, "已连接");
 
-    // 开始录音 - Qt6方式
-    m_audioDevice = m_audioSource->start();
-    connect(m_audioDevice, &QIODevice::readyRead, this, &SpeechRecognizer::onAudioDataReady);
+    if(!model){
+        // 开始录音 - Qt6方式
+        m_audioDevice = m_audioSource->start();
+        connect(m_audioDevice, &QIODevice::readyRead, this, &SpeechRecognizer::onAudioDataReady);
+    }
 
     // 发送开始帧
     sendStartFrame();
+
+    if(model){
+        // 发送缓存
+        if (!m_pendingAudioBuffer.isEmpty()) {
+            qDebug() << "发送缓存的音频数据，大小: " << m_pendingAudioBuffer.size();
+            sendAudioData(m_pendingAudioBuffer);
+            m_pendingAudioBuffer.clear();
+        }
+    }
 
     // 启动心跳定时器
     m_heartbeatTimer.start();
@@ -437,5 +454,42 @@ void SpeechRecognizer::processResponse(const QJsonObject &jsonObj)
 
     if (jsonObj.contains("code") && jsonObj["code"].toInt() != 0) {
         qDebug() << "讯飞错误码:" << jsonObj["code"].toInt() << "消息:" << jsonObj["message"].toString();
+    }
+}
+// 发送来自INMP441的音频数据给科大讯飞
+void SpeechRecognizer::processExternalAudioData(const QByteArray &audioData)
+{
+    // 模式是INMP441
+    model = true;
+    //
+    if (!m_isRecording) {
+        m_isRecording = true;
+        m_audioStatus = 0; // Reset audio status to first frame
+        m_currentText.clear();
+
+        // 缓冲区
+        m_pendingAudioBuffer.clear();
+
+        // 连接webSocket
+        if (m_webSocket.state() != QAbstractSocket::ConnectedState) {
+            QUrl url = generateAuthorizedUrl();
+            qDebug() << "首次收到音频数据，连接WebSocket: " << url.toString();
+            m_webSocket.open(url);
+            emit connectionStatusChanged(false, "正在连接...");
+        }
+    }
+
+    if (m_webSocket.state() == QAbstractSocket::ConnectedState) {
+        // 已连接
+        qDebug() << "WebSocket已连接，发送音频数据，大小: " << audioData.size();
+        sendAudioData(audioData);
+    } else {
+        // 没有连接则先进入缓冲区
+        if (m_pendingAudioBuffer.size() < 64000) { // ~2sec at 16kHz/16bit
+            m_pendingAudioBuffer.append(audioData);
+            qDebug() << "WebSocket连接中，缓存音频数据，当前缓存大小: " << m_pendingAudioBuffer.size();
+        } else {
+            qDebug() << "音频缓存已满，丢弃新数据";
+        }
     }
 }

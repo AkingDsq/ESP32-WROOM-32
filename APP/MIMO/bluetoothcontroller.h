@@ -59,6 +59,8 @@ public slots:
     void connectDevice(QString address, QBluetoothDeviceInfo info);// 连接服务
     void sendCommand(QString command); // 发送特征
 
+    void onAdjustBrightness(int id, int value); // 调整灯光亮度
+
 private slots:
     void onDeviceDiscovered(QBluetoothDeviceInfo info); // 扫描到的服务
     void onScanFinished(); // 扫描结束
@@ -67,6 +69,7 @@ private slots:
     void characteristicChanged(QLowEnergyCharacteristic characteristic, QByteArray newValue);
     void controllerStateChanged(QLowEnergyController::ControllerState state);
     void errorOccurred(QLowEnergyController::Error error);
+
 
 
 };

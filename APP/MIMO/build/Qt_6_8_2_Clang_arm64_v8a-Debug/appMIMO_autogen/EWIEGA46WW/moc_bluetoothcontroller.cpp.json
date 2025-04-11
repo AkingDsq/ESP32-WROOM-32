@@ -151,6 +151,22 @@
                     "returnType": "void"
                 },
                 {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "id",
+                            "type": "int"
+                        },
+                        {
+                            "name": "value",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 11,
+                    "name": "onAdjustBrightness",
+                    "returnType": "void"
+                },
+                {
                     "access": "private",
                     "arguments": [
                         {
@@ -158,13 +174,13 @@
                             "type": "QBluetoothDeviceInfo"
                         }
                     ],
-                    "index": 11,
+                    "index": 12,
                     "name": "onDeviceDiscovered",
                     "returnType": "void"
                 },
                 {
                     "access": "private",
-                    "index": 12,
+                    "index": 13,
                     "name": "onScanFinished",
                     "returnType": "void"
                 },
@@ -176,7 +192,7 @@
                             "type": "QBluetoothUuid"
                         }
                     ],
-                    "index": 13,
+                    "index": 14,
                     "name": "serviceDiscovered",
                     "returnType": "void"
                 },
@@ -188,7 +204,7 @@
                             "type": "QLowEnergyService::ServiceState"
                         }
                     ],
-                    "index": 14,
+                    "index": 15,
                     "name": "serviceStateChanged",
                     "returnType": "void"
                 },
@@ -204,7 +220,7 @@
                             "type": "QByteArray"
                         }
                     ],
-                    "index": 15,
+                    "index": 16,
                     "name": "characteristicChanged",
                     "returnType": "void"
                 },
@@ -216,7 +232,7 @@
                             "type": "QLowEnergyController::ControllerState"
                         }
                     ],
-                    "index": 16,
+                    "index": 17,
                     "name": "controllerStateChanged",
                     "returnType": "void"
                 },
@@ -228,7 +244,7 @@
                             "type": "QLowEnergyController::Error"
                         }
                     ],
-                    "index": 17,
+                    "index": 18,
                     "name": "errorOccurred",
                     "returnType": "void"
                 }

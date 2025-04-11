@@ -29,16 +29,14 @@ signals:
     // 可选：从 C++ 向 QML 发送反馈
     void aiResponseReceived(QString response);
 
-    //void commandReady(QString command);
+    // INMP441录音结束
+    void endINMP441();
 
 private:
     QTextToSpeech *speech; // 成员变量
     bool isTtsReady;       // 标记引擎是否就绪
 
     void data(QString answer); // 解析数据
-
-private slots:
-
 
 private:
     QNetworkAccessManager* networkManager;

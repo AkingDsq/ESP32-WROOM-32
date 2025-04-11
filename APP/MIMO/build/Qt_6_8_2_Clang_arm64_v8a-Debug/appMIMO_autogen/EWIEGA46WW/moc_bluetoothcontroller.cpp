@@ -58,6 +58,9 @@ static constexpr auto qt_meta_stringdata_ZN19BlueToothControllerE = QtMocHelpers
     "info",
     "sendCommand",
     "command",
+    "onAdjustBrightness",
+    "id",
+    "value",
     "onDeviceDiscovered",
     "onScanFinished",
     "serviceDiscovered",
@@ -86,34 +89,35 @@ Q_CONSTINIT static const uint qt_meta_data_ZN19BlueToothControllerE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      18,   14, // methods
-       2,  170, // properties
+      19,   14, // methods
+       2,  181, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        5,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,  122,    2, 0x06,    3 /* Public */,
-       4,    1,  125,    2, 0x06,    5 /* Public */,
-       6,    1,  128,    2, 0x06,    7 /* Public */,
-       8,    1,  131,    2, 0x06,    9 /* Public */,
-      10,    1,  134,    2, 0x06,   11 /* Public */,
+       1,    1,  128,    2, 0x06,    3 /* Public */,
+       4,    1,  131,    2, 0x06,    5 /* Public */,
+       6,    1,  134,    2, 0x06,    7 /* Public */,
+       8,    1,  137,    2, 0x06,    9 /* Public */,
+      10,    1,  140,    2, 0x06,   11 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-      11,    0,  137,    2, 0x0a,   13 /* Public */,
-      12,    0,  138,    2, 0x0a,   14 /* Public */,
-      13,    0,  139,    2, 0x0a,   15 /* Public */,
-      14,    0,  140,    2, 0x0a,   16 /* Public */,
-      15,    2,  141,    2, 0x0a,   17 /* Public */,
-      19,    1,  146,    2, 0x0a,   20 /* Public */,
-      21,    1,  149,    2, 0x08,   22 /* Private */,
-      22,    0,  152,    2, 0x08,   24 /* Private */,
-      23,    1,  153,    2, 0x08,   25 /* Private */,
-      26,    1,  156,    2, 0x08,   27 /* Private */,
-      29,    2,  159,    2, 0x08,   29 /* Private */,
-      33,    1,  164,    2, 0x08,   32 /* Private */,
-      35,    1,  167,    2, 0x08,   34 /* Private */,
+      11,    0,  143,    2, 0x0a,   13 /* Public */,
+      12,    0,  144,    2, 0x0a,   14 /* Public */,
+      13,    0,  145,    2, 0x0a,   15 /* Public */,
+      14,    0,  146,    2, 0x0a,   16 /* Public */,
+      15,    2,  147,    2, 0x0a,   17 /* Public */,
+      19,    1,  152,    2, 0x0a,   20 /* Public */,
+      21,    2,  155,    2, 0x0a,   22 /* Public */,
+      24,    1,  160,    2, 0x08,   25 /* Private */,
+      25,    0,  163,    2, 0x08,   27 /* Private */,
+      26,    1,  164,    2, 0x08,   28 /* Private */,
+      29,    1,  167,    2, 0x08,   30 /* Private */,
+      32,    2,  170,    2, 0x08,   32 /* Private */,
+      36,    1,  175,    2, 0x08,   35 /* Private */,
+      38,    1,  178,    2, 0x08,   37 /* Private */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString,    3,
@@ -129,13 +133,14 @@ Q_CONSTINIT static const uint qt_meta_data_ZN19BlueToothControllerE[] = {
     QMetaType::Void,
     QMetaType::Void, QMetaType::QString, 0x80000000 | 17,   16,   18,
     QMetaType::Void, QMetaType::QString,   20,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,   22,   23,
     QMetaType::Void, 0x80000000 | 17,   18,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 24,   25,
     QMetaType::Void, 0x80000000 | 27,   28,
-    QMetaType::Void, 0x80000000 | 30, QMetaType::QByteArray,   31,   32,
-    QMetaType::Void, 0x80000000 | 34,   28,
-    QMetaType::Void, 0x80000000 | 36,   37,
+    QMetaType::Void, 0x80000000 | 30,   31,
+    QMetaType::Void, 0x80000000 | 33, QMetaType::QByteArray,   34,   35,
+    QMetaType::Void, 0x80000000 | 37,   31,
+    QMetaType::Void, 0x80000000 | 39,   40,
 
  // properties: name, type, flags, notifyId, revision
        3, QMetaType::QString, 0x00015001, uint(0), 0,
@@ -187,6 +192,10 @@ Q_CONSTINIT const QMetaObject BlueToothController::staticMetaObject = { {
         // method 'sendCommand'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'onAdjustBrightness'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'onDeviceDiscovered'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QBluetoothDeviceInfo, std::false_type>,
@@ -231,13 +240,14 @@ void BlueToothController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         case 8: _t->startScan(); break;
         case 9: _t->connectDevice((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QBluetoothDeviceInfo>>(_a[2]))); break;
         case 10: _t->sendCommand((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 11: _t->onDeviceDiscovered((*reinterpret_cast< std::add_pointer_t<QBluetoothDeviceInfo>>(_a[1]))); break;
-        case 12: _t->onScanFinished(); break;
-        case 13: _t->serviceDiscovered((*reinterpret_cast< std::add_pointer_t<QBluetoothUuid>>(_a[1]))); break;
-        case 14: _t->serviceStateChanged((*reinterpret_cast< std::add_pointer_t<QLowEnergyService::ServiceState>>(_a[1]))); break;
-        case 15: _t->characteristicChanged((*reinterpret_cast< std::add_pointer_t<QLowEnergyCharacteristic>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QByteArray>>(_a[2]))); break;
-        case 16: _t->controllerStateChanged((*reinterpret_cast< std::add_pointer_t<QLowEnergyController::ControllerState>>(_a[1]))); break;
-        case 17: _t->errorOccurred((*reinterpret_cast< std::add_pointer_t<QLowEnergyController::Error>>(_a[1]))); break;
+        case 11: _t->onAdjustBrightness((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
+        case 12: _t->onDeviceDiscovered((*reinterpret_cast< std::add_pointer_t<QBluetoothDeviceInfo>>(_a[1]))); break;
+        case 13: _t->onScanFinished(); break;
+        case 14: _t->serviceDiscovered((*reinterpret_cast< std::add_pointer_t<QBluetoothUuid>>(_a[1]))); break;
+        case 15: _t->serviceStateChanged((*reinterpret_cast< std::add_pointer_t<QLowEnergyService::ServiceState>>(_a[1]))); break;
+        case 16: _t->characteristicChanged((*reinterpret_cast< std::add_pointer_t<QLowEnergyCharacteristic>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QByteArray>>(_a[2]))); break;
+        case 17: _t->controllerStateChanged((*reinterpret_cast< std::add_pointer_t<QLowEnergyController::ControllerState>>(_a[1]))); break;
+        case 18: _t->errorOccurred((*reinterpret_cast< std::add_pointer_t<QLowEnergyController::Error>>(_a[1]))); break;
         default: ;
         }
     }
@@ -251,42 +261,42 @@ void BlueToothController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
                 *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QBluetoothDeviceInfo >(); break;
             }
             break;
-        case 11:
+        case 12:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
             case 0:
                 *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QBluetoothDeviceInfo >(); break;
             }
             break;
-        case 13:
+        case 14:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
             case 0:
                 *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QBluetoothUuid >(); break;
             }
             break;
-        case 14:
+        case 15:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
             case 0:
                 *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QLowEnergyService::ServiceState >(); break;
             }
             break;
-        case 15:
+        case 16:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
             case 0:
                 *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QLowEnergyCharacteristic >(); break;
             }
             break;
-        case 16:
+        case 17:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
             case 0:
                 *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QLowEnergyController::ControllerState >(); break;
             }
             break;
-        case 17:
+        case 18:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
             case 0:
@@ -362,14 +372,14 @@ int BlueToothController::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 18)
+        if (_id < 19)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 18;
+        _id -= 19;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 18)
+        if (_id < 19)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 18;
+        _id -= 19;
     }
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty

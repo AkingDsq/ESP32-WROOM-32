@@ -1,13 +1,15 @@
 // 多线程
 #include "freertos/task.h"
 // BlueTooth
-#include "BlueTooth_Connect.h"
+//#include "BlueTooth_Connect.h"
 // ssd1306显示屏
 #include "oled.h"
 // Microphone
 #include "Microphone.h"
 // WiFi
 //#include "WiFi_Connect.h"
+// LED
+#include "VoiceA2DP.h"
 
 #define LED_PIN 33        // LED引脚
 
@@ -55,22 +57,21 @@ void setup() {
 
   pinMode(2, OUTPUT); // 再设为输出
   pinMode(LED_PIN, OUTPUT);
-  digitalWrite(LED_PIN, HIGH);
+  digitalWrite(LED_PIN, LOW);
   delay(1000);
-  Serial.println(String(LED_PIN) + ": " + String(digitalRead(LED_PIN)));
 
   // 显示屏
   oled_init();
   // 连接蓝牙
   init_TH();
   init_BLE();
-  //init_A2DPSink();
-  //init_Microphone();
+
+  init_Microphone();
   // WiFi
-  //WiFi_init();
+  WiFi_init();
 
   xTaskCreate(sensorTask, "SensorTask", 4096, NULL, 1, NULL);
-  //xTaskCreate(audioTask, "AudioTask", 4096, NULL, 1, NULL);
+  xTaskCreate(audioTask, "AudioTask", 4096, NULL, 1, NULL);
 
   Serial.println("OK");
 }

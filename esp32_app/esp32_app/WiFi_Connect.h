@@ -6,7 +6,7 @@
 const char * ssid = "laodong";   //需要输入自己的WIFI名字
 const char * password = "dsq245349";   //需要输入自己的WIFI密码
 // 手机IP地址
-const char* udpAddress = "192.168.5.2"; // Android设备IP
+const char* udpAddress = "100.101.4.23"; // Android设备IP
 const int udpPort = 12345;
 WiFiUDP udp;
 // // 
@@ -37,6 +37,18 @@ void WiFi_init() {
   Serial.println("连接成功");
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
+
+  udp.begin(udpPort);
   //Serial.println(WiFi.softAPIP());  // 打印热点的IP地址
 //-----------------连接WIFI--------------//
+}
+// 发送音频数据
+void sendAudioData(uint8_t* data, size_t bytesRead) {
+  // UDP
+  udp.beginPacket(udpAddress, udpPort);
+  udp.write(data, bytesRead);
+  udp.endPacket();
+  
+  Serial.print("发送音频数据: ");
+  Serial.println(bytesRead);
 }

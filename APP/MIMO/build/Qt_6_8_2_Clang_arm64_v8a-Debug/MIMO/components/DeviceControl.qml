@@ -11,12 +11,18 @@ Rectangle {
     property string deviceIcon: "💡"
     property bool deviceStatus: false
     property string deviceType: "light" // light, ac, fan, curtain, etc.
+
+    property int idnum: 0
     property int brightness: 100 // 亮度 0-100
+    Component.onCompleted: {
+        adjustBrightness.connect(blueToothController.onAdjustBrightness)
+    }
+
     property int temperature: 24 // 温度 16-30
 
     // 信号
     signal toggleDevice()
-    signal adjustBrightness(int value)
+    signal adjustBrightness(int idnum, int value)
     signal adjustTemperature(int value)
 
     // 样式
@@ -86,6 +92,13 @@ Rectangle {
                 width: parent.width
 
                 Text {
+                    text: "编号: " + idnum
+                    color: "#AAAAAA"
+                    font.pixelSize: 12
+                    anchors.horizontalCenter: parent.horizontalCenter
+                }
+
+                Text {
                     text: "亮度: " + brightness + "%"
                     color: "#AAAAAA"
                     font.pixelSize: 12
@@ -129,7 +142,7 @@ Rectangle {
 
                     onMoved: {
                         brightness = Math.round(value)
-                        adjustBrightness(brightness)
+                        adjustBrightness(idnum, brightness)
                     }
                 }
             }

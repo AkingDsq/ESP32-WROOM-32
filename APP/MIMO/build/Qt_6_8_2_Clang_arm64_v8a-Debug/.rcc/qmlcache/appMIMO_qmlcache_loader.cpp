@@ -12,20 +12,6 @@ namespace _qt_qml_MIMO_Main_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _qt_qml_MIMO_components_Volume_qml { 
-    extern const unsigned char qmlData[];
-    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
-    const QQmlPrivate::CachedQmlUnit unit = {
-        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
-    };
-}
-namespace _qt_qml_MIMO_components_camera_qml { 
-    extern const unsigned char qmlData[];
-    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
-    const QQmlPrivate::CachedQmlUnit unit = {
-        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
-    };
-}
 namespace _qt_qml_MIMO_components_LoginOn_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
@@ -54,14 +40,28 @@ namespace _qt_qml_MIMO_components_TemperatureHumidityChart_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _qt_qml_MIMO_components_EventsBarChart_qml { 
+namespace _qt_qml_MIMO_components_RoomsPage_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _qt_qml_MIMO_components_SensorCard_qml { 
+namespace _qt_qml_MIMO_components_InteractionPage_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_MIMO_components_SecurityPage_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_MIMO_components_ProfilePage_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
@@ -83,14 +83,14 @@ Q_GLOBAL_STATIC(Registry, unitRegistry)
 
 Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/Main.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_Main_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/Volume.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_Volume_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/camera.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_camera_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/LoginOn.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_LoginOn_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/Home.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_Home_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/DeviceControl.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_DeviceControl_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/TemperatureHumidityChart.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_TemperatureHumidityChart_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/EventsBarChart.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_EventsBarChart_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/SensorCard.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_SensorCard_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/RoomsPage.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_RoomsPage_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/InteractionPage.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_InteractionPage_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/SecurityPage.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_SecurityPage_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MIMO/components/ProfilePage.qml"), &QmlCacheGeneratedCode::_qt_qml_MIMO_components_ProfilePage_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

@@ -152,6 +152,22 @@
                         "returnType": "void"
                     },
                     {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "id",
+                                "type": "int"
+                            },
+                            {
+                                "name": "value",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 11,
+                        "name": "onAdjustBrightness",
+                        "returnType": "void"
+                    },
+                    {
                         "access": "private",
                         "arguments": [
                             {
@@ -159,13 +175,13 @@
                                 "type": "QBluetoothDeviceInfo"
                             }
                         ],
-                        "index": 11,
+                        "index": 12,
                         "name": "onDeviceDiscovered",
                         "returnType": "void"
                     },
                     {
                         "access": "private",
-                        "index": 12,
+                        "index": 13,
                         "name": "onScanFinished",
                         "returnType": "void"
                     },
@@ -177,7 +193,7 @@
                                 "type": "QBluetoothUuid"
                             }
                         ],
-                        "index": 13,
+                        "index": 14,
                         "name": "serviceDiscovered",
                         "returnType": "void"
                     },
@@ -189,7 +205,7 @@
                                 "type": "QLowEnergyService::ServiceState"
                             }
                         ],
-                        "index": 14,
+                        "index": 15,
                         "name": "serviceStateChanged",
                         "returnType": "void"
                     },
@@ -205,7 +221,7 @@
                                 "type": "QByteArray"
                             }
                         ],
-                        "index": 15,
+                        "index": 16,
                         "name": "characteristicChanged",
                         "returnType": "void"
                     },
@@ -217,7 +233,7 @@
                                 "type": "QLowEnergyController::ControllerState"
                             }
                         ],
-                        "index": 16,
+                        "index": 17,
                         "name": "controllerStateChanged",
                         "returnType": "void"
                     },
@@ -229,7 +245,7 @@
                                 "type": "QLowEnergyController::Error"
                             }
                         ],
-                        "index": 17,
+                        "index": 18,
                         "name": "errorOccurred",
                         "returnType": "void"
                     }
@@ -264,12 +280,18 @@
                         "index": 0,
                         "name": "aiResponseReceived",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "endINMP441",
+                        "returnType": "void"
                     }
                 ],
                 "slots": [
                     {
                         "access": "public",
-                        "index": 1,
+                        "index": 2,
                         "name": "call",
                         "returnType": "void"
                     },
@@ -281,13 +303,13 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 2,
+                        "index": 3,
                         "name": "requestAI",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
-                        "index": 3,
+                        "index": 4,
                         "name": "handleReplyFinished",
                         "returnType": "void"
                     },
@@ -299,7 +321,7 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 4,
+                        "index": 5,
                         "name": "saying",
                         "returnType": "void"
                     }
@@ -663,6 +685,58 @@
             }
         ],
         "inputFile": "speechrecognizer.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "UDP",
+                "lineNumber": 9,
+                "object": true,
+                "qualifiedClassName": "UDP",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "data",
+                                "type": "QByteArray"
+                            }
+                        ],
+                        "index": 0,
+                        "name": "audioDataReceived",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "errorMessage",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 1,
+                        "name": "errorOccurred",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "private",
+                        "index": 2,
+                        "name": "onReadyRead",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "udp.h",
         "outputRevision": 68
     }
 ]

@@ -20,7 +20,7 @@
 
 // 温湿度传感器
 #include <DHT.h>
-#define DHTPIN 25 // 温湿度传感器引脚
+#define DHTPIN 13 // 温湿度传感器引脚
 #define DHTTYPE DHT11 // 温湿度传感器类型
 DHT dht(DHTPIN, DHTTYPE); // 创建DHT对象
 
@@ -28,6 +28,8 @@ DHT dht(DHTPIN, DHTTYPE); // 创建DHT对象
 BLEServer *pServer;
 BLEService *pService;
 BLECharacteristic *pTemperatureChar, *pHumidityChar, *pCommandChar;
+
+bool tmp = false;
 
 // void init_A2DPSink();
 // // 连接经典蓝牙
@@ -92,6 +94,9 @@ class CommandCallbacks: public BLECharacteristicCallbacks {
           pTemperatureChar->setValue(String(humidity));
           pTemperatureChar->notify();
         } 
+        else if(value == "startVoice"){
+          tmp = true;
+        }
         // 添加更多命令处理...
       }
     }
@@ -164,3 +169,5 @@ float readTem(){
 float readHum(){
   return dht.readHumidity();
 }
+bool getTemp(){return tmp;}
+void changeTemp(){tmp = !tmp;}

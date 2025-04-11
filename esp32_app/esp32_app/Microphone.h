@@ -1,4 +1,7 @@
 #include <driver/i2s.h>
+
+#include "WiFi_Connect.h"
+#include "BlueTooth_Connect.h"
 /*
 数据引脚(DIN/DOUT)可以分配到大多数GPIO
 时钟(BCK)和字选择(WS)引脚通常可以分配到以下GPIO：
@@ -61,32 +64,34 @@ void processAudio() {
     energy += abs(audioBuffer[i]);
   }
   energy /= (bytesRead / sizeof(int16_t));
-  Serial.println(energy);
+  //Serial.println(energy);
   
-  // // 语音活动检测
-  // if (energy > VAD_THRESHOLD) {
-  //   if (!isRecording) {
-  //     isRecording = true;
-  //     recordingStartTime = millis();
-  //     Serial.println("检测到语音，开始录音...");
-  //   }
+  // 语音活动检测
+  //if (energy > VAD_THRESHOLD) {
+  if (getTemp()) {
     
-  //   // 发送音频数据到Android应用
-  //   if (WiFi.status() == WL_CONNECTED) {
-  //     udp.beginPacket(udpAddress, udpPort);
-  //     udp.write((uint8_t*)audioBuffer, bytesRead);
-  //     udp.endPacket();
-  //   }
+    if (!isRecording) {
+      isRecording = true;
+      recordingStartTime = millis();
+      Serial.println("检测到语音，开始录音...");
+    }
     
-  //   // 检查是否超过最大录音时长
-  //   if (millis() - recordingStartTime > maxRecordingTime) {
-  //     isRecording = false;
-  //     Serial.println("达到最大录音时间，停止录音。");
-  //   }
-  // } else {
-  //   if (isRecording && (millis() - recordingStartTime > 500)) {
-  //     isRecording = false;
-  //     Serial.println("语音结束，停止录音。");
-  //   }
-  // }
+    // 发送音频数据到Android应用
+    if (WiFi.status() == WL_CONNECTED) {
+      sendAudioData((uint8_t*)audioBuffer, bytesRead);
+    }
+    
+    // 检查是否超过最大录音时长
+    if (millis() - recordingStartTime > maxRecordingTime) {
+      isRecording = false;
+      Serial.println("达到最大录音时间，停止录音。");
+      changeTemp();
+    }
+  } else {
+    if (isRecording && (millis() - recordingStartTime > 500)) {
+      isRecording = false;
+      Serial.println("语音结束，停止录音。");
+      changeTemp();
+    }
+  }
 }

@@ -10,6 +10,8 @@
 #include "bluetoothcontroller.h"
 // 语音识别
 #include "speechrecognizer.h"
+// UDP
+#include "UDP.h"
 
 int main(int argc, char *argv[])
 {
@@ -51,6 +53,11 @@ int main(int argc, char *argv[])
     speechRecognizer->init(appId, apiKey, apiSecret);
     engine.rootContext()->setContextProperty("speechRecognizer", speechRecognizer);
     qDebug() << "C++对象speechRecognizer注册状态:" << engine.rootContext()->contextProperty("speechRecognizer").isValid();
+
+    // UDP
+    UDP *udpReceiver = new UDP(&app);
+    // 连接 UDP 音频数据和语音识别
+    QObject::connect(udpReceiver, &UDP::audioDataReceived,  speechRecognizer, &SpeechRecognizer::processExternalAudioData);
 
     engine.loadFromModule("MIMO", "Main");
     return app.exec();

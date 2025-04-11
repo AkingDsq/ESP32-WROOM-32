@@ -31,11 +31,12 @@ public:
     // 是否正在录音
     bool isRecording() const { return m_isRecording; }
     QString currentText() const { return m_currentText; }
+    // 发送INMP441音频数据
+    void processExternalAudioData(const QByteArray &audioData);
 
 public slots:
     // 开始录音和识别
     bool startRecognize();
-
     // 停止录音和识别
     void stopRecognize();
 
@@ -84,6 +85,9 @@ private:
     // 发送结束帧
     void sendEndFrame();
 
+    // 添加一个INMP441音频数据缓冲区
+    QByteArray m_pendingAudioBuffer;
+
 private:
     QJsonObject m_commonParams;  // 持久化公共参数
     QJsonObject m_businessParams; // 持久化业务参数
@@ -111,6 +115,9 @@ private:
 
     // 临时存放识别结果
     QString m_currentText;
+
+    // 录音模式0:qt的app，1：INMP441
+    bool model = false;
 };
 
 #endif // SPEECHRECOGNIZER_H

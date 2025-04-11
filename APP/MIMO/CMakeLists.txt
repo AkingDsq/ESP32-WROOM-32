@@ -32,12 +32,12 @@ qt_add_qml_module(appMIMO
         Main.qml
         SOURCES call_ai.cpp call_ai.h
         QML_FILES
-        QML_FILES components/Volume.qml
+        QML_FILES
         QML_FILES
         SOURCES
         RESOURCES android/AndroidManifest.xml android/build.gradle android/res/values/libs.xml android/res/xml/qtprovider_paths.xml android/gradle/wrapper/gradle-wrapper.jar android/gradle/wrapper/gradle-wrapper.properties android/gradle.properties android/gradlew android/gradlew.bat
         SOURCES
-        QML_FILES components/camera.qml
+        QML_FILES
         SOURCES speechrecognizer.h speechrecognizer.cpp
         SOURCES bluetoothcontroller.h bluetoothcontroller.cpp
         QML_FILES
@@ -48,8 +48,13 @@ qt_add_qml_module(appMIMO
         QML_FILES components/DeviceControl.qml
         RESOURCES resources/resources.qrc
         QML_FILES components/TemperatureHumidityChart.qml
-        QML_FILES components/EventsBarChart.qml
-        QML_FILES components/SensorCard.qml
+        QML_FILES
+        QML_FILES
+        QML_FILES components/RoomsPage.qml
+        QML_FILES components/InteractionPage.qml
+        QML_FILES components/SecurityPage.qml
+        QML_FILES components/ProfilePage.qml
+        SOURCES udp.h udp.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

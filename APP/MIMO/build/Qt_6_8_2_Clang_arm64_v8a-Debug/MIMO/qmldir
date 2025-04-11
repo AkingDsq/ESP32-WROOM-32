@@ -2,11 +2,12 @@ module MIMO
 typeinfo appMIMO.qmltypes
 prefer :/qt/qml/MIMO/
 Main 1.0 Main.qml
-Volume 1.0 components/Volume.qml
 LoginOn 1.0 components/LoginOn.qml
 Home 1.0 components/Home.qml
 DeviceControl 1.0 components/DeviceControl.qml
 TemperatureHumidityChart 1.0 components/TemperatureHumidityChart.qml
-EventsBarChart 1.0 components/EventsBarChart.qml
-SensorCard 1.0 components/SensorCard.qml
+RoomsPage 1.0 components/RoomsPage.qml
+InteractionPage 1.0 components/InteractionPage.qml
+SecurityPage 1.0 components/SecurityPage.qml
+ProfilePage 1.0 components/ProfilePage.qml
 

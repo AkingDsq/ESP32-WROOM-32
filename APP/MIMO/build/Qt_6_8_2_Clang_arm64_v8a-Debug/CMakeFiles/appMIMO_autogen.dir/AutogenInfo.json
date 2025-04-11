@@ -1118,6 +1118,12 @@
 			"MU",
 			"EWIEGA46WW/moc_speechrecognizer.cpp",
 			null
+		],
+		[
+			"D:/git/work/ESP32-WROOM-32/APP/MIMO/udp.h",
+			"MU",
+			"EWIEGA46WW/moc_udp.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -1213,13 +1219,13 @@
 		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.qt/rcc/qrc_qmake_MIMO.cpp",
 		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_Main_qml.cpp",
 		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/DeviceControl_qml.cpp",
-		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/EventsBarChart_qml.cpp",
 		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/Home_qml.cpp",
+		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/InteractionPage_qml.cpp",
 		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/LoginOn_qml.cpp",
-		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/SensorCard_qml.cpp",
+		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/ProfilePage_qml.cpp",
+		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/RoomsPage_qml.cpp",
+		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/SecurityPage_qml.cpp",
 		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/TemperatureHumidityChart_qml.cpp",
-		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/Volume_qml.cpp",
-		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/camera_qml.cpp",
 		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_qmlcache_loader.cpp",
 		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/appmimo_qmltyperegistrations.cpp"
 	],
@@ -1245,7 +1251,8 @@
 			"D:/git/work/ESP32-WROOM-32/APP/MIMO/speechrecognizer.cpp",
 			"MU",
 			null
-		]
+		],
+		[ "D:/git/work/ESP32-WROOM-32/APP/MIMO/udp.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
@@ -1255,13 +1262,13 @@
 		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.qt/rcc/qrc_qmake_MIMO.cpp",
 		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_Main_qml.cpp",
 		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/DeviceControl_qml.cpp",
-		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/EventsBarChart_qml.cpp",
 		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/Home_qml.cpp",
+		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/InteractionPage_qml.cpp",
 		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/LoginOn_qml.cpp",
-		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/SensorCard_qml.cpp",
+		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/ProfilePage_qml.cpp",
+		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/RoomsPage_qml.cpp",
+		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/SecurityPage_qml.cpp",
 		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/TemperatureHumidityChart_qml.cpp",
-		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/Volume_qml.cpp",
-		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_components/camera_qml.cpp",
 		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/.rcc/qmlcache/appMIMO_qmlcache_loader.cpp",
 		"D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/appmimo_qmltyperegistrations.cpp"
 	],
