@@ -75,11 +75,26 @@ write_enable=YES
 
 在虚拟机中输入`ifconfig`得到虚拟机ip地址,断端口一般默认是22或者21 
 
-
-
 #### 使用MobaXterm远程连接Ubuntu 
+Linux：
 
-``
+`sudo apt-get update ` 
+
+下载SSH
+ 
+`sudo apt install openssh-server`
+
+检测服务是否启动
+
+`service sshd status` 
+
+查询IP地址
+
+`ifconfig`
+
+MobaXterm：
+
+左上角Session-SSH，输入虚拟机的Ip地址和用户名，端口一般是22
 
 ### 下载ubuntu-24.04.2-desktop-amd64.iso（ubuntu镜像） 
 
