@@ -4,6 +4,13 @@
 使用的是Arduino IDE测试并拷贝程序所以需要其开发环境, 相关教程可在此网站上找到
 
 `https://doc.itprojects.cn/A0022.esp32.arduino/01.doc.bc474157992b15c366439040fd61543c/index.html#/01.esp32.arduino.build.dev` 
+
+需要下载的库 
+
+![esp32库](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/esp32库.png) 
+
+![库1](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/库1.png)
+![库2](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/库2.png)
 ## 组件列表
 
 如果不想焊接建议购买焊了排针的组件 
@@ -70,14 +77,31 @@
 
 #### 测试程序
 测试程序在`test/Max98357a_test`文件夹中, 将程序拷贝至`ESP32-WROOM-32`后是否有音频输出
-## 蓝牙双向通信协议
 
-指令类型	     发送方	      指令内容	  预期响应	      数据格式
-模式切换	  Qt Android	     "AI"	     无	        UTF-8字符串
-模式确认	  ESP32(Source)	  "music"	 发送音频数据流	PCM 16bit/44kHz
-状态反馈	    ESP32	        "OK"	 通知模式状态	   BLE NOTIFY
+### （四）8位WS2812
+#### 和ESP32-WROOM-32连线 
+| 8位WS2812|esp32|
+|---|---|
+|GND |5v电源负极|
+|4-7VDC |5v电源正极|
+|DI |D12|
+|GND |GND|
 
-## 
+### （五）DHT11
+#### 和ESP32-WROOM-32连线 
+|DHT11|esp32|
+|---|---|
+|VCC |VIN|
+|DATA |D13|
+|GND |GND|
+
+### （六）WIFI测试
+#### 测试程序
+测试程序在`test/wifi_test`文件夹中, 在代码中将WIFI或个人热点的名称和密码修改为自己的，需要连接0.96寸显示屏，将程序拷贝至`ESP32-WROOM-32`后是否显示屏有输出 
+
+### （七）蓝牙测试
+#### 测试程序
+测试程序在`test/bluetooth_text`文件夹中, 需要连接MAX98357以及3W喇叭，将程序拷贝至`ESP32-WROOM-32`后手机蓝牙连接`MyMusic`，手机播放音乐或者音频，喇叭是否有音频输出
 
 |--------------------------------------------------------------------------------| 
 
