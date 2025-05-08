@@ -1,9 +1,9 @@
 #include <driver/i2s.h>
 
 // 引脚定义
-#define I2S_BCLK 33
-#define I2S_LRCLK 25
-#define I2S_DIN 32
+#define I2S_BCLK 18
+#define I2S_LRCLK 19
+#define I2S_DIN 23
 
 void setup() {
   Serial.begin(115200);
