@@ -17,6 +17,16 @@
 #define Humidity_UUID "00002A6F-0000-1000-8000-00805F9B34FB"    // 湿度的uuid
 #define Command_UUID "0000FFE1-0000-1000-8000-00805F9B34FB"     // 用于接收命令的特性UUID
 
+/******************************************************************************
+ *
+ * @file       bluetoothcontroller.h
+ * @brief      蓝牙相关
+ *
+ * @author     dsq
+ * @date       2025/05/08
+ * @history
+ *****************************************************************************/
+
 class BlueToothController : public QObject
 {
     Q_OBJECT

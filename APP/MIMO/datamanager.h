@@ -11,6 +11,16 @@
 #include <QCryptographicHash>
 #include <QTimer>
 
+/******************************************************************************
+ *
+ * @file       datamanager.h
+ * @brief      数据库相关，注册，登入，保存用户数据，加载用户数据
+ *
+ * @author     dsq
+ * @date       2025/05/08
+ * @history
+ *****************************************************************************/
+
 class DataManager : public QObject
 {
     Q_OBJECT

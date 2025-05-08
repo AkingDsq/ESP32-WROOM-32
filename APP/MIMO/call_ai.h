@@ -9,6 +9,16 @@
 
 #include "bluetoothcontroller.h"
 
+/******************************************************************************
+ *
+ * @file       call_ai.h
+ * @brief      接入deepseek
+ *
+ * @author     dsq
+ * @date       2025/05/08
+ * @history
+ *****************************************************************************/
+
 class Call_AI : public QObject{
 
     Q_OBJECT

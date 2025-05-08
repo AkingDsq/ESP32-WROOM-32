@@ -316,182 +316,182 @@ bool DataManager::updateUserLastLogin(QString username)
 
     return executeQuery(query);
 }
-// 保存用户偏好
-bool DataManager::saveUserPreferences(QString username, QVariantMap preferences)
-{
-    // Start a transaction for multiple inserts
-    m_db.transaction();
+// // 保存用户偏好
+// bool DataManager::saveUserPreferences(QString username, QVariantMap preferences)
+// {
+//     // Start a transaction for multiple inserts
+//     m_db.transaction();
 
-    bool success = true;
+//     bool success = true;
 
-    for (auto it = preferences.begin(); it != preferences.end(); ++it) {
-        QSqlQuery query;
-        query.prepare(
-            "INSERT OR REPLACE INTO user_preferences (username, key, value) "
-            "VALUES (:username, :key, :value)");
-        query.bindValue(":username", username);
-        query.bindValue(":key", it.key());
-        query.bindValue(":value", it.value().toString());
+//     for (auto it = preferences.begin(); it != preferences.end(); ++it) {
+//         QSqlQuery query;
+//         query.prepare(
+//             "INSERT OR REPLACE INTO user_preferences (username, key, value) "
+//             "VALUES (:username, :key, :value)");
+//         query.bindValue(":username", username);
+//         query.bindValue(":key", it.key());
+//         query.bindValue(":value", it.value().toString());
 
-        if (!executeQuery(query)) {
-            success = false;
-            break;
-        }
-    }
+//         if (!executeQuery(query)) {
+//             success = false;
+//             break;
+//         }
+//     }
 
-    if (success) {
-        m_db.commit();
-    } else {
-        m_db.rollback();
-    }
+//     if (success) {
+//         m_db.commit();
+//     } else {
+//         m_db.rollback();
+//     }
 
-    return success;
-}
-// 获取
-QVariantMap DataManager::getUserPreferences(QString username)
-{
-    QVariantMap preferences;
+//     return success;
+// }
+// // 获取
+// QVariantMap DataManager::getUserPreferences(QString username)
+// {
+//     QVariantMap preferences;
 
-    QSqlQuery query;
-    query.prepare("SELECT key, value FROM user_preferences WHERE username = :username");
-    query.bindValue(":username", username);
+//     QSqlQuery query;
+//     query.prepare("SELECT key, value FROM user_preferences WHERE username = :username");
+//     query.bindValue(":username", username);
 
-    if (!executeQuery(query)) {
-        return preferences;
-    }
+//     if (!executeQuery(query)) {
+//         return preferences;
+//     }
 
-    while (query.next()) {
-        QString key = query.value(0).toString();
-        QString value = query.value(1).toString();
-        preferences[key] = value;
-    }
+//     while (query.next()) {
+//         QString key = query.value(0).toString();
+//         QString value = query.value(1).toString();
+//         preferences[key] = value;
+//     }
 
-    return preferences;
-}
-// 添加房间
-bool DataManager::addRoom(QString username, QString roomName)
-{
-    QSqlQuery query;
-    query.prepare(
-        "INSERT OR IGNORE INTO rooms (username, room_name, created_at) "
-        "VALUES (:username, :room_name, :created_at)");
-    query.bindValue(":username", username);
-    query.bindValue(":room_name", roomName);
-    query.bindValue(":created_at", QDateTime::currentDateTime().toString(Qt::ISODate));
+//     return preferences;
+// }
+// // 添加房间
+// bool DataManager::addRoom(QString username, QString roomName)
+// {
+//     QSqlQuery query;
+//     query.prepare(
+//         "INSERT OR IGNORE INTO rooms (username, room_name, created_at) "
+//         "VALUES (:username, :room_name, :created_at)");
+//     query.bindValue(":username", username);
+//     query.bindValue(":room_name", roomName);
+//     query.bindValue(":created_at", QDateTime::currentDateTime().toString(Qt::ISODate));
 
-    return executeQuery(query);
-}
-// 删除房间
-bool DataManager::deleteRoom(QString username, QString roomName)
-{
-    QSqlQuery query;
-    query.prepare("DELETE FROM rooms WHERE username = :username AND room_name = :room_name");
-    query.bindValue(":username", username);
-    query.bindValue(":room_name", roomName);
+//     return executeQuery(query);
+// }
+// // 删除房间
+// bool DataManager::deleteRoom(QString username, QString roomName)
+// {
+//     QSqlQuery query;
+//     query.prepare("DELETE FROM rooms WHERE username = :username AND room_name = :room_name");
+//     query.bindValue(":username", username);
+//     query.bindValue(":room_name", roomName);
 
-    return executeQuery(query);
-}
-// 获取房间
-QStringList DataManager::getRooms(QString username)
-{
-    QStringList rooms;
+//     return executeQuery(query);
+// }
+// // 获取房间
+// QStringList DataManager::getRooms(QString username)
+// {
+//     QStringList rooms;
 
-    QSqlQuery query;
-    query.prepare("SELECT room_name FROM rooms WHERE username = :username ORDER BY created_at");
-    query.bindValue(":username", username);
+//     QSqlQuery query;
+//     query.prepare("SELECT room_name FROM rooms WHERE username = :username ORDER BY created_at");
+//     query.bindValue(":username", username);
 
-    if (!executeQuery(query)) {
-        return rooms;
-    }
+//     if (!executeQuery(query)) {
+//         return rooms;
+//     }
 
-    while (query.next()) {
-        rooms.append(query.value(0).toString());
-    }
+//     while (query.next()) {
+//         rooms.append(query.value(0).toString());
+//     }
 
-    return rooms;
-}
+//     return rooms;
+// }
 
-bool DataManager::saveDeviceSettings(const QString &username, const QString &deviceId, const QVariantMap &settings)
-{
-    // Ensure the device exists
-    QSqlQuery checkQuery;
-    checkQuery.prepare("SELECT COUNT(*) FROM devices WHERE username = :username AND device_id = :device_id");
-    checkQuery.bindValue(":username", username);
-    checkQuery.bindValue(":device_id", deviceId);
+// bool DataManager::saveDeviceSettings(const QString &username, const QString &deviceId, const QVariantMap &settings)
+// {
+//     // Ensure the device exists
+//     QSqlQuery checkQuery;
+//     checkQuery.prepare("SELECT COUNT(*) FROM devices WHERE username = :username AND device_id = :device_id");
+//     checkQuery.bindValue(":username", username);
+//     checkQuery.bindValue(":device_id", deviceId);
 
-    if (!executeQuery(checkQuery) || !checkQuery.next()) {
-        return false;
-    }
+//     if (!executeQuery(checkQuery) || !checkQuery.next()) {
+//         return false;
+//     }
 
-    int deviceCount = checkQuery.value(0).toInt();
-    if (deviceCount == 0) {
-        // Create device record first
-        QSqlQuery insertDeviceQuery;
-        insertDeviceQuery.prepare(
-            "INSERT INTO devices (username, device_id, device_name, device_type, created_at) "
-            "VALUES (:username, :device_id, :device_id, 'unknown', :created_at)");
-        insertDeviceQuery.bindValue(":username", username);
-        insertDeviceQuery.bindValue(":device_id", deviceId);
-        insertDeviceQuery.bindValue(":created_at", QDateTime::currentDateTime().toString(Qt::ISODate));
+//     int deviceCount = checkQuery.value(0).toInt();
+//     if (deviceCount == 0) {
+//         // Create device record first
+//         QSqlQuery insertDeviceQuery;
+//         insertDeviceQuery.prepare(
+//             "INSERT INTO devices (username, device_id, device_name, device_type, created_at) "
+//             "VALUES (:username, :device_id, :device_id, 'unknown', :created_at)");
+//         insertDeviceQuery.bindValue(":username", username);
+//         insertDeviceQuery.bindValue(":device_id", deviceId);
+//         insertDeviceQuery.bindValue(":created_at", QDateTime::currentDateTime().toString(Qt::ISODate));
 
-        if (!executeQuery(insertDeviceQuery)) {
-            return false;
-        }
-    }
+//         if (!executeQuery(insertDeviceQuery)) {
+//             return false;
+//         }
+//     }
 
-    // Start a transaction for multiple inserts
-    m_db.transaction();
+//     // Start a transaction for multiple inserts
+//     m_db.transaction();
 
-    bool success = true;
-    QString currentDateTime = QDateTime::currentDateTime().toString(Qt::ISODate);
+//     bool success = true;
+//     QString currentDateTime = QDateTime::currentDateTime().toString(Qt::ISODate);
 
-    for (auto it = settings.begin(); it != settings.end(); ++it) {
-        QSqlQuery query;
-        query.prepare(
-            "INSERT OR REPLACE INTO device_settings (username, device_id, key, value, updated_at) "
-            "VALUES (:username, :device_id, :key, :value, :updated_at)");
-        query.bindValue(":username", username);
-        query.bindValue(":device_id", deviceId);
-        query.bindValue(":key", it.key());
-        query.bindValue(":value", it.value().toString());
-        query.bindValue(":updated_at", currentDateTime);
+//     for (auto it = settings.begin(); it != settings.end(); ++it) {
+//         QSqlQuery query;
+//         query.prepare(
+//             "INSERT OR REPLACE INTO device_settings (username, device_id, key, value, updated_at) "
+//             "VALUES (:username, :device_id, :key, :value, :updated_at)");
+//         query.bindValue(":username", username);
+//         query.bindValue(":device_id", deviceId);
+//         query.bindValue(":key", it.key());
+//         query.bindValue(":value", it.value().toString());
+//         query.bindValue(":updated_at", currentDateTime);
 
-        if (!executeQuery(query)) {
-            success = false;
-            break;
-        }
-    }
+//         if (!executeQuery(query)) {
+//             success = false;
+//             break;
+//         }
+//     }
 
-    if (success) {
-        m_db.commit();
-    } else {
-        m_db.rollback();
-    }
+//     if (success) {
+//         m_db.commit();
+//     } else {
+//         m_db.rollback();
+//     }
 
-    return success;
-}
+//     return success;
+// }
 
-QVariantMap DataManager::getDeviceSettings(const QString &username, const QString &deviceId)
-{
-    QVariantMap settings;
+// QVariantMap DataManager::getDeviceSettings(const QString &username, const QString &deviceId)
+// {
+//     QVariantMap settings;
 
-    QSqlQuery query;
-    query.prepare("SELECT key, value FROM device_settings WHERE username = :username AND device_id = :device_id");
-    query.bindValue(":username", username);
-    query.bindValue(":device_id", deviceId);
+//     QSqlQuery query;
+//     query.prepare("SELECT key, value FROM device_settings WHERE username = :username AND device_id = :device_id");
+//     query.bindValue(":username", username);
+//     query.bindValue(":device_id", deviceId);
 
-    if (!executeQuery(query)) {
-        return settings;
-    }
+//     if (!executeQuery(query)) {
+//         return settings;
+//     }
 
-    while (query.next()) {
-        QString key = query.value(0).toString();
-        QString value = query.value(1).toString();
-        settings[key] = value;
-    }
+//     while (query.next()) {
+//         QString key = query.value(0).toString();
+//         QString value = query.value(1).toString();
+//         settings[key] = value;
+//     }
 
-    return settings;
-}
+//     return settings;
+// }
 
 //===============================================温湿度表=================================================//
 // 添加数据
