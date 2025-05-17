@@ -1,0 +1,108 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 21,
+                        "durationMicroseconds": 526,
+                        "errorMessage": "",
+                        "functionName": "theme",
+                        "line": 20
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 22,
+                        "durationMicroseconds": 232,
+                        "errorMessage": "",
+                        "functionName": "accent",
+                        "line": 21
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 23,
+                        "durationMicroseconds": 210,
+                        "errorMessage": "",
+                        "functionName": "primary",
+                        "line": 22
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 26,
+                        "durationMicroseconds": 325,
+                        "errorMessage": "",
+                        "functionName": "onSourceChanged",
+                        "line": 31
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 23,
+                        "durationMicroseconds": 144,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 27
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 21,
+                        "durationMicroseconds": 144,
+                        "errorMessage": "",
+                        "functionName": "target",
+                        "line": 41
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 26,
+                        "durationMicroseconds": 149,
+                        "errorMessage": "",
+                        "functionName": "type",
+                        "line": 46
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 28,
+                        "durationMicroseconds": 1856,
+                        "errorMessage": "Cannot generate efficient code for SetUnwindHandlerh",
+                        "functionName": "onCompleted",
+                        "line": 51
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 17,
+                        "durationMicroseconds": 183,
+                        "errorMessage": "",
+                        "functionName": "target",
+                        "line": 63
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 9,
+                        "durationMicroseconds": 86,
+                        "errorMessage": "Cannot access value for name currentUser",
+                        "functionName": "onLoginSuccess",
+                        "line": 66
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 9,
+                        "durationMicroseconds": 250,
+                        "errorMessage": "",
+                        "functionName": "onRegisterSuccess",
+                        "line": 75
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 9,
+                        "durationMicroseconds": 458,
+                        "errorMessage": "",
+                        "functionName": "onLogout",
+                        "line": 81
+                    }
+                ],
+                "filepath": "D:/git/work/ESP32-WROOM-32/APP/MIMO/Main.qml"
+            }
+        ],
+        "moduleId": "MIMO(appMIMO)"
+    }
+]

@@ -1,0 +1,12 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The download step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+method=url
+command=E:/Qt/Tools/CMake_64/bin/cmake.exe;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/_deps/android_openssl-subbuild/android_openssl-populate-prefix/src/android_openssl-populate-stamp/download-android_openssl-populate.cmake;COMMAND;E:/Qt/Tools/CMake_64/bin/cmake.exe;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/_deps/android_openssl-subbuild/android_openssl-populate-prefix/src/android_openssl-populate-stamp/verify-android_openssl-populate.cmake;COMMAND;E:/Qt/Tools/CMake_64/bin/cmake.exe;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/_deps/android_openssl-subbuild/android_openssl-populate-prefix/src/android_openssl-populate-stamp/extract-android_openssl-populate.cmake
+source_dir=D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/_deps/android_openssl-src
+work_dir=D:/git/work/ESP32-WROOM-32/APP/MIMO/build/Qt_6_8_2_Clang_arm64_v8a-Debug/_deps
+url(s)=https://github.com/KDAB/android_openssl/archive/refs/heads/master.zip
+hash=
+      no_extract=
+

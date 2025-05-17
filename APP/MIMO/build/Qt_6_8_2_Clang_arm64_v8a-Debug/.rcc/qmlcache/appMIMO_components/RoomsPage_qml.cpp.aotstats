@@ -1,0 +1,1148 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 16,
+                        "durationMicroseconds": 454,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 13
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 17,
+                        "durationMicroseconds": 410,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 14
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 16,
+                        "durationMicroseconds": 920,
+                        "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: QVariant -> QColor stored as QVariant",
+                        "functionName": "color",
+                        "line": 20
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 18,
+                        "durationMicroseconds": 293,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 16
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 19,
+                        "durationMicroseconds": 153,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 17
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 20,
+                        "durationMicroseconds": 259,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 24
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 21,
+                        "durationMicroseconds": 126,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 25
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 34,
+                        "durationMicroseconds": 140,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 31
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 32,
+                        "durationMicroseconds": 127,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 32
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 27,
+                        "durationMicroseconds": 247,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 26
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 29,
+                        "durationMicroseconds": 328,
+                        "errorMessage": "",
+                        "functionName": "pixelSize",
+                        "line": 29
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 20,
+                        "durationMicroseconds": 223,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 38
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 21,
+                        "durationMicroseconds": 175,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 39
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 21,
+                        "durationMicroseconds": 133,
+                        "errorMessage": "",
+                        "functionName": "radius",
+                        "line": 45
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 24,
+                        "durationMicroseconds": 152,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 41
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 33,
+                        "durationMicroseconds": 138,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 43
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 35,
+                        "durationMicroseconds": 63,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 54
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 33,
+                        "durationMicroseconds": 429,
+                        "errorMessage": "",
+                        "functionName": "pixelSize",
+                        "line": 56
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 28,
+                        "durationMicroseconds": 197,
+                        "errorMessage": "",
+                        "functionName": "onPressed",
+                        "line": 62
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 29,
+                        "durationMicroseconds": 206,
+                        "errorMessage": "",
+                        "functionName": "onReleased",
+                        "line": 63
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 28,
+                        "durationMicroseconds": 290,
+                        "errorMessage": "QJSValue has no property called name",
+                        "functionName": "onClicked",
+                        "line": 64
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 31,
+                        "durationMicroseconds": 69,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 61
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 16,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on width.",
+                        "functionName": "width",
+                        "line": 78
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 17,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on height.",
+                        "functionName": "height",
+                        "line": 79
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 22,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on orientation.",
+                        "functionName": "orientation",
+                        "line": 81
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 22,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on interactive.",
+                        "functionName": "interactive",
+                        "line": 85
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 32,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on onCurrentIndexChanged.",
+                        "functionName": "onCurrentIndexChanged",
+                        "line": 87
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 22,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on top.",
+                        "functionName": "top",
+                        "line": 80
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 32,
+                        "durationMicroseconds": 201,
+                        "errorMessage": "Cannot generate efficient code for LoadClosure",
+                        "functionName": "onCompleted",
+                        "line": 93
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 31,
+                        "durationMicroseconds": 66,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 105
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 28,
+                        "durationMicroseconds": 106,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 110
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 29,
+                        "durationMicroseconds": 161,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 111
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 51,
+                        "durationMicroseconds": 153,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 115
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 51,
+                        "durationMicroseconds": 190,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 123
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 30,
+                        "durationMicroseconds": 144,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 133
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 31,
+                        "durationMicroseconds": 149,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 134
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 32,
+                        "durationMicroseconds": 133,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 135
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 33,
+                        "durationMicroseconds": 211,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 136
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 41,
+                        "durationMicroseconds": 365,
+                        "errorMessage": "Cannot access value for name blueToothController",
+                        "functionName": "onToggleDevice",
+                        "line": 152
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 412,
+                        "errorMessage": "",
+                        "functionName": "onToggleDevice",
+                        "line": 174
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 398,
+                        "errorMessage": "",
+                        "functionName": "onToggleDevice",
+                        "line": 189
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 430,
+                        "errorMessage": "",
+                        "functionName": "onToggleDevice",
+                        "line": 204
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 31,
+                        "durationMicroseconds": 74,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 218
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 28,
+                        "durationMicroseconds": 109,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 223
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 29,
+                        "durationMicroseconds": 167,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 224
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 51,
+                        "durationMicroseconds": 143,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 228
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 51,
+                        "durationMicroseconds": 136,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 236
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 30,
+                        "durationMicroseconds": 150,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 246
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 31,
+                        "durationMicroseconds": 138,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 247
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 32,
+                        "durationMicroseconds": 137,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 248
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 33,
+                        "durationMicroseconds": 135,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 249
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 507,
+                        "errorMessage": "",
+                        "functionName": "onToggleDevice",
+                        "line": 265
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 381,
+                        "errorMessage": "",
+                        "functionName": "onToggleDevice",
+                        "line": 281
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 387,
+                        "errorMessage": "",
+                        "functionName": "onToggleDevice",
+                        "line": 296
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 376,
+                        "errorMessage": "",
+                        "functionName": "onToggleDevice",
+                        "line": 311
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 31,
+                        "durationMicroseconds": 71,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 325
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 28,
+                        "durationMicroseconds": 103,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 330
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 29,
+                        "durationMicroseconds": 246,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 331
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 51,
+                        "durationMicroseconds": 226,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 335
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 51,
+                        "durationMicroseconds": 139,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 343
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 30,
+                        "durationMicroseconds": 147,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 353
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 31,
+                        "durationMicroseconds": 140,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 354
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 32,
+                        "durationMicroseconds": 139,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 355
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 33,
+                        "durationMicroseconds": 134,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 356
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 443,
+                        "errorMessage": "",
+                        "functionName": "onToggleDevice",
+                        "line": 372
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 403,
+                        "errorMessage": "",
+                        "functionName": "onToggleDevice",
+                        "line": 387
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 655,
+                        "errorMessage": "",
+                        "functionName": "onToggleDevice",
+                        "line": 402
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 663,
+                        "errorMessage": "",
+                        "functionName": "onToggleDevice",
+                        "line": 417
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 31,
+                        "durationMicroseconds": 121,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 431
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 28,
+                        "durationMicroseconds": 173,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 436
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 29,
+                        "durationMicroseconds": 259,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 437
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 51,
+                        "durationMicroseconds": 247,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 441
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 51,
+                        "durationMicroseconds": 223,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 449
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 30,
+                        "durationMicroseconds": 236,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 459
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 31,
+                        "durationMicroseconds": 230,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 460
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 32,
+                        "durationMicroseconds": 245,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 461
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 33,
+                        "durationMicroseconds": 218,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 462
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 638,
+                        "errorMessage": "",
+                        "functionName": "onToggleDevice",
+                        "line": 478
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 614,
+                        "errorMessage": "",
+                        "functionName": "onToggleDevice",
+                        "line": 493
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 572,
+                        "errorMessage": "",
+                        "functionName": "onToggleDevice",
+                        "line": 508
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 31,
+                        "durationMicroseconds": 111,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 522
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 28,
+                        "durationMicroseconds": 156,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 527
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 29,
+                        "durationMicroseconds": 235,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 528
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 51,
+                        "durationMicroseconds": 198,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 532
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 51,
+                        "durationMicroseconds": 187,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 540
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 30,
+                        "durationMicroseconds": 224,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 550
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 31,
+                        "durationMicroseconds": 213,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 551
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 32,
+                        "durationMicroseconds": 234,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 552
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 33,
+                        "durationMicroseconds": 225,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 553
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 609,
+                        "errorMessage": "",
+                        "functionName": "onToggleDevice",
+                        "line": 569
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 502,
+                        "errorMessage": "",
+                        "functionName": "onToggleDevice",
+                        "line": 585
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 539,
+                        "errorMessage": "",
+                        "functionName": "onToggleDevice",
+                        "line": 600
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 499,
+                        "errorMessage": "",
+                        "functionName": "onToggleDevice",
+                        "line": 615
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 17,
+                        "durationMicroseconds": 181,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 629
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 18,
+                        "durationMicroseconds": 335,
+                        "errorMessage": "",
+                        "functionName": "opacity",
+                        "line": 635
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 19,
+                        "durationMicroseconds": 147,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 631
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 29,
+                        "durationMicroseconds": 130,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 632
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 22,
+                        "durationMicroseconds": 220,
+                        "errorMessage": "",
+                        "functionName": "running",
+                        "line": 640
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 20,
+                        "durationMicroseconds": 90,
+                        "errorMessage": "",
+                        "functionName": "loops",
+                        "line": 641
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 16,
+                        "durationMicroseconds": 153,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 654
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 17,
+                        "durationMicroseconds": 184,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 655
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 20,
+                        "durationMicroseconds": 116,
+                        "errorMessage": "Cannot access value for name mouse",
+                        "functionName": "onPressed",
+                        "line": 662
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 20,
+                        "durationMicroseconds": 854,
+                        "errorMessage": "",
+                        "functionName": "onClicked",
+                        "line": 669
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 18,
+                        "durationMicroseconds": 141,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 657
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 19,
+                        "durationMicroseconds": 149,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 658
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 18,
+                        "durationMicroseconds": 163,
+                        "errorMessage": "",
+                        "functionName": "visible",
+                        "line": 681
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 20,
+                        "durationMicroseconds": 245,
+                        "errorMessage": "",
+                        "functionName": "onClicked",
+                        "line": 682
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 23,
+                        "durationMicroseconds": 66,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 680
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 32,
+                        "durationMicroseconds": 321,
+                        "errorMessage": "QJSValue has no property called name",
+                        "functionName": "onCompleted",
+                        "line": 693
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 16,
+                        "durationMicroseconds": 162,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 705
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 17,
+                        "durationMicroseconds": 187,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 706
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 12,
+                        "durationMicroseconds": 90,
+                        "errorMessage": "",
+                        "functionName": "x",
+                        "line": 711
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 22,
+                        "durationMicroseconds": 208,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 707
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 30,
+                        "durationMicroseconds": 134,
+                        "errorMessage": "",
+                        "functionName": "type",
+                        "line": 715
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 22,
+                        "durationMicroseconds": 196,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 724
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 24,
+                        "durationMicroseconds": 188,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 725
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 35,
+                        "durationMicroseconds": 94,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 732
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 28,
+                        "durationMicroseconds": 320,
+                        "errorMessage": "",
+                        "functionName": "onClicked",
+                        "line": 740
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 31,
+                        "durationMicroseconds": 91,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 739
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 20,
+                        "durationMicroseconds": 147,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 748
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 31,
+                        "durationMicroseconds": 106,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 747
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 26,
+                        "durationMicroseconds": 157,
+                        "errorMessage": "",
+                        "functionName": "orientation",
+                        "line": 766
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 23,
+                        "durationMicroseconds": 133,
+                        "errorMessage": "",
+                        "functionName": "snapMode",
+                        "line": 768
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 20,
+                        "durationMicroseconds": 120,
+                        "errorMessage": "",
+                        "functionName": "model",
+                        "line": 769
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 29,
+                        "durationMicroseconds": 125,
+                        "errorMessage": "",
+                        "functionName": "boundsBehavior",
+                        "line": 771
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 38,
+                        "durationMicroseconds": 480,
+                        "errorMessage": "",
+                        "functionName": "preferredHighlightBegin",
+                        "line": 775
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 36,
+                        "durationMicroseconds": 445,
+                        "errorMessage": "",
+                        "functionName": "preferredHighlightEnd",
+                        "line": 776
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 33,
+                        "durationMicroseconds": 135,
+                        "errorMessage": "",
+                        "functionName": "highlightRangeMode",
+                        "line": 777
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 30,
+                        "durationMicroseconds": 151,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: rooms",
+                        "functionName": "onMovementEnded",
+                        "line": 787
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 27,
+                        "durationMicroseconds": 92,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 756
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 36,
+                        "durationMicroseconds": 280,
+                        "errorMessage": "Cannot generate efficient code for LoadClosure",
+                        "functionName": "onCompleted",
+                        "line": 759
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 24,
+                        "durationMicroseconds": 40,
+                        "errorMessage": "Cannot access value for name wheelArea",
+                        "functionName": "width",
+                        "line": 800
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 25,
+                        "durationMicroseconds": 32,
+                        "errorMessage": "Cannot access value for name wheelArea",
+                        "functionName": "height",
+                        "line": 801
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 24,
+                        "durationMicroseconds": 278,
+                        "errorMessage": "",
+                        "functionName": "scale",
+                        "line": 804
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 26,
+                        "durationMicroseconds": 253,
+                        "errorMessage": "",
+                        "functionName": "opacity",
+                        "line": 805
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 35,
+                        "durationMicroseconds": 104,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 812
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 31,
+                        "durationMicroseconds": 50,
+                        "errorMessage": "Cannot access value for name model",
+                        "functionName": "text",
+                        "line": 818
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 43,
+                        "durationMicroseconds": 92,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 819
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 254,
+                        "errorMessage": "",
+                        "functionName": "pixelSize",
+                        "line": 820
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 36,
+                        "durationMicroseconds": 126,
+                        "errorMessage": "",
+                        "functionName": "bold",
+                        "line": 821
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 32,
+                        "durationMicroseconds": 61,
+                        "errorMessage": "Cannot access value for name roomsChoose",
+                        "functionName": "onClicked",
+                        "line": 828
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 35,
+                        "durationMicroseconds": 101,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 827
+                    }
+                ],
+                "filepath": "D:/git/work/ESP32-WROOM-32/APP/MIMO/components/RoomsPage.qml"
+            }
+        ],
+        "moduleId": "MIMO(appMIMO)"
+    }
+]

@@ -1,0 +1,76 @@
+{
+    "classes": [
+        {
+            "className": "Call_AI",
+            "lineNumber": 12,
+            "object": true,
+            "qualifiedClassName": "Call_AI",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "response",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "aiResponseReceived",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 1,
+                    "name": "endINMP441",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "index": 2,
+                    "name": "call",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "question",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 3,
+                    "name": "requestAI",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 4,
+                    "name": "handleReplyFinished",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "param",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 5,
+                    "name": "saying",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "call_ai.h",
+    "outputRevision": 68
+}
