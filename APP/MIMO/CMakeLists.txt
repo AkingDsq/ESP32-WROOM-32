@@ -10,13 +10,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt6 6.5 REQUIRED COMPONENTS Quick Widgets)
 
 # openssl
-set(OPENSSL_ROOT_DIR "E:/Qt/Android/android_openssl-master/ssl_1.1/arm64-v8a")
-set(OPENSSL_USE_STATIC_LIBS TRUE)  # Android必须静态链接
-# 手动指定库文件路径
-set(OPENSSL_CRYPTO_LIBRARY "${OPENSSL_ROOT_DIR}/libcrypto.a")
-set(OPENSSL_SSL_LIBRARY "${OPENSSL_ROOT_DIR}/libssl.a")
-set(OPENSSL_INCLUDE_DIR "E:/Qt/Android/android_openssl-master/ssl_1.1/include")
-find_package(OpenSSL REQUIRED)# 查找OpenSSL库
+set(OPENSSL_ROOT_DIR "E:/Qt/Android/android_openssl-master/ssl_3")
+set(OPENSSL_INCLUDE_DIR "${OPENSSL_ROOT_DIR}/include")
+set(OPENSSL_SSL_LIBRARY "${OPENSSL_ROOT_DIR}/arm64-v8a/libssl.a")
+set(OPENSSL_CRYPTO_LIBRARY "${OPENSSL_ROOT_DIR}/arm64-v8a/libcrypto.a")
+find_package(OpenSSL REQUIRED)
 
 qt_standard_project_setup(REQUIRES 6.5)
 
@@ -105,6 +103,8 @@ find_package(Qt6 REQUIRED COMPONENTS Charts)
 # 网络连接
 find_package(Qt6 REQUIRED COMPONENTS WebSockets)
 
+#find_package(Qt6 REQUIRED COMPONENTS Network)
+
 target_link_libraries(appMIMO
     PRIVATE Qt6::Quick
     PRIVATE Qt6::Widgets
@@ -116,14 +116,17 @@ target_link_libraries(appMIMO
     PRIVATE Qt6::Sql #数据库
     PRIVATE Qt6::WebSockets # 网络连接
     PRIVATE Qt6::Charts # 图表
+    #PRIVATE Qt6::Network
+    OpenSSL::SSL
+    OpenSSL::Crypto
 )
 
-# openssl
-target_include_directories(appMIMO PRIVATE ${OPENSSL_INCLUDE_DIR})
-target_link_libraries(appMIMO PRIVATE
-    ${OPENSSL_SSL_LIBRARY}
-    ${OPENSSL_CRYPTO_LIBRARY}
-)
+# # openssl
+# target_include_directories(appMIMO PRIVATE ${OPENSSL_INCLUDE_DIR})
+# target_link_libraries(appMIMO PRIVATE
+#     ${OPENSSL_SSL_LIBRARY}
+#     ${OPENSSL_CRYPTO_LIBRARY}
+# )
 
 include(GNUInstallDirs)
 install(TARGETS appMIMO

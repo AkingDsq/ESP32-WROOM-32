@@ -30,7 +30,7 @@ Call_AI::Call_AI() {
     // 确保目标目录存在
     QDir().mkpath(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation));
     // 从资源文件拷贝
-    QFile src(":/config.ini"); // 或使用别名 ":/config.ini"
+    QFile src(":/config.ini");
     if (src.exists()) {
         if (src.copy(configPath)) {
             QFile::setPermissions(configPath, QFile::ReadOwner | QFile::WriteOwner);

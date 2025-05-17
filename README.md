@@ -1,123 +1,28 @@
 # ESP32-WROOM-32
- 智能家居控制系统
- 1. 负责领导基于ESP32的智能家居控制功能，实现设备的智能互联与远程操控。
-
- 2. 主导设计并实现环境感知模块，通过DHT11传感器精准采集温湿度数据，并通过BLE协议高效传输至上位机。
- 
- 3. 负责灯光自适应调节功能的开发，利用BH1750光照传感器数据，智能调整室内照明。
-
- 4. 负责音频数据传输模块的实现，通过UDP协议传输INMP441采集的音频信号，确保音质清晰、传输稳定。
-
- 2. 引入DeepSeek大语言模型，优化语音交互系统，支持自然语言处理，提升用户交互体验。
-
- 6. 负责用户管理模块，采用SQLite数据库实现用户登录验证及设备设置与偏好记录，保障系统安全性与个性化服务。
-
- 7. 负责Qt6人机交互层的开发与集成，确保系统界面友好、操作简便，并通过C++/QML混合编程提升软件性能与用户体验。
-
+ 学习ESP32-WROOM-32 
 ### 注意：
 使用的是Arduino IDE测试并拷贝程序所以需要其开发环境, 相关教程可在此网站上找到
 
-`https://doc.itprojects.cn/A0022.esp32.arduino/01.doc.bc474157992b15c366439040fd61543c/index.html#/01.esp32.arduino.build.dev` 
-
-需要下载的库 
-
-![esp32库](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/esp32库.png) 
-
-![库1](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/库1.png)
-![库2](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/库2.png)
-## 组件列表
-
-如果不想焊接建议购买焊了排针的组件 
-
-| 组件名称| 型号| 数量| 功能| 照片|
-|---- |------- |----|-------|------|
-| esp32| ESP32-WROOM-32 | 1 | 单片机 | ![ESP32-WROOM-32](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/ESP32-WROOM-32.jpg)|
-| 麦克风| INMP441 | 1 | 输入输出音频数据 |![INMP441](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/INMP441_2.jpg)|
-| 温湿度传感器| DHT11 | 1 | 检测温湿度 |![DHT11](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/DHT11.jpg)|
-| 光传感器| GY-302 BH1750 | 1 | 检测光强度光照度 |![GY-302 BH1750](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/GY-302_BH1750.jpg)|
-| 0.96寸显示屏| IIC-OLED-1306 | 1 | 显示屏显示相关内容如温湿度 |![IIC-OLED-1306连线图](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/IIC-OLED-1306.jpg)|
-|音频放大器（推荐配套3W喇叭使用） | MAX98357 | 1 | 音频 |![MAX98357](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/MAX98357.jpg)|
-|3W喇叭 | 3w | 1 | 输出音频 |![3W喇叭](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/3W喇叭.jpg)|
-| 全彩发光二极管| 8位WS2812 | 1 | 模拟开关灯 |![8位WS2812](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/8位WS2812.jpg)|
-| 电源| 5v | 1 | 给8位WS2812供电 |![5v电源](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/5v电源.jpg)|
-| 面包板| 5*5.5（任意） | 2（根据需求） | 作为电路板 |![面包板](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/面包板.jpg)|
-| 面包条线| 任意 | 1（根据需求） | 连接电路 |![面包条线](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/面包条线.jpg)|
-| PH2.0mm公头线| 2.0mm | 2（根据需求） | 作为电路板 |![PH2.0mm公头线](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/PH2.0mm公头线.jpg)|
-
-## 连线
-
-![电路图](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/电路图.jpg)
-
-### （一）IIC-OLED-1306显示屏
-#### 和ESP32-WROOM-32连线 
+`https://doc.itprojects.cn/A0022.esp32.arduino/01.doc.bc474157992b15c366439040fd61543c/index.html#/01.esp32.arduino.build.dev`
+## （一）IIC-OLED-1306显示屏
+### 和ESP32-WROOM-32连线 
 连线按照此图连接即可：
-| IIC-OLED-1306|esp32|
-|---|---|
-|VCC |3V3|
-|GND |GND|
-|SCL |D22|
-|SDA |D21|
-
 ![IIC-OLED-1306连线图](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/IIC-OLED-1306连线图.png)
-#### 测试程序
-程序需要使用resources文件夹中的`ESP8266_and_ESP32_OLED_driver_for_SSD1306_displays.zip`库 
+### 测试程序
+程序需要使用resources文件夹中的`ESP8266_and_ESP32_OLED_driver_for_SSD1306_displays。zip`库 
 
 需要下载下来并且导入Arduino IDE库，如下图：
 ![导入库](https://github.com/AkingDsq/ESP32-WROOM-32/blob/main/images/导入库.png)
 
-导入后测试程序在`test/esp32_oled_test/esp32_oled`文件夹中, 将程序拷贝至`ESP32-WROOM-32`后就会显示hellow world
-### (二) INMP441
-#### 和ESP32-WROOM-32连线 
-| INMP441|esp32|
-|---|---|
-|VDD |3V3|
-|GND |GND|
-|SD |D23|
-|L/R |GND|
-|WS |D19|
-|SCK |D18|
+导入后测试程序在`esp32_oled`文件夹中,将程序拷贝至`ESP32-WROOM-32`后就会显示hellow world
+## （二）蓝牙双向通信协议
 
-#### 测试程序
-测试程序在`test/INMP441_test`文件夹中, 将程序拷贝至`ESP32-WROOM-32`后就在arduinoIDE中观察是否有输出
-### （三）MAX98357
-#### 和ESP32-WROOM-32连线 
-| MAX98357|esp32|
-|---|---|
-|VIN |VIN|
-|GND |GND|
-|LRC |D26|
-|BCLK |D27|
-|DIN |D14|
+指令类型	     发送方	      指令内容	  预期响应	      数据格式
+模式切换	  Qt Android	     "AI"	     无	        UTF-8字符串
+模式确认	  ESP32(Source)	  "music"	 发送音频数据流	PCM 16bit/44kHz
+状态反馈	    ESP32	        "OK"	 通知模式状态	   BLE NOTIFY
 
-#### 测试程序
-测试程序在`test/Max98357a_test`文件夹中, 将程序拷贝至`ESP32-WROOM-32`后是否有音频输出
-
-### （四）8位WS2812
-#### 和ESP32-WROOM-32连线 
-| 8位WS2812|esp32|
-|---|---|
-|GND |5v电源负极|
-|4-7VDC |5v电源正极|
-|DI |D12|
-|GND |GND|
-
-### （五）DHT11
-#### 和ESP32-WROOM-32连线 
-|DHT11|esp32|
-|---|---|
-|VCC |VIN|
-|DATA |D13|
-|GND |GND|
-
-### （六）WIFI测试
-#### 测试程序
-测试程序在`test/wifi_test`文件夹中, 在代码中将WIFI或个人热点的名称和密码修改为自己的，需要连接0.96寸显示屏，将程序拷贝至`ESP32-WROOM-32`后是否显示屏有输出 
-
-### （七）蓝牙测试
-#### 测试程序
-测试程序在`test/bluetooth_text`文件夹中, 需要连接MAX98357以及3W喇叭，将程序拷贝至`ESP32-WROOM-32`后手机蓝牙连接`MyMusic`，手机播放音乐或者音频，喇叭是否有音频输出
-
-|-----------------------------------------------------以下是linux相关操作，与该项目无关--------------------------------------------------------| 
+## （三）
 
 ## Linux下交叉编译
 
