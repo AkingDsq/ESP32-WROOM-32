@@ -22,29 +22,44 @@ Call_AI::Call_AI() {
     speech->setLocale(QLocale::Chinese);
     //speech->setVoice(QVoice::);
 
+    // 获取deepseek API
+    GetApiKey();
     // network
     networkManager = new QNetworkAccessManager(this);
-
+}
+Call_AI::~Call_AI() {
+}
+void Call_AI::GetApiKey(){
     // ini文件
-    QString configPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/config.ini";
+    configPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/config.ini";
     // 确保目标目录存在
     QDir().mkpath(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation));
     // 从资源文件拷贝
     QFile src(":/config.ini"); // 或使用别名 ":/config.ini"
     if (src.exists()) {
+        // 删除已存在的目标文件（强制覆盖）
+        if (QFile::exists(configPath)) {
+            if (!QFile::remove(configPath)) {
+                qDebug() << "删除旧文件失败:" << src.errorString();
+            }
+        }
+
         if (src.copy(configPath)) {
             QFile::setPermissions(configPath, QFile::ReadOwner | QFile::WriteOwner);
+            qDebug() << "ini拷贝成功";
         } else {
-            qDebug() << "拷贝失败原因:" << src.errorString();
+            qDebug() << "ini拷贝失败原因:" << src.errorString();
         }
     }
     else {
-        qDebug() << "资源文件不存在，检查.qrc配置";
+        qDebug() << "ini资源文件不存在，检查.qrc配置";
     }
-}
-Call_AI::~Call_AI() {
-}
 
+    // 指定文件路径和格式
+    QSettings settings(configPath, QSettings::IniFormat);
+    // 读取配置项（支持默认值）
+    _apiKey = settings.value("API/Key").toString();
+}
 void Call_AI::call(){
     if (isTtsReady) {
         speech->say("你好，需要什么帮助？");
@@ -106,14 +121,7 @@ void Call_AI::requestAI(QString question) {
     question.prepend(words);
 
     // 读取API
-    QString apiKey = "sk-09482e6b58754726b53c1f26349f208d";
-    // QFile targetFile(configPath);
-    // if (targetFile.open(QIODevice::ReadOnly)) {
-    //     qDebug() << "配置文件内容：" << targetFile.readAll();
-    //     apiKey = targetFile.readAll();
-    //     targetFile.close();
-    // }
-
+    QString apiKey = _apiKey;
     if (apiKey.isEmpty()) {
         qDebug() << "API Key 未找到或为空";
         return;

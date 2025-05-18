@@ -40,7 +40,9 @@ private:
 
 private:
     QNetworkAccessManager* networkManager;
-    QString configPath;
+    QString configPath;  // ini文件位置
+    QString _apiKey = ""; // Deepseek API
+    void GetApiKey(); // 获取Deepseek API
 
     BlueToothController *m_bluetoothController = new BlueToothController(this);
 };

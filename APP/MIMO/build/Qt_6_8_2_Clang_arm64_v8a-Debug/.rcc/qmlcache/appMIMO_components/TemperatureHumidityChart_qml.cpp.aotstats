@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 285,
+                        "durationMicroseconds": 249,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "tempData",
                         "line": 9
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 85,
+                        "durationMicroseconds": 86,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "humidityData",
                         "line": 10
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 72,
+                        "durationMicroseconds": 77,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "timeLabels",
                         "line": 11
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 244,
+                        "durationMicroseconds": 284,
                         "errorMessage": "",
                         "functionName": "lastTempRange",
                         "line": 14
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 32,
-                        "durationMicroseconds": 207,
+                        "durationMicroseconds": 219,
                         "errorMessage": "",
                         "functionName": "lastHumRange",
                         "line": 15
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 1621,
+                        "durationMicroseconds": 1741,
                         "errorMessage": "Cannot generate efficient code for call to untyped JavaScript function",
                         "functionName": "analysis",
                         "line": 18
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 1456,
+                        "durationMicroseconds": 1745,
                         "errorMessage": "Cannot generate efficient code for call to untyped JavaScript function",
                         "functionName": "updateAnalysis",
                         "line": 156
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 89,
+                        "durationMicroseconds": 74,
                         "errorMessage": "Cannot load property length from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/TemperatureHumidityChart.qml)::tempData with type QVariant.",
                         "functionName": "updateChart",
                         "line": 550
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 154,
+                        "durationMicroseconds": 119,
                         "errorMessage": "",
                         "functionName": "onTempDataChanged",
                         "line": 593
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 130,
+                        "durationMicroseconds": 93,
                         "errorMessage": "",
                         "functionName": "onHumidityDataChanged",
                         "line": 597
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 26,
-                        "durationMicroseconds": 95,
+                        "durationMicroseconds": 70,
                         "errorMessage": "",
                         "functionName": "onTimeLabelsChanged",
                         "line": 601
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 124,
+                        "durationMicroseconds": 95,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 170
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 89,
+                        "durationMicroseconds": 68,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 181
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 84,
+                        "durationMicroseconds": 65,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 193
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 74,
+                        "durationMicroseconds": 65,
                         "errorMessage": "Cannot access value for name analysis",
                         "functionName": "text",
                         "line": 208
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 43,
-                        "durationMicroseconds": 59,
+                        "durationMicroseconds": 45,
                         "errorMessage": "Cannot access value for name analysis",
                         "functionName": "text",
                         "line": 217
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 44,
-                        "durationMicroseconds": 56,
+                        "durationMicroseconds": 36,
                         "errorMessage": "Cannot access value for name analysis",
                         "functionName": "color",
                         "line": 219
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 43,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 40,
                         "errorMessage": "Cannot access value for name analysis",
                         "functionName": "text",
                         "line": 226
@@ -198,7 +198,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 44,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 33,
                         "errorMessage": "Cannot access value for name analysis",
                         "functionName": "color",
                         "line": 228
@@ -206,7 +206,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 174,
+                        "durationMicroseconds": 126,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 247
@@ -214,7 +214,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 43,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 40,
                         "errorMessage": "Cannot access value for name analysis",
                         "functionName": "text",
                         "line": 257
@@ -222,7 +222,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 43,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 35,
                         "errorMessage": "Cannot access value for name analysis",
                         "functionName": "text",
                         "line": 272
@@ -262,7 +262,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 44,
-                        "durationMicroseconds": 128,
+                        "durationMicroseconds": 88,
                         "errorMessage": "Cannot load property visualPosition from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/TemperatureHumidityChart.qml)::parent with type QQuickItem.",
                         "functionName": "width",
                         "line": 290
@@ -270,7 +270,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 45,
-                        "durationMicroseconds": 177,
+                        "durationMicroseconds": 118,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 291
@@ -278,7 +278,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 79,
+                        "durationMicroseconds": 41,
                         "errorMessage": "Cannot access value for name analysis",
                         "functionName": "text",
                         "line": 302
@@ -286,7 +286,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 100,
+                        "durationMicroseconds": 66,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 318
@@ -294,7 +294,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 50,
+                        "durationMicroseconds": 36,
                         "errorMessage": "Cannot access value for name analysis",
                         "functionName": "text",
                         "line": 333
@@ -302,7 +302,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 43,
-                        "durationMicroseconds": 60,
+                        "durationMicroseconds": 47,
                         "errorMessage": "Cannot access value for name analysis",
                         "functionName": "text",
                         "line": 342
@@ -310,7 +310,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 44,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 43,
                         "errorMessage": "Cannot access value for name analysis",
                         "functionName": "color",
                         "line": 344
@@ -318,7 +318,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 43,
-                        "durationMicroseconds": 54,
+                        "durationMicroseconds": 36,
                         "errorMessage": "Cannot access value for name analysis",
                         "functionName": "text",
                         "line": 351
@@ -326,7 +326,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 44,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 34,
                         "errorMessage": "Cannot access value for name analysis",
                         "functionName": "color",
                         "line": 353
@@ -334,7 +334,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 176,
+                        "durationMicroseconds": 123,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 372
@@ -342,7 +342,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 43,
-                        "durationMicroseconds": 57,
+                        "durationMicroseconds": 36,
                         "errorMessage": "Cannot access value for name analysis",
                         "functionName": "text",
                         "line": 382
@@ -350,7 +350,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 43,
-                        "durationMicroseconds": 55,
+                        "durationMicroseconds": 51,
                         "errorMessage": "Cannot access value for name analysis",
                         "functionName": "text",
                         "line": 397
@@ -390,7 +390,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 44,
-                        "durationMicroseconds": 135,
+                        "durationMicroseconds": 84,
                         "errorMessage": "Cannot load property visualPosition from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/TemperatureHumidityChart.qml)::parent with type QQuickItem.",
                         "functionName": "width",
                         "line": 415
@@ -398,7 +398,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 45,
-                        "durationMicroseconds": 248,
+                        "durationMicroseconds": 105,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 416
@@ -406,7 +406,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 68,
+                        "durationMicroseconds": 40,
                         "errorMessage": "Cannot access value for name analysis",
                         "functionName": "text",
                         "line": 427
@@ -414,7 +414,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 169,
+                        "durationMicroseconds": 92,
                         "errorMessage": "",
                         "functionName": "axisX",
                         "line": 457
@@ -422,7 +422,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 132,
+                        "durationMicroseconds": 79,
                         "errorMessage": "",
                         "functionName": "axisY",
                         "line": 458
@@ -430,7 +430,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 121,
+                        "durationMicroseconds": 80,
                         "errorMessage": "",
                         "functionName": "axisX",
                         "line": 468
@@ -438,7 +438,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 112,
+                        "durationMicroseconds": 78,
                         "errorMessage": "",
                         "functionName": "axisYRight",
                         "line": 469
@@ -446,7 +446,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 108,
+                        "durationMicroseconds": 65,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 520
@@ -454,7 +454,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 60,
+                        "durationMicroseconds": 55,
                         "errorMessage": "Cannot load property length from (component in D:/git/work/ESP32-WROOM-32/APP/MIMO/components/TemperatureHumidityChart.qml)::timeLabels with type QVariant.",
                         "functionName": "model",
                         "line": 526
@@ -462,7 +462,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 45,
-                        "durationMicroseconds": 255,
+                        "durationMicroseconds": 321,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "index",
                         "line": 529
@@ -470,7 +470,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 44,
-                        "durationMicroseconds": 105,
+                        "durationMicroseconds": 95,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "step",
                         "line": 530
@@ -478,7 +478,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 50,
-                        "durationMicroseconds": 92,
+                        "durationMicroseconds": 58,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "labelIndex",
                         "line": 531
@@ -486,7 +486,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 77,
+                        "durationMicroseconds": 61,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "width",
                         "line": 533
@@ -494,7 +494,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 181,
+                        "durationMicroseconds": 123,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 534
@@ -502,7 +502,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 34,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "text",
                         "line": 538
@@ -510,7 +510,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 50,
-                        "durationMicroseconds": 157,
+                        "durationMicroseconds": 108,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
                         "line": 541
@@ -518,7 +518,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 119,
+                        "durationMicroseconds": 106,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 537
@@ -526,7 +526,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 157,
+                        "durationMicroseconds": 152,
                         "errorMessage": "",
                         "functionName": "onCompleted",
                         "line": 603

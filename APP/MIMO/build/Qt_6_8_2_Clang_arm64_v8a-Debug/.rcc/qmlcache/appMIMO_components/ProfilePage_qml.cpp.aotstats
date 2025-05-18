@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 16,
-                        "durationMicroseconds": 388,
+                        "durationMicroseconds": 453,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 10
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 17,
-                        "durationMicroseconds": 192,
+                        "durationMicroseconds": 173,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 11
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 67,
+                        "durationMicroseconds": 72,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 12
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 158,
+                        "durationMicroseconds": 166,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 19
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 68,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 17
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 141,
+                        "durationMicroseconds": 167,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 26
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 301,
+                        "durationMicroseconds": 481,
                         "errorMessage": "Cannot access value for name username",
                         "functionName": "text",
                         "line": 34
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 74,
+                        "durationMicroseconds": 141,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 33
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 212,
+                        "durationMicroseconds": 353,
                         "errorMessage": "Cannot access value for name username",
                         "functionName": "text",
                         "line": 43
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 142,
+                        "durationMicroseconds": 192,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 47
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 298,
+                        "durationMicroseconds": 326,
                         "errorMessage": "Cannot access value for name currentDateTime",
                         "functionName": "text",
                         "line": 52
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 144,
+                        "durationMicroseconds": 154,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 55
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 93,
+                        "durationMicroseconds": 134,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 59
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 88,
+                        "durationMicroseconds": 110,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 66
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 1892,
+                        "durationMicroseconds": 1022,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "model",
                         "line": 70
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 65,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 84
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 57,
-                        "durationMicroseconds": 410,
+                        "durationMicroseconds": 154,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 91
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 266,
+                        "durationMicroseconds": 275,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "text",
                         "line": 95
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 57,
-                        "durationMicroseconds": 158,
+                        "durationMicroseconds": 160,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 98
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 347,
+                        "durationMicroseconds": 198,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 101
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 57,
-                        "durationMicroseconds": 142,
+                        "durationMicroseconds": 154,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 107
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 200,
+                        "durationMicroseconds": 226,
                         "errorMessage": "",
                         "functionName": "onPressed",
                         "line": 113
@@ -198,7 +198,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 41,
-                        "durationMicroseconds": 162,
+                        "durationMicroseconds": 211,
                         "errorMessage": "",
                         "functionName": "onReleased",
                         "line": 114
@@ -206,7 +206,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 61,
+                        "durationMicroseconds": 74,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 112
@@ -214,7 +214,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 161,
+                        "durationMicroseconds": 180,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 126
@@ -222,7 +222,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 195,
+                        "durationMicroseconds": 155,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 129
@@ -230,7 +230,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 68,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 133
@@ -238,7 +238,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 32,
-                        "durationMicroseconds": 177,
+                        "durationMicroseconds": 270,
                         "errorMessage": "",
                         "functionName": "onPressed",
                         "line": 142
@@ -246,7 +246,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 160,
+                        "durationMicroseconds": 220,
                         "errorMessage": "",
                         "functionName": "onReleased",
                         "line": 143
@@ -254,7 +254,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 203,
+                        "durationMicroseconds": 274,
                         "errorMessage": "Cannot access value for name homePage",
                         "functionName": "onClicked",
                         "line": 144
@@ -262,7 +262,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 71,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 141

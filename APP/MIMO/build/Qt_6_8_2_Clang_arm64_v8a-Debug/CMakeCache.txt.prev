@@ -642,7 +642,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_EGL:INTERNAL=[E:/Qt/Android/Sdk/ndk/26.1.10909125/t
 //Details about finding GLESv2
 FIND_PACKAGE_MESSAGE_DETAILS_GLESv2:INTERNAL=[E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include][E:/Qt/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/23/libGLESv2.so][1][1][v()]
 //Details about finding OpenSSL
-FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[E:/Qt/Android/android_openssl-master/ssl_1.1/arm64-v8a/libcrypto.a][E:/Qt/Android/android_openssl-master/ssl_1.1/include][c ][v1.1.1u()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[E:/Qt/Android/android_openssl-master/ssl_1.1/arm64-v8a/libcrypto_1_1.so][E:/Qt/Android/android_openssl-master/ssl_1.1/include][c ][v1.1.1u()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding WrapAtomic

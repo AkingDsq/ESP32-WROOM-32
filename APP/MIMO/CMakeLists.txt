@@ -9,15 +9,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 6.5 REQUIRED COMPONENTS Quick Widgets)
 
-# openssl
-set(OPENSSL_ROOT_DIR "E:/Qt/Android/android_openssl-master/ssl_1.1/arm64-v8a")
-set(OPENSSL_USE_STATIC_LIBS TRUE)  # Android必须静态链接
-# 手动指定库文件路径
-set(OPENSSL_CRYPTO_LIBRARY "${OPENSSL_ROOT_DIR}/libcrypto.a")
-set(OPENSSL_SSL_LIBRARY "${OPENSSL_ROOT_DIR}/libssl.a")
-set(OPENSSL_INCLUDE_DIR "E:/Qt/Android/android_openssl-master/ssl_1.1/include")
-find_package(OpenSSL REQUIRED)# 查找OpenSSL库
-
 qt_standard_project_setup(REQUIRES 6.5)
 
 qt_add_executable(appMIMO
@@ -71,14 +62,19 @@ set_target_properties(appMIMO PROPERTIES
 #蓝牙相机麦克风
 find_package(Qt6 REQUIRED COMPONENTS Core)
 
-# # Android资源配置
-# if(ANDROID)
-#     # 添加 Android 资源文件（需将 config.ini 放在 android/assets 目录）
-#     qt_android_add_assets(appMIMO "android_assets"
-#         "INCLUDES" "config.ini"
-#         "DESTINATION" "assets"
-#     )
-# endif()
+# OpenSSL动态链接配置
+set(OPENSSL_ROOT_DIR "E:/Qt/Android/android_openssl-master/ssl_3")
+set(OPENSSL_INCLUDE_DIR "${OPENSSL_ROOT_DIR}/include")
+set(OPENSSL_SSL_LIBRARY "${OPENSSL_ROOT_DIR}/arm64-v8a/libssl_3.so")
+set(OPENSSL_CRYPTO_LIBRARY "${OPENSSL_ROOT_DIR}/arm64-v8a/libcrypto_3.so")
+find_package(OpenSSL REQUIRED)
+# ​​自动部署到APK
+file(MAKE_DIRECTORY ${CMAKE_SOURCE_DIR}/android/libs/arm64-v8a)
+file(COPY
+    ${OPENSSL_SSL_LIBRARY}
+    ${OPENSSL_CRYPTO_LIBRARY}
+    DESTINATION ${CMAKE_SOURCE_DIR}/android/libs/arm64-v8a/
+)
 
 # 语音识别
 find_package(Qt6 REQUIRED COMPONENTS TextToSpeech)
@@ -119,6 +115,7 @@ target_link_libraries(appMIMO
 )
 
 # openssl
+# 链接动态库
 target_include_directories(appMIMO PRIVATE ${OPENSSL_INCLUDE_DIR})
 target_link_libraries(appMIMO PRIVATE
     ${OPENSSL_SSL_LIBRARY}

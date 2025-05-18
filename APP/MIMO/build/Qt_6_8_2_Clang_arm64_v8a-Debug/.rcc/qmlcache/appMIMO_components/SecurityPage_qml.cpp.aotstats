@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 154,
+                        "durationMicroseconds": 140,
                         "errorMessage": "Cannot access value for name dbManager",
                         "functionName": "dataDisplayMode",
                         "line": 9
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 22,
-                        "durationMicroseconds": 97,
+                        "durationMicroseconds": 77,
                         "errorMessage": "Cannot retrieve a non-object type by ID: securityPage",
                         "functionName": "onTriggered",
                         "line": 19
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 16,
-                        "durationMicroseconds": 469,
+                        "durationMicroseconds": 362,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 26
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 17,
-                        "durationMicroseconds": 257,
+                        "durationMicroseconds": 185,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 27
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 152,
+                        "durationMicroseconds": 75,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 28
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 155,
+                        "durationMicroseconds": 67,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 34
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 480,
+                        "durationMicroseconds": 561,
                         "errorMessage": "",
                         "functionName": "spacing",
                         "line": 45
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 74,
+                        "durationMicroseconds": 73,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 43
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 30,
-                        "durationMicroseconds": 386,
+                        "durationMicroseconds": 721,
                         "errorMessage": "",
                         "functionName": "margins",
                         "line": 44
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 404,
+                        "durationMicroseconds": 794,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 50
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 112,
+                        "durationMicroseconds": 148,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 55
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 37,
-                        "durationMicroseconds": 493,
+                        "durationMicroseconds": 542,
                         "errorMessage": "",
                         "functionName": "pixelSize",
                         "line": 64
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 66,
+                        "durationMicroseconds": 76,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 82
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 49,
-                        "durationMicroseconds": 153,
+                        "durationMicroseconds": 160,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 89
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 45,
+                        "durationMicroseconds": 50,
                         "errorMessage": "Cannot access value for name currentUser",
                         "functionName": "text",
                         "line": 92
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 28,
+                        "durationMicroseconds": 29,
                         "errorMessage": "Cannot access value for name currentDateTime",
                         "functionName": "text",
                         "line": 99
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 164,
+                        "durationMicroseconds": 186,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 110
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 174,
+                        "durationMicroseconds": 209,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 111
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 108,
+                        "durationMicroseconds": 119,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 109
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 69,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 116
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 32,
-                        "durationMicroseconds": 178,
+                        "durationMicroseconds": 185,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 120
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 94,
+                        "durationMicroseconds": 101,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 121
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 32,
+                        "durationMicroseconds": 37,
                         "errorMessage": "Cannot retrieve a non-object type by ID: securityPage",
                         "functionName": "color",
                         "line": 123
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 27,
                         "errorMessage": "Cannot retrieve a non-object type by ID: securityPage",
                         "functionName": "color",
                         "line": 128
@@ -198,7 +198,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 66,
+                        "durationMicroseconds": 68,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 126
@@ -206,7 +206,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 23,
+                        "durationMicroseconds": 27,
                         "errorMessage": "Cannot retrieve a non-object type by ID: securityPage",
                         "functionName": "bold",
                         "line": 130
@@ -214,7 +214,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 36,
+                        "durationMicroseconds": 34,
                         "errorMessage": "Cannot retrieve a non-object type by ID: securityPage",
                         "functionName": "onClicked",
                         "line": 135
@@ -222,7 +222,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 69,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 134
@@ -230,7 +230,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 32,
-                        "durationMicroseconds": 189,
+                        "durationMicroseconds": 184,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 146
@@ -238,7 +238,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 96,
+                        "durationMicroseconds": 107,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 147
@@ -246,7 +246,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 28,
+                        "durationMicroseconds": 45,
                         "errorMessage": "Cannot retrieve a non-object type by ID: securityPage",
                         "functionName": "color",
                         "line": 149
@@ -254,7 +254,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 34,
+                        "durationMicroseconds": 28,
                         "errorMessage": "Cannot retrieve a non-object type by ID: securityPage",
                         "functionName": "color",
                         "line": 154
@@ -262,7 +262,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 66,
+                        "durationMicroseconds": 83,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 152
@@ -270,7 +270,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 23,
+                        "durationMicroseconds": 36,
                         "errorMessage": "Cannot retrieve a non-object type by ID: securityPage",
                         "functionName": "bold",
                         "line": 156
@@ -278,7 +278,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 34,
                         "errorMessage": "Cannot retrieve a non-object type by ID: securityPage",
                         "functionName": "onClicked",
                         "line": 161
@@ -286,7 +286,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 60,
+                        "durationMicroseconds": 71,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 160
@@ -294,7 +294,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 26,
-                        "durationMicroseconds": 504,
+                        "durationMicroseconds": 531,
                         "errorMessage": "",
                         "functionName": "columns",
                         "line": 176
@@ -302,7 +302,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 41,
-                        "durationMicroseconds": 175,
+                        "durationMicroseconds": 182,
                         "errorMessage": "",
                         "functionName": "preferredHeight",
                         "line": 175
@@ -310,7 +310,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 107,
+                        "durationMicroseconds": 321,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 194
@@ -318,7 +318,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 55,
-                        "durationMicroseconds": 211,
+                        "durationMicroseconds": 383,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 200
@@ -326,7 +326,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 55,
-                        "durationMicroseconds": 183,
+                        "durationMicroseconds": 271,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 207
@@ -334,7 +334,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 55,
-                        "durationMicroseconds": 145,
+                        "durationMicroseconds": 260,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 211
@@ -342,7 +342,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 428,
+                        "durationMicroseconds": 676,
                         "errorMessage": "Cannot access value for name blueToothController",
                         "functionName": "text",
                         "line": 215
@@ -350,7 +350,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 98,
+                        "durationMicroseconds": 165,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 251
@@ -358,7 +358,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 55,
-                        "durationMicroseconds": 218,
+                        "durationMicroseconds": 229,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 257
@@ -366,7 +366,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 55,
-                        "durationMicroseconds": 243,
+                        "durationMicroseconds": 186,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 264
@@ -374,7 +374,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 55,
-                        "durationMicroseconds": 225,
+                        "durationMicroseconds": 155,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 268
@@ -382,7 +382,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 498,
+                        "durationMicroseconds": 568,
                         "errorMessage": "Cannot access value for name blueToothController",
                         "functionName": "text",
                         "line": 272
@@ -390,7 +390,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 110,
+                        "durationMicroseconds": 115,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 308
@@ -398,7 +398,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 55,
-                        "durationMicroseconds": 155,
+                        "durationMicroseconds": 193,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 314
@@ -406,7 +406,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 55,
-                        "durationMicroseconds": 137,
+                        "durationMicroseconds": 153,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 321
@@ -414,7 +414,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 55,
-                        "durationMicroseconds": 140,
+                        "durationMicroseconds": 169,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 329
@@ -422,7 +422,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 55,
-                        "durationMicroseconds": 211,
+                        "durationMicroseconds": 227,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 337
@@ -430,7 +430,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 253,
+                        "durationMicroseconds": 68,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 351
@@ -438,7 +438,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 55,
-                        "durationMicroseconds": 248,
+                        "durationMicroseconds": 165,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 357
@@ -446,7 +446,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 55,
-                        "durationMicroseconds": 225,
+                        "durationMicroseconds": 154,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 364
@@ -454,7 +454,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 55,
-                        "durationMicroseconds": 193,
+                        "durationMicroseconds": 146,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 372
@@ -462,7 +462,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 55,
-                        "durationMicroseconds": 190,
+                        "durationMicroseconds": 148,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 380
@@ -470,7 +470,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 269,
+                        "durationMicroseconds": 197,
                         "errorMessage": "",
                         "functionName": "minimumHeight",
                         "line": 390
@@ -478,7 +478,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 202,
+                        "durationMicroseconds": 103,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 397
@@ -486,7 +486,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 44,
                         "errorMessage": "Cannot retrieve a non-object type by ID: securityPage",
                         "functionName": "text",
                         "line": 403
@@ -494,7 +494,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 49,
-                        "durationMicroseconds": 254,
+                        "durationMicroseconds": 161,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 407
@@ -502,7 +502,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 179,
+                        "durationMicroseconds": 147,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 408
@@ -510,7 +510,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 157,
+                        "durationMicroseconds": 154,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 414
@@ -518,7 +518,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 49,
-                        "durationMicroseconds": 128,
+                        "durationMicroseconds": 148,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 415
@@ -526,7 +526,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 57,
-                        "durationMicroseconds": 135,
+                        "durationMicroseconds": 163,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 428
@@ -534,7 +534,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 57,
-                        "durationMicroseconds": 196,
+                        "durationMicroseconds": 146,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 435
@@ -542,7 +542,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 57,
-                        "durationMicroseconds": 188,
+                        "durationMicroseconds": 356,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 448
@@ -550,7 +550,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 57,
-                        "durationMicroseconds": 255,
+                        "durationMicroseconds": 328,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 455
@@ -558,7 +558,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 34,
-                        "durationMicroseconds": 257,
+                        "durationMicroseconds": 204,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 463
@@ -566,7 +566,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 206,
+                        "durationMicroseconds": 175,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 464
@@ -574,7 +574,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 192,
+                        "durationMicroseconds": 210,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 465
@@ -582,7 +582,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 37,
-                        "durationMicroseconds": 179,
+                        "durationMicroseconds": 149,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 466
@@ -590,7 +590,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 359,
+                        "durationMicroseconds": 242,
                         "errorMessage": "Cannot access value for name dbManager",
                         "functionName": "tempData",
                         "line": 472
@@ -598,7 +598,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 248,
+                        "durationMicroseconds": 178,
                         "errorMessage": "Cannot access value for name dbManager",
                         "functionName": "humidityData",
                         "line": 473
@@ -606,7 +606,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 37,
-                        "durationMicroseconds": 256,
+                        "durationMicroseconds": 159,
                         "errorMessage": "Cannot access value for name dbManager",
                         "functionName": "timeLabels",
                         "line": 474
@@ -614,7 +614,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 164,
+                        "durationMicroseconds": 116,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 471
@@ -622,7 +622,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 632,
+                        "durationMicroseconds": 479,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 482
@@ -630,7 +630,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 347,
+                        "durationMicroseconds": 272,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 487
@@ -638,7 +638,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 173,
+                        "durationMicroseconds": 100,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 488
@@ -646,7 +646,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 221,
+                        "durationMicroseconds": 153,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 489
@@ -654,7 +654,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 85,
+                        "durationMicroseconds": 70,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 498
@@ -662,7 +662,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 38,
-                        "durationMicroseconds": 496,
+                        "durationMicroseconds": 437,
                         "errorMessage": "Cannot access value for name blueToothController",
                         "functionName": "visible",
                         "line": 505
@@ -670,7 +670,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 45,
-                        "durationMicroseconds": 259,
+                        "durationMicroseconds": 299,
                         "errorMessage": "",
                         "functionName": "pixelSize",
                         "line": 503
@@ -678,7 +678,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 53,
-                        "durationMicroseconds": 168,
+                        "durationMicroseconds": 267,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 504
@@ -686,7 +686,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 203,
+                        "durationMicroseconds": 371,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 510
@@ -694,7 +694,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 37,
-                        "durationMicroseconds": 72,
+                        "durationMicroseconds": 169,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 511
@@ -702,7 +702,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 37,
-                        "durationMicroseconds": 126,
+                        "durationMicroseconds": 169,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 512
@@ -710,7 +710,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 38,
-                        "durationMicroseconds": 271,
+                        "durationMicroseconds": 306,
                         "errorMessage": "Cannot access value for name blueToothController",
                         "functionName": "visible",
                         "line": 516
@@ -718,7 +718,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 53,
-                        "durationMicroseconds": 189,
+                        "durationMicroseconds": 249,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 517
@@ -726,7 +726,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 170,
+                        "durationMicroseconds": 193,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 520
@@ -734,7 +734,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 41,
-                        "durationMicroseconds": 71,
+                        "durationMicroseconds": 77,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 521
@@ -742,7 +742,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 41,
-                        "durationMicroseconds": 158,
+                        "durationMicroseconds": 142,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 522
@@ -750,7 +750,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 51,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 64,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 524
@@ -758,7 +758,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 45,
-                        "durationMicroseconds": 85,
+                        "durationMicroseconds": 92,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "target",
                         "line": 527
@@ -766,7 +766,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 44,
-                        "durationMicroseconds": 129,
+                        "durationMicroseconds": 108,
                         "errorMessage": "",
                         "functionName": "loops",
                         "line": 531
@@ -774,7 +774,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 46,
-                        "durationMicroseconds": 147,
+                        "durationMicroseconds": 130,
                         "errorMessage": "Cannot access value for name blueToothController",
                         "functionName": "running",
                         "line": 532
@@ -782,7 +782,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 1316,
+                        "durationMicroseconds": 593,
                         "errorMessage": "Cannot access value for name blueToothController",
                         "functionName": "text",
                         "line": 538
@@ -790,7 +790,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 45,
-                        "durationMicroseconds": 536,
+                        "durationMicroseconds": 665,
                         "errorMessage": "",
                         "functionName": "pixelSize",
                         "line": 540
@@ -798,7 +798,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 53,
-                        "durationMicroseconds": 199,
+                        "durationMicroseconds": 211,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 542
@@ -806,7 +806,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 167,
+                        "durationMicroseconds": 193,
                         "errorMessage": "",
                         "functionName": "onPressed",
                         "line": 548
@@ -814,7 +814,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 37,
-                        "durationMicroseconds": 215,
+                        "durationMicroseconds": 445,
                         "errorMessage": "",
                         "functionName": "onReleased",
                         "line": 549
@@ -822,7 +822,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 337,
+                        "durationMicroseconds": 515,
                         "errorMessage": "Cannot access value for name blueToothController",
                         "functionName": "onClicked",
                         "line": 550
@@ -830,7 +830,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 74,
+                        "durationMicroseconds": 320,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 547
@@ -838,7 +838,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 224,
+                        "durationMicroseconds": 393,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 562
@@ -846,7 +846,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 275,
+                        "durationMicroseconds": 412,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 563
@@ -854,7 +854,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 122,
+                        "durationMicroseconds": 276,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 564
@@ -862,7 +862,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 59,
+                        "durationMicroseconds": 119,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 568
@@ -870,7 +870,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 45,
-                        "durationMicroseconds": 197,
+                        "durationMicroseconds": 323,
                         "errorMessage": "",
                         "functionName": "pixelSize",
                         "line": 573
@@ -878,7 +878,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 53,
-                        "durationMicroseconds": 144,
+                        "durationMicroseconds": 166,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 574
@@ -886,7 +886,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 45,
-                        "durationMicroseconds": 498,
+                        "durationMicroseconds": 382,
                         "errorMessage": "",
                         "functionName": "pixelSize",
                         "line": 580
@@ -894,7 +894,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 53,
-                        "durationMicroseconds": 196,
+                        "durationMicroseconds": 290,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 582
@@ -902,7 +902,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 245,
+                        "durationMicroseconds": 223,
                         "errorMessage": "",
                         "functionName": "onPressed",
                         "line": 588
@@ -910,7 +910,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 37,
-                        "durationMicroseconds": 576,
+                        "durationMicroseconds": 164,
                         "errorMessage": "",
                         "functionName": "onReleased",
                         "line": 589
@@ -918,7 +918,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 1108,
+                        "durationMicroseconds": 232,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 590
@@ -926,7 +926,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 110,
+                        "durationMicroseconds": 70,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 587
@@ -934,7 +934,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 87,
+                        "durationMicroseconds": 176,
                         "errorMessage": "Cannot access value for name blueToothController",
                         "functionName": "target",
                         "line": 604
@@ -958,7 +958,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 9,
-                        "durationMicroseconds": 33,
+                        "durationMicroseconds": 39,
                         "errorMessage": "Cannot access value for name lastTemp",
                         "functionName": "checkDataReady",
                         "line": 617
