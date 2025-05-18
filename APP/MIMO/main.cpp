@@ -12,10 +12,41 @@
 #include "speechrecognizer.h"
 // UDP
 #include "UDP.h"
+#include <QSettings>
+
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
+
+    qDebug() << "SSL支持：" << QSslSocket::supportsSsl();                   // 预期输出true
+    qDebug() << "SSL构建版本：" << QSslSocket::sslLibraryBuildVersionString();  // 如"OpenSSL 3.0.8"
+    qDebug() << "SSL运行时版本：" << QSslSocket::sslLibraryVersionString();     // 应与构建版本一致
+
+    // ini文件
+    QString configPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/config.ini";
+    // 确保目标目录存在
+    QDir().mkpath(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation));
+    // 从资源文件拷贝
+    QFile src(":/config.ini"); // 或使用别名 ":/config.ini"
+    if (src.exists()) {
+        // 删除已存在的目标文件（强制覆盖）
+        if (QFile::exists(configPath)) {
+            if (!QFile::remove(configPath)) {
+                qDebug() << "删除旧文件失败:" << src.errorString();
+            }
+        }
+
+        if (src.copy(configPath)) {
+            QFile::setPermissions(configPath, QFile::ReadOwner | QFile::WriteOwner);
+            qDebug() << "ini拷贝成功";
+        } else {
+            qDebug() << "ini拷贝失败原因:" << src.errorString();
+        }
+    }
+    else {
+        qDebug() << "ini资源文件不存在，检查.qrc配置";
+    }
 
     QQmlApplicationEngine engine;
 
@@ -46,10 +77,13 @@ int main(int argc, char *argv[])
 
     // speechrecognizer
     SpeechRecognizer* speechRecognizer = new SpeechRecognizer(&app);
+    // 指定文件路径和格式
+    QSettings settings(configPath, QSettings::IniFormat);
+    // 读取配置项（支持默认值）
     // 讯飞API参数
-    QString appId = "fcd85c47";
-    QString apiKey = "5c0f3a3b3393ddd550b7df00633cd1b8";
-    QString apiSecret = "YWMxZTNlOWZlMzQ0NGVlNWQyMzU1ZmE5";
+    QString appId = settings.value("API/appId").toString();
+    QString apiKey = settings.value("API/apiKey").toString();
+    QString apiSecret = settings.value("API/apiSecret").toString();
     speechRecognizer->init(appId, apiKey, apiSecret);
     engine.rootContext()->setContextProperty("speechRecognizer", speechRecognizer);
     qDebug() << "C++对象speechRecognizer注册状态:" << engine.rootContext()->contextProperty("speechRecognizer").isValid();
