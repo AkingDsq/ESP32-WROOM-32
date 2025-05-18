@@ -29,6 +29,4 @@ protected:
     XYMap mXyMap;
 };
 
-
-
 }  // namespace fl

@@ -13,12 +13,6 @@
 
 #define LED_PIN 33        // LED引脚
 
-
-// 传感器传输数据线程
-void wifiConnectTask(void *pvParam) {
-     // WiFi
-    WiFi_init();
-}
 // 传感器传输数据线程
 void sensorTask(void *pvParam) {
   while(1) {
@@ -73,10 +67,11 @@ void setup() {
   init_BLE();
 
   init_Microphone();
+  // WiFi
+  WiFi_init();
 
   xTaskCreate(sensorTask, "SensorTask", 4096, NULL, 1, NULL);
   xTaskCreate(audioTask, "AudioTask", 4096, NULL, 1, NULL);
-  xTaskCreate(wifiConnectTask, "WifiConnectTask", 4096, NULL, 1, NULL);
 
   Serial.println("OK");
 }

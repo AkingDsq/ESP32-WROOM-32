@@ -4,7 +4,6 @@
 #include "fl/force_inline.h"
 #include "fl/unused.h"
 
-
 #if FASTLED_IS_USING_NAMESPACE
 #define FUNCTION_FILL_RAINBOW(a,b,c,d) FASTLED_NAMESPACE::fill_rainbow(a,b,c,d)
 #define FUNCTION_NAPPLY_GAMMA(a,b,c) FASTLED_NAMESPACE::napplyGamma_video(a,b,c)

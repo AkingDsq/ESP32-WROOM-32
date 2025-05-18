@@ -6,7 +6,7 @@
 const char * ssid = "laodong";   //需要输入自己的WIFI名字
 const char * password = "dsq245349";   //需要输入自己的WIFI密码
 // 手机IP地址
-const char* udpAddress = "10.113.213.18"; // Android设备IP
+const char* udpAddress = "10.119.183.171"; // Android设备IP
 const int udpPort = 12345;
 WiFiUDP udp;
 // // 
@@ -14,47 +14,33 @@ WiFiUDP udp;
 // const long utcOffsetInSeconds = 28800;  // 北京时间：UTC+8，单位为秒
 
 void WiFi_init() {
-// WiFi初始化
-    WiFi.disconnect(true);
-    WiFi.setAutoReconnect(true);          // 启用自动重连
-    WiFi.begin(ssid, password);
-    Serial.println("启动Wi-Fi连接...");
+//-----------------连接WIFI--------------//
+  // wifi模式
+  Serial.begin(115200);
 
-    // 连接状态变量
-    bool udpInitialized = false;
-    wl_status_t lastStatus = WL_IDLE_STATUS;
+  // 断开之前的连接
+  WiFi.disconnect(true);
+  // 连接 Wi-Fi
+  WiFi.begin(ssid, password);
 
-    while(1) {
-        wl_status_t currentStatus = WiFi.status();
+  // 热点模式
+  // Serial.begin(115200);
+  // WiFi.softAP(ssid, password);  // 将 ESP32 设置为热点
 
-        if(currentStatus != lastStatus) { // 状态变化时打印
-            Serial.printf("Wi-Fi状态改变: %d -> %d\n", lastStatus, currentStatus);
-            lastStatus = currentStatus;
-        }
+  Serial.print("正在连接 Wi-Fi");
+  
+  // 检测是否链接成功
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.print(".");
+  }
+  Serial.println("连接成功");
+  Serial.print("IP address: ");
+  Serial.println(WiFi.localIP());
 
-        if(currentStatus == WL_CONNECTED) {
-            if(!udpInitialized) {         // 初始化UDP（仅一次）
-                udp.begin(udpPort);
-                Serial.print("UDP初始化完成，本地端口:");
-                Serial.println(udpPort);
-                Serial.print("设备IP地址:");
-                Serial.println(WiFi.localIP());
-                udpInitialized = true;
-            }
-            vTaskDelay(10000 / portTICK_PERIOD_MS); // 10秒检测一次
-        } 
-        else {
-            // 未连接时的处理（如LED闪烁）
-
-            vTaskDelay(500 / portTICK_PERIOD_MS);  // 更频繁地检测（0.5秒）
-            
-            // 尝试手动重连（可选）
-            if(currentStatus == WL_CONNECT_FAILED || currentStatus == WL_NO_SSID_AVAIL) {
-                WiFi.reconnect();
-                Serial.println("尝试主动重连...");
-            }
-        }
-    }
+  udp.begin(udpPort);
+  //Serial.println(WiFi.softAPIP());  // 打印热点的IP地址
+//-----------------连接WIFI--------------//
 }
 // 发送音频数据
 void sendAudioData(uint8_t* data, size_t bytesRead) {

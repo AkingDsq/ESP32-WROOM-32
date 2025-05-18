@@ -25,6 +25,7 @@ dependencies = [
     "download",
     "fastled>=1.2.26",
     "playwright",
+    "advanced-aicode",
     "download",
     "httpx",
 ]

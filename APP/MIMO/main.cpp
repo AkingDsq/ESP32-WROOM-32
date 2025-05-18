@@ -17,9 +17,6 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    qDebug() << "SSL支持：" << QSslSocket::supportsSsl();
-    qDebug() << "SSL版本：" << QSslSocket::sslLibraryBuildVersionString();
-
     QQmlApplicationEngine engine;
 
     QObject::connect(

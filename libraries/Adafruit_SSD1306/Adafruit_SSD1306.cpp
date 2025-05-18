@@ -49,8 +49,7 @@
 #endif
 
 #if !defined(__ARM_ARCH) && !defined(ENERGIA) && !defined(ESP8266) &&          \
-    !defined(ESP32) && !defined(__arc__) && !defined(__RL78__) &&              \
-    !defined(CH32V20x)
+    !defined(ESP32) && !defined(__arc__) && !defined(__RL78__)
 #include <util/delay.h>
 #endif
 
@@ -941,7 +940,7 @@ void Adafruit_SSD1306::drawFastVLineInternal(int16_t x, int16_t __y,
         }
       }
     } // endif positive height
-  } // endif x in bounds
+  }   // endif x in bounds
 }
 
 /*!
