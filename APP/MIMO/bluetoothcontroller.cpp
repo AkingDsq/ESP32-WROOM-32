@@ -305,6 +305,32 @@ void BlueToothController::serviceStateChanged(QLowEnergyService::ServiceState st
             return;
         }
 
+        // 灯特征
+        qDebug() << "灯特征:" + QBluetoothUuid(Light_UUID).toString();
+        QLowEnergyCharacteristic lightChar = service->characteristic(QBluetoothUuid(Light_UUID));
+        if (lightChar.isValid()) {
+            qDebug() << "找到灯特征";
+            service->readCharacteristic(lightChar);
+
+            // 描述符值可通过管理该描述符所属服务的QLowEnergyService 实例写入。QLowEnergyService::writeDescriptor() 函数将写入新值。成功后将发出QLowEnergyService::descriptorWritten() 信号。该对象的缓存value() 也会相应更新。
+            if (lightChar.properties() & QLowEnergyCharacteristic::Notify) {
+                QLowEnergyDescriptor notification = lightChar.descriptor(QBluetoothUuid::DescriptorType::ClientCharacteristicConfiguration);
+                if (notification.isValid()) {
+                    service->writeDescriptor(notification, QByteArray::fromHex("0100"));
+                    // 检查写入结果
+                    if (service->error() != QLowEnergyService::NoError) {
+                        qWarning() << "启用灯通知失败:" << service->error();
+                    } else {
+                        qDebug() << "灯通知已启用";
+                    }
+                }
+            }
+        }
+        else{
+            qDebug() << "灯特征无效，UUID可能不匹配";
+            return;
+        }
+
         // 获取命令特性
         QBluetoothUuid commandUuid(Command_UUID);
         m_commandCharacteristic = service->characteristic(QBluetoothUuid(commandUuid));
@@ -343,6 +369,25 @@ void BlueToothController::characteristicChanged(QLowEnergyCharacteristic charact
             emit humidityChanged(m_humidity);
         }
     }
+    else if (characteristic.uuid() == QBluetoothUuid(Light_UUID)) {
+
+        if (newValue.size() < 16) {
+            qWarning() << "数据长度不足16字节";
+            return;
+        }
+
+        const uint8_t *raw = reinterpret_cast<const uint8_t*>(newValue.constData());
+
+        bool ledStates[8];
+        for (int i=0; i<8; ++i) {
+            ledStates[i] = (raw[i] != 0); // 非零视为开启
+        }
+        uint8_t brightnessValues[8];
+        memcpy(brightnessValues, raw + 8, 8); // 直接复制内存块
+
+        emit ledsStateChanged(ledStates, brightnessValues);
+        qDebug() << "[信号]灯状态同步:";
+    }
 }
 
 void BlueToothController::errorOccurred(QLowEnergyController::Error error)
@@ -351,6 +396,8 @@ void BlueToothController::errorOccurred(QLowEnergyController::Error error)
 }
 
 void BlueToothController::onAdjustBrightness(int id, int value){
-    //sendCommand("a");
+
     qDebug() << "灯光：" << id << " 调整亮度：" << value;
+    QString commend = "led1:" + QString::number(id) + "," + QString::number(value);
+    sendCommand(commend);
 }

@@ -7,6 +7,9 @@
 // #include "BluetoothA2DPSink.h"
 // I2SStream i2s_VoiceSink;
 // BluetoothA2DPSink a2dp_sink(i2s_VoiceSink);
+#include "const.h"
+#include "LightController.h"
+
 #define LED_PIN 33        // LED引脚
 // BLE
 #include <BLEDevice.h>
@@ -17,6 +20,7 @@
 #define Temperature_UUID "2A6E" // 温度uuid
 #define Humidity_UUID "2A6F"    // 湿度的uuid
 #define Command_UUID "FFE1"     // 用于接收命令的特性UUID
+#define Lightness_UUID "ABAB"   // 灯光的uuid
 
 // 温湿度传感器
 #include <DHT.h>
@@ -27,7 +31,7 @@ DHT dht(DHTPIN, DHTTYPE); // 创建DHT对象
 // BLE服务初始化
 BLEServer *pServer;
 BLEService *pService;
-BLECharacteristic *pTemperatureChar, *pHumidityChar, *pCommandChar;
+BLECharacteristic *pTemperatureChar, *pHumidityChar, *pCommandChar, *pLightnessChar;
 
 bool tmp = false;
 
@@ -84,6 +88,48 @@ class CommandCallbacks: public BLECharacteristicCallbacks {
           digitalWrite(LED_PIN, LOW);
           Serial.println("LED已关闭");
         }
+        // 控制开关格式：led0:房间id
+        else if(value.startsWith("led0:")){
+          value = value.substring(5);
+          int id = value.toInt();
+          // 获取单例实例
+          std::shared_ptr<LightController> ledCtrl = LightController::getInstance();
+          ledCtrl->toggleLed(id);
+        }
+        // 调整亮度格式：led1:房间id,添加值
+        else if(value.startsWith("led1:")){
+          value = value.substring(5);
+          int index = value.indexOf(",");
+          int id = value.substring(0, index).toInt();
+
+          int rawValue = value.substring(index + 1).toInt();  // 转换为整数
+          uint8_t num = static_cast<uint8_t>(rawValue);
+
+          // 获取单例实例
+          std::shared_ptr<LightController> ledCtrl = LightController::getInstance();
+          ledCtrl->setBrightness(id, num);
+        }
+        // 调整颜色：led2:房间id,HSV值参数一,HSV参数二,HSV参数三
+        else if(value.startsWith("led2:")){
+          value = value.substring(5);
+          int index = value.indexOf(",");
+          int id = value.substring(0, index).toInt();
+          value = value.substring(index + 1);
+
+          uint8_t num[3];
+          for(int i = 0; i  < 2; i++){
+            int index = value.indexOf(",");
+            int rawValue = value.substring(0, index).toInt();
+            num[i] = static_cast<uint8_t>(rawValue);
+            value = value.substring(index + 1);
+          }
+
+          num[2] = static_cast<uint8_t>(value.toInt());
+
+          // 获取单例实例
+          std::shared_ptr<LightController> ledCtrl = LightController::getInstance();
+          ledCtrl->setHSV(id, num[0], num[1], num[2]);
+        }
         else if (value == "callTem") {
           float temperature = dht.readTemperature();
           pTemperatureChar->setValue(String(temperature));
@@ -120,12 +166,21 @@ void init_BLE() {
     BLECharacteristic::PROPERTY_READ | BLECharacteristic::PROPERTY_NOTIFY
   );
   pTemperatureChar->addDescriptor(new BLE2902());  // 关键！添加标准CCCD描述符
+
   // 湿度特征（支持通知）
   pHumidityChar = pService->createCharacteristic(
     BLEUUID(Humidity_UUID),
     BLECharacteristic::PROPERTY_READ | BLECharacteristic::PROPERTY_NOTIFY
   );
   pHumidityChar->addDescriptor(new BLE2902());  // 关键！添加标准CCCD描述符
+
+  // 灯光特征（支持通知）
+  pLightnessChar = pService->createCharacteristic(
+    BLEUUID(Lightness_UUID),
+    BLECharacteristic::PROPERTY_READ | BLECharacteristic::PROPERTY_NOTIFY
+  );
+  pLightnessChar->addDescriptor(new BLE2902());  // 关键！添加标准CCCD描述符
+
   // 添加命令特性（可写）
   pCommandChar = pService->createCharacteristic(
     BLEUUID(Command_UUID),
@@ -171,3 +226,17 @@ float readHum(){
 }
 bool getTemp(){return tmp;}
 void changeTemp(){tmp = !tmp;}
+// 同步灯光
+void init_light(){
+  std::shared_ptr<LightController> ledCtrl = LightController::getInstance();
+  LightController::LedState* leds = ledCtrl->getState();
+
+  // 原始字节传输
+  uint8_t bleData[16] = {0};
+  for (int i = 0; i < 8; i++) {
+      bleData[i] = leds[i].isOn;
+      bleData[i+8] = leds[i].savedValue;
+  }
+  pLightnessChar->setValue(bleData, sizeof(bleData));
+  pLightnessChar->notify();
+}

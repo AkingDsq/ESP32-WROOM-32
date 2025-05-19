@@ -1,3 +1,4 @@
+#include <iostream>
 // 多线程
 #include "freertos/task.h"
 // BlueTooth
@@ -9,10 +10,27 @@
 // WiFi
 //#include "WiFi_Connect.h"
 // LED
-#include "VoiceA2DP.h"
+#include "LightController.h"
+#include "const.h"
 
-#define LED_PIN 33        // LED引脚
+//#define LED_PIN 33        // LED引脚
 
+// 每2小时同步灯的状态线程
+void initLightTask(void *pvParam) {
+  while(1) {
+    // WiFi
+    init_light();
+    vTaskDelay(7200000 / portTICK_PERIOD_MS);
+  }
+}
+// wifi连接线程
+void wiFiConnectTask(void *pvParam) {
+  while(1) {
+    // WiFi
+    connectWiFi();
+    vTaskDelay(2000 / portTICK_PERIOD_MS);
+  }
+}
 // 传感器传输数据线程
 void sensorTask(void *pvParam) {
   while(1) {
@@ -67,11 +85,11 @@ void setup() {
   init_BLE();
 
   init_Microphone();
-  // WiFi
-  WiFi_init();
 
   xTaskCreate(sensorTask, "SensorTask", 4096, NULL, 1, NULL);
   xTaskCreate(audioTask, "AudioTask", 4096, NULL, 1, NULL);
+  xTaskCreate(wiFiConnectTask, "WiFiConnectTask", 4096, NULL, 1, NULL);
+  xTaskCreate(initLightTask, "InitLightTask", 4096, NULL, 1, NULL);
 
   Serial.println("OK");
 }

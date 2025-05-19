@@ -19,10 +19,6 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    qDebug() << "SSL支持：" << QSslSocket::supportsSsl();                   // 预期输出true
-    qDebug() << "SSL构建版本：" << QSslSocket::sslLibraryBuildVersionString();  // 如"OpenSSL 3.0.8"
-    qDebug() << "SSL运行时版本：" << QSslSocket::sslLibraryVersionString();     // 应与构建版本一致
-
     // ini文件
     QString configPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/config.ini";
     // 确保目标目录存在

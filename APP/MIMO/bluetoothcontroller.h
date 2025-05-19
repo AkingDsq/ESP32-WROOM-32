@@ -16,6 +16,9 @@
 #define Temperature_UUID "00002A6E-0000-1000-8000-00805F9B34FB" // 温度uuid
 #define Humidity_UUID "00002A6F-0000-1000-8000-00805F9B34FB"    // 湿度的uuid
 #define Command_UUID "0000FFE1-0000-1000-8000-00805F9B34FB"     // 用于接收命令的特性UUID
+#define Light_UUID "0000ABAB-0000-1000-8000-00805F9B34FB"       // 用于调整灯
+
+#define NUM_LEDS 8
 
 /******************************************************************************
  *
@@ -52,12 +55,16 @@ private:
     QString m_humidity;
     bool m_connected = false;
 
+    // LED状态结构体
+    bool ledsState[NUM_LEDS] = {0}; // 状态存储数组
+
 signals:
     void temperatureChanged(QString temperature);
     void humidityChanged(QString humidity);
     void connectionStatusChanged(bool connected);
     void commandSent(bool success);
     void commandVoiceSent(bool success);
+    void ledsStateChanged(bool *ledStates, uint8_t *brightnessValues);
 
 public slots:
     // 检测各权限

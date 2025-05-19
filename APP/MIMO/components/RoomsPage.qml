@@ -7,6 +7,26 @@ Page {
     id: roomsPage
     background: Rectangle { color: "transparent" }
 
+    property var isOn: [0, 0, 0, 0, 0, 0, 0, 0]
+    property var brightnesses: [100, 100, 100, 100, 100, 100, 100, 100]
+    Connections {
+        target: blueToothController
+        function onLedsStateChanged(ledStates, brightnessValues) {
+            // 创建临时数组副本保证响应式更新
+            let newIdnums = [...isOn]
+            let newBrightnesses = [...brightnesses]
+
+            for (let i = 0; i < 8; i++) {
+                newIdnums[i] = Number(ledStates[i]) // 将bool转为int
+                newBrightnesses[i] = brightnessValues[i]
+            }
+
+            // 必须整体赋值触发变更信号
+            isOn = newIdnums
+            brightnesses = newBrightnesses
+        }
+    }
+
     // 顶部区域
     Rectangle {
         id: topArea
@@ -72,7 +92,7 @@ Page {
         }
     }
 
-    // 各房间配置 - 主要修改此处
+    // 各房间配置
     SwipeView{
         id: rooms
         width: parent.width
@@ -142,21 +162,19 @@ Page {
 
                     // 主灯
                     DeviceControl {
+                        idnum: 0
+                        brightness: brightnesses[idnum]? brightnesses[idnum]: 0
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         deviceName: "主灯"
                         deviceIcon: "💡"
-                        deviceStatus: true
+                        deviceStatus: isOn[idnum]? true: false
                         deviceType: "light"
+
 
                         onToggleDevice: {
                             deviceStatus = !deviceStatus
-                            if(deviceStatus){
-                                blueToothController.sendCommand("LED_ON")
-                            }
-                            else{
-                                blueToothController.sendCommand("LED_OFF")
-                            }
+                            blueToothController.sendCommand("led0:" + idnum)
 
                             console.log("主灯状态: " + deviceStatus)
                         }
@@ -255,31 +273,37 @@ Page {
 
                     // 主灯
                     DeviceControl {
+                        idnum: 1
+                        brightness: brightnesses[idnum]? brightnesses[idnum]: 0
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         deviceName: "主灯"
                         deviceIcon: "💡"
-                        deviceStatus: false
+                        deviceStatus: isOn[idnum]? true: false
                         deviceType: "light"
+
 
                         onToggleDevice: {
                             deviceStatus = !deviceStatus
+                            blueToothController.sendCommand("led0:" + idnum)
                             console.log("卧室主灯状态: " + deviceStatus)
                         }
                     }
 
                     // 床头灯
                     DeviceControl {
+                        idnum: 2
+                        brightness: brightnesses[idnum]? brightnesses[idnum]: 0
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         deviceName: "床头灯"
                         deviceIcon: "💡"
-                        deviceStatus: true
+                        deviceStatus: isOn[idnum]? true: false
                         deviceType: "light"
-                        brightness: 30
 
                         onToggleDevice: {
                             deviceStatus = !deviceStatus
+                            blueToothController.sendCommand("led0:" + idnum)
                             console.log("床头灯状态: " + deviceStatus)
                         }
                     }
@@ -362,15 +386,19 @@ Page {
 
                     // 主灯
                     DeviceControl {
+                        idnum: 3
+                        brightness: brightnesses[idnum]? brightnesses[idnum]: 0
                         Layout.fillWidth: true
                         Layout.fillHeight: true
-                        deviceName: "照明灯"
+                        deviceName: "主灯"
                         deviceIcon: "💡"
-                        deviceStatus: true
+                        deviceStatus: isOn[idnum]? true: false
                         deviceType: "light"
+
 
                         onToggleDevice: {
                             deviceStatus = !deviceStatus
+                            blueToothController.sendCommand("led0:" + idnum)
                             console.log("厨房灯状态: " + deviceStatus)
                         }
                     }
@@ -468,15 +496,18 @@ Page {
 
                     // 照明灯
                     DeviceControl {
+                        idnum: 4
+                        brightness: brightnesses[idnum]? brightnesses[idnum]: 0
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         deviceName: "照明灯"
                         deviceIcon: "💡"
-                        deviceStatus: false
+                        deviceStatus: isOn[idnum]? true: false
                         deviceType: "light"
 
                         onToggleDevice: {
                             deviceStatus = !deviceStatus
+                            blueToothController.sendCommand("led0:" + idnum)
                             console.log("卫生间灯状态: " + deviceStatus)
                         }
                     }
@@ -559,31 +590,36 @@ Page {
 
                     // 主灯
                     DeviceControl {
+                        idnum: 5
+                        brightness: brightnesses[idnum]? brightnesses[idnum]: 0
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         deviceName: "主灯"
                         deviceIcon: "💡"
-                        deviceStatus: true
+                        deviceStatus: isOn[idnum]? true: false
                         deviceType: "light"
 
                         onToggleDevice: {
                             deviceStatus = !deviceStatus
+                            blueToothController.sendCommand("led0:" + idnum)
                             console.log("办公室主灯状态: " + deviceStatus)
                         }
                     }
 
                     // 台灯
                     DeviceControl {
+                        idnum:6
+                        brightness: brightnesses[idnum]? brightnesses[idnum]: 0
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         deviceName: "台灯"
                         deviceIcon: "💡"
-                        deviceStatus: true
+                        deviceStatus: isOn[idnum]? true: false
                         deviceType: "light"
-                        brightness: 70
 
                         onToggleDevice: {
                             deviceStatus = !deviceStatus
+                            blueToothController.sendCommand("led0:" + idnum)
                             console.log("台灯状态: " + deviceStatus)
                         }
                     }
