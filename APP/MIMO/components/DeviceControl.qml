@@ -142,7 +142,7 @@ Rectangle {
 
                     onMoved: {
                         brightness = Math.round(value)
-                        adjustBrightness(idnum, brightness)
+                        adjustBrightness(idnum, brightness*2.55)
                     }
                 }
             }

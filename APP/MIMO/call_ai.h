@@ -36,7 +36,7 @@ public slots:
     //void processCommands(QString commandString);
 
 signals:
-    // 可选：从 C++ 向 QML 发送反馈
+    // 从 C++ 向 QML 发送反馈
     void aiResponseReceived(QString response);
 
     // INMP441录音结束

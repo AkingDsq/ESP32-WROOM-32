@@ -6,7 +6,7 @@
 const char * ssid = "laodong";   //需要输入自己的WIFI名字
 const char * password = "dsq245349";   //需要输入自己的WIFI密码
 // 手机IP地址
-const char* udpAddress = "10.119.183.171"; // Android设备IP
+const char* udpAddress = "10.189.146.79"; // Android设备IP
 const int udpPort = 12345;
 WiFiUDP udp;
 // // 

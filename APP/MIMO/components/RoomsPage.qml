@@ -101,7 +101,7 @@ Page {
         orientation: Qt.Vertical
         clip: true
 
-        // 修改：仅在wheelArea隐藏时才允许操作rooms
+        // 仅在wheelArea隐藏时才允许操作rooms
         interactive: wheelArea.x === -wheelArea.width
 
         onCurrentIndexChanged: {

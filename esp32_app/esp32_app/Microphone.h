@@ -21,7 +21,7 @@
 #define VAD_THRESHOLD 500
 bool isRecording = false;
 unsigned long recordingStartTime = 0;
-const unsigned long maxRecordingTime = 3000; // 最大录音时长
+const unsigned long maxRecordingTime = 5000; // 最大录音时长
 
 void init_Microphone() {
   // 配置I2S

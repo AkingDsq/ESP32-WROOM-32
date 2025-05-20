@@ -30,7 +30,7 @@ Item {
             GradientStop { position: 1.0; color: "#1E1E1E" }
         }
 
-        // 使用Canvas代替ShaderEffect
+        //
         Canvas {
             id: particleCanvas
             anchors.fill: parent
@@ -131,7 +131,7 @@ Item {
         }
     }
 
-    // 创建主布局容器 - 使用Column替代ColumnLayout以更好地控制大小
+    // 创建主布局容器
     Item {
         anchors.fill: parent
 
