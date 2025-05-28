@@ -3,10 +3,10 @@
 #include <WiFiUdp.h>
 
 // 定义 Wi-Fi 名与密码
-const char * ssid = "laodong";   //需要输入自己的WIFI名字
-const char * password = "dsq245349";   //需要输入自己的WIFI密码
+const char * ssid = "HONOR 90";   //需要输入自己的WIFI名字
+const char * password = "20050803";   //需要输入自己的WIFI密码
 // 手机IP地址
-const char* udpAddress = "10.189.146.79"; // Android设备IP
+const char* udpAddress = "10.48.169.166"; // Android设备IP
 const int udpPort = 12345;
 WiFiUDP udp;
 // // 

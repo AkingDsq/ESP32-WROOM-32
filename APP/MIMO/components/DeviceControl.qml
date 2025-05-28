@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import QtQuick.Dialogs
 
 // 智能家居设备控制组件
 Rectangle {
@@ -103,6 +104,33 @@ Rectangle {
                     color: "#AAAAAA"
                     font.pixelSize: 12
                     anchors.horizontalCenter: parent.horizontalCenter
+                }
+
+                Rectangle {
+                    width: parent.width * 0.3
+                    height: parent.width * 0.3
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    color: Qt.hsv(
+                        colorDialog.selectedColor.hsvHue/360,
+                        colorDialog.selectedColor.hsvSaturation,
+                        colorDialog.selectedColor.hsvValue,
+                    )
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            colorDialog.open()
+                        }
+                    }
+                }
+
+                ColorDialog {
+                    id: colorDialog
+                    title: "选择颜色"
+                    selectedColor: "white" // 初始颜色
+                    onAccepted: {
+                        console.log("led2:" + idnum + "," + Math.round(selectedColor.hsvHue*255/360) + "," + Math.round(selectedColor.hsvSaturation*255) + "," + Math.round(selectedColor.hsvValue*255))
+                        blueToothController.sendCommand("led2:" + idnum + "," + Math.round(selectedColor.hsvHue*255/360) + "," + Math.round(selectedColor.hsvSaturation*255) + "," + Math.round(selectedColor.hsvValue*255))
+                    }
                 }
 
                 // 亮度调节滑块
